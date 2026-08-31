@@ -86,3 +86,26 @@ top Compounds are mostly obscure ChEMBL screening molecules — filter to
 approved drugs before drawing countermeasure conclusions; and one study is
 hypothesis generation — pooling several studies (`welch_meta.py`) is what
 buys real p-values.
+
+## The same dataset through the public SPOKE API (`api_projection/`)
+
+For comparison, `api_projection/` holds OSD-564 run through the *other*
+method — `spoke-api-client/examples/osdr_spoke_projection.py`, which queries
+the live SPOKE REST API and counts which diseases/pathways the signature
+genes' 1-hop neighborhoods hit:
+
+| File | What it is |
+|---|---|
+| `gene_matches.csv` | The ~100 top signature genes, their human orthologs, and whether SPOKE knows them. |
+| `diseases.csv`, `pathways.csv` | Diseases/pathways ranked by how many signature genes touch them directly. |
+| `edges.csv` | Every gene→disease / gene→pathway edge found (for graph viz). |
+
+Putting the two methods side by side is instructive. The API route's top
+diseases are **generic hubs** — "central nervous system disease", "disease",
+"cancer" — because raw hit-counting rewards nodes with many gene edges and
+sees only one hop. The PSEV route, with whole-graph propagation,
+type-normalized ranks, and the null control, turns the same signature into
+specific, robust findings (basal-forebrain anatomy, interneuron-migration
+processes). The API route is still useful as a fast first look and as an
+independent check against the *current* graph rather than the frozen 2019
+snapshot — but interpret its hit counts with the hub bias in mind.
