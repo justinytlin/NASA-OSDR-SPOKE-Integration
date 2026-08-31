@@ -28,9 +28,7 @@
 Requirements: Python 3.10+ with `numpy pandas scipy requests`
 (`scikit-learn matplotlib openpyxl` for the ML and meta-analysis extras).
 
-**[examples/OSD-564/](examples/OSD-564/)** is this whole workflow run for
-real on a mouse hippocampus study, with the actual output files and a
-step-by-step walkthrough of how to interpret them — the best place to start.
+**[examples/OSD-564/](examples/OSD-564/)** contains my example run for OSD-564.
 
 ---
 
