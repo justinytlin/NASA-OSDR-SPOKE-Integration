@@ -1,0 +1,25 @@
+1 comparison(s) pooled; 13257 anatomy nodes
+
+top 8 (associated with UP-regulated genes):
+        1 (  0.0%)  diagonal band of Broca
+        2 (  0.0%)  lateral tubercle of talus
+        3 (  0.0%)  pes
+        4 (  0.0%)  longitudinal arch of pes
+        5 (  0.0%)  stria terminalis
+        6 (  0.0%)  subdivision of diagonal band
+        7 (  0.1%)  horizontal limb of the diagonal band
+        8 (  0.1%)  vertical limb of the diagonal band
+
+bottom 8 (associated with DOWN-regulated genes):
+    13257 (100.0%)  lymphoid system
+    13256 (100.0%)  hematopoietic tissue
+    13255 (100.0%)  secondary nodular lymphoid tissue
+    13254 (100.0%)  lymph node follicular corona
+    13253 (100.0%)  lymphoid follicle
+    13252 (100.0%)  lymph node secondary follicle
+    13251 (100.0%)  secondary follicle corona
+    13250 ( 99.9%)  spleen secondary B follicle
+
+source tissue 'Ammon's horn': mean rank 2093/13257 = 15.8th percentile (UP-associated tail; extremes on either side = tissue-identity genes shifted by the condition)
+
+source tissue 'hippocampal formation': mean rank 3662/13257 = 27.6th percentile (UP-associated tail; extremes on either side = tissue-identity genes shifted by the condition)

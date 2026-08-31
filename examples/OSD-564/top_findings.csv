@@ -1,0 +1,286 @@
+Node_Type,Node_Name,real_rank_by_type,null_median,null_best,p_top
+Anatomy,diagonal band of Broca,1.0,8538.5,138.0,0.0909090909090909
+Anatomy,lateral tubercle of talus,2.0,7555.0,650.0,0.0909090909090909
+Anatomy,pes,3.0,7554.5,649.0,0.0909090909090909
+Anatomy,longitudinal arch of pes,4.0,7273.0,964.0,0.0909090909090909
+Anatomy,stria terminalis,5.0,9801.5,279.0,0.0909090909090909
+Anatomy,subdivision of diagonal band,6.0,8133.5,149.0,0.0909090909090909
+Anatomy,horizontal limb of the diagonal band,7.0,8135.5,148.0,0.0909090909090909
+Anatomy,vertical limb of the diagonal band,8.0,8135.5,147.0,0.0909090909090909
+Anatomy,keratin-coated spine,9.0,7733.5,92.0,0.0909090909090909
+Anatomy,barbed keratin-coated spine,10.0,7733.0,94.0,0.0909090909090909
+Anatomy,unbarbed keratin-coated spine,11.0,7733.0,93.0,0.0909090909090909
+Anatomy,hair of head,12.0,6972.0,79.0,0.0909090909090909
+Anatomy,anterior column of fornix,13.0,8703.5,392.0,0.0909090909090909
+Anatomy,hippocampal commissure,14.0,8905.5,196.0,0.0909090909090909
+Anatomy,centrum semiovale,15.0,8906.5,197.0,0.0909090909090909
+Anatomy,external capsule of telencephalon,16.0,8905.5,198.0,0.0909090909090909
+Anatomy,lamina terminalis of cerebral hemisphere,17.0,8904.0,194.0,0.0909090909090909
+Anatomy,ventral amygdalofugal projection,18.0,8906.0,195.0,0.0909090909090909
+Anatomy,cerebral hemisphere white matter,19.0,8900.0,199.0,0.0909090909090909
+Anatomy,pes hair,20.0,6589.5,1268.0,0.0909090909090909
+Anatomy,nuclear complex of neuraxis,21.0,7650.5,555.0,0.0909090909090909
+Anatomy,forceps major of corpus callosum,23.0,8873.5,204.0,0.0909090909090909
+Anatomy,feathered facial disc,24.0,7298.5,2266.0,0.0909090909090909
+Anatomy,pes cartilage element,25.0,7112.5,1348.0,0.0909090909090909
+Anatomy,tapetum of corpus callosum,26.0,8814.0,223.0,0.0909090909090909
+BiologicalProcess,interneuron migration from the subpallium to the cortex,1.0,7484.0,3130.0,0.0909090909090909
+BiologicalProcess,substrate-independent telencephalic tangential interneuron migration,2.0,7865.0,2587.0,0.0909090909090909
+BiologicalProcess,substrate-independent telencephalic tangential migration,3.0,7865.0,2588.0,0.0909090909090909
+BiologicalProcess,cerebral cortex GABAergic interneuron development,4.0,7878.5,1497.0,0.0909090909090909
+BiologicalProcess,cerebral cortex GABAergic interneuron differentiation,5.0,7751.5,2636.0,0.0909090909090909
+BiologicalProcess,regulation of neuron migration,6.0,8653.0,1149.0,0.0909090909090909
+BiologicalProcess,motor learning,7.0,9081.5,131.0,0.0909090909090909
+BiologicalProcess,interneuron migration,8.0,7150.0,2022.0,0.0909090909090909
+BiologicalProcess,cerebral cortex GABAergic interneuron migration,9.0,7150.0,2021.0,0.0909090909090909
+BiologicalProcess,GABAergic neuron differentiation,10.0,8171.5,1908.0,0.0909090909090909
+BiologicalProcess,negative regulation of actin filament bundle assembly,11.0,8545.5,385.0,0.0909090909090909
+BiologicalProcess,olfactory behavior,12.0,7079.0,2209.0,0.0909090909090909
+BiologicalProcess,locomotion involved in locomotory behavior,13.0,6416.0,3941.0,0.0909090909090909
+BiologicalProcess,regulation of postsynaptic cytosolic calcium ion concentration,14.0,7677.0,425.0,0.0909090909090909
+BiologicalProcess,vocalization behavior,15.0,8325.5,333.0,0.0909090909090909
+BiologicalProcess,dendrite self-avoidance,16.0,6922.5,2189.0,0.0909090909090909
+BiologicalProcess,chemoattraction of axon,17.0,8646.5,647.0,0.0909090909090909
+BiologicalProcess,regulation of protein kinase C signaling,18.0,7036.5,2758.0,0.0909090909090909
+BiologicalProcess,orbitofrontal cortex development,19.0,8670.5,430.0,0.0909090909090909
+BiologicalProcess,ruffle organization,20.0,7021.0,470.0,0.0909090909090909
+BiologicalProcess,short-term memory,21.0,5823.0,987.0,0.0909090909090909
+BiologicalProcess,apoptotic process involved in luteolysis,22.0,7837.5,2135.0,0.0909090909090909
+BiologicalProcess,negative regulation of stress fiber assembly,23.0,8056.0,726.0,0.0909090909090909
+BiologicalProcess,response to pain,24.0,8046.5,592.0,0.0909090909090909
+BiologicalProcess,lateral line system development,25.0,8888.0,87.0,0.0909090909090909
+CellularComponent,basal dendrite,1.0,820.0,187.0,0.0909090909090909
+CellularComponent,axon hillock,2.0,982.0,432.0,0.0909090909090909
+CellularComponent,dendritic branch,3.0,1016.0,85.0,0.0909090909090909
+CellularComponent,perineuronal net,4.0,1018.5,32.0,0.0909090909090909
+CellularComponent,paranodal junction,5.0,981.0,157.0,0.0909090909090909
+CellularComponent,photoreceptor outer segment membrane,6.0,680.0,461.0,0.0909090909090909
+CellularComponent,filopodium tip,7.0,903.5,171.0,0.0909090909090909
+CellularComponent,symmetric synapse,8.0,947.5,153.0,0.0909090909090909
+CellularComponent,cell tip,9.0,773.0,11.0,0.0909090909090909
+CellularComponent,CA3 pyramidal cell dendrite,10.0,1034.5,27.0,0.0909090909090909
+CellularComponent,prominosome,11.0,1120.5,13.0,0.0909090909090909
+CellularComponent,dendritic spine head,15.0,1051.0,155.0,0.0909090909090909
+CellularComponent,protein kinase 5 complex,17.0,967.0,128.0,0.0909090909090909
+CellularComponent,apical plasma membrane urothelial plaque,19.0,977.5,246.0,0.0909090909090909
+CellularComponent,intercellular canaliculus,20.0,953.0,25.0,0.0909090909090909
+CellularComponent,growing cell tip,22.0,778.0,52.0,0.0909090909090909
+CellularComponent,zymogen granule membrane,23.0,853.5,296.0,0.0909090909090909
+CellularComponent,primary dendrite,24.0,1038.5,167.0,0.0909090909090909
+CellularComponent,integrin alpha10-beta1 complex,25.0,1187.0,134.0,0.0909090909090909
+CellularComponent,insulin-responsive compartment,26.0,1124.5,184.0,0.0909090909090909
+CellularComponent,spine apparatus,27.0,977.5,95.0,0.0909090909090909
+CellularComponent,NMDA selective glutamate receptor complex,28.0,1025.0,62.0,0.0909090909090909
+CellularComponent,climbing fiber,29.0,962.5,50.0,0.0909090909090909
+CellularComponent,inhibitory synapse,30.0,941.0,429.0,0.0909090909090909
+CellularComponent,axonal spine,31.0,1084.0,74.0,0.0909090909090909
+Compound,CHEMBL2109265,1.0,134766.0,3.0,0.0909090909090909
+Compound,CHEMBL3289014,2.0,161754.0,1460.0,0.0909090909090909
+Compound,CHEMBL519741,3.0,161754.5,1461.0,0.0909090909090909
+Compound,CHEMBL3289013,4.0,161755.0,1459.0,0.0909090909090909
+Compound,CHEMBL3289011,5.0,161755.5,1457.0,0.0909090909090909
+Compound,CHEMBL3289012,6.0,161753.5,1458.0,0.0909090909090909
+Compound,CHEMBL2001019,7.0,191605.5,148.0,0.0909090909090909
+Compound,CHEMBL2323775,8.0,211570.5,103.0,0.0909090909090909
+Compound,CHEMBL180822,9.0,158852.5,2378.0,0.0909090909090909
+Compound,CHEMBL58247,10.0,163512.0,20179.0,0.0909090909090909
+Compound,CHEMBL59830,11.0,163510.5,20182.0,0.0909090909090909
+Compound,CHEMBL300330,12.0,163512.0,20180.0,0.0909090909090909
+Compound,CHEMBL1201199,13.0,159484.0,11392.0,0.0909090909090909
+Compound,CHEMBL579062,14.0,168613.5,10412.0,0.0909090909090909
+Compound,CHEMBL566581,15.0,165143.0,14333.0,0.0909090909090909
+Compound,CHEMBL1682821,16.0,165144.0,14334.0,0.0909090909090909
+Compound,CHEMBL3128043,17.0,209224.5,88.0,0.0909090909090909
+Compound,CHEMBL3707315,18.0,204094.5,50.0,0.0909090909090909
+Compound,CHEMBL97200,19.0,157728.5,17510.0,0.0909090909090909
+Compound,CHEMBL95868,20.0,157729.5,17508.0,0.0909090909090909
+Compound,CHEMBL319732,21.0,157729.5,17509.0,0.0909090909090909
+Compound,CHEMBL97574,22.0,157728.5,17512.0,0.0909090909090909
+Compound,CHEMBL420262,23.0,157729.0,17511.0,0.0909090909090909
+Compound,CHEMBL439775,24.0,157725.5,17506.0,0.0909090909090909
+Compound,CHEMBL319279,25.0,157728.5,17507.0,0.0909090909090909
+Disease,megalocornea,3.0,4826.0,60.0,0.0909090909090909
+Disease,Cenani-Lenz syndactyly syndrome,4.0,5521.5,869.0,0.0909090909090909
+Disease,Skene gland carcinoma,5.0,4647.5,11.0,0.0909090909090909
+Disease,ARC syndrome,6.0,4933.5,357.0,0.0909090909090909
+Disease,acute canaliculitis,7.0,4653.0,2372.0,0.0909090909090909
+Disease,acute inflammation of lacrimal passage,8.0,4654.5,2371.0,0.0909090909090909
+Disease,lethal congenital contracture syndrome 4,9.0,4879.0,1947.0,0.0909090909090909
+Disease,lethal congenital contracture syndrome 3,10.0,4878.0,1949.0,0.0909090909090909
+Disease,lethal congenital contracture syndrome,11.0,4878.5,1943.0,0.0909090909090909
+Disease,paraphilia disorder,12.0,4434.0,1307.0,0.0909090909090909
+Disease,bestiality,13.0,4434.0,1308.0,0.0909090909090909
+Disease,acute dacryocystitis,14.0,5383.0,511.0,0.0909090909090909
+Disease,hepatic angiomyolipoma,15.0,5312.5,1298.0,0.0909090909090909
+Disease,equatorial staphyloma,16.0,4956.5,103.0,0.0909090909090909
+Disease,lymph node adenoid cystic carcinoma,18.0,5687.5,64.0,0.0909090909090909
+Disease,lysosomal and lipase deficiency,19.0,4350.5,1754.0,0.0909090909090909
+Disease,progressive familial intrahepatic cholestasis 1,20.0,4523.5,1010.0,0.0909090909090909
+Disease,toxic myocarditis,21.0,4755.0,1456.0,0.0909090909090909
+Disease,chromosome Xp21 deletion syndrome,22.0,4873.0,1608.0,0.0909090909090909
+Disease,chromosome 15q13.3 microdeletion syndrome,23.0,5297.5,341.0,0.0909090909090909
+Disease,atelosteogenesis,26.0,5070.0,467.0,0.0909090909090909
+Disease,Niemann-Pick disease type A,28.0,4343.5,2181.0,0.0909090909090909
+Disease,osteoporosis-pseudoglioma syndrome,29.0,5394.0,621.0,0.0909090909090909
+Disease,childhood onset epileptic encephalopathy,30.0,4932.5,1401.0,0.0909090909090909
+Disease,hypertrichotic osteochondrodysplasia Cantu type,31.0,4911.0,1346.0,0.0909090909090909
+Gene,NRXN3,1.0,10673.5,104.0,0.0909090909090909
+Gene,ADGRL3,2.0,12477.5,1487.0,0.0909090909090909
+Gene,MYO18A,3.0,8925.5,2423.0,0.0909090909090909
+Gene,GFRA2,4.0,12144.0,2427.0,0.0909090909090909
+Gene,ZNF804A,5.0,11118.5,3080.0,0.0909090909090909
+Gene,MAP6,6.0,11045.5,3090.0,0.0909090909090909
+Gene,BDNF,7.0,11979.5,2298.0,0.0909090909090909
+Gene,DCLK1,8.0,10555.5,1655.0,0.0909090909090909
+Gene,SLITRK5,9.0,13333.5,68.0,0.0909090909090909
+Gene,PCDHB11,10.0,12353.0,410.0,0.0909090909090909
+Gene,DRD2,11.0,11767.5,1804.0,0.0909090909090909
+Gene,GFRA3,12.0,11207.0,1043.0,0.0909090909090909
+Gene,DSCAM,13.0,12706.5,88.0,0.0909090909090909
+Gene,SEZ6,14.0,11407.0,151.0,0.0909090909090909
+Gene,NEGR1,15.0,12217.0,889.0,0.0909090909090909
+Gene,GRIA1,16.0,10763.0,168.0,0.0909090909090909
+Gene,NXPH1,17.0,8319.5,457.0,0.0909090909090909
+Gene,TNR,18.0,13006.0,35.0,0.0909090909090909
+Gene,ABCC8,19.0,8768.0,3257.0,0.0909090909090909
+Gene,APBA3,20.0,10160.5,1106.0,0.0909090909090909
+Gene,CLSTN2,21.0,11254.0,2511.0,0.0909090909090909
+Gene,ARTN,22.0,15345.0,802.0,0.0909090909090909
+Gene,ROBO2,26.0,10689.0,3025.0,0.0909090909090909
+Gene,C6orf222,27.0,13828.5,152.0,0.0909090909090909
+Gene,OPHN1,28.0,11508.0,2372.0,0.0909090909090909
+MolecularFunction,heparan sulfate proteoglycan binding,1.0,1710.0,497.0,0.0909090909090909
+MolecularFunction,glial cell-derived neurotrophic factor receptor activity,2.0,1745.5,910.0,0.0909090909090909
+MolecularFunction,nerve growth factor binding,3.0,2421.5,43.0,0.0909090909090909
+MolecularFunction,purinergic receptor activity,4.0,2133.5,67.0,0.0909090909090909
+MolecularFunction,purinergic nucleotide receptor activity,5.0,2037.0,61.0,0.0909090909090909
+MolecularFunction,nucleotide receptor activity,6.0,2037.0,60.0,0.0909090909090909
+MolecularFunction,syndecan binding,7.0,1673.5,689.0,0.0909090909090909
+MolecularFunction,chemoattractant activity involved in axon guidance,9.0,1251.5,259.0,0.0909090909090909
+MolecularFunction,D2 dopamine receptor binding,10.0,2348.0,271.0,0.0909090909090909
+MolecularFunction,G protein-coupled nucleotide receptor activity,11.0,1740.5,153.0,0.0909090909090909
+MolecularFunction,G protein-coupled purinergic nucleotide receptor activity,12.0,1740.5,152.0,0.0909090909090909
+MolecularFunction,G protein-coupled adenosine receptor activity,13.0,1744.0,276.0,0.0909090909090909
+MolecularFunction,telethonin binding,14.0,1231.5,715.0,0.0909090909090909
+MolecularFunction,catecholamine binding,15.0,2068.5,52.0,0.0909090909090909
+MolecularFunction,ganglioside binding,16.0,2134.5,24.0,0.0909090909090909
+MolecularFunction,uridine nucleotide receptor activity,17.0,2306.0,52.0,0.0909090909090909
+MolecularFunction,G protein-coupled pyrimidinergic nucleotide receptor activity,18.0,2306.0,53.0,0.0909090909090909
+MolecularFunction,dopamine binding,19.0,1904.5,75.0,0.0909090909090909
+MolecularFunction,D4 dopamine receptor binding,21.0,2190.0,296.0,0.0909090909090909
+MolecularFunction,vasopressin receptor activity,22.0,1731.0,221.0,0.0909090909090909
+MolecularFunction,endothelin B receptor binding,23.0,1808.0,39.0,0.0909090909090909
+MolecularFunction,voltage-gated calcium channel activity involved in positive regulation of presynaptic cytosolic calcium levels,24.0,1933.5,294.0,0.0909090909090909
+MolecularFunction,acetylcholinesterase activity,25.0,2137.5,174.0,0.0909090909090909
+MolecularFunction,neurotrophin TRKB receptor binding,26.0,1855.0,430.0,0.0909090909090909
+MolecularFunction,vitamin D binding,27.0,1531.5,620.0,0.0909090909090909
+Pathway,Regulation of Commissural axon pathfinding by Slit and Robo,1.0,1381.0,176.0,0.0909090909090909
+Pathway,"Unblocking of NMDA receptor, glutamate binding and activation",2.0,1500.5,11.0,0.0909090909090909
+Pathway,Cell-type Dependent Selectivity of CCK2R Signaling,3.0,1326.0,577.0,0.0909090909090909
+Pathway,Nucleotide-like (purinergic) receptors,4.0,1237.0,254.0,0.0909090909090909
+Pathway,Role of Abl in Robo-Slit signaling,6.0,1384.0,124.0,0.0909090909090909
+Pathway,Dopamine receptors,7.0,1270.5,66.0,0.0909090909090909
+Pathway,Inactivation of Cdc42 and Rac,8.0,1494.5,242.0,0.0909090909090909
+Pathway,Elevation of cytosolic Ca2+ levels,10.0,983.5,108.0,0.0909090909090909
+Pathway,p75NTR regulates axonogenesis,11.0,1428.5,109.0,0.0909090909090909
+Pathway,Robo4 and VEGF Signaling Pathways Crosstalk,12.0,1442.5,180.0,0.0909090909090909
+Pathway,P2Y receptors,13.0,1394.5,276.0,0.0909090909090909
+Pathway,Orexin and neuropeptides FF and QRFP bind to their respective receptors,14.0,1037.5,482.0,0.0909090909090909
+Pathway,Role of phospholipids in phagocytosis,15.0,1008.0,618.0,0.0909090909090909
+Pathway,SCFA and skeletal muscle substrate metabolism,16.0,1029.5,113.0,0.0909090909090909
+Pathway,Acetylcholine regulates insulin secretion,17.0,1228.0,415.0,0.0909090909090909
+Pathway,Axonal growth inhibition (RHOA activation),18.0,1416.0,118.0,0.0909090909090909
+Pathway,Nucleotide GPCRs,19.0,1320.5,435.0,0.0909090909090909
+Pathway,Signaling by NOTCH3,20.0,1226.0,140.0,0.0909090909090909
+Pathway,Type II diabetes mellitus,21.0,986.5,499.0,0.0909090909090909
+Pathway,Type II diabetes mellitus,22.0,986.5,500.0,0.0909090909090909
+Pathway,Nicotine Activity on Chromaffin Cells,23.0,1157.0,172.0,0.0909090909090909
+Pathway,Oligomerization of connexins into connexons,24.0,1398.0,130.0,0.0909090909090909
+Pathway,Adenosine P1 receptors,25.0,1429.5,256.0,0.0909090909090909
+Pathway,Activation of AMPA receptors,26.0,1257.0,157.0,0.0909090909090909
+Pathway,Signal Transduction of S1P Receptor,30.0,1224.5,830.0,0.0909090909090909
+PharmacologicClass,Gonadotropin Releasing Hormone Receptor Agonist,1.0,863.5,193.0,0.0909090909090909
+PharmacologicClass,Gonadotropin Releasing Hormone Receptor Agonists,2.0,863.5,194.0,0.0909090909090909
+PharmacologicClass,GABA agonist,3.0,1140.5,161.0,0.0909090909090909
+PharmacologicClass,Norepinephrine Reuptake Inhibitor,4.0,841.0,334.0,0.0909090909090909
+PharmacologicClass,Norepinephrine Uptake Inhibitors,5.0,1060.5,136.0,0.0909090909090909
+PharmacologicClass,Monoamine Oxidase Inhibitors,6.0,988.0,127.0,0.0909090909090909
+PharmacologicClass,Lysosomal Acid Cholesterol Esterase,7.0,739.5,89.0,0.0909090909090909
+PharmacologicClass,Hydrolytic Lysosomal Cholesteryl Ester-specific Enzyme,8.0,741.5,91.0,0.0909090909090909
+PharmacologicClass,Hydrolytic Lysosomal Triacylglycerol-specific Enzyme,9.0,740.5,90.0,0.0909090909090909
+PharmacologicClass,GABA Agonists,10.0,975.5,151.0,0.0909090909090909
+PharmacologicClass,appetite depressant,11.0,870.0,15.0,0.0909090909090909
+PharmacologicClass,gamma-Aminobutyric Acid-ergic Agonist,12.0,1136.0,90.0,0.0909090909090909
+PharmacologicClass,Increased Sympathetic Activity,13.0,845.5,44.0,0.0909090909090909
+PharmacologicClass,Monoamine Oxidase Inhibitor,14.0,975.5,71.0,0.0909090909090909
+PharmacologicClass,dopaminergic agent,16.0,798.5,118.0,0.0909090909090909
+PharmacologicClass,"Anesthetics, Dissociative",17.0,1063.5,76.0,0.0909090909090909
+PharmacologicClass,eugeroic,18.0,1055.5,320.0,0.0909090909090909
+PharmacologicClass,Wakefulness-Promoting Agents,19.0,1056.5,321.0,0.0909090909090909
+PharmacologicClass,Sympathomimetic-like Agent,20.0,748.0,228.0,0.0909090909090909
+PharmacologicClass,GABA A Agonists,21.0,941.0,160.0,0.0909090909090909
+PharmacologicClass,"Sleep Aids, Pharmaceutical",22.0,1276.0,63.0,0.0909090909090909
+PharmacologicClass,Serotonin and Norepinephrine Reuptake Inhibitor,23.0,987.0,71.0,0.0909090909090909
+PharmacologicClass,Histamine Receptor Antagonists,24.0,802.0,328.0,0.0909090909090909
+PharmacologicClass,Antihistamine,25.0,802.0,329.0,0.0909090909090909
+PharmacologicClass,dopamine uptake inhibitor,26.0,905.0,44.0,0.0909090909090909
+Protein,NRX3B_HUMAN,1.0,18745.0,128.0,0.0909090909090909
+Protein,A0A0U1RRJ0_HUMAN,2.0,18744.0,129.0,0.0909090909090909
+Protein,E7EUW2_HUMAN,3.0,22434.5,1351.0,0.0909090909090909
+Protein,E7ESV6_HUMAN,4.0,22428.5,1354.0,0.0909090909090909
+Protein,E7EUP0_HUMAN,5.0,22431.0,1350.0,0.0909090909090909
+Protein,E7EVD6_HUMAN,6.0,22432.5,1353.0,0.0909090909090909
+Protein,B7Z2G2_HUMAN,7.0,22435.5,1352.0,0.0909090909090909
+Protein,Q9NYE8_HUMAN,8.0,17537.5,2216.0,0.0909090909090909
+Protein,A0A024QZ63_HUMAN,9.0,17536.5,2215.0,0.0909090909090909
+Protein,A0A0E3SU01_HUMAN,10.0,19849.5,2097.0,0.0909090909090909
+Protein,BDNF_HUMAN,11.0,19850.5,2098.0,0.0909090909090909
+Protein,B7Z5K4_HUMAN,12.0,19152.5,1504.0,0.0909090909090909
+Protein,Q5VZY9_HUMAN,13.0,19152.5,1505.0,0.0909090909090909
+Protein,A0A024R3C5_HUMAN,14.0,20202.0,1830.0,0.0909090909090909
+Protein,A0A024R3I6_HUMAN,15.0,20202.0,1831.0,0.0909090909090909
+Protein,SEZ6_HUMAN,16.0,21925.0,181.0,0.0909090909090909
+Protein,NYAP2_HUMAN,17.0,21008.5,1366.0,0.0909090909090909
+Protein,POPD1_HUMAN,18.0,20920.0,207.0,0.0909090909090909
+Protein,Q59GL5_HUMAN,19.0,19993.0,203.0,0.0909090909090909
+Protein,Q3LID8_HUMAN,20.0,19005.0,479.0,0.0909090909090909
+Protein,A1L306_HUMAN,21.0,23800.0,44.0,0.0909090909090909
+Protein,GRP1_HUMAN,22.0,17313.5,2888.0,0.0909090909090909
+Protein,B2RCH4_HUMAN,25.0,23856.5,304.0,0.0909090909090909
+Protein,A0A090N7T7_HUMAN,26.0,23857.5,303.0,0.0909090909090909
+Protein,PC11Y_HUMAN,27.0,19488.0,894.0,0.0909090909090909
+SideEffect,Peripheral coldness,1.0,2375.0,13.0,0.0909090909090909
+SideEffect,Psychotic episode,2.0,2234.0,13.0,0.0909090909090909
+SideEffect,Chest discomfort,3.0,2100.0,111.0,0.0909090909090909
+SideEffect,Epididymitis,4.0,981.0,44.0,0.0909090909090909
+SideEffect,Back injury,5.0,2800.0,78.0,0.0909090909090909
+SideEffect,Lip blister,6.0,2801.0,77.0,0.0909090909090909
+SideEffect,Strangury,7.0,1894.5,67.0,0.0909090909090909
+SideEffect,Drug interaction,8.0,1372.0,11.0,0.0909090909090909
+SideEffect,Glucose tolerance decreased,9.0,1712.5,114.0,0.0909090909090909
+SideEffect,Syncope vasovagal,10.0,1861.0,66.0,0.0909090909090909
+SideEffect,Gingival recession,11.0,2637.5,180.0,0.0909090909090909
+SideEffect,Breast cyst,12.0,2639.0,181.0,0.0909090909090909
+SideEffect,Large intestine polyp,14.0,1823.0,36.0,0.0909090909090909
+SideEffect,Swelling,15.0,2060.5,225.0,0.0909090909090909
+SideEffect,Injection site pain,16.0,1327.5,246.0,0.0909090909090909
+SideEffect,Feeling hot,17.0,966.0,230.0,0.0909090909090909
+SideEffect,Injection site swelling,18.0,2519.0,31.0,0.0909090909090909
+SideEffect,Gastrointestinal symptom NOS,19.0,2061.0,146.0,0.0909090909090909
+SideEffect,Sexual dysfunction,20.0,2605.5,150.0,0.0909090909090909
+SideEffect,Presyncope,21.0,2213.5,101.0,0.0909090909090909
+SideEffect,Injection site pruritus,22.0,2543.0,31.0,0.0909090909090909
+SideEffect,Pruritus generalised,23.0,2062.5,43.0,0.0909090909090909
+SideEffect,Skin laceration,24.0,2468.0,153.0,0.0909090909090909
+SideEffect,Joint sprain,25.0,1388.5,407.0,0.0909090909090909
+SideEffect,Elevated mood,27.0,2652.5,136.0,0.0909090909090909
+Symptom,Decerebrate State,1.0,207.5,9.0,0.0909090909090909
+Symptom,Hyperphagia,2.0,191.5,34.0,0.0909090909090909
+Symptom,Hypothermia,3.0,217.5,24.0,0.0909090909090909
+Symptom,Coma,4.0,163.5,14.0,0.0909090909090909
+Symptom,Anorexia,5.0,208.0,22.0,0.0909090909090909
+Symptom,Consciousness Disorders,6.0,194.0,37.0,0.0909090909090909
+Symptom,Tetany,7.0,158.0,26.0,0.0909090909090909
+Symptom,Memory Disorders,8.0,163.0,10.0,0.0909090909090909
+Symptom,Fetal Hypoxia,9.0,153.5,47.0,0.0909090909090909
+Symptom,Athetosis,10.0,236.5,29.0,0.0909090909090909

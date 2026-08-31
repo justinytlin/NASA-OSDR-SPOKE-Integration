@@ -1,0 +1,66 @@
+/Users/justinlin/Desktop/Research /SPOKE/replication/psev_pipeline.py:194: RuntimeWarning: invalid value encountered in sqrt
+  std_rank = np.sqrt(ss / float(total_genes) - avg_rank ** 2)
+[OSD-564-GCnull] 5 control samples: RR10_HPC_GC_WT_G1, RR10_HPC_GC_WT_G3, RR10_HPC_GC_WT_G5, RR10_HPC_GC_WT_G7, RR10_HPC_GC_WT_G9
+  mapped SPOKE genes: 15232
+  within-group splits: 10 (2 vs 3 samples)
+  split 00: 1415 genes selected
+  split 01: 1415 genes selected
+  split 02: 1415 genes selected
+  split 03: 1415 genes selected
+  split 04: 1415 genes selected
+  split 05: 1415 genes selected
+  split 06: 1415 genes selected
+  split 07: 1415 genes selected
+  split 08: 1415 genes selected
+  split 09: 1415 genes selected
+  union of selected genes: 9106
+  genes with PSEVs: 9106
+  pass1 group 0 done
+  pass1 group 1 done
+  pass1 group 2 done
+  pass1 group 3 done
+  pass1 group 4 done
+  pass1 group 5 done
+  pass1 group 6 done
+  pass1 group 7 done
+  pass1 group 8 done
+  pass1 group 9 done
+  pass1 group 10 done
+  pass1 group 11 done
+  pass1 group 12 done
+  pass1 group 13 done
+  pass1 group 14 done
+  pass1 group 15 done
+  pass1 group 16 done
+  pass1 group 17 done
+  pass1 group 18 done
+  pass1 group 19 done
+  pass2 group 0 done
+  pass2 group 1 done
+  pass2 group 2 done
+  pass2 group 3 done
+  pass2 group 4 done
+  pass2 group 5 done
+  pass2 group 6 done
+  pass2 group 7 done
+  pass2 group 8 done
+  pass2 group 9 done
+  pass2 group 10 done
+  pass2 group 11 done
+  pass2 group 12 done
+  pass2 group 13 done
+  pass2 group 14 done
+  pass2 group 15 done
+  pass2 group 16 done
+  pass2 group 17 done
+  pass2 group 18 done
+  pass2 group 19 done
+  wrote /Users/justinlin/Desktop/Research /SPOKE/replication/psev_out/OSD-564-GCnull_null_ranks_and_rank_by_type_for_meta0_1.tsv
+  wrote /Users/justinlin/Desktop/Research /SPOKE/replication/psev_out/OSD-564-GCnull_vs_real.tsv
+
+  real top-2.5% nodes: 9739; beating every null split: 8711
+  Disease: 194/229 robust; flagged as null-prone e.g.: carcinoma; cell type cancer; cortical dysplasia-focal epilepsy syndrome
+  Pathway: 45/61 robust; flagged as null-prone e.g.: Ras activation uopn Ca2+ infux through NMDA receptor; CREB phosphorylation through the activation of CaMKII; Evolocumab Mechanism
+  BiologicalProcess: 292/329 robust; flagged as null-prone e.g.: postsynaptic specialization assembly; positive regulation of odontogenesis of dentin-containing tooth; regulation of cell proliferation involved in embryonic placenta development
+  Symptom: 10/10 robust; flagged as null-prone e.g.: 
+  Anatomy: 283/332 robust; flagged as null-prone e.g.: spine appendage; medullary reticular formation; inguinal mammary gland

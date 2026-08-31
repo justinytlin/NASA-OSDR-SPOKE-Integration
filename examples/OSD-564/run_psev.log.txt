@@ -1,0 +1,49 @@
+/Users/justinlin/Desktop/Research /SPOKE/replication/osdr_to_psev.py:125: RuntimeWarning: All-NaN slice encountered
+  keep = np.nanmin(exp_df[pcols].values, axis=1) < cutoff
+/Users/justinlin/Desktop/Research /SPOKE/replication/psev_pipeline.py:194: RuntimeWarning: invalid value encountered in sqrt
+  std_rank = np.sqrt(ss / float(total_genes) - avg_rank ** 2)
+[OSD-564] OSD-564_rna_seq_differential_expression.csv: 24774 rows, 1 contrasts selected
+  mapped SPOKE genes: 15232
+  P.value_<0.01 in any contrast: 1415 genes kept
+  genes with PSEVs: 1415
+  pass1 group 0 done
+  pass1 group 1 done
+  pass1 group 2 done
+  pass1 group 3 done
+  pass1 group 4 done
+  pass1 group 5 done
+  pass1 group 6 done
+  pass1 group 7 done
+  pass1 group 8 done
+  pass1 group 9 done
+  pass1 group 10 done
+  pass1 group 11 done
+  pass1 group 12 done
+  pass1 group 13 done
+  pass1 group 14 done
+  pass1 group 15 done
+  pass1 group 16 done
+  pass1 group 17 done
+  pass1 group 18 done
+  pass1 group 19 done
+  pass2 group 0 done
+  pass2 group 1 done
+  pass2 group 2 done
+  pass2 group 3 done
+  pass2 group 4 done
+  pass2 group 5 done
+  pass2 group 6 done
+  pass2 group 7 done
+  pass2 group 8 done
+  pass2 group 9 done
+  pass2 group 10 done
+  pass2 group 11 done
+  pass2 group 12 done
+  pass2 group 13 done
+  pass2 group 14 done
+  pass2 group 15 done
+  pass2 group 16 done
+  pass2 group 17 done
+  pass2 group 18 done
+  pass2 group 19 done
+  wrote /Users/justinlin/Desktop/Research /SPOKE/replication/psev_out/OSD-564_ranks_and_rank_by_type_for_meta0_1.tsv
