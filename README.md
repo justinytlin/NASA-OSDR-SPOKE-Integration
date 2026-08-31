@@ -29,6 +29,9 @@ replication/
   run_all.py           batch run of the paper's six GLDS studies
   welch_meta.py        multi-study Welch's t-test meta-analysis (Methods 2.5)
   plot_violins.py      violin plots of rank distributions
+  osdr_null_control.py negative control: within-group sample splits (e.g.
+                       ground-control-only) -> no-biology null rank ensemble,
+                       plus per-node comparison against a real run
   test_synthetic.py    end-to-end smoke test against a small fake PSEV zip
 spoke-api-client/
   spoke.py             CLI for the public SPOKE REST API (see its README)
@@ -85,6 +88,27 @@ Nelson-2021 study outputs, so `welch_meta.py`-style pooling works across old
 and new studies. Human datasets: add `--human`. Gene filters:
 `--filter none | pvalue | same-direction` (the last is the paper's rule for
 space/ground/basal designs).
+
+## Negative control: does a finding beat a no-biology null?
+
+Single-study PSEV ranks have no significance attached, and well-connected hub
+nodes rank high for almost any gene set. Build an empirical null from the
+control samples alone — splits of the ground-control group where no real
+biological difference exists, each run through the identical machinery (all
+splits share one pass over the zip):
+
+```bash
+python3 replication/osdr_null_control.py TABLE.csv --name OSD-NNN-GCnull \
+    --sample-pattern _GC_ --n-genes <real signature size> \
+    --real replication/psev_out/OSD-NNN_ranks_and_rank_by_type_for_meta0_1.tsv \
+    --real-col "Log2fc_(Space Flight)v(Ground Control)"
+```
+
+Outputs the null rank ensemble plus `<name>_vs_real.tsv`: per node, the real
+rank-by-type, the null median/best, empirical percentiles (`p_top`,
+`p_bottom`), and a `beats_all_nulls` flag for real top-2.5% nodes that outrank
+every null split. Report those; treat top nodes that the null also produces
+as graph-connectivity artifacts.
 
 ## Quickstart: which SPOKE nodes separate two sample groups
 
