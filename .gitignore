@@ -1,0 +1,17 @@
+# big data + external repos (see README "Data prerequisites")
+psev_data/*
+!psev_data/parallel_download.sh
+SPOKE_NASA/
+
+# generated outputs
+replication/psev_out/
+replication/meta_out/
+replication/synthetic_test/
+*_projection/
+*_ml/
+*_out/
+*.log
+
+__pycache__/
+*.pyc
+.DS_Store
