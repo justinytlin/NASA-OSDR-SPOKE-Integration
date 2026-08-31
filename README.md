@@ -4,13 +4,13 @@
    a replication of Charlotte Nelson's spaceflown-mice paper, generalized so
    any OSDR dataset can be run through it. Needs a one-time 25.6 GB download and uses
    a frozen 2019 snapshot of SPOKE.
-3. **[The public SPOKE API](#2-the-public-spoke-api-method)** — a lightweight
+2. **[The public SPOKE API](#2-the-public-spoke-api-method)** — a lightweight
    client for the live SPOKE REST API. No bulk data, always-current graph,
    but limited to local neighborhoods around your genes.
-4. **[Anatomy sanity check](#3-sanity-check-do-the-anatomy-nodes-make-sense)** —
+3. **[Anatomy sanity check](#3-sanity-check-do-the-anatomy-nodes-make-sense)** —
    every dataset comes from a known tissue, so the tissue is free ground
-   truth: if the rankings are working, the source tissue should appear ranked highly
-   extreme of the Anatomy ranking.
+   truth: if the rankings are working, the source tissue should appear ranked
+   highly at one extreme or the other of the Anatomy ranking.
 
 ## The overall workflow for a new dataset
 
