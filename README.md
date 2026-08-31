@@ -1,23 +1,15 @@
 # NASA-OSDR-SPOKE-Integration
 
-Tools for asking one question of any NASA OSDR / GeneLab omics dataset:
-**which diseases, pathways, anatomy, and other biomedical concepts does this
-gene signature point at?** — answered by projecting the data onto
-[SPOKE](https://spoke.ucsf.edu/), a biomedical knowledge graph of ~400,000
-nodes (genes, proteins, diseases, pathways, compounds, anatomy, symptoms, ...).
-
-There are two independent methods, plus a built-in sanity check:
-
 1. **[The PSEV pipeline](#1-charlottes-paper-replication-the-psev-pipeline)** —
    a replication of Charlotte Nelson's spaceflown-mice paper, generalized so
-   any OSDR dataset can be run through it. Deep (multi-hop, whole-graph), but
-   needs a one-time 25.6 GB download and uses a frozen 2019 snapshot of SPOKE.
-2. **[The public SPOKE API](#2-the-public-spoke-api-method)** — a lightweight
+   any OSDR dataset can be run through it. Needs a one-time 25.6 GB download and uses
+   a frozen 2019 snapshot of SPOKE.
+3. **[The public SPOKE API](#2-the-public-spoke-api-method)** — a lightweight
    client for the live SPOKE REST API. No bulk data, always-current graph,
    but limited to local neighborhoods around your genes.
-3. **[The anatomy sanity check](#3-sanity-check-do-the-anatomy-nodes-make-sense)** —
+4. **[Anatomy sanity check](#3-sanity-check-do-the-anatomy-nodes-make-sense)** —
    every dataset comes from a known tissue, so the tissue is free ground
-   truth: if the rankings are working, the source tissue should appear at an
+   truth: if the rankings are working, the source tissue should appear ranked highly
    extreme of the Anatomy ranking.
 
 ## The overall workflow for a new dataset
