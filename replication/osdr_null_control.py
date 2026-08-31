@@ -92,9 +92,16 @@ def main():
     print(f"[{args.name}] {len(sample_cols)} control samples: "
           f"{', '.join(sample_cols)}")
 
-    # log2 expression, aggregated to SPOKE gene nodes
+    # the per-sample columns in OSDR DE tables are UNnormalized counts;
+    # library sizes can differ >2x, so apply DESeq2-style median-of-ratios
+    # size factors before computing split fold changes
     sub = df[["ENTREZID"] + sample_cols].copy()
-    sub[sample_cols] = np.log2(sub[sample_cols].astype(float) + 1.0)
+    raw = sub[sample_cols].astype(float).values
+    pos = (raw > 0).all(axis=1)
+    lg = np.log(raw[pos])
+    sf = np.exp(np.median(lg - lg.mean(axis=1)[:, None], axis=0))
+    print("  size factors: " + ", ".join(f"{s:.2f}" for s in sf))
+    sub[sample_cols] = np.log2(raw / sf + 1.0)
     mapped = map_to_spoke_genes(sub, spoke_genes, args.homologene, human=args.human)
     expr = mapped.groupby("Node")[sample_cols].mean()
     X = expr.values
