@@ -32,6 +32,8 @@ replication/
   osdr_null_control.py negative control: within-group sample splits (e.g.
                        ground-control-only) -> no-biology null rank ensemble,
                        plus per-node comparison against a real run
+  anatomy_check.py     tissue sanity check: extreme Anatomy nodes + source-
+                       tissue percentile for a rank table (positive control)
   test_synthetic.py    end-to-end smoke test against a small fake PSEV zip
 spoke-api-client/
   spoke.py             CLI for the public SPOKE REST API (see its README)
