@@ -11,6 +11,10 @@
    every dataset comes from a known tissue, so the tissue is free ground
    truth: if the rankings are working, the source tissue should appear ranked
    highly at one extreme or the other of the Anatomy ranking.
+4. **[Building a new PSEV file](#4-building-a-new-psev-file-from-a-current-spoke)** —
+   regenerate the gene PSEVs from any SPOKE Neo4j instance you can reach over
+   Bolt, with the paper's exact algorithm, so the pipeline runs on a current
+   graph instead of the 2019 snapshot.
 
 ## The overall workflow for a new dataset
 
@@ -51,6 +55,7 @@ so "top disease" isn't drowned out by the 287k compounds.
 | `replication/run_all.py` | Batch-runs the paper's six studies. |
 | `replication/welch_meta.py` | The paper's meta-analysis: pools comparisons into Space-v-Ground / Space-v-Basal / Ground-v-Basal groups, Welch's t-test per node, top 2.5% per type, and self-scores against the paper's published node list. |
 | `replication/osdr_to_psev.py` | **The generalization** — runs ANY OSDR/GeneLab DE table (CSV or TSV, mouse or `--human`) through the same machinery, producing output in the same format so studies old and new can be pooled. |
+| `replication/counts_to_psev.py` | **Raw counts route** — an unnormalized GeneLab/OSDR counts CSV (rows = ENSEMBL ids, columns = samples) → one PSEV embedding *per sample*, weighted by log2(CPM+1) (or per-gene z-scores with `--weight zscore`). Same output shape as the DE route, so `welch_nodes.py`-style group tests work on it. An extension of the paper, not part of the replication. |
 | `replication/osdr_null_control.py` | **The control** — splits the ground-control samples into halves (no biological difference), runs the fake contrasts through the identical machinery, and flags which real findings fail to beat this no-biology null (hubs and baseline tissue variability rank high for *any* gene set). |
 | `replication/plot_violins.py` | Rank-distribution figures. |
 | `replication/test_synthetic.py` | End-to-end smoke test against a small fake PSEV zip (no 25.6 GB download needed). |
@@ -105,6 +110,31 @@ nulls; a node the null also produces (e.g. "carcinoma") is a
 graph-connectivity artifact, not biology. Gene filters: `--filter none |
 pvalue | same-direction` (the last is the paper's rule for
 space/ground/basal designs). Human datasets: add `--human`.
+
+### Running on raw gene counts (one embedding per sample)
+
+When you want per-sample embeddings rather than one per contrast, start from
+the unnormalized counts file instead of the DE table:
+
+```bash
+# counts come from the same OSDR file listing, e.g.
+#   .../OSD-564/download?source=datamanager&file=GLDS-569_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv
+
+# check the ENSEMBL -> Entrez -> human mapping and the sample selection (free)
+python3 replication/counts_to_psev.py COUNTS.csv --name OSD-NNN-GC --samples _GC_ \
+    --gene-map DE_TABLE.csv --prep-only
+
+# full run: log2(CPM+1)-weighted PSEV per kept sample
+python3 replication/counts_to_psev.py COUNTS.csv --name OSD-NNN-GC --samples _GC_ \
+    --gene-map DE_TABLE.csv [--weight zscore] [--min-cpm 1]
+```
+
+`--samples` is a substring filter on column names (repeatable); `--gene-map`
+is any GeneLab DE table for the same organism, used only for its
+ENSEMBL/ENTREZID columns. Expression-weighted profiles of samples from one
+tissue are near-identical to each other (rank correlation > 0.999), so use a
+contrast or `--weight zscore` when the question is *differences between
+samples*.
 
 ---
 
@@ -162,6 +192,62 @@ unstable at the extremes (`--include-stages` to show them), and it pools
 Space-v-Ground-style comparisons automatically (`--col` / `--col-regex` for
 other designs). Also watch for near-duplicate node families (ten thoracic
 dorsal-root-ganglion nodes = one finding).
+
+---
+
+## 4. Building a new PSEV file from a current SPOKE
+
+The Zenodo PSEVs are a 2019 snapshot (389,297 nodes). `psev_build/`
+regenerates them from any SPOKE Neo4j instance you can reach over Bolt, using
+the exact algorithm of the original generator
+([BaranziniLab/PSEV](https://github.com/BaranziniLab/PSEV): binary undirected
+adjacency, degree-normalised random walk, one-hot restart with jump
+probability 0.1, power iteration to L1 ≤ 0.001 or 40 steps). The output has
+the same layout as `gene_psev.zip`, so every script above accepts the build
+directory wherever it took the zip (`--zip BUILD_DIR --spoke BUILD_DIR`).
+Full details, sizing and the 2025-snapshot results are in
+[psev_build/README.md](psev_build/README.md).
+
+| File | What it does |
+|---|---|
+| `psev_build/export_spoke.py` | `stats` / `nodes` / `edges`: streams the node table and per-relationship-type edge lists out of Neo4j (resumable; `--protein human-reviewed` keeps only human Swiss-Prot proteins). |
+| `psev_build/make_gene_psevs.py` | Multiprocess personalised PageRank for every Gene node; `--node-types` picks the universe, `--prune-types Compound --drop-isolated` removes orphan compounds and edgeless nodes, `--dry-run` prints the disk estimate first. |
+| `psev_build/check_build.py` | Integrity gate: shapes, row sums, restart mass, no NaNs. |
+| `psev_build/compare_psevs.py` | Spearman / top-K overlap of two builds over their shared nodes (e.g. new build vs the 2019 zip). |
+
+**Credentials.** Put a `.env` file in `psev_build/` (it is gitignored). SPOKE
+servers name the database **`spoke`**, not Neo4j's default `neo4j`, so set
+`NEO4J_DATABASE=spoke`:
+
+```
+NEO4J_URI=bolt://localhost:7687
+NEO4J_USER=<your Neo4j user>
+NEO4J_PASSWORD=<your Neo4j password>
+NEO4J_DATABASE=spoke
+```
+
+(If the name is wrong the script lists the databases it can see and falls
+back to the server default, but set it explicitly.) If SPOKE runs on a remote
+host, tunnel first: `ssh -N -L 7474:localhost:7474 -L 7687:localhost:7687 user@host`.
+
+```bash
+cd psev_build
+python3 export_spoke.py stats                # per-type counts, fast
+python3 export_spoke.py nodes --protein human-reviewed \
+    --exclude-types Location,Organism,Version,DatabaseTimestamp,SARSCov2,CellLine,AnatomyCellType,Nutrient
+python3 export_spoke.py edges --exclude-rel-types ENCODES_OeP,PARTOF_PDpP,INTERACTS_PiC,HAS_PhEC
+python3 make_gene_psevs.py --spoke spoke_current --dry-run \
+    --node-types Gene,Protein,Compound,Disease,Symptom,Anatomy,SideEffect,Pathway,PwGroup,BiologicalProcess,MolecularFunction,CellularComponent,PharmacologicClass,CellType,Complex,Reaction,EC,ProteinDomain,ProteinFamily \
+    --prune-types Compound --drop-isolated
+python3 make_gene_psevs.py ... --out /path/with/space/gene_psev   # drop --dry-run
+python3 check_build.py /path/with/space/gene_psev
+```
+
+On a 2025-03 SPOKE snapshot (42.9M nodes, 176M edges) that universe comes to
+547,873 nodes and 7.0M edges; 19,507 gene PSEVs took 27 minutes on 7 cores
+and 40 GB as float32. Expect gene- and process-level results to agree with
+the 2019 build well above chance and disease/symptom results not to — those
+layers were rebuilt — so keep the null control in the loop for either build.
 
 ---
 

@@ -15,3 +15,8 @@ replication/synthetic_test/
 __pycache__/
 *.pyc
 .DS_Store
+
+# psev_build: credentials and the multi-GB exports/builds
+psev_build/.env
+psev_build/spoke_current/
+psev_build/**/gene_psev*/

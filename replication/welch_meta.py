@@ -54,6 +54,8 @@ def main():
                     help="only pool comparisons with matched mission/timepoint/collection")
     ap.add_argument("--out", default=str(HERE / "meta_out"))
     ap.add_argument("--suffix", default="0_1")
+    ap.add_argument("--spoke", default=str(BASE / "SPOKE_NASA/spoke_v_2"),
+                    help="dir holding node_info.tsv of the PSEV universe the rank tables were built on")
     args = ap.parse_args()
     out = Path(args.out)
     out.mkdir(exist_ok=True)
@@ -110,7 +112,7 @@ def main():
                 return False
         return True
 
-    node_info = pd.read_csv(BASE / "SPOKE_NASA/spoke_v_2/node_info.tsv", sep="\t")
+    node_info = pd.read_csv(Path(args.spoke) / "node_info.tsv", sep="\t", dtype={"Node": str})
     groups = {"GvB": [], "SvB": [], "SvG": []}
 
     for acc in ACCESSIONS:

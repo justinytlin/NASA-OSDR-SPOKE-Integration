@@ -24,7 +24,7 @@ sys.path.insert(0, str(HERE))
 from psev_pipeline import (get_mapped_counts_and_diff_exp_dfs,
                            filter_same_direction,
                            load_homologene_mouse_to_human,
-                           load_gene_indices_df, member_name,
+                           load_gene_indices_df, PsevStore,
                            get_order_rank_vector, get_rank_by_type_vector)
 
 ACCESSIONS = ["GLDS-4", "GLDS-244", "GLDS-245", "GLDS-246", "GLDS-288", "GLDS-289"]
@@ -53,7 +53,8 @@ def main():
     studies = {}
     for acc in ACCESSIONS:
         diff_file = [f for f in input_dir.iterdir()
-                     if "differential_expression" in f.name and acc + "_" in f.name][0]
+                     if "differential_expression" in f.name and acc + "_" in f.name
+                     and not f.name.startswith("._")][0]   # skip exFAT AppleDouble files
         exp_df = get_mapped_counts_and_diff_exp_dfs(diff_file, mouse_to_human, spoke_genes)
         samples = np.array([c for c in exp_df.columns if "Log2fc_" in c and c != "max_fc"])
         exp_df = filter_same_direction(exp_df, samples)
@@ -61,7 +62,7 @@ def main():
         studies[acc] = {"kept": kept, "samples": samples}
         print(f"[{acc}] genes kept: {len(kept)}, comparisons: {len(samples)}", flush=True)
 
-    with zipfile.ZipFile(args.zip) as zf:
+    with PsevStore(args.zip) as zf:
         gene_indices_df = load_gene_indices_df(zf, node_list)
         rounds = sorted(gene_indices_df.Round.unique())
         if args.limit_groups:
@@ -76,23 +77,12 @@ def main():
             st["sumsq"] = np.zeros(n_nodes)
             print(f"[{acc}] genes with PSEVs: {st['total']}", flush=True)
 
-        tmpdir = Path(tempfile.mkdtemp(prefix="psev_"))
-
         def load_group(r):
-            name = member_name(zf, f"raw_psev_{save_str}_gene_group_{r}_sparse.npy")
-            target = tmpdir / f"g{r}.npy"
-            with zf.open(name) as src, open(target, "wb") as dst:
-                while True:
-                    chunk = src.read(1 << 24)
-                    if not chunk:
-                        break
-                    dst.write(chunk)
-            return target
+            return zf.load_group(r, save_str)
 
         # ---- pass 1: per-study mean/std over its seen genes -------------
         for r in rounds:
-            target = load_group(r)
-            mat = np.load(target, mmap_mode="r")
+            mat = load_group(r)
             for acc, st in studies.items():
                 idx = st["gi"][st["gi"].Round == r].round_index.values
                 if not len(idx):
@@ -102,7 +92,6 @@ def main():
                 st["sumsq"] += (sub ** 2).sum(axis=0)
                 del sub
             del mat
-            target.unlink()
             print(f"pass1 group {r} done", flush=True)
 
         for acc, st in studies.items():
@@ -115,8 +104,7 @@ def main():
         # ---- pass 2: z-score, rank rows, dot with FC --------------------
         order = np.arange(n_nodes)
         for r in rounds:
-            target = load_group(r)
-            mat = np.load(target, mmap_mode="r")
+            mat = load_group(r)
             for acc, st in studies.items():
                 gi_r = st["gi"][st["gi"].Round == r]
                 idx = gi_r.round_index.values
@@ -135,7 +123,6 @@ def main():
                 st["acc_psev"] += fc.T @ ranked
                 del ranked
             del mat
-            target.unlink()
             print(f"pass2 group {r} done", flush=True)
 
     # ---- final ranking + save -------------------------------------------

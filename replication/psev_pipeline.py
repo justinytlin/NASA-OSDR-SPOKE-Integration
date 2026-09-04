@@ -62,10 +62,71 @@ def load_homologene_mouse_to_human(path):
     return pd.merge(mouse, human, on="HID")
 
 
-def load_gene_indices_df(psev_zip, node_list):
+class PsevStore:
+    """Gene-PSEV store: either the Zenodo gene_psev.zip or a directory laid out
+    the same way (psev_build/make_gene_psevs.py output). Members are located by
+    filename suffix, so 'gene_psevs/' prefixes and __MACOSX junk are ignored."""
+
+    def __init__(self, path):
+        self.path = Path(path)
+        self.zf = None
+        if self.path.is_dir():
+            self.names = [str(f.relative_to(self.path))
+                          for f in self.path.rglob("*") if f.is_file()]
+        else:
+            self.zf = zipfile.ZipFile(self.path)
+            self.names = self.zf.namelist()
+        # ignore macOS AppleDouble sidecars (._foo) that exFAT/zip archives carry
+        self.names = [n for n in self.names if not Path(n).name.startswith("._")]
+
+    def close(self):
+        if self.zf:
+            self.zf.close()
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, *exc):
+        self.close()
+
+    def member(self, suffix):
+        for n in self.names:
+            if n.endswith(suffix) and "__MACOSX" not in n:
+                return n
+        raise KeyError(f"{suffix} not found in {self.path}")
+
+    def open(self, suffix):
+        name = self.member(suffix)
+        return self.zf.open(name) if self.zf else open(self.path / name, "rb")
+
+    def groups(self):
+        gs = sorted(int(re.search(r"gene_group_(\d+)\.tsv$", n).group(1))
+                    for n in self.names if re.search(r"gene_group_(\d+)\.tsv$", n)
+                    and "__MACOSX" not in n)
+        return gs
+
+    def load_group(self, r, save_str):
+        """Dense (genes_in_group, n_nodes) matrix for one group."""
+        name = self.member(f"raw_psev_{save_str}_gene_group_{r}_sparse.npy")
+        if not self.zf:
+            return np.load(self.path / name, allow_pickle=False, mmap_mode="r")
+        tmpdir = Path(tempfile.mkdtemp(prefix="psev_"))
+        target = tmpdir / f"g{r}.npy"
+        with self.zf.open(name) as src, open(target, "wb") as dst:
+            while True:
+                chunk = src.read(1 << 24)
+                if not chunk:
+                    break
+                dst.write(chunk)
+        mat = np.load(target, allow_pickle=False, mmap_mode=None)
+        target.unlink()
+        return mat
+
+
+def load_gene_indices_df(store, node_list):
     frames = []
-    for group_index in range(20):
-        with psev_zip.open(member_name(psev_zip, f"gene_group_{group_index}.tsv")) as fh:
+    for group_index in store.groups():
+        with store.open(f"gene_group_{group_index}.tsv") as fh:
             df = pd.read_csv(fh, sep="\t", header=0, index_col=False)
         df.loc[:, "Round"] = group_index
         df.loc[:, "round_index"] = np.arange(len(df))
@@ -73,13 +134,6 @@ def load_gene_indices_df(psev_zip, node_list):
     gene_indices_df = pd.concat(frames, axis=0)
     gene_indices_df.loc[:, "Node"] = [node_list[i] for i in gene_indices_df.node_2_index.values]
     return gene_indices_df
-
-
-def member_name(zf, suffix):
-    for n in zf.namelist():
-        if n.endswith(suffix) and not n.startswith("__MACOSX"):
-            return n
-    raise KeyError(f"{suffix} not found in zip")
 
 
 def get_mapped_counts_and_diff_exp_dfs(diff_path, mouse_to_human, spoke_genes):
@@ -144,6 +198,8 @@ def filter_same_direction(exp_df, samples):
 def compute_rank_table(kept, samples, node_info_df, zip_path, b=0.1, limit_groups=None):
     """Weighted-PSEV node ranks for one study (passes 1+2 of the pipeline).
 
+    zip_path may be the Zenodo gene_psev.zip or a directory with the same
+    layout (see psev_build/make_gene_psevs.py).
     kept: DataFrame with a 'Node' column (SPOKE gene ids, str) plus one numeric
     weight column per entry in `samples` (log2 fold changes). Returns
     node_info_df + per-sample overall-rank and Rank_by_type_* columns.
@@ -153,7 +209,7 @@ def compute_rank_table(kept, samples, node_info_df, zip_path, b=0.1, limit_group
     n_nodes = len(node_list)
     samples = list(samples)
 
-    with zipfile.ZipFile(zip_path) as zf:
+    with PsevStore(zip_path) as zf:
         gene_indices_df = load_gene_indices_df(zf, node_list)
         gene_indices_df = gene_indices_df.merge(kept[["Node"]], on="Node")
         total_genes = len(gene_indices_df)
@@ -162,20 +218,8 @@ def compute_rank_table(kept, samples, node_info_df, zip_path, b=0.1, limit_group
         exp_mat_df = kept.merge(
             gene_indices_df[["Node", "Round", "round_index"]], on="Node")
 
-        tmpdir = Path(tempfile.mkdtemp(prefix="psev_"))
-
         def load_group(r):
-            name = member_name(zf, f"raw_psev_{save_str}_gene_group_{r}_sparse.npy")
-            target = tmpdir / f"g{r}.npy"
-            with zf.open(name) as src, open(target, "wb") as dst:
-                while True:
-                    chunk = src.read(1 << 24)
-                    if not chunk:
-                        break
-                    dst.write(chunk)
-            mat = np.load(target, allow_pickle=False, mmap_mode=None)
-            target.unlink()
-            return mat
+            return zf.load_group(r, save_str)
 
         rounds = sorted(gene_indices_df.Round.unique())
         if limit_groups:
@@ -240,7 +284,8 @@ def main():
     spoke_genes = set(node_info_df[node_info_df.Node_Type == "Gene"].Node.values)
 
     diff_file = [f for f in os.listdir(input_dir)
-                 if "differential_expression" in f and args.accession + "_" in f][0]
+                 if "differential_expression" in f and args.accession + "_" in f
+                 and not f.startswith("._")][0]
     print(f"[{args.accession}] input: {diff_file}")
 
     mouse_to_human = load_homologene_mouse_to_human(args.homologene)
