@@ -1,0 +1,43 @@
+{
+  "name": "OSD-289",
+  "tissue": "thymus",
+  "ranks": "psev_out/OSD-289_GC_counts_ranks_and_rank_by_type_for_meta0_1.tsv",
+  "n_samples": 6,
+  "n_anatomy": 13257,
+  "family_regex": "thym",
+  "family_exclude": null,
+  "n_family_nodes": 26,
+  "family_median_pct": 22.157476553267458,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 0,
+  "mwu_p_less": 0.11294168891808604,
+  "ks_p_greater": 0.004008436889502385,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 5,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.11 (fail)",
+    "KS p = 0.004 (ok)",
+    "0/6 samples individually p < 0.05 (fail)",
+    "family ranks 5 of 13 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "medulla of thymus (11.2%)",
+    "thymus lobe (11.2%)",
+    "thymus trabecula (11.4%)",
+    "thymus lobule (12.3%)",
+    "thymoid (13.9%)"
+  ],
+  "top_real_anatomy": [
+    "histaminergic system (0.02%)",
+    "catecholamine system (0.02%)",
+    "gABAergic system (0.03%)",
+    "glutamatergic system (0.04%)",
+    "serotonergic system (0.05%)",
+    "cholinergic system (0.05%)",
+    "deep middle cerebral vein (0.23%)",
+    "basal vein (0.24%)",
+    "obsolete spirocyst (0.24%)",
+    "obsolete cnida (0.25%)"
+  ]
+}

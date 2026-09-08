@@ -1,0 +1,43 @@
+{
+  "name": "OSD-194",
+  "tissue": "retina",
+  "ranks": "psev_out/OSD-194_GC_counts_ranks_and_rank_by_type_for_meta0_1.tsv",
+  "n_samples": 4,
+  "n_anatomy": 13257,
+  "family_regex": "retina|photoreceptor|optic disc|fovea centralis|foveola|macula lutea|parafovea|perifovea",
+  "family_exclude": "retinaculum",
+  "n_family_nodes": 37,
+  "family_median_pct": 93.49211737195445,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 0,
+  "mwu_p_less": 0.9999999999999369,
+  "ks_p_greater": 0.8693761805486202,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 14,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 1 (fail)",
+    "KS p = 0.87 (fail)",
+    "0/4 samples individually p < 0.05 (fail)",
+    "family ranks 14 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "presumptive neural retina (31.2%)",
+    "presumptive retinal pigmented epithelium (31.2%)",
+    "pigmented layer of retina (42.5%)",
+    "photoreceptor array (54.3%)",
+    "vasculature of central nervous system plus retina (68.0%)"
+  ],
+  "top_real_anatomy": [
+    "common plantar digital arteries (0.02%)",
+    "gemellus muscle (0.03%)",
+    "extensor caudae muscle (0.03%)",
+    "maxillomandibular placode (0.04%)",
+    "nucleus recessus (0.04%)",
+    "inferior gemellus muscle (0.05%)",
+    "profundal placode (0.06%)",
+    "extensor caudae medialis muscle (0.07%)",
+    "paragigantocellular nucleus (0.08%)",
+    "notochordal ossification (0.08%)"
+  ]
+}

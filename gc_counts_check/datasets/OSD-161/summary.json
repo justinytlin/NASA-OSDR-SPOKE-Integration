@@ -1,0 +1,43 @@
+{
+  "name": "OSD-161",
+  "tissue": "adrenal gland",
+  "ranks": "psev_out/OSD-161_GC_counts_ranks_and_rank_by_type_for_meta0_1.tsv",
+  "n_samples": 5,
+  "n_anatomy": 13257,
+  "family_regex": "adrenal|suprarenal|interrenal",
+  "family_exclude": null,
+  "n_family_nodes": 31,
+  "family_median_pct": 56.2163385381308,
+  "in_top_2_5pct": 2,
+  "in_top_10pct": 4,
+  "mwu_p_less": 0.3222763325705873,
+  "ks_p_greater": 0.004389732505657713,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 12,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.32 (fail)",
+    "KS p = 0.0044 (ok)",
+    "0/5 samples individually p < 0.05 (fail)",
+    "family ranks 12 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "zona fasciculata of adrenal gland (1.0%)",
+    "zona glomerulosa of adrenal gland (1.5%)",
+    "adrenal medulla (3.0%)",
+    "suprarenal vein (6.5%)",
+    "left suprarenal vein (13.0%)"
+  ],
+  "top_real_anatomy": [
+    "zygomaticus minor muscle (0.02%)",
+    "dorsal root of spinal cord (0.04%)",
+    "obsolete cnida (0.05%)",
+    "ventral root of spinal cord (0.06%)",
+    "obsolete spirocyst (0.07%)",
+    "olfactory bulb plexiform layer (0.08%)",
+    "common plantar digital arteries (0.09%)",
+    "principal artery to limb (0.09%)",
+    "perichordal bone (0.09%)",
+    "neurogenic placode (0.12%)"
+  ]
+}

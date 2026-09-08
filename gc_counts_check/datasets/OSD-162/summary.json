@@ -1,0 +1,43 @@
+{
+  "name": "OSD-162",
+  "tissue": "eye",
+  "ranks": "psev_out/OSD-162_GC_counts_ranks_and_rank_by_type_for_meta0_1.tsv",
+  "n_samples": 5,
+  "n_anatomy": 13257,
+  "family_regex": "\\beye\\b|eyeball|ocular|cornea|\\blens\\b|retina|sclera|conjunctiv|uvea|\\biris\\b|ciliary body|choroid|vitreous|aqueous humor",
+  "family_exclude": "choroid plexus|choroidal artery|anterior choroidal|eyelid|eyebrow|lens placode|eye primordium|compound eye|ocellus|eyespot|preoptic|supraoptic|optic (?:tract|radiation|tectum|lobe|chiasm)|sensillum|extra-ocular|ocular pre-muscle|eye skin|eye sebaceous|sclerotome|scleral ossicle|retinaculum|macula densa|fovea capitis",
+  "n_family_nodes": 169,
+  "family_median_pct": 67.21279324130649,
+  "in_top_2_5pct": 1,
+  "in_top_10pct": 21,
+  "mwu_p_less": 0.9999736190387856,
+  "ks_p_greater": 0.7990995198425745,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 14,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 1 (fail)",
+    "KS p = 0.8 (fail)",
+    "0/5 samples individually p < 0.05 (fail)",
+    "family ranks 14 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "corneal epithelium (2.3%)",
+    "ciliary body (2.6%)",
+    "iris (2.6%)",
+    "muscle of iris (2.6%)",
+    "iris smooth muscle (2.6%)"
+  ],
+  "top_real_anatomy": [
+    "ossification center (0.21%)",
+    "plantar digital artery (0.21%)",
+    "superior ophthalmic vein (0.22%)",
+    "ophthalmic vein (0.23%)",
+    "common plantar digital arteries (0.23%)",
+    "inferior ophthalmic vein (0.27%)",
+    "principal artery to hindlimb (0.27%)",
+    "dorsal nerve root of cervical spinal cord (0.30%)",
+    "zygomaticus muscle (0.30%)",
+    "ventral nerve root of cervical spinal cord (0.32%)"
+  ]
+}

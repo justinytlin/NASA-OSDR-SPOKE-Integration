@@ -1,0 +1,43 @@
+{
+  "name": "OSD-168",
+  "tissue": "liver",
+  "ranks": "psev_out/OSD-168_GC_counts_ranks_and_rank_by_type_for_meta0_1.tsv",
+  "n_samples": 4,
+  "n_anatomy": 13257,
+  "family_regex": "liver|hepat",
+  "family_exclude": "hepatopancreas|flexure|arthropod|hepatic cecum",
+  "n_family_nodes": 85,
+  "family_median_pct": 45.55329260013578,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 6,
+  "mwu_p_less": 0.5387205821010236,
+  "ks_p_greater": 0.38300301810165643,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 8,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.54 (fail)",
+    "KS p = 0.38 (fail)",
+    "0/4 samples individually p < 0.05 (fail)",
+    "family ranks 8 of 13 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "hepatic cord (2.5%)",
+    "liver lobule (2.7%)",
+    "hepatic acinus (3.1%)",
+    "liver perisinusoidal space (3.6%)",
+    "extrahepatic duct (6.7%)"
+  ],
+  "top_real_anatomy": [
+    "one-pass circulatory system (0.18%)",
+    "closed circulatory system (0.19%)",
+    "two-pass circulatory system (0.20%)",
+    "cholinergic system (0.21%)",
+    "notochordal ossification (0.22%)",
+    "nucleus recessus (0.24%)",
+    "gABAergic system (0.25%)",
+    "serotonergic system (0.26%)",
+    "trigeminal placode complex (0.27%)",
+    "plantar digital artery (0.27%)"
+  ]
+}

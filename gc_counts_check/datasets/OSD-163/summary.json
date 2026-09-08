@@ -1,0 +1,43 @@
+{
+  "name": "OSD-163",
+  "tissue": "kidney",
+  "ranks": "psev_out/OSD-163_GC_counts_ranks_and_rank_by_type_for_meta0_1.tsv",
+  "n_samples": 6,
+  "n_anatomy": 13257,
+  "family_regex": "kidney|renal|nephron|glomerul",
+  "family_exclude": "adrenal|suprarenal|interrenal|nephridi|Hatschek|lieno|olfactory|cerebell|preglomerular",
+  "n_family_nodes": 167,
+  "family_median_pct": 31.852354730834023,
+  "in_top_2_5pct": 7,
+  "in_top_10pct": 32,
+  "mwu_p_less": 1.324665304622566e-07,
+  "ks_p_greater": 1.0779829823406149e-08,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 7,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 1.3e-07 (ok)",
+    "KS p = 1.1e-08 (ok)",
+    "6/6 samples individually p < 0.05 (ok)",
+    "family ranks 7 of 13 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "renal papilla (0.9%)",
+    "tip of renal papilla (0.9%)",
+    "region of nephron tubule (2.1%)",
+    "renal convoluted tubule (2.1%)",
+    "renal straight tubule (2.1%)"
+  ],
+  "top_real_anatomy": [
+    "principal artery to limb (0.02%)",
+    "nucleus recessus lateralis (0.03%)",
+    "nucleus recessus posterioris (0.04%)",
+    "nucleus recessus (0.05%)",
+    "common plantar digital arteries (0.05%)",
+    "ventral nerve root of cervical spinal cord (0.06%)",
+    "plantar digital artery (0.07%)",
+    "alisphenoid ossification center (0.07%)",
+    "perichordal bone (0.08%)",
+    "olfactory bulb plexiform layer (0.09%)"
+  ]
+}

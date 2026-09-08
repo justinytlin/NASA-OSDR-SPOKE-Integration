@@ -1,0 +1,43 @@
+{
+  "name": "OSD-244",
+  "tissue": "thymus",
+  "ranks": "psev_out/OSD-244_GC_counts_ranks_and_rank_by_type_for_meta0_1.tsv",
+  "n_samples": 19,
+  "n_anatomy": 13257,
+  "family_regex": "thym",
+  "family_exclude": null,
+  "n_family_nodes": 26,
+  "family_median_pct": 14.64231409027207,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 8,
+  "mwu_p_less": 0.023895962489945247,
+  "ks_p_greater": 3.347632614876314e-05,
+  "frac_samples_significant": 0.9473684210526315,
+  "family_rank_among_organ_families": 2,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.024 (fail)",
+    "KS p = 3.3e-05 (ok)",
+    "18/19 samples individually p < 0.05 (ok)",
+    "family ranks 2 of 13 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "medulla of thymus (7.7%)",
+    "thymus trabecula (8.0%)",
+    "thymus lobe (8.0%)",
+    "thymus lobule (8.7%)",
+    "cortex of thymus (9.7%)"
+  ],
+  "top_real_anatomy": [
+    "ventral root of spinal cord (0.22%)",
+    "dorsal root of spinal cord (0.22%)",
+    "trigeminal placode complex (0.23%)",
+    "notochordal ossification (0.26%)",
+    "extensor caudae medialis muscle (0.28%)",
+    "alisphenoid ossification center (0.28%)",
+    "ingested food (0.28%)",
+    "orbitosphenoid ossification center (0.31%)",
+    "extensor caudae muscle (0.32%)",
+    "superior ophthalmic vein (0.34%)"
+  ]
+}

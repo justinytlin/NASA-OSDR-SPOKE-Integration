@@ -34,6 +34,10 @@ Requirements: Python 3.10+ with `numpy pandas scipy requests`
 
 **[examples/OSD-564/](examples/OSD-564/)** contains my example run for OSD-564.
 
+For a positive control on a dataset's **ground-control counts alone** (no contrast), see
+section 5: `gc_counts_check/` projects each GC sample and asks whether the source tissue's
+Anatomy nodes separate.
+
 ---
 
 ## 1. Charlotte's paper replication (the PSEV pipeline)
@@ -248,6 +252,31 @@ On a 2025-03 SPOKE snapshot (42.9M nodes, 176M edges) that universe comes to
 and 40 GB as float32. Expect gene- and process-level results to agree with
 the 2019 build well above chance and disease/symptom results not to — those
 layers were rebuilt — so keep the null control in the loop for either build.
+
+---
+
+## 5. Ground-control tissue check (`gc_counts_check/`)
+
+Each dataset is judged on its own: the ground-control counts are projected onto the 2019 PSEVs
+(one embedding per sample, `log2(CPM+1)` weights), and the ranking of the 13,257 Anatomy nodes is
+checked for separation of the known source tissue. No comparison between datasets is made.
+
+```
+gc_counts_check/fetch_data.sh                          download counts + ISA metadata (14 OSDR datasets)
+gc_counts_check/scripts/gc_counts_to_psev.py           counts -> per-sample rank tables, one streaming pass
+gc_counts_check/scripts/check_anatomy.py --ranks T.tsv --tissue spleen --name OSD-246
+                                                       -> datasets/OSD-246/{A_qq_plot,B_organ_families,C_per_sample}.png + summary.json
+gc_counts_check/scripts/check_anatomy.py --counts COUNTS.csv --tissue liver --name OSD-xxx   (any new dataset)
+```
+
+Three figures per dataset — a QQ plot of the tissue family against a random-node null with a
+bootstrap envelope, the family's median against 13 control organ families, and per-sample
+consistency — and a verdict (CLEAR / PARTIAL / NONE) from one-sided Mann-Whitney U and KS tests.
+[gc_counts_check/README.md](gc_counts_check/README.md) has the results for RR-1, RR-3, RR-10 and
+MHU datasets; [gc_counts_check/METHODS.md](gc_counts_check/METHODS.md) explains every step and test.
+Headline: the tissue's parenchymal terms reach the top 1–3 % of Anatomy nodes in every dataset,
+but broad UBERON families (liver, kidney, eye) are diluted by vessel/duct/primordium terms, and
+retina is anti-associated on the 2019 build.
 
 ---
 

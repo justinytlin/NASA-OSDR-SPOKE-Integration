@@ -1,0 +1,43 @@
+{
+  "name": "OSD-352",
+  "tissue": "brain",
+  "ranks": "psev_out/OSD-352_GC_counts_ranks_and_rank_by_type_for_meta0_1.tsv",
+  "n_samples": 3,
+  "n_anatomy": 13257,
+  "family_regex": "brain|cerebr|cerebell|hippocamp|thalam|amygdala|striatum|telenceph|dienceph|midbrain|hindbrain|\\bpons\\b|medulla oblongata|olfactory bulb|forebrain|neocortex|isocortex|pallium|basal ganglia|substantia nigra|corpus callosum",
+  "family_exclude": "cerebral vein|cerebral artery|braincase|Myxin|ascidian|protocerebrum|cerebral ganglion",
+  "n_family_nodes": 578,
+  "family_median_pct": 18.68446858263559,
+  "in_top_2_5pct": 17,
+  "in_top_10pct": 100,
+  "mwu_p_less": 3.0045746256291257e-78,
+  "ks_p_greater": 2.0566732503640298e-93,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 3,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 3e-78 (ok)",
+    "KS p = 2.1e-93 (ok)",
+    "3/3 samples individually p < 0.05 (ok)",
+    "family ranks 3 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "olfactory bulb plexiform layer (0.6%)",
+    "olfactory bulb internal plexiform layer (0.7%)",
+    "olfactory bulb external plexiform layer (0.7%)",
+    "external capsule of telencephalon (1.4%)",
+    "lamina terminalis of cerebral hemisphere (1.5%)"
+  ],
+  "top_real_anatomy": [
+    "cholinergic system (0.03%)",
+    "glutamatergic system (0.04%)",
+    "gABAergic system (0.05%)",
+    "catecholamine system (0.05%)",
+    "serotonergic system (0.06%)",
+    "histaminergic system (0.07%)",
+    "obsolete ptychocyst (0.23%)",
+    "aortic plexus (0.25%)",
+    "paragigantocellular nucleus (0.26%)",
+    "dorsal paragigantocellular nucleus (0.28%)"
+  ]
+}

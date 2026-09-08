@@ -1,0 +1,43 @@
+{
+  "name": "OSD-137",
+  "tissue": "liver",
+  "ranks": "psev_out/OSD-137_GC_counts_ranks_and_rank_by_type_for_meta0_1.tsv",
+  "n_samples": 6,
+  "n_anatomy": 13257,
+  "family_regex": "liver|hepat",
+  "family_exclude": "hepatopancreas|flexure|arthropod|hepatic cecum",
+  "n_family_nodes": 85,
+  "family_median_pct": 46.150461391466145,
+  "in_top_2_5pct": 1,
+  "in_top_10pct": 6,
+  "mwu_p_less": 0.6621985101734313,
+  "ks_p_greater": 0.3597117577565661,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 8,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.66 (fail)",
+    "KS p = 0.36 (fail)",
+    "0/6 samples individually p < 0.05 (fail)",
+    "family ranks 8 of 13 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "hepatic cord (2.5%)",
+    "liver lobule (2.6%)",
+    "hepatic acinus (3.0%)",
+    "liver perisinusoidal space (3.6%)",
+    "extrahepatic duct (6.9%)"
+  ],
+  "top_real_anatomy": [
+    "common plantar digital arteries (0.22%)",
+    "notochordal ossification (0.23%)",
+    "catecholamine system (0.25%)",
+    "proper plantar digital artery (0.25%)",
+    "principal artery to forelimb (0.27%)",
+    "obsolete ptychocyst (0.30%)",
+    "gABAergic system (0.30%)",
+    "olfactory bulb internal plexiform layer (0.32%)",
+    "glutamatergic system (0.33%)",
+    "principal artery to limb (0.34%)"
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "name": "OSD-245",
+  "tissue": "liver",
+  "ranks": "psev_out/OSD-245_GC_counts_ranks_and_rank_by_type_for_meta0_1.tsv",
+  "n_samples": 19,
+  "n_anatomy": 13257,
+  "family_regex": "liver|hepat",
+  "family_exclude": "hepatopancreas|flexure|arthropod|hepatic cecum",
+  "n_family_nodes": 85,
+  "family_median_pct": 44.4599278236324,
+  "in_top_2_5pct": 1,
+  "in_top_10pct": 6,
+  "mwu_p_less": 0.4423754507386055,
+  "ks_p_greater": 0.12551277348484988,
+  "frac_samples_significant": 0.10526315789473684,
+  "family_rank_among_organ_families": 8,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.44 (fail)",
+    "KS p = 0.13 (fail)",
+    "2/19 samples individually p < 0.05 (fail)",
+    "family ranks 8 of 13 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "hepatic cord (2.5%)",
+    "liver lobule (2.6%)",
+    "hepatic acinus (3.0%)",
+    "liver perisinusoidal space (3.5%)",
+    "central vein of liver (7.6%)"
+  ],
+  "top_real_anatomy": [
+    "ophthalmic vein (0.20%)",
+    "gABAergic system (0.21%)",
+    "glutamatergic system (0.23%)",
+    "catecholamine system (0.25%)",
+    "notochordal ossification (0.27%)",
+    "histaminergic system (0.28%)",
+    "superior ophthalmic vein (0.29%)",
+    "inferior ophthalmic vein (0.30%)",
+    "proper plantar digital artery (0.31%)",
+    "olfactory bulb external plexiform layer (0.31%)"
+  ]
+}

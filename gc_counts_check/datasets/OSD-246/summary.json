@@ -1,0 +1,43 @@
+{
+  "name": "OSD-246",
+  "tissue": "spleen",
+  "ranks": "psev_out/OSD-246_GC_counts_ranks_and_rank_by_type_for_meta0_1.tsv",
+  "n_samples": 16,
+  "n_anatomy": 13257,
+  "family_regex": "spleen|splenic",
+  "family_exclude": "flexure",
+  "n_family_nodes": 31,
+  "family_median_pct": 14.48715772799276,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 5,
+  "mwu_p_less": 0.0016163608887166533,
+  "ks_p_greater": 1.994962690708333e-05,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 1,
+  "verdict": "CLEAR",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.0016 (ok)",
+    "KS p = 2e-05 (ok)",
+    "16/16 samples individually p < 0.05 (ok)",
+    "family ranks 1 of 13 organ families by median percentile (ok)"
+  ],
+  "best_family_nodes": [
+    "splenic arteriole (4.3%)",
+    "parenchyma of spleen (8.7%)",
+    "spleen primary B follicle (9.2%)",
+    "white pulp of spleen (9.4%)",
+    "spleen marginal sinus (9.4%)"
+  ],
+  "top_real_anatomy": [
+    "nucleus recessus lateralis (0.20%)",
+    "nucleus recessus (0.21%)",
+    "maxillomandibular placode (0.23%)",
+    "trigeminal placode complex (0.23%)",
+    "dorsal nerve root of cervical spinal cord (0.24%)",
+    "ventral nerve root of cervical spinal cord (0.25%)",
+    "profundal placode (0.27%)",
+    "obsolete ptychocyst (0.27%)",
+    "ingested food (0.28%)",
+    "extensor caudae muscle (0.29%)"
+  ]
+}

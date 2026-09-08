@@ -1,0 +1,43 @@
+{
+  "name": "OSD-564",
+  "tissue": "hippocampus",
+  "ranks": "psev_out/OSD-564_GC_counts_ranks_and_rank_by_type_for_meta0_1.tsv",
+  "n_samples": 5,
+  "n_anatomy": 13257,
+  "family_regex": "hippocamp|dentate gyrus|Ammon|subiculum",
+  "family_exclude": null,
+  "n_family_nodes": 51,
+  "family_median_pct": 13.398204722033643,
+  "in_top_2_5pct": 1,
+  "in_top_10pct": 17,
+  "mwu_p_less": 1.846976179226721e-18,
+  "ks_p_greater": 2.976542489143121e-24,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 1,
+  "verdict": "CLEAR",
+  "criteria": [
+    "pooled Mann-Whitney p = 1.8e-18 (ok)",
+    "KS p = 3e-24 (ok)",
+    "5/5 samples individually p < 0.05 (ok)",
+    "family ranks 1 of 13 organ families by median percentile (ok)"
+  ],
+  "best_family_nodes": [
+    "hippocampal commissure (1.6%)",
+    "hippocampus fimbria (6.0%)",
+    "dentate gyrus subgranular zone (6.2%)",
+    "posterior parahippocampal white matter (7.1%)",
+    "hippocampus alveus (7.1%)"
+  ],
+  "top_real_anatomy": [
+    "serotonergic system (0.02%)",
+    "catecholamine system (0.02%)",
+    "cholinergic system (0.03%)",
+    "gABAergic system (0.04%)",
+    "glutamatergic system (0.05%)",
+    "histaminergic system (0.05%)",
+    "dorsal root of spinal cord (0.22%)",
+    "extensor caudae medialis muscle (0.22%)",
+    "principal artery to hindlimb (0.24%)",
+    "thoracic aortic plexus (0.25%)"
+  ]
+}

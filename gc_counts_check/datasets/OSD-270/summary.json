@@ -1,0 +1,43 @@
+{
+  "name": "OSD-270",
+  "tissue": "heart",
+  "ranks": "psev_out/OSD-270_GC_counts_ranks_and_rank_by_type_for_meta0_1.tsv",
+  "n_samples": 2,
+  "n_anatomy": 13257,
+  "family_regex": "heart|cardiac|myocard",
+  "family_exclude": "cardiac stomach|cardiac gastric|corpus cardiacum|lymph heart|dorsal vessel",
+  "n_family_nodes": 97,
+  "family_median_pct": 40.86143169646225,
+  "in_top_2_5pct": 1,
+  "in_top_10pct": 14,
+  "mwu_p_less": 0.03659570329907722,
+  "ks_p_greater": 0.055867060674062594,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 7,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.037 (fail)",
+    "KS p = 0.056 (fail)",
+    "2/2 samples individually p < 0.05 (ok)",
+    "family ranks 7 of 13 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "cardiac Purkinje fiber (1.5%)",
+    "cardiac muscle tissue of ventricle (2.6%)",
+    "pericardiacophrenic vein (4.6%)",
+    "trabecula carnea cardiac muscle tissue (4.6%)",
+    "cardiac muscle of right ventricle (5.0%)"
+  ],
+  "top_real_anatomy": [
+    "principal artery to limb (0.19%)",
+    "ventral root of spinal cord (0.20%)",
+    "ingested food (0.20%)",
+    "thoracic aortic plexus (0.21%)",
+    "dorsal root of spinal cord (0.22%)",
+    "orbitosphenoid ossification center (0.23%)",
+    "abdominal nerve plexus (0.23%)",
+    "nucleus recessus (0.24%)",
+    "aortic plexus (0.26%)",
+    "olfactory bulb plexiform layer (0.26%)"
+  ]
+}

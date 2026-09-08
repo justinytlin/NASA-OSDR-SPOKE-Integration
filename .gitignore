@@ -20,3 +20,8 @@ __pycache__/
 psev_build/.env
 psev_build/spoke_current/
 psev_build/**/gene_psev*/
+
+# gc_counts_check: downloads (fetch_data.sh), 800 MB rank tables, superseded cross-dataset analysis
+gc_counts_check/data/
+gc_counts_check/psev_out/
+gc_counts_check/archive/

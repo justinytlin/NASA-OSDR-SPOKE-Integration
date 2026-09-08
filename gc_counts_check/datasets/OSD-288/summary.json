@@ -1,0 +1,43 @@
+{
+  "name": "OSD-288",
+  "tissue": "spleen",
+  "ranks": "psev_out/OSD-288_GC_counts_ranks_and_rank_by_type_for_meta0_1.tsv",
+  "n_samples": 3,
+  "n_anatomy": 13257,
+  "family_regex": "spleen|splenic",
+  "family_exclude": "flexure",
+  "n_family_nodes": 31,
+  "family_median_pct": 20.13527444620452,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 3,
+  "mwu_p_less": 0.00404665658830884,
+  "ks_p_greater": 0.00010015444596679992,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 4,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.004 (ok)",
+    "KS p = 0.0001 (ok)",
+    "3/3 samples individually p < 0.05 (ok)",
+    "family ranks 4 of 13 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "splenic arteriole (6.9%)",
+    "parenchyma of spleen (9.3%)",
+    "spleen primary B follicle (9.7%)",
+    "spleen perifollicular zone (11.2%)",
+    "spleen capsule (11.4%)"
+  ],
+  "top_real_anatomy": [
+    "plantar digital artery (0.02%)",
+    "principal artery to hindlimb (0.03%)",
+    "olfactory bulb external plexiform layer (0.04%)",
+    "dorsal paragigantocellular nucleus (0.05%)",
+    "one-pass circulatory system (0.06%)",
+    "dorsal nerve root of cervical spinal cord (0.06%)",
+    "olfactory bulb internal plexiform layer (0.06%)",
+    "two-pass circulatory system (0.08%)",
+    "paragigantocellular nucleus (0.09%)",
+    "morphological boundary (0.09%)"
+  ]
+}
