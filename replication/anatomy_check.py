@@ -32,18 +32,21 @@ STAGE_RE = re.compile(
 
 
 def pick_cols(df, col, col_regex):
-    fc_cols = [c for c in df.columns if c.startswith("Log2fc_(")]
+    # every column that has a Rank_by_type_ twin: Log2fc_ contrasts from the
+    # DE route, or sample names from counts_to_psev.py
+    all_cols = [c[len("Rank_by_type_"):] for c in df.columns if c.startswith("Rank_by_type_")]
+    fc_cols = [c for c in all_cols if c.startswith("Log2fc_(")]
     if col:
-        return [c for c in fc_cols if c == col or c[len("Log2fc_"):] == col]
+        return [c for c in all_cols if c == col or c[len("Log2fc_"):] == col]
     if col_regex:
-        return [c for c in fc_cols if re.search(col_regex, c, re.IGNORECASE)]
+        return [c for c in all_cols if re.search(col_regex, c, re.IGNORECASE)]
     out = []
     for c in fc_cols:  # default: Space-v-Ground style comparisons
         p = c[len("Log2fc_("):-1].split(")v(")
         if len(p) == 2 and re.search("SPACE|FLIGHT|FLT", p[0], re.I) \
                 and re.search("GROUND|GC", p[1], re.I):
             out.append(c)
-    return out or fc_cols
+    return out or fc_cols or all_cols
 
 
 def main():
@@ -56,6 +59,10 @@ def main():
     ap.add_argument("--col-regex", default=None)
     ap.add_argument("--include-stages", action="store_true",
                     help="keep life-stage/fluid nodes in the top/bottom view")
+    ap.add_argument("--tissue-regex", action="append", default=[],
+                    help="score every Anatomy node whose name matches (e.g. "
+                         "'hippocamp|dentate gyrus|Ammon|subiculum'): median "
+                         "percentile vs the rest and a Mann-Whitney p; repeatable")
     args = ap.parse_args()
 
     df = pd.read_csv(args.ranks, sep="\t", low_memory=False)
@@ -69,6 +76,9 @@ def main():
 
     view = ana if args.include_stages else \
         ana[~ana.Node_Name.astype(str).str.contains(STAGE_RE)]
+    if not all(c.startswith("Log2fc_(") for c in cols):
+        print("(per-sample expression columns: 'UP' = highly expressed genes, "
+              "'DOWN' = weakly/un-expressed genes)")
     print(f"\ntop {args.n} (associated with UP-regulated genes):")
     for _, r in view.nsmallest(args.n, "mean_bt").iterrows():
         print(f"  {r.mean_bt:7.0f} ({100*r.mean_bt/n:5.1f}%)  {r.Node_Name}")
@@ -90,6 +100,21 @@ def main():
         print(f"\nsource tissue '{t}': mean rank {r.mean_bt:.0f}/{n} "
               f"= {pct:.1f}th percentile ({tail} tail; extremes on either "
               f"side = tissue-identity genes shifted by the condition)")
+
+    for rx in args.tissue_regex:
+        m = ana.Node_Name.astype(str).str.contains(rx, case=False, regex=True)
+        if not m.any():
+            print(f"\n'{rx}': no Anatomy node matches"); continue
+        from scipy.stats import mannwhitneyu
+        pct = 100 * ana.mean_bt / n
+        p_up = mannwhitneyu(pct[m], pct[~m], alternative="less").pvalue
+        p_dn = mannwhitneyu(pct[m], pct[~m], alternative="greater").pvalue
+        best = ana[m].nsmallest(3, "mean_bt").Node_Name.astype(str).tolist()
+        print(f"\n'{rx}': {m.sum()} nodes, median percentile {pct[m].median():.1f}% "
+              f"(other anatomy {pct[~m].median():.1f}%); in top 2.5%: {(pct[m] <= 2.5).sum()}, "
+              f"top 10%: {(pct[m] <= 10).sum()}, bottom 2.5%: {(pct[m] >= 97.5).sum()}\n"
+              f"   Mann-Whitney shifted UP p = {p_up:.1e}, shifted DOWN p = {p_dn:.1e}; "
+              f"highest: {best}")
 
 
 if __name__ == "__main__":
