@@ -76,3 +76,29 @@ python3 examples/disease_gene_table.py "multiple sclerosis"
   and `ensembl` id — all useful join keys for expression datasets.
 - Cutoff parameters (see `types`) control edge stringency, e.g.
   `cutoff_PiP_confidence` (default 0.7), `cutoff_DaG_textmining` (default 3.0).
+
+## examples/ — analyses on the live graph
+
+The API only serves neighborhoods, so these build small subgraphs around a
+gene signature instead of using the whole graph. Useful as an independent
+check on the PSEV route (`../replication/`) and for anything that needs
+current graph content.
+
+| Script | What it does |
+|---|---|
+| `examples/osdr_spoke_projection.py` | Simplest analysis: signature genes → 1-hop neighborhoods → which diseases/pathways get hit. Fast but hub-biased. |
+| `examples/fetch_subgraph.py` | Unions the 1-hop neighborhoods of the signature genes into a local subgraph (`subgraph.jsonl`). |
+| `examples/spoke_embeddings_ml.py` | PSEV-style per-sample embeddings on that subgraph (personalized PageRank on up/down-regulated genes) + leave-one-out classification. |
+| `examples/welch_nodes.py` | Which nodes *separate* two sample groups: Welch's t-test per node on the embeddings, rank-by-type, top-2.5% flags. |
+| `examples/predict_treatments.py`, `alzheimers_multidb.py`, `disease_gene_table.py` | Drug-repurposing-style queries on the live graph. |
+
+```bash
+python3 examples/fetch_subgraph.py ...        # genes -> subgraph.jsonl
+python3 examples/spoke_embeddings_ml.py ...   # per-sample embeddings
+python3 examples/welch_nodes.py --dir OUTDIR
+```
+
+Treat `welch_nodes.py` p-values as rankings, not calibrated significance
+(embedding dimensions are correlated and sample counts are small). Include
+`Anatomy` in the node filters when fetching subgraphs if you want the
+anatomy sanity check to work on this route.
