@@ -46,8 +46,11 @@ def main():
     ap.add_argument("--label", action="append", default=[])
     ap.add_argument("--col-regex", default=None)
     ap.add_argument("--family", action="append", default=None)
-    ap.add_argument("--brain-regex", default="brain|cortex|cerebr|hippocamp|telenceph|forebrain|gyrus|thalam|"
-                                             "amygdala|striatum|pallium|dentate|nucleus|neur|spinal|ganglion|placode")
+    ap.add_argument("--brain-regex",
+                    default=r"brain|cerebr|cerebell|hippocamp|telenceph|forebrain|gyrus|thalam|amygdala|striatum|"
+                            r"pallium|dentate gyrus|(?<!pulposus )nucleus(?! pulposus)|neur(?!o?hypophys)|spinal|"
+                            r"ganglion|placode|corpus callosum|forceps (major|minor)|mushroom body|(cerebral|cerebellar|neo|prefrontal|cingulate|frontal|temporal|"
+                            r"entorhinal|motor|visual|olfactory|piriform|insular|parietal|occipital) cortex")
     ap.add_argument("--top", type=int, default=12)
     ap.add_argument("--title", default="Hippocampus in the ground-control expression PSEVs (OSD-564, 5 mice)")
     ap.add_argument("--out", default=str(Path(__file__).parent / "figures/anatomy_families.png"))
@@ -131,12 +134,13 @@ def main():
                Line2D([], [], color=INK, lw=2.2, label="median")]
     fig.legend(handles=handles, loc="lower left", bbox_to_anchor=(0.03, 0.01), ncol=3, frameon=False,
                fontsize=9, handletextpad=0.5, columnspacing=1.6)
-    fig.suptitle(a.title, x=0.03, ha="left", fontsize=13.5, color=INK, y=0.985, fontweight="semibold")
-    fig.text(0.03, 0.925, "Each dot is one Anatomy node, placed by its mean rank-by-type across the samples as a "
+    H = 3.6 * rows + 1.7
+    top_frac = 1 - 1.15 / H
+    bot_frac = 0.85 / H
+    fig.suptitle(a.title, x=0.03, ha="left", fontsize=13.5, color=INK, y=1 - 0.22 / H, fontweight="semibold")
+    fig.text(0.03, 1 - 0.55 / H, "Each dot is one Anatomy node, placed by its mean rank-by-type across the samples as a "
              "percentile of all Anatomy nodes.   * = UBERON life-stage / organism pseudo-anatomy",
              fontsize=9, color=INK2)
-    top_frac = 1 - 1.15 / (3.6 * rows + 1.7)
-    bot_frac = 0.85 / (3.6 * rows + 1.7)
     fig.subplots_adjust(top=top_frac, bottom=bot_frac, left=0.2, right=0.985)
     out = Path(a.out); out.parent.mkdir(parents=True, exist_ok=True)
     fig.savefig(out, dpi=180, facecolor=SURFACE)

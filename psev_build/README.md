@@ -138,3 +138,33 @@ appear 2–3× (`WP1531`, `WP1531_r118354`, … are revision copies with identic
 gene sets), and raw PSEVs are dominated by Bgee anatomy hubs (blood,
 gastrocnemius, heart left ventricle) instead of 2019's brain/testis; the
 pipeline's cross-gene z-scoring handles the second, nothing handles the first.
+
+### Anatomy-edge variants (2026-09-14)
+
+The expression-weighted anatomy check (`replication/counts_to_psev.py` on
+ground-control counts, then `anatomy_check.py --tissue-regex`) works on the
+2019 PSEVs and not on the 2025 build, and two variant builds show why:
+
+| Build (`--exclude-rel-types` added to the default four) | hippocampal family, OSD-564 GC | liver family |
+|---|---|---|
+| 2019 zip | median 13th pct, p 1e-18 | 46%, n.s. |
+| 2025, all edges | 34%, p 3e-6 | 11%, p 1e-33 |
+| 2025 `EXPRESSES_AeG` dropped (`gene_psev_spoke2025-03_noAeG`) | 54%, n.s. | 6% |
+| 2025 `EXPRESSES_AeG,DOWNREGULATES_AdG` dropped (`gene_psev_spoke2025-03_upAuG_only`) | 25%, p 2e-10 | 7% |
+
+- `EXPRESSES_AeG` (Bgee) links each of 92 GTEx-style tissues to ~18,000 of the
+  20,816 genes and carries no level or confidence property, so it cannot be
+  thinned and contributes no tissue information. The 2019-era layer linked a
+  median tissue to 46 genes.
+- `DOWNREGULATES_AdG` is anti-information for an unsigned random walk: liver's
+  12,840 "down" genes include 1,406 of the 2,000 most-expressed hippocampus
+  genes, so brain samples pull liver up.
+- `UPREGULATES_AuG` is selective and correct (Ammon's horn = the hippocampus
+  tissue node: 413 of the top-2,000 hippocampus genes among its 1,420 edges;
+  liver: 4 of 113) but the anatomy extreme is still owned by liver/kidney via
+  `LOCALIZES_DlA` disease-literature edges (57k in 2025 vs 7k in v1).
+
+Use the main build with the null control for fold-change-weighted work; if
+tissue identity from a single-group expression profile matters, the up-only
+variant is the least bad 2025 option, and the 2019 zip remains the reference
+for that check.
