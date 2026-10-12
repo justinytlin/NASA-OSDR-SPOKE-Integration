@@ -1,0 +1,25 @@
+{
+  "name": "OSD-457_brown-adipose-tissue",
+  "tissue": "adipose tissue",
+  "tissue_label": "brown adipose tissue",
+  "n_samples": 6,
+  "n_linked": 74,
+  "proxy": false,
+  "target_nodes": [
+    "adipose tissue (rank 65)"
+  ],
+  "best_target_rank": 65,
+  "frac_samples_target_rank1": 0.0,
+  "frac_samples_target_top3": 0.0,
+  "verdict": "NONE",
+  "top_linked_nodes": [
+    "cardiovascular system",
+    "renal system",
+    "kidney",
+    "digestive system",
+    "smooth muscle tissue",
+    "respiratory system",
+    "forebrain",
+    "nephron tubule"
+  ]
+}

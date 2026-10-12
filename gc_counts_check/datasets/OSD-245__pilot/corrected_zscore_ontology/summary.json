@@ -1,0 +1,47 @@
+{
+  "name": "OSD-245__pilot",
+  "tissue": "liver",
+  "tissue_label": "liver",
+  "mode": "corrected_zscore_ontology",
+  "families": "ontology",
+  "score_key": "zscore",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-245__pilot_GC_ranks.npz",
+  "n_samples": 19,
+  "n_anatomy": 13257,
+  "family_regex": "liver|hepat",
+  "family_exclude": "hepatopancreas|flexure|arthropod|hepatic cecum",
+  "n_family_nodes": 56,
+  "family_median_pct": 18.76287800288229,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 1,
+  "mwu_p_less": 2.489058142064478e-06,
+  "ks_p_greater": 5.858868080013191e-10,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 4,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 2.5e-06 (ok)",
+    "KS p = 5.9e-10 (ok)",
+    "19/19 samples individually p < 0.05 (ok)",
+    "family ranks 4 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "intralobular bile duct (7.1%)",
+    "hepatic acinus (10.2%)",
+    "liver perisinusoidal space (11.0%)",
+    "left hepatic vein (11.5%)",
+    "right hepatic vein (11.8%)"
+  ],
+  "top_real_anatomy": [
+    "Marshall's gland (0.02%)",
+    "renal duct (0.03%)",
+    "gall bladder smooth muscle (0.05%)",
+    "mesonephric late proximal tubule (0.19%)",
+    "mesonephric early proximal tubule (0.19%)",
+    "enteric musculature (0.23%)",
+    "renal collecting system (0.24%)",
+    "metanephros (0.26%)",
+    "gular gland (0.28%)",
+    "posterior pronephric duct (0.31%)"
+  ]
+}

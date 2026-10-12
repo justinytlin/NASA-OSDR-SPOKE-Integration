@@ -1,0 +1,26 @@
+{
+  "name": "OSD-719__pilot",
+  "tissue": "whole blood",
+  "tissue_label": "blood",
+  "n_samples": 6,
+  "n_linked": 74,
+  "proxy": false,
+  "target_nodes": [
+    "blood plasma (rank 5)",
+    "blood (rank 62)"
+  ],
+  "best_target_rank": 5,
+  "frac_samples_target_rank1": 0.0,
+  "frac_samples_target_top3": 0.0,
+  "verdict": "PARTIAL",
+  "top_linked_nodes": [
+    "lymphoid tissue",
+    "connective tissue",
+    "smooth muscle tissue",
+    "hematopoietic system",
+    "blood plasma",
+    "cardiovascular system",
+    "neck",
+    "hair follicle"
+  ]
+}

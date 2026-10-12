@@ -1,0 +1,34 @@
+{
+  "name": "OSD-352",
+  "tissue": "brain",
+  "tissue_label": "brain",
+  "n_samples": 3,
+  "n_linked": 74,
+  "proxy": false,
+  "target_nodes": [
+    "forebrain (rank 1)",
+    "telencephalon (rank 2)",
+    "brainstem (rank 6)",
+    "hindbrain (rank 8)",
+    "metencephalon (rank 9)",
+    "midbrain (rank 42)",
+    "medulla oblongata (rank 46)",
+    "pituitary gland (rank 58)",
+    "cerebellum (rank 66)",
+    "brain (rank 74)"
+  ],
+  "best_target_rank": 1,
+  "frac_samples_target_rank1": 1.0,
+  "frac_samples_target_top3": 1.0,
+  "verdict": "CLEAR",
+  "top_linked_nodes": [
+    "forebrain",
+    "telencephalon",
+    "smooth muscle tissue",
+    "retina",
+    "eye",
+    "brainstem",
+    "cardiovascular system",
+    "hindbrain"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "name": "OSD-201",
+  "tissue": "spleen",
+  "tissue_label": "spleen",
+  "n_samples": 4,
+  "n_linked": 74,
+  "proxy": true,
+  "target_nodes": [
+    "hematopoietic system (rank 2)"
+  ],
+  "best_target_rank": 2,
+  "frac_samples_target_rank1": 0.0,
+  "frac_samples_target_top3": 1.0,
+  "verdict": "PARTIAL",
+  "top_linked_nodes": [
+    "lymphoid tissue",
+    "hematopoietic system",
+    "digestive system",
+    "smooth muscle tissue",
+    "respiratory system",
+    "pancreas",
+    "mammary gland",
+    "renal system"
+  ]
+}

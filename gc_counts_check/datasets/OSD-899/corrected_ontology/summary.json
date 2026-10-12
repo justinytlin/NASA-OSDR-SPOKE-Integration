@@ -1,0 +1,46 @@
+{
+  "name": "OSD-899",
+  "tissue": "cecum",
+  "tissue_label": "cecum",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-899_GC_ranks.npz",
+  "n_samples": 5,
+  "n_anatomy": 13257,
+  "family_regex": "c(?:a)?ecum|c(?:a)?ecal|ileoc(?:a)?ecal|vermiform appendix",
+  "family_exclude": "hepatic cecum|pyloric c|gastric c|intestinal c|buccal|foramen c",
+  "n_family_nodes": 7,
+  "family_median_pct": 4.714490457871313,
+  "in_top_2_5pct": 1,
+  "in_top_10pct": 6,
+  "mwu_p_less": 1.8914289174516715e-05,
+  "ks_p_greater": 6.782388265261768e-06,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 1,
+  "verdict": "CLEAR",
+  "criteria": [
+    "pooled Mann-Whitney p = 1.9e-05 (ok)",
+    "KS p = 6.8e-06 (ok)",
+    "5/5 samples individually p < 0.05 (ok)",
+    "family ranks 1 of 15 organ families by median percentile (ok)"
+  ],
+  "best_family_nodes": [
+    "submucosa of cecum (2.4%)",
+    "caecum (3.6%)",
+    "cecum mucosa (3.8%)",
+    "caecum epithelium (4.7%)",
+    "caecum mesentery (5.1%)"
+  ],
+  "top_real_anatomy": [
+    "digestive system (0.02%)",
+    "renal system (0.02%)",
+    "excretory gland (0.03%)",
+    "labial cavities (0.04%)",
+    "renal duct (0.05%)",
+    "ureteropelvic junction (0.05%)",
+    "Marshall's gland (0.06%)",
+    "digestive syncytial vacuole (0.07%)",
+    "mesentery of urinary system (0.08%)",
+    "kidney (0.09%)"
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "name": "OSD-525__pilot",
+  "tissue": "cerebellum",
+  "tissue_label": "cerebellum",
+  "mode": "corrected_zscore_ontology",
+  "families": "ontology",
+  "score_key": "zscore",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-525__pilot_GC_ranks.npz",
+  "n_samples": 10,
+  "n_anatomy": 13257,
+  "family_regex": "cerebell",
+  "family_exclude": "artery|vein|spinocerebellar|cerebellar peduncle (?:artery|vein)",
+  "n_family_nodes": 113,
+  "family_median_pct": 27.304820095044125,
+  "in_top_2_5pct": 3,
+  "in_top_10pct": 18,
+  "mwu_p_less": 0.005496951869363919,
+  "ks_p_greater": 1.1140061592964067e-07,
+  "frac_samples_significant": 0.9,
+  "family_rank_among_organ_families": 5,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.0055 (ok)",
+    "KS p = 1.1e-07 (ok)",
+    "9/10 samples individually p < 0.05 (ok)",
+    "family ranks 5 of 15 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "dentate nucleus (2.2%)",
+    "hilum of dentate nucleus (2.2%)",
+    "amiculum of dentate nucleus (2.3%)",
+    "neodentate part of dentate nucleus (3.1%)",
+    "paleodentate of dentate nucleus (3.1%)"
+  ],
+  "top_real_anatomy": [
+    "metanephric smooth muscle tissue (0.01%)",
+    "enteric circular muscle (0.02%)",
+    "smooth muscle tissue (0.02%)",
+    "spleen smooth muscle (0.03%)",
+    "anal region smooth muscle (0.04%)",
+    "smooth muscle endomysium (0.04%)",
+    "ureter smooth muscle (0.06%)",
+    "lymphatic vessel smooth muscle (0.06%)",
+    "smooth muscle layer in fatty layer of subcutaneous tissue (0.07%)",
+    "umbilical smooth muscle (0.07%)"
+  ]
+}

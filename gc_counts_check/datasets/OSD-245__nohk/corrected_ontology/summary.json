@@ -1,0 +1,47 @@
+{
+  "name": "OSD-245__nohk",
+  "tissue": "liver",
+  "tissue_label": "liver",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "score_key": "scores",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-245__nohk_GC_ranks.npz",
+  "n_samples": 19,
+  "n_anatomy": 13257,
+  "family_regex": "liver|hepat",
+  "family_exclude": "hepatopancreas|flexure|arthropod|hepatic cecum",
+  "n_family_nodes": 56,
+  "family_median_pct": 32.408300679283634,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 4,
+  "mwu_p_less": 0.002318847637791272,
+  "ks_p_greater": 0.0005544709293632655,
+  "frac_samples_significant": 0.5789473684210527,
+  "family_rank_among_organ_families": 6,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.0023 (ok)",
+    "KS p = 0.00055 (ok)",
+    "11/19 samples individually p < 0.05 (fail)",
+    "family ranks 6 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "intralobular bile duct (5.8%)",
+    "hepatic acinus (7.9%)",
+    "liver perisinusoidal space (8.1%)",
+    "liver lobule (9.9%)",
+    "hepatic cord (11.4%)"
+  ],
+  "top_real_anatomy": [
+    "renal duct (0.01%)",
+    "kidney vasculature (0.23%)",
+    "nephric duct (0.24%)",
+    "mesonephric late proximal tubule (0.24%)",
+    "mesonephric early proximal tubule (0.25%)",
+    "ureteropelvic junction (0.25%)",
+    "renal system (0.27%)",
+    "metanephros (0.27%)",
+    "pronephric sinus (0.27%)",
+    "excretory gland (0.27%)"
+  ]
+}

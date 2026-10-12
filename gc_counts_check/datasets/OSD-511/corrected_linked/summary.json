@@ -1,0 +1,26 @@
+{
+  "name": "OSD-511",
+  "tissue": "mammary gland",
+  "tissue_label": "mammary gland",
+  "n_samples": 15,
+  "n_linked": 74,
+  "proxy": false,
+  "target_nodes": [
+    "mammary gland (rank 12)",
+    "nipple (rank 43)"
+  ],
+  "best_target_rank": 12,
+  "frac_samples_target_rank1": 0.0,
+  "frac_samples_target_top3": 0.06666666666666667,
+  "verdict": "NONE",
+  "top_linked_nodes": [
+    "smooth muscle tissue",
+    "cardiovascular system",
+    "renal system",
+    "kidney",
+    "pancreas",
+    "digestive system",
+    "islet of Langerhans",
+    "lymphoid tissue"
+  ]
+}

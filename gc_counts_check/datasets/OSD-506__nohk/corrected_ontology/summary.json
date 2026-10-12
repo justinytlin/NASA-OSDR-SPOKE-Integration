@@ -1,0 +1,47 @@
+{
+  "name": "OSD-506__nohk",
+  "tissue": "spleen",
+  "tissue_label": "spleen",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "score_key": "scores",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-506__nohk_GC_ranks.npz",
+  "n_samples": 10,
+  "n_anatomy": 13257,
+  "family_regex": "spleen|splenic",
+  "family_exclude": "flexure",
+  "n_family_nodes": 29,
+  "family_median_pct": 5.811269517990496,
+  "in_top_2_5pct": 8,
+  "in_top_10pct": 17,
+  "mwu_p_less": 4.280161432224293e-11,
+  "ks_p_greater": 1.0633172922129432e-09,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 3,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 4.3e-11 (ok)",
+    "KS p = 1.1e-09 (ok)",
+    "10/10 samples individually p < 0.05 (ok)",
+    "family ranks 3 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "spleen follicular dendritic cell network (0.0%)",
+    "spleen B cell corona (0.1%)",
+    "spleen secondary B follicle (0.1%)",
+    "spleen smooth muscle (0.2%)",
+    "spleen (0.3%)"
+  ],
+  "top_real_anatomy": [
+    "secondary follicle corona (0.01%)",
+    "lymphoid tissue (0.01%)",
+    "appendix lymphoid tissue (0.02%)",
+    "spleen follicular dendritic cell network (0.03%)",
+    "lymph node follicular corona (0.04%)",
+    "hematopoietic system (0.05%)",
+    "thymus lymphoid tissue (0.05%)",
+    "nephric fold (0.06%)",
+    "intermediate cell mass of mesoderm (0.08%)",
+    "hemolymphoid system (0.08%)"
+  ]
+}

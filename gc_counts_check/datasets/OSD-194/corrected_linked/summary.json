@@ -1,0 +1,25 @@
+{
+  "name": "OSD-194",
+  "tissue": "retina",
+  "tissue_label": "retina",
+  "n_samples": 4,
+  "n_linked": 74,
+  "proxy": false,
+  "target_nodes": [
+    "retina (rank 1)"
+  ],
+  "best_target_rank": 1,
+  "frac_samples_target_rank1": 1.0,
+  "frac_samples_target_top3": 1.0,
+  "verdict": "CLEAR",
+  "top_linked_nodes": [
+    "retina",
+    "forebrain",
+    "eye",
+    "telencephalon",
+    "smooth muscle tissue",
+    "renal system",
+    "sense organ",
+    "uterus"
+  ]
+}

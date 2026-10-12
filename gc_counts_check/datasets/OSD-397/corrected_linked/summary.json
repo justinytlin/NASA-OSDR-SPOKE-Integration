@@ -1,0 +1,25 @@
+{
+  "name": "OSD-397",
+  "tissue": "retina",
+  "tissue_label": "retina",
+  "n_samples": 7,
+  "n_linked": 74,
+  "proxy": false,
+  "target_nodes": [
+    "retina (rank 2)"
+  ],
+  "best_target_rank": 2,
+  "frac_samples_target_rank1": 0.14285714285714285,
+  "frac_samples_target_top3": 1.0,
+  "verdict": "PARTIAL",
+  "top_linked_nodes": [
+    "forebrain",
+    "retina",
+    "eye",
+    "telencephalon",
+    "smooth muscle tissue",
+    "sense organ",
+    "renal system",
+    "uterus"
+  ]
+}

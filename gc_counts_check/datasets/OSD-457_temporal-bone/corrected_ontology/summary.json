@@ -1,0 +1,46 @@
+{
+  "name": "OSD-457_temporal-bone",
+  "tissue": "temporal bone",
+  "tissue_label": "temporal bone",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-457_temporal-bone_GC_ranks.npz",
+  "n_samples": 6,
+  "n_anatomy": 13257,
+  "family_regex": "temporal bone|petrous|mastoid|tympanic (?:ring|bone|part)|squamous part of temporal|otic capsule|periotic",
+  "family_exclude": "sterno|extratemporal|intertemporal|supratemporal",
+  "n_family_nodes": 51,
+  "family_median_pct": 79.77923612682609,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 0,
+  "mwu_p_less": 0.9999062943696481,
+  "ks_p_greater": 0.34539584492764047,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 12,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 1 (fail)",
+    "KS p = 0.35 (fail)",
+    "0/6 samples individually p < 0.05 (fail)",
+    "family ranks 12 of 15 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "osseus semicircular canal (17.1%)",
+    "cochlea (20.9%)",
+    "otolymph (20.9%)",
+    "endolymph (20.9%)",
+    "perilymph (21.0%)"
+  ],
+  "top_real_anatomy": [
+    "mammary gland smooth muscle (0.01%)",
+    "smooth muscle tissue (0.02%)",
+    "smooth muscle endomysium (0.03%)",
+    "metanephric smooth muscle tissue (0.03%)",
+    "enteric circular muscle (0.04%)",
+    "spleen smooth muscle (0.05%)",
+    "anal region smooth muscle (0.06%)",
+    "ureter smooth muscle (0.07%)",
+    "smooth muscle layer in fatty layer of subcutaneous tissue (0.08%)",
+    "umbilical smooth muscle (0.09%)"
+  ]
+}

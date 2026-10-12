@@ -1,0 +1,25 @@
+{
+  "name": "OSD-561",
+  "tissue": "cerebellum",
+  "tissue_label": "cerebellum",
+  "n_samples": 12,
+  "n_linked": 74,
+  "proxy": false,
+  "target_nodes": [
+    "cerebellum (rank 67)"
+  ],
+  "best_target_rank": 67,
+  "frac_samples_target_rank1": 0.0,
+  "frac_samples_target_top3": 0.0,
+  "verdict": "NONE",
+  "top_linked_nodes": [
+    "forebrain",
+    "smooth muscle tissue",
+    "telencephalon",
+    "cardiovascular system",
+    "renal system",
+    "kidney",
+    "eye",
+    "pancreas"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "name": "OSD-566",
+  "tissue": "adrenal gland",
+  "tissue_label": "adrenal gland",
+  "n_samples": 6,
+  "n_linked": 74,
+  "proxy": false,
+  "target_nodes": [
+    "adrenal cortex (rank 33)",
+    "adrenal gland (rank 72)"
+  ],
+  "best_target_rank": 33,
+  "frac_samples_target_rank1": 0.0,
+  "frac_samples_target_top3": 0.0,
+  "verdict": "NONE",
+  "top_linked_nodes": [
+    "renal system",
+    "smooth muscle tissue",
+    "cardiovascular system",
+    "kidney",
+    "islet of Langerhans",
+    "pancreas",
+    "mammary gland",
+    "digestive system"
+  ]
+}

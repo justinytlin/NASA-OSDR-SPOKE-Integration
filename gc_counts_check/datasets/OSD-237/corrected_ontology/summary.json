@@ -1,0 +1,46 @@
+{
+  "name": "OSD-237",
+  "tissue": "skin",
+  "tissue_label": "skin",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-237_GC_ranks.npz",
+  "n_samples": 6,
+  "n_anatomy": 13257,
+  "family_regex": "\\bskin|epidermis|dermis",
+  "family_exclude": "dermatome|hypodermis",
+  "n_family_nodes": 280,
+  "family_median_pct": 24.53043675039602,
+  "in_top_2_5pct": 15,
+  "in_top_10pct": 54,
+  "mwu_p_less": 8.270705536394178e-23,
+  "ks_p_greater": 5.121854588921026e-19,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 4,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 8.3e-23 (ok)",
+    "KS p = 5.1e-19 (ok)",
+    "6/6 samples individually p < 0.05 (ok)",
+    "family ranks 4 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "hyponychium (0.9%)",
+    "skin of body (0.9%)",
+    "skin gland (1.4%)",
+    "stratum corneum of epidermis (1.5%)",
+    "areolar gland (1.7%)"
+  ],
+  "top_real_anatomy": [
+    "mammary gland smooth muscle (0.01%)",
+    "cervical mammary gland (0.02%)",
+    "mammary gland connective tissue (0.03%)",
+    "cardiovascular system (0.04%)",
+    "heart primordium (0.05%)",
+    "smooth muscle tissue (0.05%)",
+    "anal region smooth muscle (0.06%)",
+    "smooth muscle endomysium (0.06%)",
+    "enteric circular muscle (0.08%)",
+    "areola (0.09%)"
+  ]
+}

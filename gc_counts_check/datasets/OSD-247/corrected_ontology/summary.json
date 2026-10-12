@@ -1,0 +1,46 @@
+{
+  "name": "OSD-247",
+  "tissue": "colon",
+  "tissue_label": "colon",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-247_GC_ranks.npz",
+  "n_samples": 17,
+  "n_anatomy": 13257,
+  "family_regex": "colon\\b|colonic|large intestine|rectum",
+  "family_exclude": "colonic (?:artery|vein)|mesocolon",
+  "n_family_nodes": 35,
+  "family_median_pct": 7.967377944615275,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 21,
+  "mwu_p_less": 2.5675776489471017e-15,
+  "ks_p_greater": 5.01843466375265e-15,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 2,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 2.6e-15 (ok)",
+    "KS p = 5e-15 (ok)",
+    "17/17 samples individually p < 0.05 (ok)",
+    "family ranks 2 of 15 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "submucosa of cecum (2.7%)",
+    "cecum mucosa (3.8%)",
+    "caecum (3.9%)",
+    "muscularis mucosae of colon (4.2%)",
+    "crypt of Lieberkuhn of colon (4.3%)"
+  ],
+  "top_real_anatomy": [
+    "renal duct (0.02%)",
+    "renal system (0.03%)",
+    "excretory gland (0.04%)",
+    "digestive system (0.05%)",
+    "ureteropelvic junction (0.06%)",
+    "labial cavities (0.06%)",
+    "pancreas (0.06%)",
+    "Marshall's gland (0.08%)",
+    "mesentery of urinary system (0.08%)",
+    "intercalated duct of pancreas (0.09%)"
+  ]
+}

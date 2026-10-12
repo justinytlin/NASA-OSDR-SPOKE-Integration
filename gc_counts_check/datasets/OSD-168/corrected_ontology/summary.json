@@ -1,0 +1,46 @@
+{
+  "name": "OSD-168",
+  "tissue": "liver",
+  "tissue_label": "liver",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-168_GC_ranks.npz",
+  "n_samples": 4,
+  "n_anatomy": 13257,
+  "family_regex": "liver|hepat",
+  "family_exclude": "hepatopancreas|flexure|arthropod|hepatic cecum",
+  "n_family_nodes": 56,
+  "family_median_pct": 80.72999170249679,
+  "in_top_2_5pct": 1,
+  "in_top_10pct": 8,
+  "mwu_p_less": 0.9989849935504632,
+  "ks_p_greater": 0.5300804041873158,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 8,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 1 (fail)",
+    "KS p = 0.53 (fail)",
+    "0/4 samples individually p < 0.05 (fail)",
+    "family ranks 8 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "intralobular bile duct (1.6%)",
+    "hepatic acinus (4.2%)",
+    "bile canaliculus (5.2%)",
+    "hepatic cord (5.5%)",
+    "liver lobule (7.0%)"
+  ],
+  "top_real_anatomy": [
+    "kidney (0.01%)",
+    "renal duct (0.02%)",
+    "kidney corticomedullary boundary (0.02%)",
+    "upper urinary tract (0.03%)",
+    "renal collecting system (0.04%)",
+    "right kidney (0.05%)",
+    "left kidney (0.05%)",
+    "renal fat pad (0.06%)",
+    "kidney capsule (0.07%)",
+    "renal sinus of right kidney (0.08%)"
+  ]
+}

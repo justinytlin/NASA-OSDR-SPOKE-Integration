@@ -1,0 +1,47 @@
+{
+  "name": "OSD-525__pilot",
+  "tissue": "cerebellum",
+  "tissue_label": "cerebellum",
+  "mode": "corrected_perm_ontology",
+  "families": "ontology",
+  "score_key": "perm",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-525__pilot_GC_ranks.npz",
+  "n_samples": 10,
+  "n_anatomy": 13257,
+  "family_regex": "cerebell",
+  "family_exclude": "artery|vein|spinocerebellar|cerebellar peduncle (?:artery|vein)",
+  "n_family_nodes": 113,
+  "family_median_pct": 93.6984234743909,
+  "in_top_2_5pct": 13,
+  "in_top_10pct": 18,
+  "mwu_p_less": 1.0,
+  "ks_p_greater": 0.0558009719793762,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 12,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 1 (fail)",
+    "KS p = 0.056 (fail)",
+    "0/10 samples individually p < 0.05 (fail)",
+    "family ranks 12 of 15 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "white matter of the cerebellar cortex (0.7%)",
+    "amiculum of dentate nucleus (1.6%)",
+    "cerebellar glomerulus (1.7%)",
+    "fastigial nucleus (1.9%)",
+    "nucleus of cerebellar nuclear complex (1.9%)"
+  ],
+  "top_real_anatomy": [
+    "secondary prosencephalon (0.01%)",
+    "forebrain (0.02%)",
+    "superficial feature part of forebrain (0.02%)",
+    "telencephalon diencephalon boundary (0.03%)",
+    "postnatal subventricular zone (0.04%)",
+    "basal forebrain (0.05%)",
+    "gray matter of forebrain (0.05%)",
+    "forebrain meninges (0.07%)",
+    "forebrain ventricular layer (0.07%)",
+    "white matter of forebrain (0.07%)"
+  ]
+}

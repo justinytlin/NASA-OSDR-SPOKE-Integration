@@ -1,0 +1,47 @@
+{
+  "name": "OSD-758__pilot",
+  "tissue": "retina",
+  "tissue_label": "retina",
+  "mode": "corrected_zscore_ontology",
+  "families": "ontology",
+  "score_key": "zscore",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-758__pilot_GC_ranks.npz",
+  "n_samples": 12,
+  "n_anatomy": 13257,
+  "family_regex": "retina|photoreceptor|optic disc|fovea centralis|foveola|macula lutea|parafovea|perifovea",
+  "family_exclude": "retinaculum",
+  "n_family_nodes": 50,
+  "family_median_pct": 0.1945513062281562,
+  "in_top_2_5pct": 38,
+  "in_top_10pct": 43,
+  "mwu_p_less": 1.8634562093274327e-31,
+  "ks_p_greater": 1.321502842697946e-30,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 1,
+  "verdict": "CLEAR",
+  "criteria": [
+    "pooled Mann-Whitney p = 1.9e-31 (ok)",
+    "KS p = 1.3e-30 (ok)",
+    "12/12 samples individually p < 0.05 (ok)",
+    "family ranks 1 of 15 organ families by median percentile (ok)"
+  ],
+  "best_family_nodes": [
+    "retinal tapetum lucidum (0.0%)",
+    "border between sublaminar layers (0.0%)",
+    "border of sublaminar layers S3 and S4 (0.0%)",
+    "substratum of layer of retina (0.0%)",
+    "border of sublaminar layers S2 and S3 (0.0%)"
+  ],
+  "top_real_anatomy": [
+    "retinal tapetum lucidum (0.01%)",
+    "border between sublaminar layers (0.02%)",
+    "border of sublaminar layers S3 and S4 (0.03%)",
+    "substratum of layer of retina (0.04%)",
+    "border of sublaminar layers S2 and S3 (0.05%)",
+    "border of sublaminar layers S4 and S5 (0.05%)",
+    "retina (0.06%)",
+    "sublaminar layers S3 or S4 (0.06%)",
+    "border of sublaminar layers S1 and S2 (0.06%)",
+    "sublaminar layers S1 or S3 or S4 (0.07%)"
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "name": "OSD-322",
+  "tissue": "liver",
+  "tissue_label": "liver",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-322_GC_ranks.npz",
+  "n_samples": 15,
+  "n_anatomy": 13257,
+  "family_regex": "liver|hepat",
+  "family_exclude": "hepatopancreas|flexure|arthropod|hepatic cecum",
+  "n_family_nodes": 56,
+  "family_median_pct": 56.95557064192503,
+  "in_top_2_5pct": 1,
+  "in_top_10pct": 6,
+  "mwu_p_less": 0.819690912926382,
+  "ks_p_greater": 0.8065104562855882,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 9,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.82 (fail)",
+    "KS p = 0.81 (fail)",
+    "0/15 samples individually p < 0.05 (fail)",
+    "family ranks 9 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "intralobular bile duct (1.9%)",
+    "hepatic acinus (4.6%)",
+    "hepatic cord (5.4%)",
+    "liver lobule (5.9%)",
+    "bile canaliculus (6.0%)"
+  ],
+  "top_real_anatomy": [
+    "renal duct (0.01%)",
+    "kidney (0.02%)",
+    "renal system (0.03%)",
+    "excretory gland (0.03%)",
+    "upper urinary tract (0.04%)",
+    "kidney corticomedullary boundary (0.04%)",
+    "ureteropelvic junction (0.06%)",
+    "renal collecting system (0.06%)",
+    "renal fat pad (0.07%)",
+    "right kidney (0.08%)"
+  ]
+}

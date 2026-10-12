@@ -27,6 +27,25 @@ FAMILIES = {
     "brain": (r"brain|cerebr|cerebell|hippocamp|thalam|amygdala|striatum|telenceph|dienceph|midbrain|hindbrain|\bpons\b|medulla oblongata|"
               r"olfactory bulb|forebrain|neocortex|isocortex|pallium|basal ganglia|substantia nigra|corpus callosum",
               r"cerebral vein|cerebral artery|braincase|Myxin|ascidian|protocerebrum|cerebral ganglion"),
+    # added for the OSDR-wide run
+    "cerebellum": (r"cerebell", r"artery|vein|spinocerebellar|cerebellar peduncle (?:artery|vein)"),
+    "cerebrum": (r"cerebral (?:hemisphere|cortex|white matter|lobe|subcortex)|cerebrum|telencephal|neocortex|isocortex|"
+                 r"frontal (?:lobe|cortex)|parietal (?:lobe|cortex)|temporal (?:lobe|cortex)|occipital (?:lobe|cortex)|corpus callosum",
+                 r"artery|vein|Myxin|protocerebrum"),
+    "optic nerve": (r"optic nerve|optic disc|optic chiasm|optic tract|cranial nerve II|nerve fiber layer of retina|optic stalk", None),
+    "colon": (r"colon\b|colonic|large intestine|rectum", r"colonic (?:artery|vein)|mesocolon"),
+    "cecum": (r"c(?:a)?ecum|c(?:a)?ecal|ileoc(?:a)?ecal|vermiform appendix", r"hepatic cecum|pyloric c|gastric c|intestinal c|buccal|foramen c"),
+    "mammary gland": (r"mammary|lactiferous|nipple|areola|\bbreast", r"internal mammary|mammary (?:artery|vein)|mammary body|mamm?illary|feather"),
+    "temporal bone": (r"temporal bone|petrous|mastoid|tympanic (?:ring|bone|part)|squamous part of temporal|otic capsule|periotic",
+                      r"sterno|extratemporal|intertemporal|supratemporal"),
+    "mandible": (r"mandib|dentary|lower jaw", r"mandibular (?:nerve|artery|vein|gland|lymph)|submandibular|maxillomandibular|"
+                 r"mandibular (?:arch|process|prominence) (?:mesenchyme|ectoderm|endoderm)"),
+    "bone tissue": (r"bone tissue|compact bone|cortical bone|trabecular bone|cancellous bone|spongy bone|osteon|periosteum|"
+                    r"endosteum|diaphysis|\bfemur\b|\btibia\b|long bone|bone element", r"arthropod"),
+    "adipose tissue": (r"adipose|fat pad|\bfat\b|panniculus", r"adipose fin|adipose eyelid|arthropod"),
+    "whole blood": (r"\bblood\b|plasma|serum",
+                    r"blood (?:vessel|island|brain|nerve|vasculature)|blood-|vessel|barrier|plasma membrane|sinus|feather"),
+    "placenta": (r"placent|chorioallantoic|decidua|trophoblast|chorionic (?:plate|villus)|labyrinth layer|junctional zone|ectoplacental", None),
 }
 # the fixed competition set used by check_anatomy.py (the dataset's own family is added if not in it)
 CORE_ORGAN_FAMILIES = ["hippocampus", "thymus", "spleen", "liver", "cerebral cortex", "heart", "kidney", "lung",

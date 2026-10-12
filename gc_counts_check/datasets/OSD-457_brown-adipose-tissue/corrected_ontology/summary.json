@@ -1,0 +1,46 @@
+{
+  "name": "OSD-457_brown-adipose-tissue",
+  "tissue": "adipose tissue",
+  "tissue_label": "brown adipose tissue",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-457_brown-adipose-tissue_GC_ranks.npz",
+  "n_samples": 6,
+  "n_anatomy": 13257,
+  "family_regex": "adipose|fat pad|\\bfat\\b|panniculus",
+  "family_exclude": "adipose fin|adipose eyelid|arthropod",
+  "n_family_nodes": 46,
+  "family_median_pct": 63.564531945387344,
+  "in_top_2_5pct": 2,
+  "in_top_10pct": 8,
+  "mwu_p_less": 0.9688870153938832,
+  "ks_p_greater": 0.26296262801723486,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 11,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.97 (fail)",
+    "KS p = 0.26 (fail)",
+    "0/6 samples individually p < 0.05 (fail)",
+    "family ranks 11 of 15 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "renal fat pad (0.1%)",
+    "pancreatic fat pad (0.7%)",
+    "tail fat pad (3.6%)",
+    "interscapular fat pad (4.9%)",
+    "brown adipose tissue (5.8%)"
+  ],
+  "top_real_anatomy": [
+    "cardiovascular system (0.01%)",
+    "heart primordium (0.02%)",
+    "renal system (0.02%)",
+    "excretory gland (0.03%)",
+    "kidney (0.03%)",
+    "proepicardium (0.05%)",
+    "ureteropelvic junction (0.05%)",
+    "kidney corticomedullary boundary (0.06%)",
+    "renal collecting system (0.07%)",
+    "mesentery of urinary system (0.07%)"
+  ]
+}

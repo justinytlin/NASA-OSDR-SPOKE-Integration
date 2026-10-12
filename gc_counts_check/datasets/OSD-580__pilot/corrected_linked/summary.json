@@ -1,0 +1,28 @@
+{
+  "name": "OSD-580__pilot",
+  "tissue": "heart",
+  "tissue_label": "heart",
+  "n_samples": 20,
+  "n_linked": 74,
+  "proxy": false,
+  "target_nodes": [
+    "myocardium (rank 2)",
+    "cardiac ventricle (rank 14)",
+    "cardiac atrium (rank 23)",
+    "heart (rank 62)"
+  ],
+  "best_target_rank": 2,
+  "frac_samples_target_rank1": 0.0,
+  "frac_samples_target_top3": 0.35,
+  "verdict": "PARTIAL",
+  "top_linked_nodes": [
+    "cardiovascular system",
+    "myocardium",
+    "renal system",
+    "smooth muscle tissue",
+    "pancreas",
+    "kidney",
+    "forebrain",
+    "digestive system"
+  ]
+}

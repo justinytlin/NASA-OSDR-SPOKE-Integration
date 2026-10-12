@@ -1,0 +1,9 @@
+{
+  "name": "OSD-101",
+  "tissue": "skeletal muscle",
+  "tissue_label": "gastrocnemius",
+  "n_linked": 74,
+  "verdict": "NO LINKED NODE",
+  "target_nodes": [],
+  "proxy": true
+}

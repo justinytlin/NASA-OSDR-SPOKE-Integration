@@ -1,0 +1,75 @@
+Node	Node_Name	pooled_rank	mean_rank	target
+UBERON:0001890	forebrain	1	1.0	False
+UBERON:0000966	retina	2	2.0	True
+UBERON:0001893	telencephalon	3	3.0	False
+UBERON:0000970	eye	4	4.0	False
+UBERON:0001135	smooth muscle tissue	5	5.0	False
+UBERON:0000995	uterus	6	6.13	False
+UBERON:0000020	sense organ	7	7.87	False
+UBERON:0000991	gonad	8	8.07	False
+UBERON:0001008	renal system	9	8.93	False
+UBERON:0002082	cardiac ventricle	10	9.6	False
+UBERON:0000006	islet of Langerhans	11	11.73	False
+UBERON:0001911	mammary gland	12	11.87	False
+UBERON:0004535	cardiovascular system	13	12.67	False
+UBERON:0001231	nephron tubule	14	14.4	False
+UBERON:0001264	pancreas	15	14.8	False
+UBERON:0002298	brainstem	16	16.53	False
+UBERON:0002028	hindbrain	17	16.73	False
+UBERON:0002113	kidney	18	18.0	False
+UBERON:0001895	metencephalon	19	18.47	False
+UBERON:0002349	myocardium	20	19.2	False
+UBERON:0001004	respiratory system	21	21.0	False
+UBERON:0001007	digestive system	22	22.93	False
+UBERON:0001044	saliva-secreting gland	23	23.27	False
+UBERON:0002073	hair follicle	24	23.93	False
+UBERON:0002081	cardiac atrium	25	24.93	False
+UBERON:0001744	lymphoid tissue	26	25.93	False
+UBERON:0002371	bone marrow	27	26.67	False
+UBERON:0002185	bronchus	28	28.93	False
+UBERON:0000974	neck	29	29.0	False
+UBERON:0000922	embryo	30	29.33	False
+UBERON:0002390	hematopoietic system	31	30.93	False
+UBERON:0000002	uterine cervix	32	31.33	False
+UBERON:0002030	nipple	33	33.2	False
+UBERON:0002097	skin of body	34	34.47	False
+UBERON:0001225	cortex of kidney	35	34.6	False
+UBERON:0001235	adrenal cortex	36	35.93	False
+UBERON:0000045	ganglion	37	38.47	False
+UBERON:0001891	midbrain	38	38.6	False
+UBERON:0001017	central nervous system	39	38.73	False
+UBERON:0002384	connective tissue	40	39.07	False
+UBERON:0002450	decidua	41	41.53	False
+UBERON:0001016	nervous system	42	41.6	False
+UBERON:0001296	myometrium	43	42.73	False
+UBERON:0003126	trachea	44	43.53	False
+UBERON:0000165	mouth	45	45.33	False
+UBERON:0000997	mammalian vulva	46	46.47	False
+UBERON:0000033	head	47	47.33	False
+UBERON:0000057	urethra	48	47.67	False
+UBERON:0001969	blood plasma	49	48.73	False
+UBERON:0000483	epithelium	50	49.27	False
+UBERON:0001896	medulla oblongata	51	51.27	False
+UBERON:0002240	spinal cord	52	52.53	False
+UBERON:0001831	parotid gland	53	53.67	False
+UBERON:0001675	trigeminal ganglion	54	54.4	False
+UBERON:0000998	seminal vesicle	55	54.47	False
+UBERON:0001295	endometrium	56	54.47	False
+UBERON:0000043	tendon	57	56.73	False
+UBERON:0002368	endocrine gland	58	58.13	False
+UBERON:0000992	ovary	59	58.87	False
+UBERON:0000007	pituitary gland	60	60.07	False
+UBERON:0000474	female reproductive system	61	60.93	False
+UBERON:0000178	blood	62	62.0	False
+UBERON:0000996	vagina	63	63.0	False
+UBERON:0001013	adipose tissue	64	64.0	False
+UBERON:0000029	lymph node	65	65.0	False
+UBERON:0002107	liver	66	66.07	False
+UBERON:0002037	cerebellum	67	67.13	False
+UBERON:0002046	thyroid gland	68	67.8	False
+UBERON:0002367	prostate gland	69	69.0	False
+UBERON:0000948	heart	70	70.07	False
+UBERON:0002048	lung	71	70.93	False
+UBERON:0002369	adrenal gland	72	72.0	False
+UBERON:0000473	testis	73	73.0	False
+UBERON:0000955	brain	74	74.0	False

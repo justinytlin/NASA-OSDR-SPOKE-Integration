@@ -1,0 +1,46 @@
+{
+  "name": "OSD-876",
+  "tissue": "skeletal muscle",
+  "tissue_label": "gastrocnemius",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-876_GC_ranks.npz",
+  "n_samples": 4,
+  "n_anatomy": 13257,
+  "family_regex": "skeletal muscle|gastrocnemius|quadriceps|soleus|tibialis",
+  "family_exclude": null,
+  "n_family_nodes": 498,
+  "family_median_pct": 18.17624651127706,
+  "in_top_2_5pct": 2,
+  "in_top_10pct": 60,
+  "mwu_p_less": 3.2585931242980918e-93,
+  "ks_p_greater": 5.987488316311073e-94,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 3,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 3.3e-93 (ok)",
+    "KS p = 6e-94 (ok)",
+    "4/4 samples individually p < 0.05 (ok)",
+    "family ranks 3 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "respiratory system skeletal muscle (0.5%)",
+    "skeletal muscle tissue of pharynx (0.7%)",
+    "skeletal muscle tissue of diaphragm (3.7%)",
+    "skeletal muscle endomysium (3.7%)",
+    "splenius capitis (3.9%)"
+  ],
+  "top_real_anatomy": [
+    "heart primordium (0.01%)",
+    "cardiovascular system (0.02%)",
+    "proepicardium (0.02%)",
+    "vascular system (0.04%)",
+    "arterial system (0.05%)",
+    "cardiovascular system elastic tissue (0.05%)",
+    "septum transversum (0.06%)",
+    "renal system (0.07%)",
+    "primordial vasculature (0.07%)",
+    "excretory gland (0.08%)"
+  ]
+}

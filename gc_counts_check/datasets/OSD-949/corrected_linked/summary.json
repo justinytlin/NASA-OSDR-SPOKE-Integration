@@ -1,0 +1,9 @@
+{
+  "name": "OSD-949",
+  "tissue": "skeletal muscle",
+  "tissue_label": "soleus",
+  "n_linked": 74,
+  "verdict": "NO LINKED NODE",
+  "target_nodes": [],
+  "proxy": true
+}

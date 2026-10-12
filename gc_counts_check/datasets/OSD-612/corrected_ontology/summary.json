@@ -1,0 +1,46 @@
+{
+  "name": "OSD-612",
+  "tissue": "cerebrum",
+  "tissue_label": "cerebrum",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-612_GC_ranks.npz",
+  "n_samples": 5,
+  "n_anatomy": 13257,
+  "family_regex": "cerebral (?:hemisphere|cortex|white matter|lobe|subcortex)|cerebrum|telencephal|neocortex|isocortex|frontal (?:lobe|cortex)|parietal (?:lobe|cortex)|temporal (?:lobe|cortex)|occipital (?:lobe|cortex)|corpus callosum",
+  "family_exclude": "artery|vein|Myxin|protocerebrum",
+  "n_family_nodes": 633,
+  "family_median_pct": 15.071283095723013,
+  "in_top_2_5pct": 111,
+  "in_top_10pct": 238,
+  "mwu_p_less": 1.527296855727802e-178,
+  "ks_p_greater": 1.3337648686299991e-174,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 2,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 1.5e-178 (ok)",
+    "KS p = 1.3e-174 (ok)",
+    "5/5 samples individually p < 0.05 (ok)",
+    "family ranks 2 of 15 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "meninx of telencephalon (0.1%)",
+    "substantia innominata (0.1%)",
+    "telencephalon dura mater (0.1%)",
+    "telencephalon pia mater (0.1%)",
+    "gray matter of telencephalon (0.1%)"
+  ],
+  "top_real_anatomy": [
+    "forebrain (0.01%)",
+    "secondary prosencephalon (0.02%)",
+    "superficial feature part of forebrain (0.02%)",
+    "telencephalon diencephalon boundary (0.03%)",
+    "basal forebrain (0.04%)",
+    "postnatal subventricular zone (0.05%)",
+    "gray matter of forebrain (0.05%)",
+    "forebrain meninges (0.06%)",
+    "meninx of telencephalon (0.07%)",
+    "substantia innominata (0.08%)"
+  ]
+}

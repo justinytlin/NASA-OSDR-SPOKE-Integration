@@ -1,0 +1,25 @@
+{
+  "name": "OSD-248__nohk",
+  "tissue": "lung",
+  "tissue_label": "lung",
+  "n_samples": 19,
+  "n_linked": 74,
+  "proxy": false,
+  "target_nodes": [
+    "lung (rank 67)"
+  ],
+  "best_target_rank": 67,
+  "frac_samples_target_rank1": 0.0,
+  "frac_samples_target_top3": 0.0,
+  "verdict": "NONE",
+  "top_linked_nodes": [
+    "uterus",
+    "smooth muscle tissue",
+    "pancreas",
+    "cardiovascular system",
+    "myocardium",
+    "renal system",
+    "islet of Langerhans",
+    "nephron tubule"
+  ]
+}

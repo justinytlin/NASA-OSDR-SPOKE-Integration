@@ -1,0 +1,25 @@
+{
+  "name": "OSD-162",
+  "tissue": "eye",
+  "tissue_label": "eye",
+  "n_samples": 5,
+  "n_linked": 74,
+  "proxy": false,
+  "target_nodes": [
+    "retina (rank 8)"
+  ],
+  "best_target_rank": 8,
+  "frac_samples_target_rank1": 0.0,
+  "frac_samples_target_top3": 0.0,
+  "verdict": "NONE",
+  "top_linked_nodes": [
+    "cardiovascular system",
+    "eye",
+    "renal system",
+    "smooth muscle tissue",
+    "pancreas",
+    "islet of Langerhans",
+    "kidney",
+    "retina"
+  ]
+}

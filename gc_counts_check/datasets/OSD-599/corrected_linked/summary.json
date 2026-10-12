@@ -1,0 +1,28 @@
+{
+  "name": "OSD-599",
+  "tissue": "heart",
+  "tissue_label": "heart",
+  "n_samples": 3,
+  "n_linked": 74,
+  "proxy": false,
+  "target_nodes": [
+    "myocardium (rank 5)",
+    "cardiac ventricle (rank 15)",
+    "cardiac atrium (rank 27)",
+    "heart (rank 65)"
+  ],
+  "best_target_rank": 5,
+  "frac_samples_target_rank1": 0.0,
+  "frac_samples_target_top3": 0.0,
+  "verdict": "PARTIAL",
+  "top_linked_nodes": [
+    "cardiovascular system",
+    "renal system",
+    "kidney",
+    "smooth muscle tissue",
+    "myocardium",
+    "digestive system",
+    "pancreas",
+    "respiratory system"
+  ]
+}

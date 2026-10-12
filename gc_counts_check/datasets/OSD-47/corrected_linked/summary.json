@@ -1,0 +1,25 @@
+{
+  "name": "OSD-47",
+  "tissue": "liver",
+  "tissue_label": "liver",
+  "n_samples": 3,
+  "n_linked": 74,
+  "proxy": false,
+  "target_nodes": [
+    "liver (rank 60)"
+  ],
+  "best_target_rank": 60,
+  "frac_samples_target_rank1": 0.0,
+  "frac_samples_target_top3": 0.0,
+  "verdict": "NONE",
+  "top_linked_nodes": [
+    "kidney",
+    "renal system",
+    "cardiovascular system",
+    "nephron tubule",
+    "digestive system",
+    "islet of Langerhans",
+    "pancreas",
+    "respiratory system"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "name": "OSD-270",
+  "tissue": "heart",
+  "tissue_label": "heart",
+  "n_samples": 2,
+  "n_linked": 74,
+  "proxy": false,
+  "target_nodes": [
+    "myocardium (rank 6)",
+    "cardiac ventricle (rank 22)",
+    "cardiac atrium (rank 29)",
+    "heart (rank 65)"
+  ],
+  "best_target_rank": 6,
+  "frac_samples_target_rank1": 0.0,
+  "frac_samples_target_top3": 0.0,
+  "verdict": "PARTIAL",
+  "top_linked_nodes": [
+    "cardiovascular system",
+    "kidney",
+    "renal system",
+    "smooth muscle tissue",
+    "digestive system",
+    "myocardium",
+    "forebrain",
+    "respiratory system"
+  ]
+}

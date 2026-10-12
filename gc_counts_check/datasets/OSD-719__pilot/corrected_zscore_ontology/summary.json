@@ -1,0 +1,47 @@
+{
+  "name": "OSD-719__pilot",
+  "tissue": "whole blood",
+  "tissue_label": "blood",
+  "mode": "corrected_zscore_ontology",
+  "families": "ontology",
+  "score_key": "zscore",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-719__pilot_GC_ranks.npz",
+  "n_samples": 6,
+  "n_anatomy": 13257,
+  "family_regex": "\\bblood\\b|plasma|serum",
+  "family_exclude": "blood (?:vessel|island|brain|nerve|vasculature)|blood-|vessel|barrier|plasma membrane|sinus|feather",
+  "n_family_nodes": 7,
+  "family_median_pct": 88.17857232656961,
+  "in_top_2_5pct": 2,
+  "in_top_10pct": 3,
+  "mwu_p_less": 0.6401054778140939,
+  "ks_p_greater": 0.07891607641834175,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 13,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.64 (fail)",
+    "KS p = 0.079 (fail)",
+    "0/6 samples individually p < 0.05 (fail)",
+    "family ranks 13 of 15 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "blood plasma (0.6%)",
+    "blood serum (0.7%)",
+    "umbilical cord blood (2.6%)",
+    "arterial blood (88.2%)",
+    "venous blood (88.3%)"
+  ],
+  "top_real_anatomy": [
+    "gall bladder smooth muscle (0.01%)",
+    "spleen smooth muscle (0.02%)",
+    "kidney pelvis smooth muscle (0.03%)",
+    "gastrointestinal system smooth muscle (0.03%)",
+    "anal region smooth muscle (0.04%)",
+    "smooth muscle endomysium (0.06%)",
+    "ureter smooth muscle (0.07%)",
+    "neck connective tissue (0.08%)",
+    "smooth muscle tissue (0.09%)",
+    "metanephric smooth muscle tissue (0.09%)"
+  ]
+}

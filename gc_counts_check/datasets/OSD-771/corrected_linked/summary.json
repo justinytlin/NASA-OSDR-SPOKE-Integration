@@ -1,0 +1,27 @@
+{
+  "name": "OSD-771",
+  "tissue": "kidney",
+  "tissue_label": "kidney",
+  "n_samples": 20,
+  "n_linked": 74,
+  "proxy": false,
+  "target_nodes": [
+    "kidney (rank 2)",
+    "nephron tubule (rank 4)",
+    "cortex of kidney (rank 30)"
+  ],
+  "best_target_rank": 2,
+  "frac_samples_target_rank1": 0.3,
+  "frac_samples_target_top3": 0.95,
+  "verdict": "PARTIAL",
+  "top_linked_nodes": [
+    "renal system",
+    "kidney",
+    "pancreas",
+    "nephron tubule",
+    "digestive system",
+    "islet of Langerhans",
+    "cardiovascular system",
+    "smooth muscle tissue"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "name": "OSD-457_temporal-bone",
+  "tissue": "temporal bone",
+  "tissue_label": "temporal bone",
+  "n_linked": 74,
+  "verdict": "NO LINKED NODE",
+  "target_nodes": [],
+  "proxy": true
+}

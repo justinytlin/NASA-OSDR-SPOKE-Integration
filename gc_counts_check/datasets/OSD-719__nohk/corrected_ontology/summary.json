@@ -1,0 +1,47 @@
+{
+  "name": "OSD-719__nohk",
+  "tissue": "whole blood",
+  "tissue_label": "blood",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "score_key": "scores",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-719__nohk_GC_ranks.npz",
+  "n_samples": 6,
+  "n_anatomy": 13257,
+  "family_regex": "\\bblood\\b|plasma|serum",
+  "family_exclude": "blood (?:vessel|island|brain|nerve|vasculature)|blood-|vessel|barrier|plasma membrane|sinus|feather",
+  "n_family_nodes": 7,
+  "family_median_pct": 89.46719971838776,
+  "in_top_2_5pct": 1,
+  "in_top_10pct": 3,
+  "mwu_p_less": 0.6797889812376683,
+  "ks_p_greater": 0.08930944281217493,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 13,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.68 (fail)",
+    "KS p = 0.089 (fail)",
+    "0/6 samples individually p < 0.05 (fail)",
+    "family ranks 13 of 15 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "blood plasma (2.5%)",
+    "umbilical cord blood (3.2%)",
+    "blood serum (3.7%)",
+    "arterial blood (89.5%)",
+    "venous blood (92.0%)"
+  ],
+  "top_real_anatomy": [
+    "secondary follicle corona (0.01%)",
+    "lymph node follicular corona (0.02%)",
+    "spleen follicular dendritic cell network (0.02%)",
+    "appendix lymphoid tissue (0.03%)",
+    "lymphoid tissue (0.04%)",
+    "spleen B cell corona (0.05%)",
+    "spleen secondary B follicle (0.06%)",
+    "thymus lymphoid tissue (0.07%)",
+    "anal region smooth muscle (0.07%)",
+    "smooth muscle endomysium (0.08%)"
+  ]
+}

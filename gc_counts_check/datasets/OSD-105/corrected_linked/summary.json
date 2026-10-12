@@ -1,0 +1,9 @@
+{
+  "name": "OSD-105",
+  "tissue": "skeletal muscle",
+  "tissue_label": "tibialis anterior",
+  "n_linked": 74,
+  "verdict": "NO LINKED NODE",
+  "target_nodes": [],
+  "proxy": true
+}

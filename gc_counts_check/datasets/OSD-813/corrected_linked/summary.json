@@ -1,0 +1,25 @@
+{
+  "name": "OSD-813",
+  "tissue": "placenta",
+  "tissue_label": "placenta",
+  "n_samples": 15,
+  "n_linked": 74,
+  "proxy": false,
+  "target_nodes": [
+    "decidua (rank 26)"
+  ],
+  "best_target_rank": 26,
+  "frac_samples_target_rank1": 0.0,
+  "frac_samples_target_top3": 0.0,
+  "verdict": "NONE",
+  "top_linked_nodes": [
+    "smooth muscle tissue",
+    "islet of Langerhans",
+    "pancreas",
+    "cardiovascular system",
+    "renal system",
+    "kidney",
+    "respiratory system",
+    "digestive system"
+  ]
+}

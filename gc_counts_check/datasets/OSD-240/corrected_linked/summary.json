@@ -1,0 +1,26 @@
+{
+  "name": "OSD-240",
+  "tissue": "skin",
+  "tissue_label": "skin",
+  "n_samples": 10,
+  "n_linked": 74,
+  "proxy": false,
+  "target_nodes": [
+    "skin of body (rank 12)",
+    "hair follicle (rank 17)"
+  ],
+  "best_target_rank": 12,
+  "frac_samples_target_rank1": 0.0,
+  "frac_samples_target_top3": 0.0,
+  "verdict": "NONE",
+  "top_linked_nodes": [
+    "cardiovascular system",
+    "smooth muscle tissue",
+    "pancreas",
+    "digestive system",
+    "renal system",
+    "mammary gland",
+    "kidney",
+    "islet of Langerhans"
+  ]
+}

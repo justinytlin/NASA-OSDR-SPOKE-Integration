@@ -1,0 +1,34 @@
+{
+  "name": "OSD-202",
+  "tissue": "brain",
+  "tissue_label": "brain",
+  "n_samples": 10,
+  "n_linked": 74,
+  "proxy": false,
+  "target_nodes": [
+    "forebrain (rank 1)",
+    "telencephalon (rank 2)",
+    "brainstem (rank 10)",
+    "hindbrain (rank 12)",
+    "metencephalon (rank 14)",
+    "midbrain (rank 34)",
+    "medulla oblongata (rank 45)",
+    "pituitary gland (rank 57)",
+    "cerebellum (rank 63)",
+    "brain (rank 74)"
+  ],
+  "best_target_rank": 1,
+  "frac_samples_target_rank1": 1.0,
+  "frac_samples_target_top3": 1.0,
+  "verdict": "CLEAR",
+  "top_linked_nodes": [
+    "forebrain",
+    "telencephalon",
+    "smooth muscle tissue",
+    "retina",
+    "eye",
+    "uterus",
+    "cardiac ventricle",
+    "cardiovascular system"
+  ]
+}

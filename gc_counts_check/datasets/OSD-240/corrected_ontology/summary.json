@@ -1,0 +1,46 @@
+{
+  "name": "OSD-240",
+  "tissue": "skin",
+  "tissue_label": "skin",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-240_GC_ranks.npz",
+  "n_samples": 10,
+  "n_anatomy": 13257,
+  "family_regex": "\\bskin|epidermis|dermis",
+  "family_exclude": "dermatome|hypodermis",
+  "n_family_nodes": 280,
+  "family_median_pct": 26.857132081164668,
+  "in_top_2_5pct": 17,
+  "in_top_10pct": 52,
+  "mwu_p_less": 6.267348351268697e-22,
+  "ks_p_greater": 4.924960811639529e-17,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 6,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 6.3e-22 (ok)",
+    "KS p = 4.9e-17 (ok)",
+    "10/10 samples individually p < 0.05 (ok)",
+    "family ranks 6 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "skin of body (0.8%)",
+    "hyponychium (0.8%)",
+    "hair follicle (1.5%)",
+    "skin gland (1.5%)",
+    "stratum corneum of epidermis (1.5%)"
+  ],
+  "top_real_anatomy": [
+    "mammary gland smooth muscle (0.01%)",
+    "cervical mammary gland (0.02%)",
+    "mammary gland connective tissue (0.04%)",
+    "cardiovascular system (0.05%)",
+    "heart primordium (0.05%)",
+    "smooth muscle tissue (0.07%)",
+    "anal region smooth muscle (0.09%)",
+    "enteric circular muscle (0.09%)",
+    "metanephric smooth muscle tissue (0.10%)",
+    "proepicardium (0.11%)"
+  ]
+}

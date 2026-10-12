@@ -1,0 +1,25 @@
+{
+  "name": "OSD-562",
+  "tissue": "hippocampus",
+  "tissue_label": "hippocampus",
+  "n_samples": 12,
+  "n_linked": 74,
+  "proxy": true,
+  "target_nodes": [
+    "brain (rank 74)"
+  ],
+  "best_target_rank": 74,
+  "frac_samples_target_rank1": 0.0,
+  "frac_samples_target_top3": 0.0,
+  "verdict": "NONE",
+  "top_linked_nodes": [
+    "forebrain",
+    "smooth muscle tissue",
+    "telencephalon",
+    "cardiovascular system",
+    "renal system",
+    "eye",
+    "kidney",
+    "retina"
+  ]
+}

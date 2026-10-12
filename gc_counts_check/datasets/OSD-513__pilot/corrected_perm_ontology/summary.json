@@ -1,0 +1,47 @@
+{
+  "name": "OSD-513__pilot",
+  "tissue": "kidney",
+  "tissue_label": "kidney",
+  "mode": "corrected_perm_ontology",
+  "families": "ontology",
+  "score_key": "perm",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-513__pilot_GC_ranks.npz",
+  "n_samples": 10,
+  "n_anatomy": 13257,
+  "family_regex": "kidney|renal|nephron|glomerul",
+  "family_exclude": "adrenal|suprarenal|interrenal|nephridi|Hatschek|lieno|olfactory|cerebell|preglomerular",
+  "n_family_nodes": 272,
+  "family_median_pct": 5.287772497548464,
+  "in_top_2_5pct": 92,
+  "in_top_10pct": 172,
+  "mwu_p_less": 6.1786061351015345e-77,
+  "ks_p_greater": 3.1088461744233464e-78,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 1,
+  "verdict": "CLEAR",
+  "criteria": [
+    "pooled Mann-Whitney p = 6.2e-77 (ok)",
+    "KS p = 3.1e-78 (ok)",
+    "10/10 samples individually p < 0.05 (ok)",
+    "family ranks 1 of 14 organ families by median percentile (ok)"
+  ],
+  "best_family_nodes": [
+    "renal duct (0.1%)",
+    "distal late tubule (0.1%)",
+    "kidney (0.1%)",
+    "kidney corticomedullary boundary (0.1%)",
+    "renal collecting system (0.1%)"
+  ],
+  "top_real_anatomy": [
+    "renal system (0.01%)",
+    "excretory gland (0.01%)",
+    "Marshall's gland (0.03%)",
+    "ureteropelvic junction (0.03%)",
+    "mesentery of urinary system (0.04%)",
+    "upper urinary tract (0.04%)",
+    "ureterovesical junction (0.06%)",
+    "Hatschek's nephridium (0.07%)",
+    "urogenital membrane (0.07%)",
+    "urorectal septum (0.08%)"
+  ]
+}

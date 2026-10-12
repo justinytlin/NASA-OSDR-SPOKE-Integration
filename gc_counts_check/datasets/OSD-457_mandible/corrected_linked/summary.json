@@ -1,0 +1,25 @@
+{
+  "name": "OSD-457_mandible",
+  "tissue": "mandible",
+  "tissue_label": "mandible",
+  "n_samples": 3,
+  "n_linked": 74,
+  "proxy": true,
+  "target_nodes": [
+    "digestive system (rank 7)"
+  ],
+  "best_target_rank": 7,
+  "frac_samples_target_rank1": 0.0,
+  "frac_samples_target_top3": 0.0,
+  "verdict": "PARTIAL",
+  "top_linked_nodes": [
+    "smooth muscle tissue",
+    "renal system",
+    "pancreas",
+    "islet of Langerhans",
+    "cardiovascular system",
+    "kidney",
+    "digestive system",
+    "respiratory system"
+  ]
+}

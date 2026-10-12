@@ -1,0 +1,25 @@
+{
+  "name": "OSD-255",
+  "tissue": "retina",
+  "tissue_label": "retina",
+  "n_samples": 8,
+  "n_linked": 74,
+  "proxy": false,
+  "target_nodes": [
+    "retina (rank 2)"
+  ],
+  "best_target_rank": 2,
+  "frac_samples_target_rank1": 0.0,
+  "frac_samples_target_top3": 1.0,
+  "verdict": "PARTIAL",
+  "top_linked_nodes": [
+    "forebrain",
+    "retina",
+    "telencephalon",
+    "eye",
+    "smooth muscle tissue",
+    "uterus",
+    "gonad",
+    "sense organ"
+  ]
+}

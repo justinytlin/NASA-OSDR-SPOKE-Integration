@@ -1,0 +1,25 @@
+{
+  "name": "OSD-667",
+  "tissue": "colon",
+  "tissue_label": "colon",
+  "n_samples": 5,
+  "n_linked": 74,
+  "proxy": true,
+  "target_nodes": [
+    "digestive system (rank 1)"
+  ],
+  "best_target_rank": 1,
+  "frac_samples_target_rank1": 0.6,
+  "frac_samples_target_top3": 1.0,
+  "verdict": "CLEAR",
+  "top_linked_nodes": [
+    "digestive system",
+    "renal system",
+    "pancreas",
+    "kidney",
+    "smooth muscle tissue",
+    "islet of Langerhans",
+    "mammary gland",
+    "cardiovascular system"
+  ]
+}

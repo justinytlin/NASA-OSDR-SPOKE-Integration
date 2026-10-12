@@ -1,0 +1,26 @@
+{
+  "name": "OSD-98",
+  "tissue": "adrenal gland",
+  "tissue_label": "adrenal gland",
+  "n_samples": 5,
+  "n_linked": 74,
+  "proxy": false,
+  "target_nodes": [
+    "adrenal cortex (rank 33)",
+    "adrenal gland (rank 72)"
+  ],
+  "best_target_rank": 33,
+  "frac_samples_target_rank1": 0.0,
+  "frac_samples_target_top3": 0.0,
+  "verdict": "NONE",
+  "top_linked_nodes": [
+    "smooth muscle tissue",
+    "renal system",
+    "cardiovascular system",
+    "kidney",
+    "islet of Langerhans",
+    "pancreas",
+    "digestive system",
+    "respiratory system"
+  ]
+}

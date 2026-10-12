@@ -1,0 +1,9 @@
+{
+  "name": "OSD-99",
+  "tissue": "skeletal muscle",
+  "tissue_label": "extensor digitorum longus",
+  "n_linked": 74,
+  "verdict": "NO LINKED NODE",
+  "target_nodes": [],
+  "proxy": true
+}

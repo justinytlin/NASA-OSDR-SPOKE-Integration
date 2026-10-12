@@ -1,0 +1,46 @@
+{
+  "name": "OSD-457_thymus",
+  "tissue": "thymus",
+  "tissue_label": "thymus",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-457_thymus_GC_ranks.npz",
+  "n_samples": 6,
+  "n_anatomy": 13257,
+  "family_regex": "thym",
+  "family_exclude": null,
+  "n_family_nodes": 17,
+  "family_median_pct": 21.549621583565912,
+  "in_top_2_5pct": 4,
+  "in_top_10pct": 5,
+  "mwu_p_less": 3.798894068159482e-06,
+  "ks_p_greater": 2.0279125151610873e-06,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 2,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 3.8e-06 (ok)",
+    "KS p = 2e-06 (ok)",
+    "6/6 samples individually p < 0.05 (ok)",
+    "family ranks 2 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "thymus lymphoid tissue (0.0%)",
+    "cervical thymus (2.0%)",
+    "deep cervical thymus (2.0%)",
+    "superficial cervical thymus (2.0%)",
+    "thymus (5.8%)"
+  ],
+  "top_real_anatomy": [
+    "lymphoid tissue (0.01%)",
+    "appendix lymphoid tissue (0.02%)",
+    "secondary follicle corona (0.02%)",
+    "spleen follicular dendritic cell network (0.03%)",
+    "lymph node follicular corona (0.04%)",
+    "thymus lymphoid tissue (0.05%)",
+    "hematopoietic system (0.05%)",
+    "mammary gland smooth muscle (0.06%)",
+    "digestive system (0.07%)",
+    "spleen B cell corona (0.08%)"
+  ]
+}

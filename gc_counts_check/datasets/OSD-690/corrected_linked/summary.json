@@ -1,0 +1,25 @@
+{
+  "name": "OSD-690",
+  "tissue": "bone marrow",
+  "tissue_label": "bone marrow",
+  "n_samples": 6,
+  "n_linked": 74,
+  "proxy": false,
+  "target_nodes": [
+    "bone marrow (rank 32)"
+  ],
+  "best_target_rank": 32,
+  "frac_samples_target_rank1": 0.0,
+  "frac_samples_target_top3": 0.0,
+  "verdict": "NONE",
+  "top_linked_nodes": [
+    "lymphoid tissue",
+    "hematopoietic system",
+    "digestive system",
+    "smooth muscle tissue",
+    "respiratory system",
+    "cardiovascular system",
+    "kidney",
+    "pancreas"
+  ]
+}

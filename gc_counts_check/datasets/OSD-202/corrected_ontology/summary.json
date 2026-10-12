@@ -1,0 +1,46 @@
+{
+  "name": "OSD-202",
+  "tissue": "brain",
+  "tissue_label": "brain",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-202_GC_ranks.npz",
+  "n_samples": 10,
+  "n_anatomy": 13257,
+  "family_regex": "brain|cerebr|cerebell|hippocamp|thalam|amygdala|striatum|telenceph|dienceph|midbrain|hindbrain|\\bpons\\b|medulla oblongata|olfactory bulb|forebrain|neocortex|isocortex|pallium|basal ganglia|substantia nigra|corpus callosum",
+  "family_exclude": "cerebral vein|cerebral artery|braincase|Myxin|ascidian|protocerebrum|cerebral ganglion",
+  "n_family_nodes": 1714,
+  "family_median_pct": 9.933619974353173,
+  "in_top_2_5pct": 221,
+  "in_top_10pct": 858,
+  "mwu_p_less": 0.0,
+  "ks_p_greater": 0.0,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 2,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 0 (ok)",
+    "KS p = 0 (ok)",
+    "10/10 samples individually p < 0.05 (ok)",
+    "family ranks 2 of 15 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "secondary prosencephalon (0.0%)",
+    "forebrain (0.0%)",
+    "superficial feature part of forebrain (0.0%)",
+    "telencephalon diencephalon boundary (0.0%)",
+    "basal forebrain (0.0%)"
+  ],
+  "top_real_anatomy": [
+    "secondary prosencephalon (0.01%)",
+    "forebrain (0.02%)",
+    "superficial feature part of forebrain (0.02%)",
+    "telencephalon diencephalon boundary (0.03%)",
+    "basal forebrain (0.04%)",
+    "postnatal subventricular zone (0.05%)",
+    "gray matter of forebrain (0.05%)",
+    "meninx of telencephalon (0.06%)",
+    "forebrain meninges (0.07%)",
+    "telencephalon pia mater (0.08%)"
+  ]
+}

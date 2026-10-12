@@ -1,0 +1,25 @@
+{
+  "name": "OSD-900",
+  "tissue": "lung",
+  "tissue_label": "lung",
+  "n_samples": 5,
+  "n_linked": 74,
+  "proxy": false,
+  "target_nodes": [
+    "lung (rank 70)"
+  ],
+  "best_target_rank": 70,
+  "frac_samples_target_rank1": 0.0,
+  "frac_samples_target_top3": 0.0,
+  "verdict": "NONE",
+  "top_linked_nodes": [
+    "smooth muscle tissue",
+    "cardiovascular system",
+    "kidney",
+    "mammary gland",
+    "respiratory system",
+    "renal system",
+    "digestive system",
+    "eye"
+  ]
+}

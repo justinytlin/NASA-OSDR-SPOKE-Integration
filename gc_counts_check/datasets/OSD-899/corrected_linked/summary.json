@@ -1,0 +1,25 @@
+{
+  "name": "OSD-899",
+  "tissue": "cecum",
+  "tissue_label": "cecum",
+  "n_samples": 5,
+  "n_linked": 74,
+  "proxy": true,
+  "target_nodes": [
+    "digestive system (rank 2)"
+  ],
+  "best_target_rank": 2,
+  "frac_samples_target_rank1": 0.2,
+  "frac_samples_target_top3": 1.0,
+  "verdict": "PARTIAL",
+  "top_linked_nodes": [
+    "renal system",
+    "digestive system",
+    "kidney",
+    "pancreas",
+    "cardiovascular system",
+    "islet of Langerhans",
+    "lymphoid tissue",
+    "smooth muscle tissue"
+  ]
+}

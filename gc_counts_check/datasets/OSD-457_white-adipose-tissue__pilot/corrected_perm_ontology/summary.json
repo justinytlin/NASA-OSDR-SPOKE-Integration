@@ -1,0 +1,47 @@
+{
+  "name": "OSD-457_white-adipose-tissue__pilot",
+  "tissue": "adipose tissue",
+  "tissue_label": "white adipose tissue",
+  "mode": "corrected_perm_ontology",
+  "families": "ontology",
+  "score_key": "perm",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-457_white-adipose-tissue__pilot_GC_ranks.npz",
+  "n_samples": 6,
+  "n_anatomy": 13257,
+  "family_regex": "adipose|fat pad|\\bfat\\b|panniculus",
+  "family_exclude": "adipose fin|adipose eyelid|arthropod",
+  "n_family_nodes": 46,
+  "family_median_pct": 80.49458147896709,
+  "in_top_2_5pct": 4,
+  "in_top_10pct": 4,
+  "mwu_p_less": 0.9999992341139152,
+  "ks_p_greater": 0.64434705468613,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 8,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 1 (fail)",
+    "KS p = 0.64 (fail)",
+    "0/6 samples individually p < 0.05 (fail)",
+    "family ranks 8 of 15 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "renal fat pad (0.3%)",
+    "brown adipose tissue (1.5%)",
+    "pancreatic fat pad (1.7%)",
+    "tail fat pad (2.2%)",
+    "interscapular fat pad (10.0%)"
+  ],
+  "top_real_anatomy": [
+    "cardiovascular system (0.01%)",
+    "heart primordium (0.02%)",
+    "neck connective tissue (0.02%)",
+    "arterial system (0.03%)",
+    "proepicardium (0.04%)",
+    "submandibular region (0.07%)",
+    "dense irregular connective tissue (0.07%)",
+    "dense connective tissue (0.08%)",
+    "vascular system (0.09%)",
+    "connective tissue (0.09%)"
+  ]
+}

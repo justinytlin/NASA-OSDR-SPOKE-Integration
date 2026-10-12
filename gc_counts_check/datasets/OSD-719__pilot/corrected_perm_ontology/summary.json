@@ -1,0 +1,47 @@
+{
+  "name": "OSD-719__pilot",
+  "tissue": "whole blood",
+  "tissue_label": "blood",
+  "mode": "corrected_perm_ontology",
+  "families": "ontology",
+  "score_key": "perm",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-719__pilot_GC_ranks.npz",
+  "n_samples": 6,
+  "n_anatomy": 13257,
+  "family_regex": "\\bblood\\b|plasma|serum",
+  "family_exclude": "blood (?:vessel|island|brain|nerve|vasculature)|blood-|vessel|barrier|plasma membrane|sinus|feather",
+  "n_family_nodes": 7,
+  "family_median_pct": 91.35928188881344,
+  "in_top_2_5pct": 1,
+  "in_top_10pct": 2,
+  "mwu_p_less": 0.7200149081362697,
+  "ks_p_greater": 0.1710662296671111,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 13,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.72 (fail)",
+    "KS p = 0.17 (fail)",
+    "0/6 samples individually p < 0.05 (fail)",
+    "family ranks 13 of 15 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "blood plasma (0.7%)",
+    "blood serum (3.3%)",
+    "umbilical cord blood (10.0%)",
+    "arterial blood (91.4%)",
+    "venous blood (93.8%)"
+  ],
+  "top_real_anatomy": [
+    "secondary follicle corona (0.01%)",
+    "spleen follicular dendritic cell network (0.02%)",
+    "appendix lymphoid tissue (0.03%)",
+    "lymphoid tissue (0.04%)",
+    "lymph node follicular corona (0.05%)",
+    "inner chondrogenic layer of perichondrium (0.08%)",
+    "outer fibrous layer of perichondrium (0.09%)",
+    "dense connective tissue (0.09%)",
+    "connective tissue (0.09%)",
+    "dense irregular connective tissue (0.10%)"
+  ]
+}

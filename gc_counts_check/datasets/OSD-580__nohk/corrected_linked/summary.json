@@ -1,0 +1,28 @@
+{
+  "name": "OSD-580__nohk",
+  "tissue": "heart",
+  "tissue_label": "heart",
+  "n_samples": 20,
+  "n_linked": 74,
+  "proxy": false,
+  "target_nodes": [
+    "myocardium (rank 3)",
+    "cardiac ventricle (rank 13)",
+    "cardiac atrium (rank 26)",
+    "heart (rank 57)"
+  ],
+  "best_target_rank": 3,
+  "frac_samples_target_rank1": 0.0,
+  "frac_samples_target_top3": 0.4,
+  "verdict": "PARTIAL",
+  "top_linked_nodes": [
+    "cardiovascular system",
+    "renal system",
+    "myocardium",
+    "kidney",
+    "pancreas",
+    "digestive system",
+    "smooth muscle tissue",
+    "eye"
+  ]
+}

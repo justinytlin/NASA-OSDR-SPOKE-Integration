@@ -1,0 +1,47 @@
+{
+  "name": "OSD-248__pilot",
+  "tissue": "lung",
+  "tissue_label": "lung",
+  "mode": "corrected_zscore_ontology",
+  "families": "ontology",
+  "score_key": "zscore",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-248__pilot_GC_ranks.npz",
+  "n_samples": 19,
+  "n_anatomy": 13257,
+  "family_regex": "\\blung|pulmonary|bronch|alveolus of lung|alveolar (?:sac|wall|system|duct)",
+  "family_exclude": "pulmonum",
+  "n_family_nodes": 136,
+  "family_median_pct": 31.11682805111897,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 3,
+  "mwu_p_less": 5.94564605962434e-10,
+  "ks_p_greater": 1.759504523618229e-13,
+  "frac_samples_significant": 0.7368421052631579,
+  "family_rank_among_organ_families": 6,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 5.9e-10 (ok)",
+    "KS p = 1.8e-13 (ok)",
+    "14/19 samples individually p < 0.05 (fail)",
+    "family ranks 6 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "pulmonary lymphatic vessel (5.1%)",
+    "lobar bronchus alveolar system (5.5%)",
+    "lung endothelium (10.0%)",
+    "epithelium of bronchiole (12.9%)",
+    "lumen of secondary bronchus (12.9%)"
+  ],
+  "top_real_anatomy": [
+    "enteric musculature (0.02%)",
+    "lymphatic vessel smooth muscle (0.02%)",
+    "spleen smooth muscle (0.03%)",
+    "metanephric smooth muscle tissue (0.04%)",
+    "enteric circular muscle (0.04%)",
+    "gastrointestinal system smooth muscle (0.06%)",
+    "umbilical smooth muscle (0.06%)",
+    "smooth muscle tissue (0.08%)",
+    "mammary gland smooth muscle (0.09%)",
+    "anal region smooth muscle (0.10%)"
+  ]
+}

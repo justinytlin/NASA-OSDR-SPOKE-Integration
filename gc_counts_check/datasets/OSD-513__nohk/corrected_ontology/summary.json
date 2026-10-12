@@ -1,0 +1,47 @@
+{
+  "name": "OSD-513__nohk",
+  "tissue": "kidney",
+  "tissue_label": "kidney",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "score_key": "scores",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-513__nohk_GC_ranks.npz",
+  "n_samples": 10,
+  "n_anatomy": 13257,
+  "family_regex": "kidney|renal|nephron|glomerul",
+  "family_exclude": "adrenal|suprarenal|interrenal|nephridi|Hatschek|lieno|olfactory|cerebell|preglomerular",
+  "n_family_nodes": 272,
+  "family_median_pct": 5.3247341027381765,
+  "in_top_2_5pct": 93,
+  "in_top_10pct": 170,
+  "mwu_p_less": 2.9734873124294093e-114,
+  "ks_p_greater": 1.0859224137434078e-94,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 1,
+  "verdict": "CLEAR",
+  "criteria": [
+    "pooled Mann-Whitney p = 3e-114 (ok)",
+    "KS p = 1.1e-94 (ok)",
+    "10/10 samples individually p < 0.05 (ok)",
+    "family ranks 1 of 14 organ families by median percentile (ok)"
+  ],
+  "best_family_nodes": [
+    "renal duct (0.0%)",
+    "kidney (0.0%)",
+    "kidney corticomedullary boundary (0.0%)",
+    "renal collecting system (0.0%)",
+    "left kidney (0.1%)"
+  ],
+  "top_real_anatomy": [
+    "renal duct (0.01%)",
+    "kidney (0.02%)",
+    "kidney corticomedullary boundary (0.03%)",
+    "renal system (0.03%)",
+    "excretory gland (0.04%)",
+    "renal collecting system (0.05%)",
+    "ureteropelvic junction (0.05%)",
+    "left kidney (0.06%)",
+    "right kidney (0.06%)",
+    "renal fat pad (0.08%)"
+  ]
+}

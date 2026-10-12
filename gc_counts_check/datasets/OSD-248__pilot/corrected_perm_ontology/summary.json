@@ -1,0 +1,47 @@
+{
+  "name": "OSD-248__pilot",
+  "tissue": "lung",
+  "tissue_label": "lung",
+  "mode": "corrected_perm_ontology",
+  "families": "ontology",
+  "score_key": "perm",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-248__pilot_GC_ranks.npz",
+  "n_samples": 19,
+  "n_anatomy": 13257,
+  "family_regex": "\\blung|pulmonary|bronch|alveolus of lung|alveolar (?:sac|wall|system|duct)",
+  "family_exclude": "pulmonum",
+  "n_family_nodes": 136,
+  "family_median_pct": 86.619382808685,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 1,
+  "mwu_p_less": 1.0,
+  "ks_p_greater": 0.6197182020995761,
+  "frac_samples_significant": 0.10526315789473684,
+  "family_rank_among_organ_families": 13,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 1 (fail)",
+    "KS p = 0.62 (fail)",
+    "2/19 samples individually p < 0.05 (fail)",
+    "family ranks 13 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "alveolus of lung (9.5%)",
+    "sputum (12.9%)",
+    "epithelial lining fluid (18.8%)",
+    "right lung alveolus (29.1%)",
+    "left lung alveolus (30.0%)"
+  ],
+  "top_real_anatomy": [
+    "anal region smooth muscle (0.10%)",
+    "ureter smooth muscle (0.12%)",
+    "smooth muscle tissue (0.12%)",
+    "smooth muscle endomysium (0.12%)",
+    "hepatic duct smooth muscle (0.14%)",
+    "lymph node follicular corona (0.14%)",
+    "secondary follicle corona (0.16%)",
+    "enteric circular muscle (0.16%)",
+    "metanephric smooth muscle tissue (0.17%)",
+    "lymphatic vessel smooth muscle (0.18%)"
+  ]
+}

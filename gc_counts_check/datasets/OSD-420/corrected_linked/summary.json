@@ -1,0 +1,25 @@
+{
+  "name": "OSD-420",
+  "tissue": "spleen",
+  "tissue_label": "spleen",
+  "n_samples": 10,
+  "n_linked": 74,
+  "proxy": true,
+  "target_nodes": [
+    "hematopoietic system (rank 2)"
+  ],
+  "best_target_rank": 2,
+  "frac_samples_target_rank1": 0.0,
+  "frac_samples_target_top3": 1.0,
+  "verdict": "PARTIAL",
+  "top_linked_nodes": [
+    "lymphoid tissue",
+    "hematopoietic system",
+    "smooth muscle tissue",
+    "digestive system",
+    "renal system",
+    "pancreas",
+    "respiratory system",
+    "cardiovascular system"
+  ]
+}

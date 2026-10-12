@@ -1,0 +1,25 @@
+{
+  "name": "OSD-294",
+  "tissue": "liver",
+  "tissue_label": "liver",
+  "n_samples": 15,
+  "n_linked": 74,
+  "proxy": false,
+  "target_nodes": [
+    "liver (rank 60)"
+  ],
+  "best_target_rank": 60,
+  "frac_samples_target_rank1": 0.0,
+  "frac_samples_target_top3": 0.0,
+  "verdict": "NONE",
+  "top_linked_nodes": [
+    "renal system",
+    "kidney",
+    "nephron tubule",
+    "pancreas",
+    "cardiovascular system",
+    "digestive system",
+    "islet of Langerhans",
+    "respiratory system"
+  ]
+}

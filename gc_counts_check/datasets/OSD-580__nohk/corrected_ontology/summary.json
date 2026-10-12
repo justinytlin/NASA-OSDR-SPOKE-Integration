@@ -1,0 +1,47 @@
+{
+  "name": "OSD-580__nohk",
+  "tissue": "heart",
+  "tissue_label": "heart",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "score_key": "scores",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-580__nohk_GC_ranks.npz",
+  "n_samples": 20,
+  "n_anatomy": 13257,
+  "family_regex": "heart|cardiac|myocard",
+  "family_exclude": "cardiac stomach|cardiac gastric|corpus cardiacum|lymph heart|dorsal vessel",
+  "n_family_nodes": 225,
+  "family_median_pct": 18.521535792411555,
+  "in_top_2_5pct": 30,
+  "in_top_10pct": 85,
+  "mwu_p_less": 3.0625543964722165e-48,
+  "ks_p_greater": 7.803515445847756e-40,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 3,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 3.1e-48 (ok)",
+    "KS p = 7.8e-40 (ok)",
+    "20/20 samples individually p < 0.05 (ok)",
+    "family ranks 3 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "myocardium (0.2%)",
+    "myocardial layer (0.3%)",
+    "outflow tract myocardium (0.3%)",
+    "bulbus cordis myocardium (0.4%)",
+    "myocardial compact layer (0.4%)"
+  ],
+  "top_real_anatomy": [
+    "cardiovascular system (0.01%)",
+    "heart primordium (0.02%)",
+    "proepicardium (0.02%)",
+    "septum transversum (0.05%)",
+    "vascular system (0.09%)",
+    "arterial system (0.17%)",
+    "myocardium (0.20%)",
+    "primordial vasculature (0.22%)",
+    "enteric musculature (0.24%)",
+    "myocardial layer (0.28%)"
+  ]
+}

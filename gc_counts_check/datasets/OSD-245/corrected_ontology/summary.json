@@ -1,0 +1,46 @@
+{
+  "name": "OSD-245",
+  "tissue": "liver",
+  "tissue_label": "liver",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-245_GC_ranks.npz",
+  "n_samples": 19,
+  "n_anatomy": 13257,
+  "family_regex": "liver|hepat",
+  "family_exclude": "hepatopancreas|flexure|arthropod|hepatic cecum",
+  "n_family_nodes": 56,
+  "family_median_pct": 57.06419250207436,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 3,
+  "mwu_p_less": 0.6523682906868351,
+  "ks_p_greater": 0.4760732385434381,
+  "frac_samples_significant": 0.21052631578947367,
+  "family_rank_among_organ_families": 8,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.65 (fail)",
+    "KS p = 0.48 (fail)",
+    "4/19 samples individually p < 0.05 (fail)",
+    "family ranks 8 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "intralobular bile duct (6.6%)",
+    "hepatic acinus (8.1%)",
+    "liver perisinusoidal space (9.9%)",
+    "liver lobule (10.5%)",
+    "hepatic cord (10.8%)"
+  ],
+  "top_real_anatomy": [
+    "renal duct (0.02%)",
+    "mesonephric early proximal tubule (0.30%)",
+    "mesonephric late proximal tubule (0.31%)",
+    "metanephros (0.34%)",
+    "posterior pronephric duct (0.44%)",
+    "nephric duct (0.47%)",
+    "distal late tubule (0.51%)",
+    "mesentery of urinary system (0.52%)",
+    "renal system (0.52%)",
+    "Hatschek's nephridium (0.52%)"
+  ]
+}

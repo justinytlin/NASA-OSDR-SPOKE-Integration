@@ -1,0 +1,25 @@
+{
+  "name": "OSD-421",
+  "tissue": "thymus",
+  "tissue_label": "thymus",
+  "n_samples": 10,
+  "n_linked": 74,
+  "proxy": true,
+  "target_nodes": [
+    "hematopoietic system (rank 4)"
+  ],
+  "best_target_rank": 4,
+  "frac_samples_target_rank1": 0.0,
+  "frac_samples_target_top3": 0.6,
+  "verdict": "PARTIAL",
+  "top_linked_nodes": [
+    "lymphoid tissue",
+    "renal system",
+    "pancreas",
+    "hematopoietic system",
+    "cardiovascular system",
+    "smooth muscle tissue",
+    "digestive system",
+    "kidney"
+  ]
+}

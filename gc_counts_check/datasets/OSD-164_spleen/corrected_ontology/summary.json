@@ -1,0 +1,46 @@
+{
+  "name": "OSD-164_spleen",
+  "tissue": "spleen",
+  "tissue_label": "spleen",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-164_spleen_GC_ranks.npz",
+  "n_samples": 3,
+  "n_anatomy": 13257,
+  "family_regex": "spleen|splenic",
+  "family_exclude": "flexure",
+  "n_family_nodes": 29,
+  "family_median_pct": 12.172185763496012,
+  "in_top_2_5pct": 6,
+  "in_top_10pct": 14,
+  "mwu_p_less": 1.8713178750917067e-06,
+  "ks_p_greater": 8.546973730817507e-08,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 4,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 1.9e-06 (ok)",
+    "KS p = 8.5e-08 (ok)",
+    "3/3 samples individually p < 0.05 (ok)",
+    "family ranks 4 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "spleen follicular dendritic cell network (0.0%)",
+    "spleen B cell corona (0.1%)",
+    "spleen secondary B follicle (0.1%)",
+    "spleen smooth muscle (0.2%)",
+    "spleen (0.7%)"
+  ],
+  "top_real_anatomy": [
+    "lymphoid tissue (0.01%)",
+    "appendix lymphoid tissue (0.02%)",
+    "secondary follicle corona (0.02%)",
+    "spleen follicular dendritic cell network (0.03%)",
+    "lymph node follicular corona (0.04%)",
+    "thymus lymphoid tissue (0.05%)",
+    "hematopoietic system (0.05%)",
+    "spleen B cell corona (0.06%)",
+    "vermiform appendix (0.07%)",
+    "spleen secondary B follicle (0.08%)"
+  ]
+}

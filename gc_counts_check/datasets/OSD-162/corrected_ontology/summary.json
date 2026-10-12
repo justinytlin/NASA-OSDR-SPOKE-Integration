@@ -1,0 +1,46 @@
+{
+  "name": "OSD-162",
+  "tissue": "eye",
+  "tissue_label": "eye",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-162_GC_ranks.npz",
+  "n_samples": 5,
+  "n_anatomy": 13257,
+  "family_regex": "\\beye\\b|eyeball|ocular|cornea|\\blens\\b|retina|sclera|conjunctiv|uvea|\\biris\\b|ciliary body|choroid|vitreous|aqueous humor",
+  "family_exclude": "choroid plexus|choroidal artery|anterior choroidal|eyelid|eyebrow|lens placode|eye primordium|compound eye|ocellus|eyespot|preoptic|supraoptic|optic (?:tract|radiation|tectum|lobe|chiasm)|sensillum|extra-ocular|ocular pre-muscle|eye skin|eye sebaceous|sclerotome|scleral ossicle|retinaculum|macula densa|fovea capitis",
+  "n_family_nodes": 256,
+  "family_median_pct": 24.88496643282794,
+  "in_top_2_5pct": 46,
+  "in_top_10pct": 71,
+  "mwu_p_less": 2.216404631846383e-34,
+  "ks_p_greater": 3.3824961518389327e-29,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 5,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 2.2e-34 (ok)",
+    "KS p = 3.4e-29 (ok)",
+    "5/5 samples individually p < 0.05 (ok)",
+    "family ranks 5 of 15 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "tapetum lucidum of camera-type eye (0.3%)",
+    "embryonic intraretinal space (0.3%)",
+    "retinal tapetum lucidum (0.4%)",
+    "retina (0.5%)",
+    "smooth muscle of eye (0.6%)"
+  ],
+  "top_real_anatomy": [
+    "mammary gland smooth muscle (0.01%)",
+    "cardiovascular system (0.04%)",
+    "heart primordium (0.05%)",
+    "tapetum (0.06%)",
+    "renal duct (0.07%)",
+    "eye (0.08%)",
+    "respiratory system lymphatic vessel smooth muscle (0.08%)",
+    "nauplius eye (0.09%)",
+    "median eye (0.10%)",
+    "smooth muscle tissue (0.13%)"
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "name": "OSD-245__pilot",
+  "tissue": "liver",
+  "tissue_label": "liver",
+  "mode": "corrected_perm_ontology",
+  "families": "ontology",
+  "score_key": "perm",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-245__pilot_GC_ranks.npz",
+  "n_samples": 19,
+  "n_anatomy": 13257,
+  "family_regex": "liver|hepat",
+  "family_exclude": "hepatopancreas|flexure|arthropod|hepatic cecum",
+  "n_family_nodes": 56,
+  "family_median_pct": 64.58732824366868,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 6,
+  "mwu_p_less": 0.8739435123508942,
+  "ks_p_greater": 0.09248304602020624,
+  "frac_samples_significant": 0.15789473684210525,
+  "family_rank_among_organ_families": 7,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.87 (fail)",
+    "KS p = 0.092 (fail)",
+    "3/19 samples individually p < 0.05 (fail)",
+    "family ranks 7 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "hepatic acinus (4.9%)",
+    "intralobular bile duct (5.2%)",
+    "hepatic cord (5.6%)",
+    "liver lobule (7.7%)",
+    "bile canaliculus (8.0%)"
+  ],
+  "top_real_anatomy": [
+    "renal duct (0.05%)",
+    "Marshall's gland (0.15%)",
+    "upper urinary tract (0.19%)",
+    "nephric duct (0.25%)",
+    "metanephros (0.26%)",
+    "renal lobe (0.30%)",
+    "hilum of kidney (0.36%)",
+    "pronephric sinus (0.38%)",
+    "renal collecting system (0.38%)",
+    "kidney corticomedullary boundary (0.40%)"
+  ]
+}

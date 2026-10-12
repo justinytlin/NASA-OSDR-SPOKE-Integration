@@ -1,0 +1,27 @@
+{
+  "name": "OSD-102",
+  "tissue": "kidney",
+  "tissue_label": "kidney",
+  "n_samples": 6,
+  "n_linked": 74,
+  "proxy": false,
+  "target_nodes": [
+    "kidney (rank 2)",
+    "nephron tubule (rank 3)",
+    "cortex of kidney (rank 31)"
+  ],
+  "best_target_rank": 2,
+  "frac_samples_target_rank1": 0.0,
+  "frac_samples_target_top3": 1.0,
+  "verdict": "PARTIAL",
+  "top_linked_nodes": [
+    "renal system",
+    "kidney",
+    "nephron tubule",
+    "digestive system",
+    "cardiovascular system",
+    "smooth muscle tissue",
+    "pancreas",
+    "islet of Langerhans"
+  ]
+}

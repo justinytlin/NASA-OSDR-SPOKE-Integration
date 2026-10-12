@@ -1,0 +1,9 @@
+{
+  "name": "OSD-467",
+  "tissue": "bone tissue",
+  "tissue_label": "bone",
+  "n_linked": 74,
+  "verdict": "NO LINKED NODE",
+  "target_nodes": [],
+  "proxy": true
+}

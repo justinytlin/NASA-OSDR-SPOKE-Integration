@@ -1,0 +1,46 @@
+{
+  "name": "OSD-270",
+  "tissue": "heart",
+  "tissue_label": "heart",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-270_GC_ranks.npz",
+  "n_samples": 2,
+  "n_anatomy": 13257,
+  "family_regex": "heart|cardiac|myocard",
+  "family_exclude": "cardiac stomach|cardiac gastric|corpus cardiacum|lymph heart|dorsal vessel",
+  "n_family_nodes": 225,
+  "family_median_pct": 13.509843856076035,
+  "in_top_2_5pct": 16,
+  "in_top_10pct": 93,
+  "mwu_p_less": 4.928030875060496e-25,
+  "ks_p_greater": 5.222977041770737e-38,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 2,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 4.9e-25 (ok)",
+    "KS p = 5.2e-38 (ok)",
+    "2/2 samples individually p < 0.05 (ok)",
+    "family ranks 2 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "outflow tract smooth muscle (0.2%)",
+    "myocardium (0.6%)",
+    "pulmonary myocardium (0.7%)",
+    "outflow tract myocardium (0.8%)",
+    "myocardial layer (0.8%)"
+  ],
+  "top_real_anatomy": [
+    "cardiovascular system (0.01%)",
+    "heart primordium (0.02%)",
+    "proepicardium (0.02%)",
+    "vascular system (0.03%)",
+    "cardiovascular system elastic tissue (0.05%)",
+    "arterial system (0.05%)",
+    "septum transversum (0.06%)",
+    "primordial vasculature (0.07%)",
+    "kidney (0.09%)",
+    "smooth muscle endomysium (0.09%)"
+  ]
+}

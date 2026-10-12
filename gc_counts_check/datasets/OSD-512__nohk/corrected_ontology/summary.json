@@ -1,0 +1,47 @@
+{
+  "name": "OSD-512__nohk",
+  "tissue": "adrenal gland",
+  "tissue_label": "adrenal gland",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "score_key": "scores",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-512__nohk_GC_ranks.npz",
+  "n_samples": 10,
+  "n_anatomy": 13257,
+  "family_regex": "adrenal|suprarenal|interrenal",
+  "family_exclude": null,
+  "n_family_nodes": 15,
+  "family_median_pct": 99.36637248246208,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 0,
+  "mwu_p_less": 0.9999948153187546,
+  "ks_p_greater": 0.9918333011159025,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 15,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 1 (fail)",
+    "KS p = 0.99 (fail)",
+    "0/10 samples individually p < 0.05 (fail)",
+    "family ranks 15 of 15 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "adrenal cortex (11.7%)",
+    "adrenal gland cortex zone (12.9%)",
+    "adrenal medulla (25.5%)",
+    "adrenal tissue (99.3%)",
+    "type 4 adrenal tissue (99.4%)"
+  ],
+  "top_real_anatomy": [
+    "cardiovascular system (0.01%)",
+    "heart primordium (0.02%)",
+    "proepicardium (0.03%)",
+    "mammary gland smooth muscle (0.08%)",
+    "smooth muscle tissue (0.08%)",
+    "metanephric smooth muscle tissue (0.08%)",
+    "smooth muscle endomysium (0.08%)",
+    "renal duct (0.09%)",
+    "enteric circular muscle (0.09%)",
+    "anal region smooth muscle (0.12%)"
+  ]
+}

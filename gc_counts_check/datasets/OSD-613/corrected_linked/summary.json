@@ -1,0 +1,25 @@
+{
+  "name": "OSD-613",
+  "tissue": "cerebrum",
+  "tissue_label": "cerebrum",
+  "n_samples": 9,
+  "n_linked": 74,
+  "proxy": false,
+  "target_nodes": [
+    "telencephalon (rank 2)"
+  ],
+  "best_target_rank": 2,
+  "frac_samples_target_rank1": 0.0,
+  "frac_samples_target_top3": 1.0,
+  "verdict": "PARTIAL",
+  "top_linked_nodes": [
+    "forebrain",
+    "telencephalon",
+    "smooth muscle tissue",
+    "retina",
+    "eye",
+    "cardiovascular system",
+    "renal system",
+    "kidney"
+  ]
+}

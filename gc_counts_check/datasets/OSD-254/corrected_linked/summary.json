@@ -1,0 +1,26 @@
+{
+  "name": "OSD-254",
+  "tissue": "skin",
+  "tissue_label": "skin",
+  "n_samples": 20,
+  "n_linked": 74,
+  "proxy": false,
+  "target_nodes": [
+    "hair follicle (rank 18)",
+    "skin of body (rank 21)"
+  ],
+  "best_target_rank": 18,
+  "frac_samples_target_rank1": 0.0,
+  "frac_samples_target_top3": 0.0,
+  "verdict": "NONE",
+  "top_linked_nodes": [
+    "mammary gland",
+    "pancreas",
+    "uterus",
+    "smooth muscle tissue",
+    "myocardium",
+    "renal system",
+    "cardiovascular system",
+    "nephron tubule"
+  ]
+}

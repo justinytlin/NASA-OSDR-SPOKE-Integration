@@ -1,0 +1,25 @@
+{
+  "name": "OSD-100",
+  "tissue": "eye",
+  "tissue_label": "eye",
+  "n_samples": 6,
+  "n_linked": 74,
+  "proxy": false,
+  "target_nodes": [
+    "retina (rank 3)"
+  ],
+  "best_target_rank": 3,
+  "frac_samples_target_rank1": 0.0,
+  "frac_samples_target_top3": 1.0,
+  "verdict": "PARTIAL",
+  "top_linked_nodes": [
+    "eye",
+    "smooth muscle tissue",
+    "retina",
+    "cardiovascular system",
+    "forebrain",
+    "telencephalon",
+    "renal system",
+    "pancreas"
+  ]
+}

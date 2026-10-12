@@ -1,0 +1,46 @@
+{
+  "name": "OSD-203",
+  "tissue": "retina",
+  "tissue_label": "retina",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-203_GC_ranks.npz",
+  "n_samples": 15,
+  "n_anatomy": 13257,
+  "family_regex": "retina|photoreceptor|optic disc|fovea centralis|foveola|macula lutea|parafovea|perifovea",
+  "family_exclude": "retinaculum",
+  "n_family_nodes": 50,
+  "family_median_pct": 0.2509366121042971,
+  "in_top_2_5pct": 39,
+  "in_top_10pct": 39,
+  "mwu_p_less": 1.666487687980817e-25,
+  "ks_p_greater": 5.1062228723764687e-26,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 1,
+  "verdict": "CLEAR",
+  "criteria": [
+    "pooled Mann-Whitney p = 1.7e-25 (ok)",
+    "KS p = 5.1e-26 (ok)",
+    "15/15 samples individually p < 0.05 (ok)",
+    "family ranks 1 of 15 organ families by median percentile (ok)"
+  ],
+  "best_family_nodes": [
+    "embryonic intraretinal space (0.0%)",
+    "retina (0.1%)",
+    "sublaminar layers S1 or S3 or S4 (0.1%)",
+    "sublaminar layers S3 or S4 or S5 (0.1%)",
+    "sublaminar layers S1 or S2 or S3 or S4 (0.1%)"
+  ],
+  "top_real_anatomy": [
+    "forebrain (0.01%)",
+    "secondary prosencephalon (0.02%)",
+    "superficial feature part of forebrain (0.02%)",
+    "telencephalon diencephalon boundary (0.05%)",
+    "retina (0.05%)",
+    "meninx of telencephalon (0.07%)",
+    "basal forebrain (0.08%)",
+    "sublaminar layers S1 or S3 or S4 (0.11%)",
+    "sublaminar layers S3 or S4 or S5 (0.11%)",
+    "sublaminar layers S1 or S2 or S3 or S4 (0.11%)"
+  ]
+}

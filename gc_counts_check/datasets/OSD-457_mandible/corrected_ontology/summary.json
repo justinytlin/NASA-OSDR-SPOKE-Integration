@@ -1,0 +1,46 @@
+{
+  "name": "OSD-457_mandible",
+  "tissue": "mandible",
+  "tissue_label": "mandible",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-457_mandible_GC_ranks.npz",
+  "n_samples": 3,
+  "n_anatomy": 13257,
+  "family_regex": "mandib|dentary|lower jaw",
+  "family_exclude": "mandibular (?:nerve|artery|vein|gland|lymph)|submandibular|maxillomandibular|mandibular (?:arch|process|prominence) (?:mesenchyme|ectoderm|endoderm)",
+  "n_family_nodes": 17,
+  "family_median_pct": 40.21774659928088,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 0,
+  "mwu_p_less": 0.18495601562867686,
+  "ks_p_greater": 0.019919768118430565,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 8,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.18 (fail)",
+    "KS p = 0.02 (fail)",
+    "0/3 samples individually p < 0.05 (fail)",
+    "family ranks 8 of 15 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "retromolar space (21.1%)",
+    "mandible (26.6%)",
+    "mesenchyme of mandible (30.3%)",
+    "incisor process (37.3%)",
+    "mandible angular process (37.9%)"
+  ],
+  "top_real_anatomy": [
+    "mammary gland smooth muscle (0.01%)",
+    "smooth muscle tissue (0.02%)",
+    "metanephric smooth muscle tissue (0.02%)",
+    "anal region smooth muscle (0.03%)",
+    "enteric circular muscle (0.04%)",
+    "ureter smooth muscle (0.05%)",
+    "renal system (0.07%)",
+    "spleen smooth muscle (0.07%)",
+    "smooth muscle endomysium (0.07%)",
+    "excretory gland (0.07%)"
+  ]
+}

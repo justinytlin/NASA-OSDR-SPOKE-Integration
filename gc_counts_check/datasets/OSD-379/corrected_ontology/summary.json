@@ -1,0 +1,46 @@
+{
+  "name": "OSD-379",
+  "tissue": "liver",
+  "tissue_label": "liver",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-379_GC_ranks.npz",
+  "n_samples": 35,
+  "n_anatomy": 13257,
+  "family_regex": "liver|hepat",
+  "family_exclude": "hepatopancreas|flexure|arthropod|hepatic cecum",
+  "n_family_nodes": 56,
+  "family_median_pct": 45.130227696419155,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 5,
+  "mwu_p_less": 0.02264706636011606,
+  "ks_p_greater": 0.00861417665309882,
+  "frac_samples_significant": 0.37142857142857144,
+  "family_rank_among_organ_families": 8,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.023 (fail)",
+    "KS p = 0.0086 (ok)",
+    "13/35 samples individually p < 0.05 (fail)",
+    "family ranks 8 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "intralobular bile duct (5.1%)",
+    "hepatic acinus (5.7%)",
+    "liver lobule (7.4%)",
+    "liver perisinusoidal space (8.5%)",
+    "hepatic cord (9.4%)"
+  ],
+  "top_real_anatomy": [
+    "renal duct (0.04%)",
+    "renal system (0.21%)",
+    "excretory gland (0.21%)",
+    "Hatschek's nephridium (0.24%)",
+    "ureteropelvic junction (0.24%)",
+    "Marshall's gland (0.24%)",
+    "mesentery of urinary system (0.25%)",
+    "urorectal septum (0.33%)",
+    "ureterovesical junction (0.35%)",
+    "upper urinary tract (0.35%)"
+  ]
+}

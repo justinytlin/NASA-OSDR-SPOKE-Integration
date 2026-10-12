@@ -1,0 +1,47 @@
+{
+  "name": "OSD-512__pilot",
+  "tissue": "adrenal gland",
+  "tissue_label": "adrenal gland",
+  "mode": "corrected_perm_ontology",
+  "families": "ontology",
+  "score_key": "perm",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-512__pilot_GC_ranks.npz",
+  "n_samples": 10,
+  "n_anatomy": 13257,
+  "family_regex": "adrenal|suprarenal|interrenal",
+  "family_exclude": null,
+  "n_family_nodes": 15,
+  "family_median_pct": 97.78154937014406,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 0,
+  "mwu_p_less": 0.9999999876677832,
+  "ks_p_greater": 0.9997956792944375,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 15,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 1 (fail)",
+    "KS p = 1 (fail)",
+    "0/10 samples individually p < 0.05 (fail)",
+    "family ranks 15 of 15 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "adrenal medulla (12.7%)",
+    "adrenal gland cortex zone (86.0%)",
+    "adrenal cortex (86.7%)",
+    "adrenal tissue (97.8%)",
+    "type 1 adrenal tissue (97.8%)"
+  ],
+  "top_real_anatomy": [
+    "cardiovascular system (0.02%)",
+    "back connective tissue (0.02%)",
+    "heart primordium (0.02%)",
+    "dense connective tissue (0.04%)",
+    "Sharpey's fiber (0.05%)",
+    "connective tissue (0.06%)",
+    "specialized connective tissue (0.06%)",
+    "thoracic cavity connective tissue (0.06%)",
+    "dense irregular connective tissue (0.07%)",
+    "mylohyoid raphe (0.07%)"
+  ]
+}

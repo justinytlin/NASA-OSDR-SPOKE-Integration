@@ -1,0 +1,47 @@
+{
+  "name": "OSD-580__pilot",
+  "tissue": "heart",
+  "tissue_label": "heart",
+  "mode": "corrected_perm_ontology",
+  "families": "ontology",
+  "score_key": "perm",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-580__pilot_GC_ranks.npz",
+  "n_samples": 20,
+  "n_anatomy": 13257,
+  "family_regex": "heart|cardiac|myocard",
+  "family_exclude": "cardiac stomach|cardiac gastric|corpus cardiacum|lymph heart|dorsal vessel",
+  "n_family_nodes": 225,
+  "family_median_pct": 33.27411933318247,
+  "in_top_2_5pct": 3,
+  "in_top_10pct": 46,
+  "mwu_p_less": 1.897756896547808e-10,
+  "ks_p_greater": 6.213616266538916e-14,
+  "frac_samples_significant": 0.9,
+  "family_rank_among_organ_families": 4,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 1.9e-10 (ok)",
+    "KS p = 6.2e-14 (ok)",
+    "18/20 samples individually p < 0.05 (ok)",
+    "family ranks 4 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "outflow tract smooth muscle (0.7%)",
+    "cardiac muscle tissue of ventricle (2.0%)",
+    "cardiac muscle tissue of myocardium (2.3%)",
+    "valve of foramen ovale (2.8%)",
+    "foramen ovale of heart (2.8%)"
+  ],
+  "top_real_anatomy": [
+    "heart primordium (0.01%)",
+    "cardiovascular system (0.01%)",
+    "proepicardium (0.02%)",
+    "arterial system (0.06%)",
+    "ductus venosus (0.07%)",
+    "vascular system (0.07%)",
+    "cardiovascular system elastic tissue (0.13%)",
+    "neck (0.14%)",
+    "primordial vasculature (0.18%)",
+    "submandibular region (0.18%)"
+  ]
+}

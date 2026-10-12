@@ -1,0 +1,47 @@
+{
+  "name": "OSD-457_white-adipose-tissue__pilot",
+  "tissue": "adipose tissue",
+  "tissue_label": "white adipose tissue",
+  "mode": "corrected_zscore_ontology",
+  "families": "ontology",
+  "score_key": "zscore",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-457_white-adipose-tissue__pilot_GC_ranks.npz",
+  "n_samples": 6,
+  "n_anatomy": 13257,
+  "family_regex": "adipose|fat pad|\\bfat\\b|panniculus",
+  "family_exclude": "adipose fin|adipose eyelid|arthropod",
+  "n_family_nodes": 46,
+  "family_median_pct": 33.38047823791205,
+  "in_top_2_5pct": 5,
+  "in_top_10pct": 14,
+  "mwu_p_less": 0.35541540780044817,
+  "ks_p_greater": 0.0016867335530097588,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 7,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.36 (fail)",
+    "KS p = 0.0017 (ok)",
+    "0/6 samples individually p < 0.05 (fail)",
+    "family ranks 7 of 15 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "pancreatic fat pad (0.7%)",
+    "renal fat pad (0.9%)",
+    "tail fat pad (1.1%)",
+    "interscapular fat pad (1.5%)",
+    "superficial cervical fascia (2.1%)"
+  ],
+  "top_real_anatomy": [
+    "enteric musculature (0.01%)",
+    "metanephric smooth muscle tissue (0.02%)",
+    "enteric circular muscle (0.02%)",
+    "gastrointestinal system smooth muscle (0.03%)",
+    "lymphatic vessel smooth muscle (0.04%)",
+    "spleen smooth muscle (0.04%)",
+    "anal region smooth muscle (0.05%)",
+    "smooth muscle tissue (0.06%)",
+    "umbilical smooth muscle (0.07%)",
+    "smooth muscle endomysium (0.07%)"
+  ]
+}

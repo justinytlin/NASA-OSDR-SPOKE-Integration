@@ -1,0 +1,46 @@
+{
+  "name": "OSD-511",
+  "tissue": "mammary gland",
+  "tissue_label": "mammary gland",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-511_GC_ranks.npz",
+  "n_samples": 15,
+  "n_anatomy": 13257,
+  "family_regex": "mammary|lactiferous|nipple|areola|\\bbreast",
+  "family_exclude": "internal mammary|mammary (?:artery|vein)|mammary body|mamm?illary|feather",
+  "n_family_nodes": 33,
+  "family_median_pct": 1.8757386035050665,
+  "in_top_2_5pct": 18,
+  "in_top_10pct": 26,
+  "mwu_p_less": 7.839992771225779e-19,
+  "ks_p_greater": 1.733557482170942e-17,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 1,
+  "verdict": "CLEAR",
+  "criteria": [
+    "pooled Mann-Whitney p = 7.8e-19 (ok)",
+    "KS p = 1.7e-17 (ok)",
+    "15/15 samples individually p < 0.05 (ok)",
+    "family ranks 1 of 15 organ families by median percentile (ok)"
+  ],
+  "best_family_nodes": [
+    "mammary gland smooth muscle (0.0%)",
+    "mammary gland connective tissue (0.1%)",
+    "cervical mammary gland (0.1%)",
+    "mammary gland (0.8%)",
+    "lobule of mammary gland (0.9%)"
+  ],
+  "top_real_anatomy": [
+    "mammary gland smooth muscle (0.01%)",
+    "smooth muscle tissue (0.03%)",
+    "metanephric smooth muscle tissue (0.03%)",
+    "enteric circular muscle (0.05%)",
+    "mammary gland connective tissue (0.07%)",
+    "spleen smooth muscle (0.07%)",
+    "respiratory system lymphatic vessel smooth muscle (0.07%)",
+    "smooth muscle endomysium (0.08%)",
+    "respiratory system smooth muscle (0.09%)",
+    "anal region smooth muscle (0.10%)"
+  ]
+}

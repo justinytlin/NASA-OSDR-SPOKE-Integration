@@ -1,0 +1,25 @@
+{
+  "name": "OSD-245__pilot",
+  "tissue": "liver",
+  "tissue_label": "liver",
+  "n_samples": 19,
+  "n_linked": 74,
+  "proxy": false,
+  "target_nodes": [
+    "liver (rank 57)"
+  ],
+  "best_target_rank": 57,
+  "frac_samples_target_rank1": 0.0,
+  "frac_samples_target_top3": 0.05263157894736842,
+  "verdict": "NONE",
+  "top_linked_nodes": [
+    "renal system",
+    "kidney",
+    "pancreas",
+    "cardiovascular system",
+    "nephron tubule",
+    "islet of Langerhans",
+    "smooth muscle tissue",
+    "digestive system"
+  ]
+}

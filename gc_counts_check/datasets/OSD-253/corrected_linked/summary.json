@@ -1,0 +1,27 @@
+{
+  "name": "OSD-253",
+  "tissue": "kidney",
+  "tissue_label": "kidney",
+  "n_samples": 19,
+  "n_linked": 74,
+  "proxy": false,
+  "target_nodes": [
+    "kidney (rank 2)",
+    "nephron tubule (rank 3)",
+    "cortex of kidney (rank 19)"
+  ],
+  "best_target_rank": 2,
+  "frac_samples_target_rank1": 0.0,
+  "frac_samples_target_top3": 0.9473684210526315,
+  "verdict": "PARTIAL",
+  "top_linked_nodes": [
+    "renal system",
+    "kidney",
+    "nephron tubule",
+    "pancreas",
+    "islet of Langerhans",
+    "myocardium",
+    "smooth muscle tissue",
+    "digestive system"
+  ]
+}

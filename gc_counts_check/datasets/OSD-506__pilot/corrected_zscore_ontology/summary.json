@@ -1,0 +1,47 @@
+{
+  "name": "OSD-506__pilot",
+  "tissue": "spleen",
+  "tissue_label": "spleen",
+  "mode": "corrected_zscore_ontology",
+  "families": "ontology",
+  "score_key": "zscore",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-506__pilot_GC_ranks.npz",
+  "n_samples": 10,
+  "n_anatomy": 13257,
+  "family_regex": "spleen|splenic",
+  "family_exclude": "flexure",
+  "n_family_nodes": 29,
+  "family_median_pct": 7.593724070302481,
+  "in_top_2_5pct": 8,
+  "in_top_10pct": 15,
+  "mwu_p_less": 3.783785922159018e-10,
+  "ks_p_greater": 4.218199965945423e-07,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 4,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 3.8e-10 (ok)",
+    "KS p = 4.2e-07 (ok)",
+    "10/10 samples individually p < 0.05 (ok)",
+    "family ranks 4 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "spleen smooth muscle (0.0%)",
+    "spleen follicular dendritic cell network (0.1%)",
+    "spleen B cell corona (0.1%)",
+    "spleen secondary B follicle (0.2%)",
+    "spleen (0.4%)"
+  ],
+  "top_real_anatomy": [
+    "spleen smooth muscle (0.02%)",
+    "secondary follicle corona (0.02%)",
+    "lymph node follicular corona (0.04%)",
+    "enteric musculature (0.04%)",
+    "appendix lymphoid tissue (0.04%)",
+    "lymphatic vessel smooth muscle (0.06%)",
+    "lymphoid tissue (0.06%)",
+    "thymus lymphoid tissue (0.07%)",
+    "gastrointestinal system smooth muscle (0.07%)",
+    "enteric circular muscle (0.08%)"
+  ]
+}

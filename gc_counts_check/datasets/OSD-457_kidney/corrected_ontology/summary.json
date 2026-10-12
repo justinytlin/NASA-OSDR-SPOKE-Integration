@@ -1,0 +1,46 @@
+{
+  "name": "OSD-457_kidney",
+  "tissue": "kidney",
+  "tissue_label": "kidney",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-457_kidney_GC_ranks.npz",
+  "n_samples": 3,
+  "n_anatomy": 13257,
+  "family_regex": "kidney|renal|nephron|glomerul",
+  "family_exclude": "adrenal|suprarenal|interrenal|nephridi|Hatschek|lieno|olfactory|cerebell|preglomerular",
+  "n_family_nodes": 272,
+  "family_median_pct": 5.863568932136482,
+  "in_top_2_5pct": 81,
+  "in_top_10pct": 176,
+  "mwu_p_less": 5.104063436527565e-116,
+  "ks_p_greater": 1.196116760521247e-112,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 1,
+  "verdict": "CLEAR",
+  "criteria": [
+    "pooled Mann-Whitney p = 5.1e-116 (ok)",
+    "KS p = 1.2e-112 (ok)",
+    "3/3 samples individually p < 0.05 (ok)",
+    "family ranks 1 of 14 organ families by median percentile (ok)"
+  ],
+  "best_family_nodes": [
+    "renal duct (0.0%)",
+    "kidney (0.0%)",
+    "kidney corticomedullary boundary (0.0%)",
+    "renal collecting system (0.1%)",
+    "renal fat pad (0.1%)"
+  ],
+  "top_real_anatomy": [
+    "renal duct (0.01%)",
+    "renal system (0.02%)",
+    "kidney (0.02%)",
+    "excretory gland (0.03%)",
+    "ureteropelvic junction (0.04%)",
+    "kidney corticomedullary boundary (0.04%)",
+    "mesentery of urinary system (0.06%)",
+    "renal collecting system (0.06%)",
+    "renal fat pad (0.07%)",
+    "right kidney (0.08%)"
+  ]
+}

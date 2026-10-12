@@ -1,0 +1,27 @@
+{
+  "name": "OSD-513__nohk",
+  "tissue": "kidney",
+  "tissue_label": "kidney",
+  "n_samples": 10,
+  "n_linked": 74,
+  "proxy": false,
+  "target_nodes": [
+    "kidney (rank 1)",
+    "nephron tubule (rank 3)",
+    "cortex of kidney (rank 37)"
+  ],
+  "best_target_rank": 1,
+  "frac_samples_target_rank1": 0.8,
+  "frac_samples_target_top3": 1.0,
+  "verdict": "CLEAR",
+  "top_linked_nodes": [
+    "kidney",
+    "renal system",
+    "nephron tubule",
+    "cardiovascular system",
+    "pancreas",
+    "smooth muscle tissue",
+    "digestive system",
+    "forebrain"
+  ]
+}

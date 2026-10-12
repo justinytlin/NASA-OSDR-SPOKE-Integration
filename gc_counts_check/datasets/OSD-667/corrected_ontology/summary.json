@@ -1,0 +1,46 @@
+{
+  "name": "OSD-667",
+  "tissue": "colon",
+  "tissue_label": "colon",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-667_GC_ranks.npz",
+  "n_samples": 5,
+  "n_anatomy": 13257,
+  "family_regex": "colon\\b|colonic|large intestine|rectum",
+  "family_exclude": "colonic (?:artery|vein)|mesocolon",
+  "n_family_nodes": 35,
+  "family_median_pct": 8.149656785094667,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 20,
+  "mwu_p_less": 2.0041506208359972e-15,
+  "ks_p_greater": 2.0442340476769054e-15,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 2,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 2e-15 (ok)",
+    "KS p = 2e-15 (ok)",
+    "5/5 samples individually p < 0.05 (ok)",
+    "family ranks 2 of 15 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "submucosa of cecum (2.8%)",
+    "muscularis mucosae of colon (4.2%)",
+    "caecum (4.2%)",
+    "cecum mucosa (4.3%)",
+    "crypt of Lieberkuhn of colon (4.4%)"
+  ],
+  "top_real_anatomy": [
+    "mammary gland smooth muscle (0.01%)",
+    "cervical mammary gland (0.02%)",
+    "digestive system (0.04%)",
+    "labial cavities (0.05%)",
+    "renal duct (0.05%)",
+    "renal system (0.06%)",
+    "excretory gland (0.06%)",
+    "ureteropelvic junction (0.10%)",
+    "digestive syncytial vacuole (0.10%)",
+    "lumen of gastrointestinal system (0.12%)"
+  ]
+}

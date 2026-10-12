@@ -1,0 +1,47 @@
+{
+  "name": "OSD-513__pilot",
+  "tissue": "kidney",
+  "tissue_label": "kidney",
+  "mode": "corrected_zscore_ontology",
+  "families": "ontology",
+  "score_key": "zscore",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-513__pilot_GC_ranks.npz",
+  "n_samples": 10,
+  "n_anatomy": 13257,
+  "family_regex": "kidney|renal|nephron|glomerul",
+  "family_exclude": "adrenal|suprarenal|interrenal|nephridi|Hatschek|lieno|olfactory|cerebell|preglomerular",
+  "n_family_nodes": 272,
+  "family_median_pct": 6.484498755374519,
+  "in_top_2_5pct": 66,
+  "in_top_10pct": 177,
+  "mwu_p_less": 3.278368151399951e-110,
+  "ks_p_greater": 9.605450753991125e-95,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 2,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 3.3e-110 (ok)",
+    "KS p = 9.6e-95 (ok)",
+    "10/10 samples individually p < 0.05 (ok)",
+    "family ranks 2 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "renal duct (0.0%)",
+    "metanephric smooth muscle tissue (0.0%)",
+    "distal late tubule (0.0%)",
+    "metanephros (0.1%)",
+    "mesonephric early proximal tubule (0.1%)"
+  ],
+  "top_real_anatomy": [
+    "renal duct (0.01%)",
+    "Marshall's gland (0.01%)",
+    "metanephric smooth muscle tissue (0.02%)",
+    "distal late tubule (0.04%)",
+    "metanephros (0.05%)",
+    "hair follicle (0.05%)",
+    "enteric musculature (0.07%)",
+    "mesonephric early proximal tubule (0.07%)",
+    "mesonephric late proximal tubule (0.07%)",
+    "infundibulum of hair follicle (0.08%)"
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "name": "OSD-512__pilot",
+  "tissue": "adrenal gland",
+  "tissue_label": "adrenal gland",
+  "mode": "corrected_zscore_ontology",
+  "families": "ontology",
+  "score_key": "zscore",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-512__pilot_GC_ranks.npz",
+  "n_samples": 10,
+  "n_anatomy": 13257,
+  "family_regex": "adrenal|suprarenal|interrenal",
+  "family_exclude": null,
+  "n_family_nodes": 15,
+  "family_median_pct": 99.72467375726032,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 0,
+  "mwu_p_less": 0.9999950291462498,
+  "ks_p_greater": 0.9834126313368603,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 15,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 1 (fail)",
+    "KS p = 0.98 (fail)",
+    "0/10 samples individually p < 0.05 (fail)",
+    "family ranks 15 of 15 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "adrenal medulla (13.0%)",
+    "adrenal cortex (16.2%)",
+    "adrenal gland cortex zone (19.0%)",
+    "adrenal tissue (99.7%)",
+    "type 1 adrenal tissue (99.7%)"
+  ],
+  "top_real_anatomy": [
+    "enteric musculature (0.01%)",
+    "metanephric smooth muscle tissue (0.02%)",
+    "enteric circular muscle (0.03%)",
+    "spleen smooth muscle (0.03%)",
+    "lymphatic vessel smooth muscle (0.04%)",
+    "gall bladder smooth muscle (0.05%)",
+    "gastrointestinal system smooth muscle (0.05%)",
+    "smooth muscle tissue (0.06%)",
+    "anal region smooth muscle (0.06%)",
+    "umbilical smooth muscle (0.07%)"
+  ]
+}

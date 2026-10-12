@@ -1,0 +1,47 @@
+{
+  "name": "OSD-758__pilot",
+  "tissue": "retina",
+  "tissue_label": "retina",
+  "mode": "corrected_perm_ontology",
+  "families": "ontology",
+  "score_key": "perm",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-758__pilot_GC_ranks.npz",
+  "n_samples": 12,
+  "n_anatomy": 13257,
+  "family_regex": "retina|photoreceptor|optic disc|fovea centralis|foveola|macula lutea|parafovea|perifovea",
+  "family_exclude": "retinaculum",
+  "n_family_nodes": 50,
+  "family_median_pct": 0.20272308968846647,
+  "in_top_2_5pct": 39,
+  "in_top_10pct": 42,
+  "mwu_p_less": 2.58008184649832e-31,
+  "ks_p_greater": 2.3212985473762913e-31,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 1,
+  "verdict": "CLEAR",
+  "criteria": [
+    "pooled Mann-Whitney p = 2.6e-31 (ok)",
+    "KS p = 2.3e-31 (ok)",
+    "12/12 samples individually p < 0.05 (ok)",
+    "family ranks 1 of 15 organ families by median percentile (ok)"
+  ],
+  "best_family_nodes": [
+    "retina (0.0%)",
+    "border of sublaminar layers S3 and S4 (0.1%)",
+    "border between sublaminar layers (0.1%)",
+    "sublaminar layers S3 or S4 (0.1%)",
+    "substratum of layer of retina (0.1%)"
+  ],
+  "top_real_anatomy": [
+    "retina (0.02%)",
+    "border of sublaminar layers S3 and S4 (0.06%)",
+    "border between sublaminar layers (0.07%)",
+    "sublaminar layers S3 or S4 (0.08%)",
+    "substratum of layer of retina (0.10%)",
+    "sublaminar layers S1 or S3 or S4 (0.10%)",
+    "sublaminar layers S2 or S3 or S4 (0.12%)",
+    "sublaminar layers S3 or S4 or S5 (0.12%)",
+    "sublaminar layer S3 (0.13%)",
+    "secondary prosencephalon (0.13%)"
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "name": "OSD-467",
+  "tissue": "bone tissue",
+  "tissue_label": "bone",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-467_GC_ranks.npz",
+  "n_samples": 8,
+  "n_anatomy": 13257,
+  "family_regex": "bone tissue|compact bone|cortical bone|trabecular bone|cancellous bone|spongy bone|osteon|periosteum|endosteum|diaphysis|\\bfemur\\b|\\btibia\\b|long bone|bone element",
+  "family_exclude": "arthropod",
+  "n_family_nodes": 27,
+  "family_median_pct": 48.81854869125745,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 0,
+  "mwu_p_less": 0.22658933174419,
+  "ks_p_greater": 0.00023820813295174443,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 9,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.23 (fail)",
+    "KS p = 0.00024 (ok)",
+    "0/8 samples individually p < 0.05 (fail)",
+    "family ranks 9 of 15 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "hypertrophic cartilage zone (26.1%)",
+    "network of trabecular spaces in bone tissue (29.3%)",
+    "vein of trabecular bone (30.4%)",
+    "cortex of manus bone (31.8%)",
+    "bone tissue (33.1%)"
+  ],
+  "top_real_anatomy": [
+    "smooth muscle tissue (0.03%)",
+    "smooth muscle endomysium (0.03%)",
+    "enteric circular muscle (0.04%)",
+    "metanephric smooth muscle tissue (0.05%)",
+    "heart primordium (0.05%)",
+    "cardiovascular system (0.05%)",
+    "spleen smooth muscle (0.06%)",
+    "anal region smooth muscle (0.07%)",
+    "ureter smooth muscle (0.08%)",
+    "lymphoid tissue (0.09%)"
+  ]
+}

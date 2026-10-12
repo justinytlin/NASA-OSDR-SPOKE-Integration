@@ -1,0 +1,27 @@
+{
+  "name": "OSD-513__pilot",
+  "tissue": "kidney",
+  "tissue_label": "kidney",
+  "n_samples": 10,
+  "n_linked": 74,
+  "proxy": false,
+  "target_nodes": [
+    "kidney (rank 2)",
+    "nephron tubule (rank 3)",
+    "cortex of kidney (rank 39)"
+  ],
+  "best_target_rank": 2,
+  "frac_samples_target_rank1": 0.0,
+  "frac_samples_target_top3": 1.0,
+  "verdict": "PARTIAL",
+  "top_linked_nodes": [
+    "renal system",
+    "kidney",
+    "nephron tubule",
+    "cardiovascular system",
+    "neck",
+    "smooth muscle tissue",
+    "hair follicle",
+    "forebrain"
+  ]
+}

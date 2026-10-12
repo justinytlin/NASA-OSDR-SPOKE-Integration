@@ -1,0 +1,45 @@
+{
+  "name": "OSD-690",
+  "tissue": "bone marrow",
+  "tissue_label": "bone marrow",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-690_GC_ranks.npz",
+  "n_samples": 6,
+  "n_anatomy": 13257,
+  "family_regex": "bone marrow",
+  "family_exclude": null,
+  "n_family_nodes": 4,
+  "family_median_pct": 7.468381483995877,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 3,
+  "mwu_p_less": 0.0016473109702486567,
+  "ks_p_greater": 0.0011521552337224836,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 1,
+  "verdict": "CLEAR",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.0016 (ok)",
+    "KS p = 0.0012 (ok)",
+    "6/6 samples individually p < 0.05 (ok)",
+    "family ranks 1 of 14 organ families by median percentile (ok)"
+  ],
+  "best_family_nodes": [
+    "red bone marrow (3.5%)",
+    "bone marrow (6.7%)",
+    "yellow bone marrow (8.2%)",
+    "stroma of bone marrow (12.2%)"
+  ],
+  "top_real_anatomy": [
+    "lymphoid tissue (0.01%)",
+    "secondary follicle corona (0.02%)",
+    "appendix lymphoid tissue (0.02%)",
+    "spleen follicular dendritic cell network (0.03%)",
+    "lymph node follicular corona (0.04%)",
+    "hematopoietic system (0.05%)",
+    "thymus lymphoid tissue (0.05%)",
+    "spleen B cell corona (0.06%)",
+    "lymph node secondary follicle (0.07%)",
+    "spleen secondary B follicle (0.08%)"
+  ]
+}

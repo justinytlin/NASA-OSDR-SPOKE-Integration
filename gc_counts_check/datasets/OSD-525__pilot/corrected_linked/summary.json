@@ -1,0 +1,25 @@
+{
+  "name": "OSD-525__pilot",
+  "tissue": "cerebellum",
+  "tissue_label": "cerebellum",
+  "n_samples": 10,
+  "n_linked": 74,
+  "proxy": false,
+  "target_nodes": [
+    "cerebellum (rank 68)"
+  ],
+  "best_target_rank": 68,
+  "frac_samples_target_rank1": 0.0,
+  "frac_samples_target_top3": 0.0,
+  "verdict": "NONE",
+  "top_linked_nodes": [
+    "forebrain",
+    "telencephalon",
+    "smooth muscle tissue",
+    "renal system",
+    "cardiovascular system",
+    "pancreas",
+    "nephron tubule",
+    "retina"
+  ]
+}

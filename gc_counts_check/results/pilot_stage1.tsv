@@ -1,0 +1,41 @@
+tissue	arm	linked_verdict	best_target_rank	own_node	own_node_rank	own_node_link_weight	top_linked	onto_verdict	onto_family_median_pct	onto_family_rank
+retina	A rank	CLEAR	1	retina	1.0	61.0	retina, forebrain, eye	CLEAR	0.2	1
+retina	Z z-score	CLEAR	1	retina	1.0	61.0	retina, smooth muscle tissue, eye	CLEAR	0.2	1
+retina	B perm z	CLEAR	1	retina	1.0	61.0	retina, forebrain, metencephalon	CLEAR	0.2	1
+retina	D no-HK	CLEAR	1	retina	1.0	61.0	retina, forebrain, eye	CLEAR	0.2	1
+kidney	A rank	CLEAR	1	kidney	1.0	55.0	kidney, renal system, nephron tubule	CLEAR	6.2	1
+kidney	Z z-score	PARTIAL	2	kidney	2.0	55.0	hair follicle, kidney, smooth muscle tissue	PARTIAL	6.5	2
+kidney	B perm z	PARTIAL	2	kidney	2.0	55.0	renal system, kidney, nephron tubule	CLEAR	5.3	1
+kidney	D no-HK	CLEAR	1	kidney	1.0	55.0	kidney, renal system, nephron tubule	CLEAR	5.3	1
+heart	A rank	PARTIAL	2	myocardium	2.0	46.0	cardiovascular system, myocardium, renal system	PARTIAL	22.1	5
+heart	Z z-score	PARTIAL	4	myocardium	4.0	46.0	cardiovascular system, smooth muscle tissue, neck	PARTIAL	15.1	3
+heart	B perm z	NONE	15	myocardium	15.0	46.0	cardiovascular system, neck, kidney	PARTIAL	33.3	4
+heart	D no-HK	PARTIAL	3	myocardium	3.0	46.0	cardiovascular system, renal system, myocardium	PARTIAL	18.5	3
+spleen	A rank	PARTIAL (proxy)	2				lymphoid tissue, hematopoietic system, digestive system	PARTIAL	8.3	3
+spleen	Z z-score	PARTIAL (proxy)	4				lymphoid tissue, smooth muscle tissue, hair follicle	PARTIAL	7.6	4
+spleen	B perm z	PARTIAL (proxy)	2				lymphoid tissue, hematopoietic system, connective tissue	PARTIAL	31.7	2
+spleen	D no-HK	PARTIAL (proxy)	2				lymphoid tissue, hematopoietic system, smooth muscle tissue	PARTIAL	5.8	3
+liver	A rank	NONE	57	liver	57.0	7.0	renal system, kidney, pancreas	NONE	57.1	8
+liver	Z z-score	NONE	52	liver	52.0	7.0	kidney, neck, renal system	PARTIAL	18.8	4
+liver	B perm z	NONE	48	liver	48.0	7.0	kidney, renal system, cardiovascular system	NONE	64.6	7
+liver	D no-HK	NONE	52	liver	52.0	7.0	kidney, renal system, pancreas	PARTIAL	32.4	6
+adrenal gland	A rank	NONE	37	adrenal cortex	37.0	37.0	cardiovascular system, smooth muscle tissue, renal system	NONE	99.6	15
+adrenal gland	Z z-score	NONE	36	adrenal cortex	36.0	37.0	smooth muscle tissue, cardiovascular system, hair follicle	NONE	99.7	15
+adrenal gland	B perm z	NONE	42	adrenal cortex	42.0	37.0	cardiovascular system, connective tissue, neck	NONE	97.8	15
+adrenal gland	D no-HK	NONE	34	adrenal cortex	34.0	37.0	cardiovascular system, smooth muscle tissue, renal system	NONE	99.4	15
+lung	A rank	NONE	69	lung	69.0	5.0	smooth muscle tissue, uterus, pancreas	PARTIAL	47.3	8
+lung	Z z-score	NONE	69	lung	69.0	5.0	smooth muscle tissue, nephron tubule, pancreas	PARTIAL	31.1	6
+lung	B perm z	NONE	60	lung	60.0	5.0	cardiovascular system, smooth muscle tissue, lymphoid tissue	NONE	86.6	13
+lung	D no-HK	NONE	67	lung	67.0	5.0	uterus, smooth muscle tissue, pancreas	PARTIAL	41.3	8
+cerebellum	A rank	NONE	68	cerebellum	68.0	6.0	forebrain, telencephalon, smooth muscle tissue	NONE	80.4	12
+cerebellum	Z z-score	NONE	66	cerebellum	66.0	6.0	smooth muscle tissue, forebrain, hair follicle	PARTIAL	27.3	5
+cerebellum	B perm z	NONE	64	cerebellum	64.0	6.0	forebrain, brainstem, hindbrain	NONE	93.7	12
+cerebellum	D no-HK	NONE	67	cerebellum	67.0	6.0	forebrain, telencephalon, smooth muscle tissue	NONE	52.0	8
+white adipose tissue	A rank	NONE	65	adipose tissue	65.0	11.0	cardiovascular system, smooth muscle tissue, kidney	NONE	36.6	9
+white adipose tissue	Z z-score	NONE	63	adipose tissue	63.0	11.0	smooth muscle tissue, cardiovascular system, hair follicle	NONE	33.4	7
+white adipose tissue	B perm z	NONE	63	adipose tissue	63.0	11.0	cardiovascular system, connective tissue, kidney	NONE	80.5	8
+white adipose tissue	D no-HK	NONE	64	adipose tissue	64.0	11.0	cardiovascular system, smooth muscle tissue, renal system	NONE	28.1	6
+blood	A rank	NONE	13	blood plasma	13.0	74.0	lymphoid tissue, smooth muscle tissue, hematopoietic system	NONE	89.9	13
+blood	Z z-score	PARTIAL	3	blood plasma	3.0	74.0	smooth muscle tissue, neck, blood plasma	NONE	88.2	13
+blood	B perm z	PARTIAL	5	blood plasma	5.0	74.0	lymphoid tissue, connective tissue, smooth muscle tissue	NONE	91.4	13
+blood	D no-HK	NONE	11	blood plasma	11.0	74.0	lymphoid tissue, smooth muscle tissue, hematopoietic system	NONE	89.5	13
