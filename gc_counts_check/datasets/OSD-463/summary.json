@@ -1,0 +1,45 @@
+{
+  "name": "OSD-463",
+  "tissue": "liver",
+  "tissue_label": "liver",
+  "mode": "raw",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-463_GC_anatomy_ranks.tsv",
+  "n_samples": 10,
+  "n_anatomy": 13257,
+  "family_regex": "liver|hepat",
+  "family_exclude": "hepatopancreas|flexure|arthropod|hepatic cecum",
+  "n_family_nodes": 85,
+  "family_median_pct": 45.64607377234669,
+  "in_top_2_5pct": 1,
+  "in_top_10pct": 6,
+  "mwu_p_less": 0.7263760920140252,
+  "ks_p_greater": 0.5236428085513037,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 7,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.73 (fail)",
+    "KS p = 0.52 (fail)",
+    "0/10 samples individually p < 0.05 (fail)",
+    "family ranks 7 of 13 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "hepatic cord (2.5%)",
+    "liver lobule (2.6%)",
+    "hepatic acinus (3.0%)",
+    "liver perisinusoidal space (3.7%)",
+    "extrahepatic duct (6.6%)"
+  ],
+  "top_real_anatomy": [
+    "principal artery to forelimb (0.20%)",
+    "principal artery to hindlimb (0.21%)",
+    "plantar digital artery (0.23%)",
+    "ventral root of spinal cord (0.24%)",
+    "trigeminal placode complex (0.24%)",
+    "cholinergic system (0.26%)",
+    "serotonergic system (0.26%)",
+    "dorsal root of spinal cord (0.27%)",
+    "zygomaticus muscle (0.29%)",
+    "extensor caudae lateralis muscle (0.30%)"
+  ]
+}

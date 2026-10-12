@@ -1,0 +1,44 @@
+{
+  "name": "OSD-420",
+  "tissue": "spleen",
+  "tissue_label": "spleen",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-420_GC_anatomy_ranks.tsv",
+  "n_samples": 10,
+  "n_anatomy": 13257,
+  "family_regex": "spleen|splenic",
+  "family_exclude": "flexure",
+  "n_family_nodes": 31,
+  "family_median_pct": 14.748434789167987,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 9,
+  "mwu_p_less": 0.0007119926994962298,
+  "ks_p_greater": 5.535652515718155e-05,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 1,
+  "verdict": "CLEAR",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.00071 (ok)",
+    "KS p = 5.5e-05 (ok)",
+    "10/10 samples individually p < 0.05 (ok)",
+    "family ranks 1 of 13 organ families by median percentile (ok)"
+  ],
+  "best_family_nodes": [
+    "splenic arteriole (4.3%)",
+    "parenchyma of spleen (8.1%)",
+    "spleen perifollicular zone (8.6%)",
+    "spleen primary B follicle (8.9%)",
+    "marginal zone of spleen (9.0%)"
+  ],
+  "top_real_anatomy": [
+    "proper plantar digital artery (0.21%)",
+    "closed circulatory system (0.21%)",
+    "trigeminal placode complex (0.22%)",
+    "morphological boundary (0.22%)",
+    "one-pass circulatory system (0.25%)",
+    "serotonergic system (0.27%)",
+    "alisphenoid ossification center (0.27%)",
+    "basal vein (0.28%)",
+    "integumental surface (0.28%)",
+    "two-pass circulatory system (0.29%)"
+  ]
+}

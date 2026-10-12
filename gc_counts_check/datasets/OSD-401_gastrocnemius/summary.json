@@ -1,0 +1,44 @@
+{
+  "name": "OSD-401_gastrocnemius",
+  "tissue": "skeletal muscle",
+  "tissue_label": "gastrocnemius",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-401_gastrocnemius_GC_anatomy_ranks.tsv",
+  "n_samples": 3,
+  "n_anatomy": 13257,
+  "family_regex": "skeletal muscle|gastrocnemius|quadriceps|soleus|tibialis",
+  "family_exclude": null,
+  "n_family_nodes": 55,
+  "family_median_pct": 49.56626687787584,
+  "in_top_2_5pct": 2,
+  "in_top_10pct": 6,
+  "mwu_p_less": 0.6875007012727503,
+  "ks_p_greater": 0.6780619049444904,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 11,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.69 (fail)",
+    "KS p = 0.68 (fail)",
+    "0/3 samples individually p < 0.05 (fail)",
+    "family ranks 11 of 13 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "skeletal muscle tissue of masseter (1.8%)",
+    "lip skeletal muscle (2.0%)",
+    "skeletal muscle tissue of diaphragm (3.5%)",
+    "tendon of quadriceps femoris (5.6%)",
+    "quadriceps femoris (7.9%)"
+  ],
+  "top_real_anatomy": [
+    "integumental surface (0.20%)",
+    "morphological boundary (0.20%)",
+    "superior gemellus muscle (0.21%)",
+    "cholinergic system (0.22%)",
+    "inferior gemellus muscle (0.22%)",
+    "gemellus muscle (0.24%)",
+    "trigeminal placode complex (0.25%)",
+    "obsolete ptychocyst (0.26%)",
+    "common plantar digital arteries (0.26%)",
+    "ventral nerve root of cervical spinal cord (0.29%)"
+  ]
+}

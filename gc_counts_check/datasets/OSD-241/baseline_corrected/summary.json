@@ -1,0 +1,45 @@
+{
+  "name": "OSD-241",
+  "tissue": "skin",
+  "tissue_label": "skin",
+  "mode": "baseline-corrected",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-241_GC_ranks.npz",
+  "n_samples": 10,
+  "n_anatomy": 13257,
+  "family_regex": "\\bskin|epidermis|dermis",
+  "family_exclude": "dermatome|hypodermis",
+  "n_family_nodes": 111,
+  "family_median_pct": 26.24575695858791,
+  "in_top_2_5pct": 4,
+  "in_top_10pct": 19,
+  "mwu_p_less": 1.8196983910222735e-12,
+  "ks_p_greater": 1.0282250992918787e-11,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 5,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 1.8e-12 (ok)",
+    "KS p = 1e-11 (ok)",
+    "10/10 samples individually p < 0.05 (ok)",
+    "family ranks 5 of 13 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "skin of body (0.6%)",
+    "skin gland (1.3%)",
+    "stratum corneum of epidermis (1.3%)",
+    "skin apocrine gland (1.7%)",
+    "skin mucous gland (2.6%)"
+  ],
+  "top_real_anatomy": [
+    "mammary gland smooth muscle (0.01%)",
+    "cervical mammary gland (0.02%)",
+    "mammary gland connective tissue (0.02%)",
+    "smooth muscle tissue (0.08%)",
+    "areola (0.09%)",
+    "digestive system (0.10%)",
+    "areolar sweat gland (0.10%)",
+    "enteric circular muscle (0.11%)",
+    "lobule of mammary gland (0.11%)",
+    "pancreas (0.12%)"
+  ]
+}

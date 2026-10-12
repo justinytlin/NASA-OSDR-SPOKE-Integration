@@ -1,0 +1,45 @@
+{
+  "name": "OSD-563",
+  "tissue": "cerebellum",
+  "tissue_label": "cerebellum",
+  "mode": "raw",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-563_GC_anatomy_ranks.tsv",
+  "n_samples": 5,
+  "n_anatomy": 13257,
+  "family_regex": "cerebell",
+  "family_exclude": "artery|vein|spinocerebellar|cerebellar peduncle (?:artery|vein)",
+  "n_family_nodes": 102,
+  "family_median_pct": 28.129290186316663,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 22,
+  "mwu_p_less": 5.737763150190098e-10,
+  "ks_p_greater": 2.422241803638796e-14,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 4,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 5.7e-10 (ok)",
+    "KS p = 2.4e-14 (ok)",
+    "5/5 samples individually p < 0.05 (ok)",
+    "family ranks 4 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "cerebellar cortex (4.3%)",
+    "molecular layer of cerebellar cortex (4.4%)",
+    "cerebellar layer (4.4%)",
+    "Purkinje cell layer of cerebellar cortex (4.4%)",
+    "granular layer of cerebellar cortex (4.5%)"
+  ],
+  "top_real_anatomy": [
+    "orbitosphenoid ossification center (0.20%)",
+    "alisphenoid ossification center (0.21%)",
+    "principal artery to limb (0.21%)",
+    "olfactory bulb external plexiform layer (0.22%)",
+    "olfactory bulb plexiform layer (0.23%)",
+    "neurogenic placode (0.23%)",
+    "extensor caudae lateralis muscle (0.26%)",
+    "obsolete ptychocyst (0.26%)",
+    "ventral nerve root of cervical spinal cord (0.26%)",
+    "basal vein (0.26%)"
+  ]
+}

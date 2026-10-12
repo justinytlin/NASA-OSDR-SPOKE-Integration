@@ -14,3 +14,6 @@ for n in 161 163; do dl OSD-$n OSD-${n}_metadata_GLDS-${n}-ISA.zip & done
 wait
 for z in OSD-*-ISA.zip; do n=${z%%_*}; mkdir -p "isa/$n"; unzip -qo "$z" -d "isa/$n"; done
 echo "done: $(ls *.csv | wc -l) counts files"
+# UBERON (for ontology-based tissue families) and the OSDR-wide survey/manifest
+mkdir -p ../data/_ontology && curl -sS -L -o ../data/_ontology/uberon-basic.obo "https://purl.obolibrary.org/obo/uberon/uberon-basic.obo"
+echo "for the OSDR-wide set run: python3 scripts/survey_osdr.py && python3 scripts/build_manifest.py"

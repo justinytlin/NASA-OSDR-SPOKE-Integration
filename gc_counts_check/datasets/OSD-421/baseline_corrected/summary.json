@@ -1,0 +1,45 @@
+{
+  "name": "OSD-421",
+  "tissue": "thymus",
+  "tissue_label": "thymus",
+  "mode": "baseline-corrected",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-421_GC_ranks.npz",
+  "n_samples": 10,
+  "n_anatomy": 13257,
+  "family_regex": "thym",
+  "family_exclude": null,
+  "n_family_nodes": 26,
+  "family_median_pct": 17.226370973825148,
+  "in_top_2_5pct": 4,
+  "in_top_10pct": 8,
+  "mwu_p_less": 0.000458774091917912,
+  "ks_p_greater": 3.849798862384807e-05,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 3,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.00046 (ok)",
+    "KS p = 3.8e-05 (ok)",
+    "10/10 samples individually p < 0.05 (ok)",
+    "family ranks 3 of 13 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "thymus lymphoid tissue (0.2%)",
+    "cervical thymus (1.2%)",
+    "deep cervical thymus (1.2%)",
+    "superficial cervical thymus (1.2%)",
+    "thymus (3.3%)"
+  ],
+  "top_real_anatomy": [
+    "lymphoid tissue (0.03%)",
+    "renal system (0.03%)",
+    "appendix lymphoid tissue (0.04%)",
+    "Marshall's gland (0.04%)",
+    "excretory gland (0.04%)",
+    "secondary follicle corona (0.07%)",
+    "ureteropelvic junction (0.07%)",
+    "spleen follicular dendritic cell network (0.08%)",
+    "mesentery of urinary system (0.09%)",
+    "pancreas (0.10%)"
+  ]
+}

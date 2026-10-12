@@ -1,0 +1,45 @@
+{
+  "name": "OSD-457_cerebrum",
+  "tissue": "cerebrum",
+  "tissue_label": "cerebrum",
+  "mode": "baseline-corrected",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-457_cerebrum_GC_ranks.npz",
+  "n_samples": 6,
+  "n_anatomy": 13257,
+  "family_regex": "cerebral (?:hemisphere|cortex|white matter|lobe|subcortex)|cerebrum|telencephal|neocortex|isocortex|frontal (?:lobe|cortex)|parietal (?:lobe|cortex)|temporal (?:lobe|cortex)|occipital (?:lobe|cortex)|corpus callosum",
+  "family_exclude": "artery|vein|Myxin|protocerebrum",
+  "n_family_nodes": 107,
+  "family_median_pct": 12.295391114128385,
+  "in_top_2_5pct": 25,
+  "in_top_10pct": 46,
+  "mwu_p_less": 1.6375400927539818e-28,
+  "ks_p_greater": 3.4208048539873256e-28,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 3,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 1.6e-28 (ok)",
+    "KS p = 3.4e-28 (ok)",
+    "6/6 samples individually p < 0.05 (ok)",
+    "family ranks 3 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "telencephalon diencephalon boundary (0.0%)",
+    "meninx of telencephalon (0.1%)",
+    "telencephalon dura mater (0.1%)",
+    "telencephalon pia mater (0.1%)",
+    "telencephalon arachnoid mater (0.1%)"
+  ],
+  "top_real_anatomy": [
+    "forebrain (0.01%)",
+    "secondary prosencephalon (0.02%)",
+    "superficial feature part of forebrain (0.02%)",
+    "telencephalon diencephalon boundary (0.03%)",
+    "basal forebrain (0.04%)",
+    "postnatal subventricular zone (0.05%)",
+    "gray matter of forebrain (0.05%)",
+    "forebrain meninges (0.06%)",
+    "meninx of telencephalon (0.07%)",
+    "substantia innominata (0.08%)"
+  ]
+}

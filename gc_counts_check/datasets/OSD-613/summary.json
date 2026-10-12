@@ -1,0 +1,45 @@
+{
+  "name": "OSD-613",
+  "tissue": "cerebrum",
+  "tissue_label": "cerebrum",
+  "mode": "raw",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-613_GC_anatomy_ranks.tsv",
+  "n_samples": 9,
+  "n_anatomy": 13257,
+  "family_regex": "cerebral (?:hemisphere|cortex|white matter|lobe|subcortex)|cerebrum|telencephal|neocortex|isocortex|frontal (?:lobe|cortex)|parietal (?:lobe|cortex)|temporal (?:lobe|cortex)|occipital (?:lobe|cortex)|corpus callosum",
+  "family_exclude": "artery|vein|Myxin|protocerebrum",
+  "n_family_nodes": 107,
+  "family_median_pct": 18.293899239814607,
+  "in_top_2_5pct": 13,
+  "in_top_10pct": 25,
+  "mwu_p_less": 5.14022278399278e-19,
+  "ks_p_greater": 7.261092438066683e-23,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 2,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 5.1e-19 (ok)",
+    "KS p = 7.3e-23 (ok)",
+    "9/9 samples individually p < 0.05 (ok)",
+    "family ranks 2 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "lamina terminalis of cerebral hemisphere (1.5%)",
+    "external capsule of telencephalon (1.6%)",
+    "cerebral hemisphere white matter (1.6%)",
+    "forceps major of corpus callosum (1.6%)",
+    "splenium of the corpus callosum (1.6%)"
+  ],
+  "top_real_anatomy": [
+    "thoracic aortic plexus (0.20%)",
+    "extensor caudae lateralis muscle (0.21%)",
+    "abdominal nerve plexus (0.22%)",
+    "alisphenoid ossification center (0.23%)",
+    "aortic plexus (0.25%)",
+    "extensor caudae muscle (0.25%)",
+    "zygomaticus muscle (0.27%)",
+    "olfactory bulb plexiform layer (0.28%)",
+    "orbitosphenoid ossification center (0.30%)",
+    "extensor caudae medialis muscle (0.30%)"
+  ]
+}

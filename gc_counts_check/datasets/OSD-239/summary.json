@@ -1,0 +1,44 @@
+{
+  "name": "OSD-239",
+  "tissue": "skin",
+  "tissue_label": "skin",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-239_GC_anatomy_ranks.tsv",
+  "n_samples": 6,
+  "n_anatomy": 13257,
+  "family_regex": "\\bskin|epidermis|dermis",
+  "family_exclude": "dermatome|hypodermis",
+  "n_family_nodes": 111,
+  "family_median_pct": 50.46390586105454,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 15,
+  "mwu_p_less": 0.353867119724808,
+  "ks_p_greater": 0.27139060741860416,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 11,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.35 (fail)",
+    "KS p = 0.27 (fail)",
+    "0/6 samples individually p < 0.05 (fail)",
+    "family ranks 11 of 13 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "skin of lip (2.5%)",
+    "skin of knee (2.7%)",
+    "skin of cheek (4.8%)",
+    "skin sebaceous gland (4.9%)",
+    "skin of prepuce of penis (5.2%)"
+  ],
+  "top_real_anatomy": [
+    "integumental surface (0.17%)",
+    "morphological boundary (0.18%)",
+    "perichordal bone (0.19%)",
+    "catecholamine system (0.21%)",
+    "histaminergic system (0.23%)",
+    "notochordal ossification (0.23%)",
+    "inferior gemellus muscle (0.25%)",
+    "principal artery to limb (0.27%)",
+    "profundal placode (0.30%)",
+    "superior gemellus muscle (0.30%)"
+  ]
+}

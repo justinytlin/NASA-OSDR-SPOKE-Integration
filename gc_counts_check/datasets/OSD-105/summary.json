@@ -1,0 +1,44 @@
+{
+  "name": "OSD-105",
+  "tissue": "skeletal muscle",
+  "tissue_label": "tibialis anterior",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-105_GC_anatomy_ranks.tsv",
+  "n_samples": 6,
+  "n_anatomy": 13257,
+  "family_regex": "skeletal muscle|gastrocnemius|quadriceps|soleus|tibialis",
+  "family_exclude": null,
+  "n_family_nodes": 55,
+  "family_median_pct": 56.74486434839455,
+  "in_top_2_5pct": 2,
+  "in_top_10pct": 5,
+  "mwu_p_less": 0.685961668516667,
+  "ks_p_greater": 0.591950071584366,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 12,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.69 (fail)",
+    "KS p = 0.59 (fail)",
+    "0/6 samples individually p < 0.05 (fail)",
+    "family ranks 12 of 13 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "skeletal muscle tissue of masseter (1.7%)",
+    "lip skeletal muscle (1.8%)",
+    "skeletal muscle tissue of diaphragm (3.3%)",
+    "tendon of quadriceps femoris (5.9%)",
+    "quadriceps femoris (8.0%)"
+  ],
+  "top_real_anatomy": [
+    "neurogenic placode (0.21%)",
+    "inferior gemellus muscle (0.22%)",
+    "lateral paragigantocellular nucleus (0.23%)",
+    "dorsal paragigantocellular nucleus (0.24%)",
+    "principal artery to forelimb (0.25%)",
+    "dorsal root of spinal cord (0.27%)",
+    "notochordal ossification (0.27%)",
+    "paragigantocellular nucleus (0.28%)",
+    "gABAergic system (0.30%)",
+    "nucleus recessus (0.30%)"
+  ]
+}

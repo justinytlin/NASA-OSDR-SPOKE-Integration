@@ -1,0 +1,45 @@
+{
+  "name": "OSD-457_liver",
+  "tissue": "liver",
+  "tissue_label": "liver",
+  "mode": "raw",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-457_liver_GC_anatomy_ranks.tsv",
+  "n_samples": 6,
+  "n_anatomy": 13257,
+  "family_regex": "liver|hepat",
+  "family_exclude": "hepatopancreas|flexure|arthropod|hepatic cecum",
+  "n_family_nodes": 85,
+  "family_median_pct": 46.254808780267034,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 6,
+  "mwu_p_less": 0.5524340751730197,
+  "ks_p_greater": 0.2878821187634707,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 8,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.55 (fail)",
+    "KS p = 0.29 (fail)",
+    "0/6 samples individually p < 0.05 (fail)",
+    "family ranks 8 of 13 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "hepatic cord (2.5%)",
+    "liver lobule (2.6%)",
+    "hepatic acinus (3.0%)",
+    "liver perisinusoidal space (3.6%)",
+    "extrahepatic duct (6.7%)"
+  ],
+  "top_real_anatomy": [
+    "obsolete ptychocyst (0.21%)",
+    "gABAergic system (0.22%)",
+    "cholinergic system (0.25%)",
+    "lateral paragigantocellular nucleus (0.27%)",
+    "catecholamine system (0.28%)",
+    "nucleus recessus posterioris (0.29%)",
+    "dorsal paragigantocellular nucleus (0.30%)",
+    "paragigantocellular nucleus (0.30%)",
+    "nucleus recessus lateralis (0.31%)",
+    "ventral root of spinal cord (0.33%)"
+  ]
+}

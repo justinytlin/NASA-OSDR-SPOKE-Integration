@@ -1,0 +1,45 @@
+{
+  "name": "OSD-457_white-adipose-tissue",
+  "tissue": "adipose tissue",
+  "tissue_label": "white adipose tissue",
+  "mode": "baseline-corrected",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-457_white-adipose-tissue_GC_ranks.npz",
+  "n_samples": 6,
+  "n_anatomy": 13257,
+  "family_regex": "adipose|fat pad|\\bfat\\b|panniculus",
+  "family_exclude": "adipose fin|adipose eyelid|arthropod",
+  "n_family_nodes": 41,
+  "family_median_pct": 31.29793065298836,
+  "in_top_2_5pct": 3,
+  "in_top_10pct": 9,
+  "mwu_p_less": 0.37766583394394554,
+  "ks_p_greater": 0.020258097701643454,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 6,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.38 (fail)",
+    "KS p = 0.02 (fail)",
+    "0/6 samples individually p < 0.05 (fail)",
+    "family ranks 6 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "renal fat pad (0.2%)",
+    "pancreatic fat pad (0.4%)",
+    "tail fat pad (2.2%)",
+    "interscapular fat pad (2.8%)",
+    "uterine fat pad (3.1%)"
+  ],
+  "top_real_anatomy": [
+    "cardiovascular system (0.01%)",
+    "heart primordium (0.02%)",
+    "proepicardium (0.03%)",
+    "mammary gland smooth muscle (0.03%)",
+    "metanephric smooth muscle tissue (0.03%)",
+    "smooth muscle tissue (0.05%)",
+    "smooth muscle endomysium (0.06%)",
+    "enteric circular muscle (0.07%)",
+    "respiratory system lymphatic vessel smooth muscle (0.07%)",
+    "respiratory system smooth muscle (0.08%)"
+  ]
+}

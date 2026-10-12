@@ -1,0 +1,45 @@
+{
+  "name": "OSD-161",
+  "tissue": "adrenal gland",
+  "tissue_label": "adrenal gland",
+  "mode": "baseline-corrected",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-161_GC_ranks.npz",
+  "n_samples": 5,
+  "n_anatomy": 13257,
+  "family_regex": "adrenal|suprarenal|interrenal",
+  "family_exclude": null,
+  "n_family_nodes": 31,
+  "family_median_pct": 50.987402881496564,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 3,
+  "mwu_p_less": 0.9505534607169811,
+  "ks_p_greater": 0.3887173715698009,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 9,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.95 (fail)",
+    "KS p = 0.39 (fail)",
+    "0/5 samples individually p < 0.05 (fail)",
+    "family ranks 9 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "adrenal cortex (9.0%)",
+    "adrenal gland X zone (9.0%)",
+    "zona intermedia of adrenal gland (9.0%)",
+    "adrenal gland cortex zone (11.8%)",
+    "zona fasciculata of adrenal gland (12.1%)"
+  ],
+  "top_real_anatomy": [
+    "renal system (0.01%)",
+    "excretory gland (0.02%)",
+    "renal duct (0.02%)",
+    "ureteropelvic junction (0.03%)",
+    "mesentery of urinary system (0.04%)",
+    "cardiovascular system (0.05%)",
+    "heart primordium (0.06%)",
+    "Marshall's gland (0.06%)",
+    "Hatschek's nephridium (0.07%)",
+    "kidney (0.07%)"
+  ]
+}

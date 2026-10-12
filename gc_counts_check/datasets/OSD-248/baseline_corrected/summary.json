@@ -1,0 +1,45 @@
+{
+  "name": "OSD-248",
+  "tissue": "lung",
+  "tissue_label": "lung",
+  "mode": "baseline-corrected",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-248_GC_ranks.npz",
+  "n_samples": 19,
+  "n_anatomy": 13257,
+  "family_regex": "\\blung|pulmonary|bronch|alveolus of lung|alveolar (?:sac|wall|system|duct)",
+  "family_exclude": "pulmonum",
+  "n_family_nodes": 200,
+  "family_median_pct": 36.713672617842406,
+  "in_top_2_5pct": 2,
+  "in_top_10pct": 43,
+  "mwu_p_less": 2.4367451827752108e-15,
+  "ks_p_greater": 1.1912996488816934e-11,
+  "frac_samples_significant": 0.7368421052631579,
+  "family_rank_among_organ_families": 7,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 2.4e-15 (ok)",
+    "KS p = 1.2e-11 (ok)",
+    "14/19 samples individually p < 0.05 (fail)",
+    "family ranks 7 of 13 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "pulmonary myocardium (1.8%)",
+    "bronchial tube (2.5%)",
+    "bronchoalveolar duct junction (2.5%)",
+    "air capillary of parabronchus (2.8%)",
+    "bronchus reticular lamina (2.8%)"
+  ],
+  "top_real_anatomy": [
+    "mammary gland smooth muscle (0.01%)",
+    "cervical mammary gland (0.23%)",
+    "enteric musculature (0.25%)",
+    "respiratory system lymphatic vessel smooth muscle (0.26%)",
+    "respiratory system smooth muscle (0.28%)",
+    "uterus (0.29%)",
+    "simplex uterus (0.30%)",
+    "bipartite uterus (0.30%)",
+    "duplex uterus (0.31%)",
+    "bicornuate uterus (0.31%)"
+  ]
+}

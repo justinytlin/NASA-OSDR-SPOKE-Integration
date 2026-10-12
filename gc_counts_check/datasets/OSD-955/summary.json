@@ -1,0 +1,45 @@
+{
+  "name": "OSD-955",
+  "tissue": "skeletal muscle",
+  "tissue_label": "soleus",
+  "mode": "raw",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-955_GC_anatomy_ranks.tsv",
+  "n_samples": 5,
+  "n_anatomy": 13257,
+  "family_regex": "skeletal muscle|gastrocnemius|quadriceps|soleus|tibialis",
+  "family_exclude": null,
+  "n_family_nodes": 55,
+  "family_median_pct": 59.17175831636117,
+  "in_top_2_5pct": 2,
+  "in_top_10pct": 6,
+  "mwu_p_less": 0.6932025345060358,
+  "ks_p_greater": 0.6934415156170797,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 12,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.69 (fail)",
+    "KS p = 0.69 (fail)",
+    "0/5 samples individually p < 0.05 (fail)",
+    "family ranks 12 of 13 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "skeletal muscle tissue of masseter (1.7%)",
+    "lip skeletal muscle (2.1%)",
+    "skeletal muscle tissue of diaphragm (3.7%)",
+    "tendon of quadriceps femoris (6.4%)",
+    "quadriceps femoris (8.9%)"
+  ],
+  "top_real_anatomy": [
+    "olfactory bulb internal plexiform layer (0.19%)",
+    "olfactory bulb external plexiform layer (0.21%)",
+    "nucleus recessus posterioris (0.22%)",
+    "nucleus recessus lateralis (0.23%)",
+    "dorsal root of spinal cord (0.24%)",
+    "ventral root of spinal cord (0.26%)",
+    "proper plantar digital artery (0.31%)",
+    "common plantar digital arteries (0.33%)",
+    "nucleus recessus (0.35%)",
+    "obsolete ptychocyst (0.35%)"
+  ]
+}

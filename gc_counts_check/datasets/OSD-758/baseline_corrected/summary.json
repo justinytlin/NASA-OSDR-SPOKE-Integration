@@ -1,0 +1,45 @@
+{
+  "name": "OSD-758",
+  "tissue": "retina",
+  "tissue_label": "retina",
+  "mode": "baseline-corrected",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-758_GC_ranks.npz",
+  "n_samples": 12,
+  "n_anatomy": 13257,
+  "family_regex": "retina|photoreceptor|optic disc|fovea centralis|foveola|macula lutea|parafovea|perifovea",
+  "family_exclude": "retinaculum",
+  "n_family_nodes": 37,
+  "family_median_pct": 0.5393377083804781,
+  "in_top_2_5pct": 20,
+  "in_top_10pct": 20,
+  "mwu_p_less": 2.3412954858647988e-12,
+  "ks_p_greater": 9.948542195713043e-10,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 1,
+  "verdict": "CLEAR",
+  "criteria": [
+    "pooled Mann-Whitney p = 2.3e-12 (ok)",
+    "KS p = 9.9e-10 (ok)",
+    "12/12 samples individually p < 0.05 (ok)",
+    "family ranks 1 of 14 organ families by median percentile (ok)"
+  ],
+  "best_family_nodes": [
+    "retina (0.0%)",
+    "embryonic intraretinal space (0.0%)",
+    "retinal tapetum lucidum (0.0%)",
+    "substratum of layer of retina (0.1%)",
+    "inner plexiform layer of retina (0.1%)"
+  ],
+  "top_real_anatomy": [
+    "retina (0.01%)",
+    "retinal tapetum lucidum (0.03%)",
+    "sublaminar layers S1 or S3 or S4 (0.06%)",
+    "sublaminar layers S3 or S4 (0.06%)",
+    "sublaminar layers S3 or S4 or S5 (0.08%)",
+    "substratum of layer of retina (0.09%)",
+    "sublaminar layers S2 or S3 or S4 (0.09%)",
+    "sublaminar layer S3 (0.09%)",
+    "sublaminar layers S1 or S2 or S3 (0.10%)",
+    "sublaminar layers S1 or S2 or S3 or S4 (0.10%)"
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "name": "OSD-102",
+  "tissue": "kidney",
+  "tissue_label": "kidney",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-102_GC_anatomy_ranks.tsv",
+  "n_samples": 6,
+  "n_anatomy": 13257,
+  "family_regex": "kidney|renal|nephron|glomerul",
+  "family_exclude": "adrenal|suprarenal|interrenal|nephridi|Hatschek|lieno|olfactory|cerebell|preglomerular",
+  "n_family_nodes": 167,
+  "family_median_pct": 34.22720072414574,
+  "in_top_2_5pct": 7,
+  "in_top_10pct": 28,
+  "mwu_p_less": 3.330762742941416e-05,
+  "ks_p_greater": 2.419300314650481e-06,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 6,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 3.3e-05 (ok)",
+    "KS p = 2.4e-06 (ok)",
+    "6/6 samples individually p < 0.05 (ok)",
+    "family ranks 6 of 13 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "renal papilla (0.9%)",
+    "tip of renal papilla (0.9%)",
+    "renal medulla loop of Henle (2.2%)",
+    "inner medulla of kidney (2.3%)",
+    "region of nephron tubule (2.4%)"
+  ],
+  "top_real_anatomy": [
+    "principal artery to hindlimb (0.20%)",
+    "principal artery to forelimb (0.20%)",
+    "dorsal paragigantocellular nucleus (0.22%)",
+    "one-pass circulatory system (0.22%)",
+    "trigeminal placode complex (0.23%)",
+    "paragigantocellular nucleus (0.24%)",
+    "basal vein (0.26%)",
+    "closed circulatory system (0.26%)",
+    "deep middle cerebral vein (0.27%)",
+    "lateral paragigantocellular nucleus (0.28%)"
+  ]
+}

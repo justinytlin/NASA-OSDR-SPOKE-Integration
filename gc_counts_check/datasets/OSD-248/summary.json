@@ -1,0 +1,44 @@
+{
+  "name": "OSD-248",
+  "tissue": "lung",
+  "tissue_label": "lung",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-248_GC_anatomy_ranks.tsv",
+  "n_samples": 19,
+  "n_anatomy": 13257,
+  "family_regex": "\\blung|pulmonary|bronch|alveolus of lung|alveolar (?:sac|wall|system|duct)",
+  "family_exclude": "pulmonum",
+  "n_family_nodes": 200,
+  "family_median_pct": 38.793606555424546,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 13,
+  "mwu_p_less": 3.4629298944726446e-08,
+  "ks_p_greater": 2.516910473482541e-21,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 8,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 3.5e-08 (ok)",
+    "KS p = 2.5e-21 (ok)",
+    "19/19 samples individually p < 0.05 (ok)",
+    "family ranks 8 of 13 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "pulmonary artery (2.5%)",
+    "pulmonary artery endothelium (5.9%)",
+    "bronchial vein (6.4%)",
+    "alveolar wall (6.6%)",
+    "pulmonary alveolus epithelium (6.8%)"
+  ],
+  "top_real_anatomy": [
+    "alisphenoid ossification center (0.18%)",
+    "orbitosphenoid ossification center (0.21%)",
+    "common plantar digital arteries (0.22%)",
+    "olfactory bulb internal plexiform layer (0.23%)",
+    "bolus of food (0.24%)",
+    "perichordal bone (0.24%)",
+    "olfactory bulb external plexiform layer (0.25%)",
+    "one-pass circulatory system (0.27%)",
+    "trigeminal placode complex (0.28%)",
+    "closed circulatory system (0.28%)"
+  ]
+}

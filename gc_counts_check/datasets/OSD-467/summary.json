@@ -1,0 +1,45 @@
+{
+  "name": "OSD-467",
+  "tissue": "bone tissue",
+  "tissue_label": "bone",
+  "mode": "raw",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-467_GC_anatomy_ranks.tsv",
+  "n_samples": 8,
+  "n_anatomy": 13257,
+  "family_regex": "bone tissue|compact bone|cortical bone|trabecular bone|cancellous bone|spongy bone|osteon|periosteum|endosteum|diaphysis|\\bfemur\\b|\\btibia\\b|long bone|bone element",
+  "family_exclude": "arthropod",
+  "n_family_nodes": 81,
+  "family_median_pct": 76.22011013049709,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 9,
+  "mwu_p_less": 0.999999928460315,
+  "ks_p_greater": 0.900407378576216,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 14,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 1 (fail)",
+    "KS p = 0.9 (fail)",
+    "0/8 samples individually p < 0.05 (fail)",
+    "family ranks 14 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "long bone epiphyseal ossification zone (3.9%)",
+    "periosteum (5.6%)",
+    "outer fibrous layer of periosteum (7.8%)",
+    "long bone epiphyseal plate ossification zone (8.2%)",
+    "long bone epiphyseal plate proliferative zone (8.2%)"
+  ],
+  "top_real_anatomy": [
+    "basal vein (0.17%)",
+    "deep middle cerebral vein (0.18%)",
+    "profundal placode (0.19%)",
+    "paragigantocellular nucleus (0.20%)",
+    "maxillomandibular placode (0.21%)",
+    "nucleus recessus posterioris (0.24%)",
+    "catecholamine system (0.24%)",
+    "notochordal ossification (0.25%)",
+    "abdominal nerve plexus (0.28%)",
+    "alisphenoid ossification center (0.28%)"
+  ]
+}

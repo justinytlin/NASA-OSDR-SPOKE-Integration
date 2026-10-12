@@ -22,6 +22,19 @@ psev_build/spoke_current/
 psev_build/**/gene_psev*/
 
 # gc_counts_check: downloads (fetch_data.sh), 800 MB rank tables, superseded cross-dataset analysis
-gc_counts_check/data/
 gc_counts_check/psev_out/
 gc_counts_check/archive/
+
+# gc_counts_check: keep the catalog but not the per-study file listings / ISA archives / ontology download
+!gc_counts_check/data/
+gc_counts_check/data/*
+!gc_counts_check/data/_catalog/
+gc_counts_check/data/_catalog/files_*.json
+gc_counts_check/data/_catalog/isa/
+!gc_counts_check/data/_genesets/
+gc_counts_check/data/_genesets/Housekeeping_GenesHuman.csv
+gc_counts_check/data/_genesets/HK_genes_Eisenberg2013.txt
+# per-dataset figures: only the validated configuration's linked-node figures are tracked (the first 14 raw folders predate this rule)
+gc_counts_check/datasets/**/*.png
+gc_counts_check/datasets/**/*.svg
+!gc_counts_check/datasets/*__2025upAuG/corrected_linked_2025upAuG60/*.png

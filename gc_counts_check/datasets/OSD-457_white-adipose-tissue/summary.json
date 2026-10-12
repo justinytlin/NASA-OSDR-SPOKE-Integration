@@ -1,0 +1,45 @@
+{
+  "name": "OSD-457_white-adipose-tissue",
+  "tissue": "adipose tissue",
+  "tissue_label": "white adipose tissue",
+  "mode": "raw",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-457_white-adipose-tissue_GC_anatomy_ranks.tsv",
+  "n_samples": 6,
+  "n_anatomy": 13257,
+  "family_regex": "adipose|fat pad|\\bfat\\b|panniculus",
+  "family_exclude": "adipose fin|adipose eyelid|arthropod",
+  "n_family_nodes": 41,
+  "family_median_pct": 38.70030927057403,
+  "in_top_2_5pct": 2,
+  "in_top_10pct": 4,
+  "mwu_p_less": 0.002547736596111787,
+  "ks_p_greater": 0.002009191139190012,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 7,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.0025 (ok)",
+    "KS p = 0.002 (ok)",
+    "6/6 samples individually p < 0.05 (ok)",
+    "family ranks 7 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "buccal fat pad (2.2%)",
+    "infrapatellar fat pad (2.2%)",
+    "epididymal fat pad (9.6%)",
+    "inguinal fat pad (9.9%)",
+    "brown adipose tissue (10.3%)"
+  ],
+  "top_real_anatomy": [
+    "obsolete spirocyst (0.20%)",
+    "zygomaticus minor muscle (0.20%)",
+    "obsolete ptychocyst (0.22%)",
+    "perichordal bone (0.24%)",
+    "obsolete cnida (0.24%)",
+    "trigeminal placode complex (0.26%)",
+    "superior ophthalmic vein (0.28%)",
+    "principal artery to limb (0.28%)",
+    "bolus of food (0.29%)",
+    "plantar digital artery (0.31%)"
+  ]
+}

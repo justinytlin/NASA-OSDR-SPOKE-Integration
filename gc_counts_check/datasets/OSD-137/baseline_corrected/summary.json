@@ -1,0 +1,45 @@
+{
+  "name": "OSD-137",
+  "tissue": "liver",
+  "tissue_label": "liver",
+  "mode": "baseline-corrected",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-137_GC_ranks.npz",
+  "n_samples": 6,
+  "n_anatomy": 13257,
+  "family_regex": "liver|hepat",
+  "family_exclude": "hepatopancreas|flexure|arthropod|hepatic cecum",
+  "n_family_nodes": 85,
+  "family_median_pct": 30.928314601091245,
+  "in_top_2_5pct": 1,
+  "in_top_10pct": 17,
+  "mwu_p_less": 0.10203252293390885,
+  "ks_p_greater": 3.982679872480596e-05,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 5,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.1 (fail)",
+    "KS p = 4e-05 (ok)",
+    "0/6 samples individually p < 0.05 (fail)",
+    "family ranks 5 of 13 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "hepatic duct smooth muscle (1.1%)",
+    "hepatobiliary system (3.4%)",
+    "hepatic duct (3.7%)",
+    "hepatic acinus (4.5%)",
+    "hepatic diverticulum (4.9%)"
+  ],
+  "top_real_anatomy": [
+    "kidney (0.01%)",
+    "renal duct (0.01%)",
+    "kidney corticomedullary boundary (0.02%)",
+    "upper urinary tract (0.03%)",
+    "renal collecting system (0.04%)",
+    "left kidney (0.05%)",
+    "right kidney (0.05%)",
+    "kidney capsule (0.06%)",
+    "renal fat pad (0.06%)",
+    "renal sinus of left kidney (0.08%)"
+  ]
+}

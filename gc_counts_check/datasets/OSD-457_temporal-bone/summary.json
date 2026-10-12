@@ -1,0 +1,45 @@
+{
+  "name": "OSD-457_temporal-bone",
+  "tissue": "temporal bone",
+  "tissue_label": "temporal bone",
+  "mode": "raw",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-457_temporal-bone_GC_anatomy_ranks.tsv",
+  "n_samples": 6,
+  "n_anatomy": 13257,
+  "family_regex": "temporal bone|petrous|mastoid|tympanic (?:ring|bone|part)|squamous part of temporal|otic capsule|periotic",
+  "family_exclude": "sterno|extratemporal|intertemporal|supratemporal",
+  "n_family_nodes": 19,
+  "family_median_pct": 78.6955319202434,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 4,
+  "mwu_p_less": 0.9829654280178906,
+  "ks_p_greater": 0.4660294596755704,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 14,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.98 (fail)",
+    "KS p = 0.47 (fail)",
+    "0/6 samples individually p < 0.05 (fail)",
+    "family ranks 14 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "otic capsule (4.6%)",
+    "otic capsule pre-cartilage condensation (4.6%)",
+    "cartilaginous otic capsule (7.1%)",
+    "sigmoid process of tympanic bone (7.8%)",
+    "distal part of styloid process of temporal bone (55.6%)"
+  ],
+  "top_real_anatomy": [
+    "plantar digital artery (0.20%)",
+    "bolus of food (0.22%)",
+    "ventral root of spinal cord (0.22%)",
+    "dorsal paragigantocellular nucleus (0.23%)",
+    "notochordal ossification (0.24%)",
+    "ingested food (0.25%)",
+    "dorsal root of spinal cord (0.26%)",
+    "two-pass circulatory system (0.30%)",
+    "perichordal bone (0.30%)",
+    "principal artery to forelimb (0.30%)"
+  ]
+}

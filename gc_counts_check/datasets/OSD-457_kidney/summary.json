@@ -1,0 +1,44 @@
+{
+  "name": "OSD-457_kidney",
+  "tissue": "kidney",
+  "tissue_label": "kidney",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-457_kidney_GC_anatomy_ranks.tsv",
+  "n_samples": 3,
+  "n_anatomy": 13257,
+  "family_regex": "kidney|renal|nephron|glomerul",
+  "family_exclude": "adrenal|suprarenal|interrenal|nephridi|Hatschek|lieno|olfactory|cerebell|preglomerular",
+  "n_family_nodes": 167,
+  "family_median_pct": 31.749264539488575,
+  "in_top_2_5pct": 7,
+  "in_top_10pct": 30,
+  "mwu_p_less": 3.384695389543932e-06,
+  "ks_p_greater": 7.390037515919742e-08,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 6,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 3.4e-06 (ok)",
+    "KS p = 7.4e-08 (ok)",
+    "3/3 samples individually p < 0.05 (ok)",
+    "family ranks 6 of 13 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "renal papilla (0.9%)",
+    "tip of renal papilla (0.9%)",
+    "renal medulla loop of Henle (2.1%)",
+    "inner medulla of kidney (2.2%)",
+    "region of nephron tubule (2.2%)"
+  ],
+  "top_real_anatomy": [
+    "nucleus recessus posterioris (0.19%)",
+    "catecholamine system (0.20%)",
+    "superior gemellus muscle (0.20%)",
+    "dorsal nerve root of cervical spinal cord (0.22%)",
+    "gemellus muscle (0.22%)",
+    "histaminergic system (0.23%)",
+    "nucleus recessus lateralis (0.25%)",
+    "morphological boundary (0.25%)",
+    "ventral nerve root of cervical spinal cord (0.26%)",
+    "integumental surface (0.27%)"
+  ]
+}

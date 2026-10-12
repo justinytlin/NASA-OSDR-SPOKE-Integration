@@ -1,0 +1,45 @@
+{
+  "name": "OSD-566",
+  "tissue": "adrenal gland",
+  "tissue_label": "adrenal gland",
+  "mode": "raw",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-566_GC_anatomy_ranks.tsv",
+  "n_samples": 6,
+  "n_anatomy": 13257,
+  "family_regex": "adrenal|suprarenal|interrenal",
+  "family_exclude": null,
+  "n_family_nodes": 31,
+  "family_median_pct": 54.991073898066425,
+  "in_top_2_5pct": 2,
+  "in_top_10pct": 4,
+  "mwu_p_less": 0.22839475167916762,
+  "ks_p_greater": 0.004152450667285665,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 12,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.23 (fail)",
+    "KS p = 0.0042 (ok)",
+    "0/6 samples individually p < 0.05 (fail)",
+    "family ranks 12 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "zona fasciculata of adrenal gland (1.0%)",
+    "zona glomerulosa of adrenal gland (1.4%)",
+    "adrenal medulla (2.8%)",
+    "suprarenal vein (5.4%)",
+    "right suprarenal vein (10.4%)"
+  ],
+  "top_real_anatomy": [
+    "proper plantar digital artery (0.20%)",
+    "plantar digital artery (0.21%)",
+    "paragigantocellular nucleus (0.23%)",
+    "zygomaticus minor muscle (0.23%)",
+    "integumental surface (0.25%)",
+    "dorsal paragigantocellular nucleus (0.26%)",
+    "common plantar digital arteries (0.26%)",
+    "perichordal bone (0.28%)",
+    "lateral paragigantocellular nucleus (0.29%)",
+    "extensor caudae muscle (0.29%)"
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "name": "OSD-243",
+  "tissue": "skin",
+  "tissue_label": "skin",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-243_GC_anatomy_ranks.tsv",
+  "n_samples": 19,
+  "n_anatomy": 13257,
+  "family_regex": "\\bskin|epidermis|dermis",
+  "family_exclude": "dermatome|hypodermis",
+  "n_family_nodes": 111,
+  "family_median_pct": 54.05922591044254,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 15,
+  "mwu_p_less": 0.6564504214713776,
+  "ks_p_greater": 0.6483787764727743,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 11,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.66 (fail)",
+    "KS p = 0.65 (fail)",
+    "0/19 samples individually p < 0.05 (fail)",
+    "family ranks 11 of 13 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "skin of lip (2.5%)",
+    "skin of knee (2.7%)",
+    "skin of cheek (5.0%)",
+    "skin of prepuce of penis (5.4%)",
+    "skin sebaceous gland (5.6%)"
+  ],
+  "top_real_anatomy": [
+    "common plantar digital arteries (0.18%)",
+    "histaminergic system (0.21%)",
+    "aortic plexus (0.21%)",
+    "ossification center (0.23%)",
+    "serotonergic system (0.25%)",
+    "abdominal nerve plexus (0.28%)",
+    "cholinergic system (0.29%)",
+    "nucleus recessus (0.29%)",
+    "glutamatergic system (0.29%)",
+    "ventral root of spinal cord (0.29%)"
+  ]
+}

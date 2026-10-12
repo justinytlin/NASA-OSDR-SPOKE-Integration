@@ -1,0 +1,45 @@
+{
+  "name": "OSD-100",
+  "tissue": "eye",
+  "tissue_label": "eye",
+  "mode": "baseline-corrected",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-100_GC_ranks.npz",
+  "n_samples": 6,
+  "n_anatomy": 13257,
+  "family_regex": "\\beye\\b|eyeball|ocular|cornea|\\blens\\b|retina|sclera|conjunctiv|uvea|\\biris\\b|ciliary body|choroid|vitreous|aqueous humor",
+  "family_exclude": "choroid plexus|choroidal artery|anterior choroidal|eyelid|eyebrow|lens placode|eye primordium|compound eye|ocellus|eyespot|preoptic|supraoptic|optic (?:tract|radiation|tectum|lobe|chiasm)|sensillum|extra-ocular|ocular pre-muscle|eye skin|eye sebaceous|sclerotome|scleral ossicle|retinaculum|macula densa|fovea capitis",
+  "n_family_nodes": 169,
+  "family_median_pct": 14.498001056045863,
+  "in_top_2_5pct": 40,
+  "in_top_10pct": 67,
+  "mwu_p_less": 5.518477342320481e-41,
+  "ks_p_greater": 4.4054933283322025e-33,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 2,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 5.5e-41 (ok)",
+    "KS p = 4.4e-33 (ok)",
+    "6/6 samples individually p < 0.05 (ok)",
+    "family ranks 2 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "eye (0.0%)",
+    "median eye (0.0%)",
+    "nauplius eye (0.0%)",
+    "simple eye (0.1%)",
+    "embryonic intraretinal space (0.1%)"
+  ],
+  "top_real_anatomy": [
+    "mammary gland smooth muscle (0.01%)",
+    "tapetum (0.02%)",
+    "eye (0.03%)",
+    "median eye (0.03%)",
+    "nauplius eye (0.04%)",
+    "smooth muscle tissue (0.07%)",
+    "aphakic space (0.07%)",
+    "simple eye (0.07%)",
+    "pinhole eye (0.08%)",
+    "spherical lensed eye (0.08%)"
+  ]
+}

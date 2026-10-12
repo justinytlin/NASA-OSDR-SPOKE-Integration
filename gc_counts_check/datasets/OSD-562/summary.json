@@ -1,0 +1,45 @@
+{
+  "name": "OSD-562",
+  "tissue": "hippocampus",
+  "tissue_label": "hippocampus",
+  "mode": "raw",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-562_GC_anatomy_ranks.tsv",
+  "n_samples": 12,
+  "n_anatomy": 13257,
+  "family_regex": "hippocamp|dentate gyrus|Ammon|subiculum",
+  "family_exclude": null,
+  "n_family_nodes": 51,
+  "family_median_pct": 13.289205702647656,
+  "in_top_2_5pct": 1,
+  "in_top_10pct": 17,
+  "mwu_p_less": 1.488961474794188e-18,
+  "ks_p_greater": 2.7824325494676988e-24,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 1,
+  "verdict": "CLEAR",
+  "criteria": [
+    "pooled Mann-Whitney p = 1.5e-18 (ok)",
+    "KS p = 2.8e-24 (ok)",
+    "12/12 samples individually p < 0.05 (ok)",
+    "family ranks 1 of 13 organ families by median percentile (ok)"
+  ],
+  "best_family_nodes": [
+    "hippocampal commissure (1.6%)",
+    "hippocampus fimbria (5.8%)",
+    "dentate gyrus subgranular zone (6.3%)",
+    "hippocampus alveus (6.8%)",
+    "posterior parahippocampal white matter (7.0%)"
+  ],
+  "top_real_anatomy": [
+    "ventral root of spinal cord (0.20%)",
+    "closed circulatory system (0.20%)",
+    "aortic plexus (0.21%)",
+    "dorsal root of spinal cord (0.21%)",
+    "two-pass circulatory system (0.23%)",
+    "ingested food (0.24%)",
+    "extensor caudae lateralis muscle (0.25%)",
+    "one-pass circulatory system (0.26%)",
+    "bolus of food (0.26%)",
+    "integumental surface (0.27%)"
+  ]
+}

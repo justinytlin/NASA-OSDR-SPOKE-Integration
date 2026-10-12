@@ -1,0 +1,45 @@
+{
+  "name": "OSD-515",
+  "tissue": "thymus",
+  "tissue_label": "thymus",
+  "mode": "baseline-corrected",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-515_GC_ranks.npz",
+  "n_samples": 10,
+  "n_anatomy": 13257,
+  "family_regex": "thym",
+  "family_exclude": null,
+  "n_family_nodes": 26,
+  "family_median_pct": 25.40959493097986,
+  "in_top_2_5pct": 4,
+  "in_top_10pct": 7,
+  "mwu_p_less": 0.0009576192359613581,
+  "ks_p_greater": 0.000543946793875636,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 5,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.00096 (ok)",
+    "KS p = 0.00054 (ok)",
+    "10/10 samples individually p < 0.05 (ok)",
+    "family ranks 5 of 13 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "thymus lymphoid tissue (0.1%)",
+    "cervical thymus (1.7%)",
+    "deep cervical thymus (1.7%)",
+    "superficial cervical thymus (1.7%)",
+    "thymus (3.7%)"
+  ],
+  "top_real_anatomy": [
+    "lymphoid tissue (0.01%)",
+    "appendix lymphoid tissue (0.02%)",
+    "secondary follicle corona (0.02%)",
+    "spleen follicular dendritic cell network (0.03%)",
+    "lymph node follicular corona (0.04%)",
+    "thymus lymphoid tissue (0.06%)",
+    "hematopoietic system (0.06%)",
+    "digestive system (0.09%)",
+    "nephric fold (0.10%)",
+    "smooth muscle tissue (0.12%)"
+  ]
+}

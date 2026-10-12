@@ -1,0 +1,45 @@
+{
+  "name": "OSD-580",
+  "tissue": "heart",
+  "tissue_label": "heart",
+  "mode": "raw",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-580_GC_anatomy_ranks.tsv",
+  "n_samples": 20,
+  "n_anatomy": 13257,
+  "family_regex": "heart|cardiac|myocard",
+  "family_exclude": "cardiac stomach|cardiac gastric|corpus cardiacum|lymph heart|dorsal vessel",
+  "n_family_nodes": 97,
+  "family_median_pct": 37.7272384400694,
+  "in_top_2_5pct": 1,
+  "in_top_10pct": 15,
+  "mwu_p_less": 0.0035612584011355647,
+  "ks_p_greater": 0.0008618682996577288,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 7,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.0036 (ok)",
+    "KS p = 0.00086 (ok)",
+    "20/20 samples individually p < 0.05 (ok)",
+    "family ranks 7 of 13 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "cardiac Purkinje fiber (1.6%)",
+    "cardiac muscle tissue of ventricle (2.9%)",
+    "trabecula carnea cardiac muscle tissue (4.3%)",
+    "cardiac muscle tissue of myocardium (4.6%)",
+    "cardiac muscle of right ventricle (4.7%)"
+  ],
+  "top_real_anatomy": [
+    "gABAergic system (0.23%)",
+    "catecholamine system (0.24%)",
+    "paragigantocellular nucleus (0.25%)",
+    "histaminergic system (0.27%)",
+    "lateral paragigantocellular nucleus (0.27%)",
+    "cholinergic system (0.27%)",
+    "serotonergic system (0.28%)",
+    "obsolete ptychocyst (0.29%)",
+    "extensor caudae medialis muscle (0.31%)",
+    "glutamatergic system (0.33%)"
+  ]
+}

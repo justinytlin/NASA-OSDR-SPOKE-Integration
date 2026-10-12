@@ -1,0 +1,44 @@
+{
+  "name": "OSD-379",
+  "tissue": "liver",
+  "tissue_label": "liver",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-379_GC_anatomy_ranks.tsv",
+  "n_samples": 35,
+  "n_anatomy": 13257,
+  "family_regex": "liver|hepat",
+  "family_exclude": "hepatopancreas|flexure|arthropod|hepatic cecum",
+  "n_family_nodes": 85,
+  "family_median_pct": 47.56171941507989,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 5,
+  "mwu_p_less": 0.518867644398577,
+  "ks_p_greater": 0.22304475050912426,
+  "frac_samples_significant": 0.2571428571428571,
+  "family_rank_among_organ_families": 8,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.52 (fail)",
+    "KS p = 0.22 (fail)",
+    "9/35 samples individually p < 0.05 (fail)",
+    "family ranks 8 of 13 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "hepatic cord (3.0%)",
+    "liver lobule (3.4%)",
+    "hepatic acinus (3.8%)",
+    "liver perisinusoidal space (5.1%)",
+    "hepatic artery (7.3%)"
+  ],
+  "top_real_anatomy": [
+    "thoracic aortic plexus (0.18%)",
+    "abdominal nerve plexus (0.19%)",
+    "aortic plexus (0.21%)",
+    "deep middle cerebral vein (0.21%)",
+    "maxillomandibular placode (0.23%)",
+    "basal vein (0.24%)",
+    "ventral root of spinal cord (0.27%)",
+    "obsolete ptychocyst (0.30%)",
+    "cholinergic system (0.32%)",
+    "profundal placode (0.33%)"
+  ]
+}

@@ -1,0 +1,18 @@
+accession	tissue	reason
+OSD-49	Liver	no condition factor (sample-preservation / methods study)
+OSD-141	Tissue; Whole Spleen; Cells	no condition factor (sample-preservation / methods study)
+OSD-235	Left Lobe of the Liver	no condition factor (sample-preservation / methods study)
+OSD-236	Left quadriceps femoris	no GeneLab RSEM counts file
+OSD-272	Spleen	no condition factor (sample-preservation / methods study)
+OSD-273	Liver	no condition factor (sample-preservation / methods study)
+OSD-274	Soleus	no condition factor (sample-preservation / methods study)
+OSD-287	thymus	no GeneLab RSEM counts file
+OSD-318	Trp53 null Mammary Tumor	cell culture / tumour / plasma
+OSD-374	Hippocampus	ISA sample names do not match counts columns
+OSD-426	Cells	no samples at the baseline level of Spaceflight, Treatment
+OSD-462	Left kidney	no GeneLab RSEM counts file
+OSD-532	Plasma	no GeneLab RSEM counts file
+OSD-611	Hippocampus	ISA sample names do not match counts columns
+OSD-792	Cells	no samples at the baseline level of Ionizing Radiation, Microgravity Simulation
+OSD-793	femoral skin	no GeneLab RSEM counts file
+OSD-901	Cells, Cultured	cell culture / tumour / plasma

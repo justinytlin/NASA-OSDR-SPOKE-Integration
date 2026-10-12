@@ -1,0 +1,45 @@
+{
+  "name": "OSD-719",
+  "tissue": "whole blood",
+  "tissue_label": "blood",
+  "mode": "raw",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-719_GC_anatomy_ranks.tsv",
+  "n_samples": 6,
+  "n_anatomy": 13257,
+  "family_regex": "\\bblood\\b|plasma|serum",
+  "family_exclude": "blood (?:vessel|island|brain|nerve|vasculature)|blood-|vessel|barrier|plasma membrane|sinus|feather",
+  "n_family_nodes": 10,
+  "family_median_pct": 75.40293178446606,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 1,
+  "mwu_p_less": 0.8492841222933982,
+  "ks_p_greater": 0.6930364386752775,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 13,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.85 (fail)",
+    "KS p = 0.69 (fail)",
+    "0/6 samples individually p < 0.05 (fail)",
+    "family ranks 13 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "blood clot (5.0%)",
+    "venous blood (23.2%)",
+    "arterial blood (24.2%)",
+    "placenta fetal blood space (28.0%)",
+    "blood (74.6%)"
+  ],
+  "top_real_anatomy": [
+    "closed circulatory system (0.20%)",
+    "perichordal bone (0.21%)",
+    "common plantar digital arteries (0.21%)",
+    "zygomaticus minor muscle (0.21%)",
+    "two-pass circulatory system (0.23%)",
+    "dorsal root of spinal cord (0.24%)",
+    "one-pass circulatory system (0.25%)",
+    "ventral root of spinal cord (0.25%)",
+    "nucleus recessus posterioris (0.27%)",
+    "paragigantocellular nucleus (0.28%)"
+  ]
+}

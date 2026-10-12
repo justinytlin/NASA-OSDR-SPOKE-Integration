@@ -1,0 +1,45 @@
+{
+  "name": "OSD-506",
+  "tissue": "spleen",
+  "tissue_label": "spleen",
+  "mode": "raw",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-506_GC_anatomy_ranks.tsv",
+  "n_samples": 10,
+  "n_anatomy": 13257,
+  "family_regex": "spleen|splenic",
+  "family_exclude": "flexure",
+  "n_family_nodes": 31,
+  "family_median_pct": 12.182243343139472,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 10,
+  "mwu_p_less": 0.000163894816305741,
+  "ks_p_greater": 5.291817309934329e-06,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 2,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.00016 (ok)",
+    "KS p = 5.3e-06 (ok)",
+    "10/10 samples individually p < 0.05 (ok)",
+    "family ranks 2 of 13 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "splenic arteriole (4.2%)",
+    "parenchyma of spleen (7.2%)",
+    "spleen primary B follicle (7.2%)",
+    "white pulp of spleen (8.3%)",
+    "spleen marginal sinus (8.3%)"
+  ],
+  "top_real_anatomy": [
+    "histaminergic system (0.18%)",
+    "morphological boundary (0.18%)",
+    "catecholamine system (0.18%)",
+    "integumental surface (0.20%)",
+    "extensor caudae muscle (0.21%)",
+    "cholinergic system (0.21%)",
+    "gABAergic system (0.22%)",
+    "extensor caudae lateralis muscle (0.24%)",
+    "extensor caudae medialis muscle (0.24%)",
+    "dorsal paragigantocellular nucleus (0.26%)"
+  ]
+}

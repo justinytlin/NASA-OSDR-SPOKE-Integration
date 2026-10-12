@@ -1,0 +1,45 @@
+{
+  "name": "OSD-612",
+  "tissue": "cerebrum",
+  "tissue_label": "cerebrum",
+  "mode": "raw",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-612_GC_anatomy_ranks.tsv",
+  "n_samples": 5,
+  "n_anatomy": 13257,
+  "family_regex": "cerebral (?:hemisphere|cortex|white matter|lobe|subcortex)|cerebrum|telencephal|neocortex|isocortex|frontal (?:lobe|cortex)|parietal (?:lobe|cortex)|temporal (?:lobe|cortex)|occipital (?:lobe|cortex)|corpus callosum",
+  "family_exclude": "artery|vein|Myxin|protocerebrum",
+  "n_family_nodes": 107,
+  "family_median_pct": 18.542656709662815,
+  "in_top_2_5pct": 13,
+  "in_top_10pct": 25,
+  "mwu_p_less": 1.6507182271422582e-19,
+  "ks_p_greater": 3.229909957118394e-23,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 2,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 1.7e-19 (ok)",
+    "KS p = 3.2e-23 (ok)",
+    "5/5 samples individually p < 0.05 (ok)",
+    "family ranks 2 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "lamina terminalis of cerebral hemisphere (1.5%)",
+    "external capsule of telencephalon (1.5%)",
+    "cerebral hemisphere white matter (1.5%)",
+    "forceps major of corpus callosum (1.6%)",
+    "splenium of the corpus callosum (1.6%)"
+  ],
+  "top_real_anatomy": [
+    "zygomaticus minor muscle (0.19%)",
+    "ventral root of spinal cord (0.20%)",
+    "principal artery to limb (0.21%)",
+    "one-pass circulatory system (0.24%)",
+    "nucleus recessus (0.24%)",
+    "two-pass circulatory system (0.25%)",
+    "paragigantocellular nucleus (0.26%)",
+    "perichordal bone (0.27%)",
+    "obsolete spirocyst (0.28%)",
+    "dorsal root of spinal cord (0.28%)"
+  ]
+}

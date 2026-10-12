@@ -1,0 +1,44 @@
+{
+  "name": "OSD-326",
+  "tissue": "skeletal muscle",
+  "tissue_label": "quadriceps",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-326_GC_anatomy_ranks.tsv",
+  "n_samples": 4,
+  "n_anatomy": 13257,
+  "family_regex": "skeletal muscle|gastrocnemius|quadriceps|soleus|tibialis",
+  "family_exclude": null,
+  "n_family_nodes": 55,
+  "family_median_pct": 57.3489477257298,
+  "in_top_2_5pct": 2,
+  "in_top_10pct": 5,
+  "mwu_p_less": 0.7564009464887249,
+  "ks_p_greater": 0.612368256361526,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 12,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.76 (fail)",
+    "KS p = 0.61 (fail)",
+    "0/4 samples individually p < 0.05 (fail)",
+    "family ranks 12 of 13 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "skeletal muscle tissue of masseter (1.7%)",
+    "lip skeletal muscle (1.9%)",
+    "skeletal muscle tissue of diaphragm (3.3%)",
+    "tendon of quadriceps femoris (5.7%)",
+    "quadriceps femoris (8.0%)"
+  ],
+  "top_real_anatomy": [
+    "paragigantocellular nucleus (0.21%)",
+    "ossification center (0.24%)",
+    "extensor caudae muscle (0.24%)",
+    "dorsal root of spinal cord (0.26%)",
+    "extensor caudae medialis muscle (0.27%)",
+    "perichordal bone (0.27%)",
+    "neurogenic placode (0.29%)",
+    "zygomaticus minor muscle (0.30%)",
+    "extensor caudae lateralis muscle (0.31%)",
+    "nucleus recessus (0.31%)"
+  ]
+}

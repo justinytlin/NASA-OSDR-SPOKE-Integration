@@ -1,0 +1,44 @@
+{
+  "name": "OSD-419",
+  "tissue": "skeletal muscle",
+  "tissue_label": "gastrocnemius",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-419_GC_anatomy_ranks.tsv",
+  "n_samples": 8,
+  "n_anatomy": 13257,
+  "family_regex": "skeletal muscle|gastrocnemius|quadriceps|soleus|tibialis",
+  "family_exclude": null,
+  "n_family_nodes": 55,
+  "family_median_pct": 45.5231198612054,
+  "in_top_2_5pct": 2,
+  "in_top_10pct": 6,
+  "mwu_p_less": 0.5812366497368804,
+  "ks_p_greater": 0.575662419197214,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 9,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.58 (fail)",
+    "KS p = 0.58 (fail)",
+    "0/8 samples individually p < 0.05 (fail)",
+    "family ranks 9 of 13 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "skeletal muscle tissue of masseter (1.8%)",
+    "lip skeletal muscle (1.8%)",
+    "skeletal muscle tissue of diaphragm (2.7%)",
+    "tendon of quadriceps femoris (4.9%)",
+    "quadriceps femoris (7.1%)"
+  ],
+  "top_real_anatomy": [
+    "integumental surface (0.20%)",
+    "morphological boundary (0.21%)",
+    "extensor caudae medialis muscle (0.22%)",
+    "extensor caudae muscle (0.22%)",
+    "ingested food (0.24%)",
+    "extensor caudae lateralis muscle (0.25%)",
+    "olfactory bulb internal plexiform layer (0.25%)",
+    "bolus of food (0.25%)",
+    "olfactory bulb external plexiform layer (0.27%)",
+    "profundal placode (0.27%)"
+  ]
+}

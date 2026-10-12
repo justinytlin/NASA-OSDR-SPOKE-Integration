@@ -79,42 +79,104 @@ def main():
     ap.add_argument("--ranks", help="rank table with Rank_by_type_* columns")
     ap.add_argument("--counts", help="GeneLab unnormalized counts CSV (runs the projection first)")
     ap.add_argument("--tissue", required=True, help="source tissue (built-in family name or free label with --family-regex)")
+    ap.add_argument("--label", default=None, help="tissue name shown in figure titles (default: --tissue)")
+    ap.add_argument("--families", choices=["name", "ontology"], default="name",
+                    help="how tissue families are defined: 'name' = regexes in families.py; 'ontology' = the UBERON root "
+                         "term and everything below it by is_a / part_of (ontology_families.py)")
     ap.add_argument("--family-regex", default=None); ap.add_argument("--exclude-regex", default=None)
     ap.add_argument("--name", default=None); ap.add_argument("--samples", action="append", default=None)
     ap.add_argument("--col-regex", default=None, help="restrict to Rank_by_type_ columns matching this")
+    ap.add_argument("--npz", default=None, help="<name>_GC_ranks.npz from gc_counts_to_psev.py --compact (needed for --corrected)")
+    ap.add_argument("--corrected", action="store_true",
+                    help="baseline-corrected check: rank Anatomy nodes by scores - mean_weight * uniform (the across-gene "
+                         "covariance of expression weight and node rank) instead of the raw score; output in "
+                         "<out>/<name>/baseline_corrected/")
+    ap.add_argument("--spoke", default=str(ROOT.parent / "SPOKE_NASA/spoke_v_2"))
+    ap.add_argument("--score-key", choices=["scores", "zscore", "perm"], default="scores",
+                    help="with --corrected: 'scores' = rank-based scores minus baseline; 'zscore' = z-score-based scores "
+                         "minus baseline (needs --zscore-arm output); 'perm' = z of the corrected score against hub-rank-matched "
+                         "weight permutations (needs --perm-cov output)")
     ap.add_argument("--out", default=str(ROOT / "datasets"))
     ap.add_argument("--p-pooled", type=float, default=0.01); ap.add_argument("--p-sample", type=float, default=0.05)
     ap.add_argument("--min-sample-frac", type=float, default=0.8)
     ap.add_argument("--n-null", type=int, default=2000); ap.add_argument("--threads", type=int, default=4)
     a = ap.parse_args()
-    if not a.ranks and not a.counts:
-        sys.exit("give --ranks or --counts")
-    name = a.name or (Path(a.ranks or a.counts).stem.split("_")[0])
-    ranks_path = Path(a.ranks) if a.ranks else run_projection(a.counts, name, a.tissue, a.samples, a.threads)
+    if not a.ranks and not a.counts and not a.npz:
+        sys.exit("give --ranks, --counts or --npz")
+    if a.corrected and not a.npz:
+        sys.exit("--corrected needs --npz")
+    name = a.name or (Path(a.ranks or a.counts or a.npz).stem.split("_")[0])
+    ranks_path = Path(a.npz) if a.corrected else Path(a.ranks) if a.ranks else run_projection(a.counts, name, a.tissue, a.samples, a.threads)
     tissue = a.tissue
+    label = a.label or tissue
+    onto = a.families == "ontology"
     if a.family_regex:
         inc, exc = a.family_regex, a.exclude_regex
     elif tissue in FAMILIES:
         inc, exc = FAMILIES[tissue]
     else:
         sys.exit(f"'{tissue}' is not a built-in family ({', '.join(ORGAN_FAMILIES)}); pass --family-regex")
+    min_src, min_fam = (1, 3) if onto else (5, 5)
     color = S.TISSUE_COLOR.get(tissue, "#2a78d6")
-    out = Path(a.out) / name; out.mkdir(parents=True, exist_ok=True)
+    sub_dir = {(False, False): "", (True, False): "baseline_corrected", (False, True): "ontology",
+               (True, True): "corrected_ontology"}[(a.corrected, onto)]
+    mode = {"": "", "baseline_corrected": " (baseline-corrected)", "ontology": " (ontology families)",
+            "corrected_ontology": " (baseline-corrected, ontology families)"}[sub_dir]
+    if a.corrected and a.score_key != "scores":
+        sub_dir = sub_dir.replace("baseline_corrected", f"corrected_{a.score_key}").replace("corrected_ontology", f"corrected_{a.score_key}_ontology")
+        mode = mode.replace("baseline-corrected", {"zscore": "z-score projection, baseline-corrected", "perm": "permutation z, hub-rank matched"}[a.score_key])
+    out = Path(a.out) / name / sub_dir; out.mkdir(parents=True, exist_ok=True)
 
     # ---------- load ----------
-    df = pd.read_csv(ranks_path, sep="\t", low_memory=False)
-    cols = [c for c in df.columns if c.startswith("Rank_by_type_")]
-    if a.col_regex:
-        cols = [c for c in cols if re.search(a.col_regex, c, re.I)]
-    an = df[df.Node_Type == "Anatomy"].reset_index(drop=True)
+    if a.corrected:
+        z = np.load(ranks_path, allow_pickle=False)
+        if "scores" not in z.files:
+            sys.exit(f"{ranks_path} has no scores/uniform arrays; re-run gc_counts_to_psev.py --compact")
+        ni = pd.read_csv(Path(a.spoke) / "node_info.tsv", sep="\t")
+        amask = (ni.Node_Type == "Anatomy").values
+        an = ni[amask].reset_index(drop=True)
+        if a.score_key == "zscore":
+            if "scores_z" not in z.files:
+                sys.exit(f"{ranks_path} has no scores_z; re-run with --zscore-arm")
+            corr = z["scores_z"].astype(np.float64) - z["mean_weight"][:, None] * z["uniform_z"].astype(np.float64)[None, :]
+            ca = corr[:, amask]
+        elif a.score_key == "perm":
+            if "perm_scores" not in z.files:
+                sys.exit(f"{ranks_path} has no perm_scores; re-run with --perm-cov")
+            corr = z["scores"].astype(np.float64) - z["mean_weight"][:, None] * z["uniform"].astype(np.float64)[None, :]
+            obs = corr[:, amask]
+            P = z["perm_scores"].astype(np.float64) - z["mean_weight"][None, :, None] * z["uniform"].astype(np.float64)[amask][None, None, :]
+            ca = (obs - P.mean(axis=0)) / np.where(P.std(axis=0) > 0, P.std(axis=0), np.nan)
+            ca = np.nan_to_num(ca)                       # samples x anatomy nodes: z of the observed corrected score vs the null
+        else:
+            corr = z["scores"].astype(np.float64) - z["mean_weight"][:, None] * z["uniform"].astype(np.float64)[None, :]
+            ca = corr[:, amask]                          # samples x anatomy nodes; high = more associated
+        n = ca.shape[1]
+        pct = ((-ca).argsort(axis=1).argsort(axis=1) + 1).T * 100.0 / n
+        samples = [str(s) for s in z["samples"]]
+    else:
+        df = pd.read_csv(ranks_path, sep="\t", low_memory=False)
+        cols = [c for c in df.columns if c.startswith("Rank_by_type_")]
+        if a.col_regex:
+            cols = [c for c in cols if re.search(a.col_regex, c, re.I)]
+        an = df[df.Node_Type == "Anatomy"].reset_index(drop=True)
+        n = len(an)
+        pct = an[cols].values * 100.0 / n                # nodes x samples
+        samples = [c[len("Rank_by_type_"):] for c in cols]
     names = an.Node_Name.astype(str)
-    n = len(an)
-    pct = an[cols].values * 100.0 / n                    # nodes x samples
     pooled = pct.mean(axis=1)
-    samples = [c[len("Rank_by_type_"):] for c in cols]
-    m = family_mask(names, inc, exc)
-    if m.sum() < 5:
-        sys.exit(f"only {m.sum()} Anatomy nodes match the family; widen the regex")
+    if onto:
+        from ontology_families import build_families
+        ofam, oroots = build_families(an.Node.values)
+        if tissue not in ofam:
+            sys.exit(f"no UBERON root defined for '{tissue}' in ontology_families.ROOTS")
+        fam_masks = {f: an.Node.isin(ids).values for f, ids in ofam.items()}
+    else:
+        fam_masks = {f: family_mask(names, *FAMILIES[f]) for f in ORGAN_FAMILIES}
+        fam_masks[tissue] = family_mask(names, inc, exc)
+    m = fam_masks[tissue]
+    if m.sum() < min_src:
+        sys.exit(f"only {m.sum()} Anatomy nodes in the family")
     rng = np.random.default_rng(0)
 
     # ---------- statistics ----------
@@ -127,8 +189,8 @@ def main():
     frac_sig = float((per.mwu_p_less < a.p_sample).mean())
     comp = []
     for f in ORGAN_FAMILIES:
-        mf = family_mask(names, *FAMILIES[f])
-        if mf.sum() >= 5:
+        mf = fam_masks[f]
+        if mf.sum() >= min_fam:
             comp.append(dict(family=f, n_nodes=int(mf.sum()), median_pct=float(np.median(pooled[mf])),
                              mwu_p_less=float(mannwhitneyu(pooled[mf], pooled[~mf], alternative="less").pvalue)))
     if tissue not in [c["family"] for c in comp]:
@@ -149,7 +211,7 @@ def main():
                f"{int((per.mwu_p_less < a.p_sample).sum())}/{len(per)} samples individually p < {a.p_sample} "
                f"({'ok' if frac_sig >= a.min_sample_frac else 'fail'})",
                f"family ranks {fam_rank} of {len(comp)} organ families by median percentile ({'ok' if fam_rank == 1 else 'fail'})"]
-    summary = dict(name=name, tissue=tissue, ranks=str(ranks_path), n_samples=len(samples), n_anatomy=n,
+    summary = dict(name=name, tissue=tissue, tissue_label=label, mode=sub_dir or "raw", families=a.families, score_key=a.score_key, ranks=str(ranks_path), n_samples=len(samples), n_anatomy=n,
                    family_regex=inc, family_exclude=exc, n_family_nodes=int(m.sum()), family_median_pct=float(np.median(fam)),
                    in_top_2_5pct=int((fam <= 2.5).sum()), in_top_10pct=int((fam <= 10).sum()),
                    mwu_p_less=float(mwu), ks_p_greater=float(ks), frac_samples_significant=frac_sig,
@@ -164,7 +226,7 @@ def main():
                     f"family ranks {fam_rank} of {len(comp)} organ families")
 
     def finish(fig, letter, title, sub, fname):
-        fig.suptitle(f"{name} {tissue}: {title}", x=0.5, ha="center", y=0.97, fontsize=12.5)
+        fig.suptitle(f"{name.split('_')[0]} {label}: {title}{mode}", x=0.5, ha="center", y=0.97, fontsize=12.5 if not mode else 11)
         fig.savefig(out / f"{fname}.png", dpi=180); fig.savefig(out / f"{fname}.svg"); plt.close(fig)
 
     # ---------- figures (one file each) ----------
@@ -182,8 +244,8 @@ def main():
     for f in ORGAN_FAMILIES:
         if f == tissue:
             continue
-        mf = family_mask(names, *FAMILIES[f]); kf = int(mf.sum())
-        if kf >= 5:
+        mf = fam_masks[f]; kf = int(mf.sum())
+        if kf >= min_fam:
             ax.plot(100.0 * (np.arange(1, kf + 1) - 0.5) / kf, np.sort(pooled[mf]), color=S.GRAY_MARK, lw=0.9, alpha=0.7, zorder=3)
     ax.plot(exp, np.sort(fam), color=color, lw=2.4, marker="o", ms=3.5, mec=S.SURFACE, mew=0.6, zorder=5)
     ax.set_xlim(0, 100); ax.set_ylim(0, 100); ax.set_aspect("equal")
@@ -202,7 +264,7 @@ def main():
     fig, ax = plt.subplots(figsize=(8.2, 6.0)); fig.subplots_adjust(left=0.22, right=0.97, top=0.92, bottom=0.11)
     yy = np.arange(len(comp))[::-1]
     for i, r in comp.iterrows():
-        mf = family_mask(names, *FAMILIES[r.family]) if r.family in FAMILIES else m
+        mf = fam_masks.get(r.family, m)
         vals = pooled[mf]; own = r.family == tissue
         ax.scatter(vals, yy[i] + rng.uniform(-0.2, 0.2, len(vals)), s=16 if own else 9, color=color if own else S.GRAY_MARK,
                    alpha=0.85 if own else 0.55, edgecolors=S.SURFACE, linewidths=0.6, zorder=3)
@@ -234,7 +296,7 @@ def main():
     ax.legend(handles=handles, frameon=False, fontsize=8, loc="lower right")
     finish(fig, "C", f"{tissue} family per sample ({int(sig.sum())}/{n_s} samples p < {a.p_sample})", "", "C_per_sample")
 
-    print(f"\n{name} ({tissue}): {verdict}")
+    print(f"\n{name} ({tissue}){mode}: {verdict}")
     for r in reasons:
         print("  -", r)
     print(f"  best family nodes: {', '.join(summary['best_family_nodes'])}")

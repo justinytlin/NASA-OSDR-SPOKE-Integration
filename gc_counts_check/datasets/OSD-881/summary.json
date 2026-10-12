@@ -1,0 +1,45 @@
+{
+  "name": "OSD-881",
+  "tissue": "heart",
+  "tissue_label": "heart",
+  "mode": "raw",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-881_GC_anatomy_ranks.tsv",
+  "n_samples": 19,
+  "n_anatomy": 13257,
+  "family_regex": "heart|cardiac|myocard",
+  "family_exclude": "cardiac stomach|cardiac gastric|corpus cardiacum|lymph heart|dorsal vessel",
+  "n_family_nodes": 97,
+  "family_median_pct": 34.37667488476793,
+  "in_top_2_5pct": 1,
+  "in_top_10pct": 15,
+  "mwu_p_less": 0.0015439050101404036,
+  "ks_p_greater": 0.0011477564291983585,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 7,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.0015 (ok)",
+    "KS p = 0.0011 (ok)",
+    "19/19 samples individually p < 0.05 (ok)",
+    "family ranks 7 of 13 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "cardiac Purkinje fiber (1.6%)",
+    "cardiac muscle tissue of ventricle (2.9%)",
+    "trabecula carnea cardiac muscle tissue (4.5%)",
+    "cardiac muscle tissue of myocardium (4.8%)",
+    "cardiac muscle of right ventricle (4.8%)"
+  ],
+  "top_real_anatomy": [
+    "deep middle cerebral vein (0.24%)",
+    "profundal placode (0.24%)",
+    "trigeminal placode complex (0.25%)",
+    "basal vein (0.25%)",
+    "maxillomandibular placode (0.27%)",
+    "obsolete ptychocyst (0.30%)",
+    "olfactory bulb internal plexiform layer (0.31%)",
+    "proper plantar digital artery (0.36%)",
+    "serotonergic system (0.37%)",
+    "nucleus recessus (0.37%)"
+  ]
+}

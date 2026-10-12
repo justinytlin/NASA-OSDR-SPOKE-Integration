@@ -1,0 +1,45 @@
+{
+  "name": "OSD-467",
+  "tissue": "bone tissue",
+  "tissue_label": "bone",
+  "mode": "baseline-corrected",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-467_GC_ranks.npz",
+  "n_samples": 8,
+  "n_anatomy": 13257,
+  "family_regex": "bone tissue|compact bone|cortical bone|trabecular bone|cancellous bone|spongy bone|osteon|periosteum|endosteum|diaphysis|\\bfemur\\b|\\btibia\\b|long bone|bone element",
+  "family_exclude": "arthropod",
+  "n_family_nodes": 81,
+  "family_median_pct": 57.23108546428301,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 0,
+  "mwu_p_less": 0.9735535829447758,
+  "ks_p_greater": 0.0006799181120053042,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 9,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.97 (fail)",
+    "KS p = 0.00068 (ok)",
+    "0/8 samples individually p < 0.05 (fail)",
+    "family ranks 9 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "periosteum (16.9%)",
+    "long bone epiphyseal ossification zone (21.9%)",
+    "outer fibrous layer of periosteum (23.6%)",
+    "periosteum of long bone (24.5%)",
+    "long bone epiphyseal plate hypertrophic zone (27.6%)"
+  ],
+  "top_real_anatomy": [
+    "smooth muscle tissue (0.03%)",
+    "smooth muscle endomysium (0.03%)",
+    "enteric circular muscle (0.04%)",
+    "metanephric smooth muscle tissue (0.05%)",
+    "heart primordium (0.05%)",
+    "cardiovascular system (0.05%)",
+    "spleen smooth muscle (0.06%)",
+    "anal region smooth muscle (0.07%)",
+    "ureter smooth muscle (0.08%)",
+    "lymphoid tissue (0.09%)"
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "name": "OSD-686",
+  "tissue": "liver",
+  "tissue_label": "liver",
+  "mode": "raw",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-686_GC_anatomy_ranks.tsv",
+  "n_samples": 3,
+  "n_anatomy": 13257,
+  "family_regex": "liver|hepat",
+  "family_exclude": "hepatopancreas|flexure|arthropod|hepatic cecum",
+  "n_family_nodes": 85,
+  "family_median_pct": 45.50049030700762,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 6,
+  "mwu_p_less": 0.6040977450187528,
+  "ks_p_greater": 0.4240121404335687,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 8,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.6 (fail)",
+    "KS p = 0.42 (fail)",
+    "0/3 samples individually p < 0.05 (fail)",
+    "family ranks 8 of 13 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "hepatic cord (2.5%)",
+    "liver lobule (2.7%)",
+    "hepatic acinus (3.0%)",
+    "liver perisinusoidal space (3.7%)",
+    "extrahepatic duct (6.7%)"
+  ],
+  "top_real_anatomy": [
+    "ophthalmic vein (0.20%)",
+    "inferior ophthalmic vein (0.21%)",
+    "dorsal root of spinal cord (0.22%)",
+    "superior ophthalmic vein (0.23%)",
+    "integumental surface (0.23%)",
+    "morphological boundary (0.25%)",
+    "ventral root of spinal cord (0.26%)",
+    "trigeminal placode complex (0.28%)",
+    "histaminergic system (0.28%)",
+    "gemellus muscle (0.29%)"
+  ]
+}

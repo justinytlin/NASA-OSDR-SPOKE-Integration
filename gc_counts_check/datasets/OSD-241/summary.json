@@ -1,0 +1,44 @@
+{
+  "name": "OSD-241",
+  "tissue": "skin",
+  "tissue_label": "skin",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-241_GC_anatomy_ranks.tsv",
+  "n_samples": 10,
+  "n_anatomy": 13257,
+  "family_regex": "\\bskin|epidermis|dermis",
+  "family_exclude": "dermatome|hypodermis",
+  "n_family_nodes": 111,
+  "family_median_pct": 50.85162555630988,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 15,
+  "mwu_p_less": 0.4047594230203799,
+  "ks_p_greater": 0.28746403110482727,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 11,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.4 (fail)",
+    "KS p = 0.29 (fail)",
+    "0/10 samples individually p < 0.05 (fail)",
+    "family ranks 11 of 13 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "skin of lip (2.5%)",
+    "skin of knee (2.6%)",
+    "skin of cheek (4.6%)",
+    "skin sebaceous gland (4.8%)",
+    "skin of prepuce of penis (5.2%)"
+  ],
+  "top_real_anatomy": [
+    "dorsal root of spinal cord (0.18%)",
+    "principal artery to forelimb (0.19%)",
+    "ventral root of spinal cord (0.22%)",
+    "common plantar digital arteries (0.22%)",
+    "glutamatergic system (0.23%)",
+    "trigeminal placode complex (0.23%)",
+    "principal artery to hindlimb (0.25%)",
+    "serotonergic system (0.25%)",
+    "cholinergic system (0.25%)",
+    "histaminergic system (0.28%)"
+  ]
+}

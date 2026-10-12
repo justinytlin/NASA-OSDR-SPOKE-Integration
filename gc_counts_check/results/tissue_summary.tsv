@@ -1,0 +1,32 @@
+tissue	family	n_datasets	n_samples	CLEAR	PARTIAL	NONE	median_family_pct	min_family_pct	max_family_pct	datasets_pooled_p_lt_0_01	separates	corr_n	corr_CLEAR	corr_PARTIAL	corr_NONE	corr_median_family_pct	corr_median_family_rank	corr_separates	onto_CLEAR	onto_PARTIAL	onto_NONE	onto_family_nodes	onto_median_family_pct	onto_median_family_rank	linked_target	linked_proxy	linked_median_rank	linked_CLEAR	linked_PARTIAL	linked_NONE	linked_no_node
+retina	retina	5	46	0	0	5	93.55	93.1	93.77	0	no	5	5	0	0	0.79	1.0	yes	5	0	0	50	0.23	1.0	retina	False	2.0	2	3	0	0
+cecum	cecum	1	5	0	1	0	22.0	22.0	22.0	1	yes	1	1	0	0	4.92	1.0	yes	1	0	0	7	4.71	1.0	digestive system	True	2.0	0	1	0	0
+bone marrow	bone marrow	2	9	0	1	1	17.89	15.08	20.7	0	mixed	2	2	0	0	6.01	1.0	yes	2	0	0	4	5.56	1.0	bone marrow	False	28.5	0	0	2	0
+colon	colon	2	22	0	2	0	24.03	22.41	25.65	2	yes	2	0	2	0	7.805	2.0	yes	0	2	0	35	8.06	2.0	digestive system	True	1.5	1	1	0	0
+mammary gland	mammary gland	1	15	0	0	1	77.99	77.99	77.99	0	no	1	0	1	0	8.64	2.0	yes	1	0	0	33	1.88	1.0	mammary gland; nipple	False	12.0	0	0	1	0
+kidney	kidney	6	64	0	6	0	33.04	29.6	38.42	6	yes	6	4	2	0	8.79	1.0	yes	6	0	0	272	6.005000000000001	1.0	kidney; nephron tubule; cortex of kidney	False	2.0	2	4	0	0
+brain	brain	2	13	0	2	0	18.215	17.75	18.68	2	yes	2	1	1	0	9.844999999999999	1.5	yes	1	1	0	1714	10.8	1.5	forebrain; telencephalon; brainstem	False	1.0	2	0	0	0
+hippocampus	hippocampus	2	17	2	0	0	13.344999999999999	13.29	13.4	2	yes	2	2	0	0	10.835	1.0	yes	0	2	0	115	14.635	2.0	brain	True	74.0	0	0	2	0
+heart	heart	6	84	0	6	0	35.595	33.54	40.86	5	yes	6	5	1	0	12.44	1.0	yes	0	6	0	225	17.1	4.0	myocardium; cardiac ventricle; cardiac atrium	False	3.0	0	6	0	0
+cerebrum	cerebrum	3	20	0	3	0	18.54	18.29	19.91	3	yes	3	0	3	0	13.76	3.0	yes	0	3	0	633	13.2	2.0	telencephalon	False	2.0	0	3	0	0
+eye	eye	2	11	0	0	2	66.91	66.61	67.21	0	no	2	0	2	0	16.83	3.5	yes	0	2	0	256	21.83	4.0	retina	False	5.5	0	1	1	0
+spleen	spleen	8	58	4	4	0	15.985	12.18	20.14	8	yes	8	0	8	0	17.375	3.0	yes	0	8	0	29	13.155	2.5	hematopoietic system	True	2.0	0	8	0	0
+tibialis anterior	skeletal muscle	2	15	0	0	2	56.78	56.74	56.82	0	no	2	0	2	0	18.73	2.5	yes	1	1	0	498	15.545	2.0		False		0	0	0	2
+extensor digitorum longus	skeletal muscle	2	16	0	0	2	57.055	56.54	57.57	0	no	2	0	2	0	19.405	3.0	yes	0	2	0	498	16.314999999999998	2.5		False		0	0	0	2
+soleus	skeletal muscle	7	66	0	0	7	56.17	54.98	59.17	0	no	7	0	7	0	20.37	3.0	yes	0	7	0	498	16.89	3.0		False		0	0	0	7
+quadriceps	skeletal muscle	4	23	0	0	4	57.36	57.24	57.52	0	no	4	0	4	0	20.685000000000002	3.5	yes	0	4	0	498	17.03	2.5		False		0	0	0	4
+gastrocnemius	skeletal muscle	5	24	0	0	5	58.17	45.52	60.92	0	no	5	0	5	0	22.54	2.0	yes	0	5	0	498	18.18	3.0		False		0	0	0	5
+thymus	thymus	5	51	0	1	4	19.32	14.64	23.74	0	mixed	5	0	5	0	25.41	3.0	yes	0	5	0	17	18.34	2.0	hematopoietic system	True	2.0	0	5	0	0
+skin	skin	7	77	0	0	7	50.85	50.46	54.06	0	no	7	0	7	0	26.25	5.0	yes	0	7	0	280	25.53	5.0	skin of body; hair follicle	False	11.0	0	0	7	0
+liver	liver	14	132	0	0	14	45.305	42.75	47.56	0	no	14	0	10	4	31.17	6.0	mixed	0	1	13	56	73.285	9.0	liver	False	60.5	0	0	14	0
+white adipose tissue	adipose tissue	1	6	0	1	0	38.7	38.7	38.7	1	yes	1	0	0	1	31.3	6.0	no	0	0	1	46	36.56	9.0	adipose tissue	False	65.0	0	0	1	0
+placenta	placenta	1	15	0	1	0	31.23	31.23	31.23	1	yes	1	0	1	0	33.18	8.0	yes	0	1	0	29	35.04	7.0	decidua	False	26.0	0	0	1	0
+mandible	mandible	1	3	0	0	1	52.29	52.29	52.29	0	no	1	0	0	1	47.5	7.0	no	0	0	1	17	40.22	8.0	digestive system	True	7.0	0	1	0	0
+adrenal gland	adrenal gland	4	26	0	0	4	56.83	54.99	59.48	0	no	4	0	0	4	50.08	9.0	no	0	0	4	15	99.65	15.0	adrenal cortex; adrenal gland	False	34.0	0	0	4	0
+brown adipose tissue	adipose tissue	1	6	0	1	0	48.26	48.26	48.26	0	yes	1	0	0	1	51.32	9.0	no	0	0	1	46	63.56	11.0	adipose tissue	False	65.0	0	0	1	0
+bone	bone tissue	1	8	0	0	1	76.22	76.22	76.22	0	no	1	0	0	1	57.23	9.0	no	0	0	1	27	48.82	9.0		False		0	0	0	1
+cerebellum	cerebellum	3	27	0	3	0	28.13	27.72	28.97	3	yes	3	0	0	3	61.23	9.0	no	0	0	3	113	78.22	12.0	cerebellum	False	67.0	0	0	3	0
+blood	whole blood	1	6	0	0	1	75.4	75.4	75.4	0	no	1	0	0	1	72.61	9.0	no	0	0	1	7	89.88	13.0	blood plasma; blood	False	13.0	0	0	1	0
+optic nerve	optic nerve	1	12	0	0	1	86.42	86.42	86.42	0	no	1	0	0	1	74.27	12.0	no	0	0	1	1	83.76	14.0	central nervous system	True	61.0	0	0	1	0
+lung	lung	3	33	0	1	2	53.99	38.79	58.91	1	mixed	3	0	1	2	76.8	10.0	mixed	0	1	2	136	92.3	13.0	lung	False	70.0	0	0	3	0
+temporal bone	temporal bone	1	6	0	0	1	78.7	78.7	78.7	0	no	1	0	0	1	81.54	13.0	no	0	0	1	51	79.78	12.0		False		0	0	0	1

@@ -1,0 +1,44 @@
+{
+  "name": "OSD-164_liver",
+  "tissue": "liver",
+  "tissue_label": "liver",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-164_liver_GC_anatomy_ranks.tsv",
+  "n_samples": 3,
+  "n_anatomy": 13257,
+  "family_regex": "liver|hepat",
+  "family_exclude": "hepatopancreas|flexure|arthropod|hepatic cecum",
+  "n_family_nodes": 85,
+  "family_median_pct": 43.23250609740766,
+  "in_top_2_5pct": 1,
+  "in_top_10pct": 6,
+  "mwu_p_less": 0.48755312263561845,
+  "ks_p_greater": 0.16959099305448885,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 7,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.49 (fail)",
+    "KS p = 0.17 (fail)",
+    "0/3 samples individually p < 0.05 (fail)",
+    "family ranks 7 of 13 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "hepatic cord (2.4%)",
+    "liver lobule (2.6%)",
+    "hepatic acinus (2.9%)",
+    "liver perisinusoidal space (3.6%)",
+    "extrahepatic duct (6.9%)"
+  ],
+  "top_real_anatomy": [
+    "gemellus muscle (0.20%)",
+    "aortic plexus (0.21%)",
+    "abdominal nerve plexus (0.22%)",
+    "nucleus recessus (0.23%)",
+    "thoracic aortic plexus (0.23%)",
+    "inferior gemellus muscle (0.26%)",
+    "superior gemellus muscle (0.26%)",
+    "nucleus recessus posterioris (0.29%)",
+    "morphological boundary (0.30%)",
+    "profundal placode (0.33%)"
+  ]
+}

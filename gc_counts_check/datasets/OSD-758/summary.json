@@ -1,0 +1,45 @@
+{
+  "name": "OSD-758",
+  "tissue": "retina",
+  "tissue_label": "retina",
+  "mode": "raw",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-758_GC_anatomy_ranks.tsv",
+  "n_samples": 12,
+  "n_anatomy": 13257,
+  "family_regex": "retina|photoreceptor|optic disc|fovea centralis|foveola|macula lutea|parafovea|perifovea",
+  "family_exclude": "retinaculum",
+  "n_family_nodes": 37,
+  "family_median_pct": 93.54994845490432,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 0,
+  "mwu_p_less": 0.999999999973323,
+  "ks_p_greater": 0.7997763750508462,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 14,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 1 (fail)",
+    "KS p = 0.8 (fail)",
+    "0/12 samples individually p < 0.05 (fail)",
+    "family ranks 14 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "presumptive retinal pigmented epithelium (33.1%)",
+    "presumptive neural retina (33.1%)",
+    "pigmented layer of retina (43.3%)",
+    "macula lutea (52.7%)",
+    "photoreceptor array (53.1%)"
+  ],
+  "top_real_anatomy": [
+    "obsolete cnida (0.20%)",
+    "zygomaticus minor muscle (0.21%)",
+    "proper plantar digital artery (0.22%)",
+    "common plantar digital arteries (0.23%)",
+    "obsolete spirocyst (0.23%)",
+    "thoracic aortic plexus (0.24%)",
+    "nucleus recessus posterioris (0.25%)",
+    "trigeminal placode complex (0.27%)",
+    "notochordal ossification (0.29%)",
+    "ossification center (0.29%)"
+  ]
+}

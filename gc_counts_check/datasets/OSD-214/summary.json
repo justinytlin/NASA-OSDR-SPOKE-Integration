@@ -1,0 +1,45 @@
+{
+  "name": "OSD-214",
+  "tissue": "bone marrow",
+  "tissue_label": "bone marrow",
+  "mode": "raw",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-214_GC_anatomy_ranks.tsv",
+  "n_samples": 3,
+  "n_anatomy": 13257,
+  "family_regex": "bone marrow",
+  "family_exclude": null,
+  "n_family_nodes": 5,
+  "family_median_pct": 15.076311885544746,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 1,
+  "mwu_p_less": 0.03475080978018196,
+  "ks_p_greater": 0.01629983898202573,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 2,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.035 (fail)",
+    "KS p = 0.016 (fail)",
+    "3/3 samples individually p < 0.05 (ok)",
+    "family ranks 2 of 13 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "red bone marrow (9.1%)",
+    "bone marrow (13.6%)",
+    "yellow bone marrow (15.1%)",
+    "stroma of bone marrow (19.2%)",
+    "bone marrow cavity (76.1%)"
+  ],
+  "top_real_anatomy": [
+    "ingested food (0.23%)",
+    "bolus of food (0.24%)",
+    "perichordal bone (0.25%)",
+    "olfactory bulb plexiform layer (0.28%)",
+    "neurogenic placode (0.29%)",
+    "superior gemellus muscle (0.29%)",
+    "trigeminal placode complex (0.30%)",
+    "inferior gemellus muscle (0.31%)",
+    "ventral root of spinal cord (0.36%)",
+    "obsolete ptychocyst (0.37%)"
+  ]
+}

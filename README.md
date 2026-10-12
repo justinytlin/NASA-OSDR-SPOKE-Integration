@@ -24,7 +24,8 @@ control for graph artifacts, and rebuild the PSEVs from a current SPOKE.
 replication/        the PSEV pipeline: DE route, counts route, null control, anatomy check,
                     the six-study replication and its meta-analysis; figures/ for the build comparisons
 examples/OSD-564/   worked example (mouse hippocampus, RR-10): rank table, null control, top findings
-gc_counts_check/    ground-control tissue check across 14 OSDR datasets, one verdict per dataset
+gc_counts_check/    ground-control tissue check across 104 OSDR control sets (31 tissues), one verdict per dataset;
+                    validated configuration = 2025 SPOKE 'upregulates-only' PSEVs + baseline-corrected score
 psev_build/         export a SPOKE graph over Bolt and regenerate gene PSEVs with the original algorithm
 spoke-api-client/   CLI + library for the public SPOKE REST API, with neighborhood-based analyses
 psev_data/          where the large downloads live (gitignored); parallel_download.sh fetches the zip

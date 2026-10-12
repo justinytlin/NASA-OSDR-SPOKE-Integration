@@ -1,0 +1,45 @@
+{
+  "name": "OSD-464",
+  "tissue": "lung",
+  "tissue_label": "lung",
+  "mode": "baseline-corrected",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-464_GC_ranks.npz",
+  "n_samples": 9,
+  "n_anatomy": 13257,
+  "family_regex": "\\blung|pulmonary|bronch|alveolus of lung|alveolar (?:sac|wall|system|duct)",
+  "family_exclude": "pulmonum",
+  "n_family_nodes": 200,
+  "family_median_pct": 76.79967815745141,
+  "in_top_2_5pct": 6,
+  "in_top_10pct": 14,
+  "mwu_p_less": 0.9999999103131215,
+  "ks_p_greater": 0.027214797695930996,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 10,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 1 (fail)",
+    "KS p = 0.027 (fail)",
+    "0/9 samples individually p < 0.05 (fail)",
+    "family ranks 10 of 13 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "bronchoalveolar duct junction (0.4%)",
+    "air capillary of parabronchus (0.5%)",
+    "bronchial tube (1.0%)",
+    "pulmonary capillary plexus (1.8%)",
+    "pulmonary vascular system (2.1%)"
+  ],
+  "top_real_anatomy": [
+    "smooth muscle tissue (0.02%)",
+    "metanephric smooth muscle tissue (0.02%)",
+    "enteric circular muscle (0.03%)",
+    "anal region smooth muscle (0.05%)",
+    "respiratory system lymphatic vessel smooth muscle (0.05%)",
+    "ureter smooth muscle (0.05%)",
+    "spleen smooth muscle (0.05%)",
+    "smooth muscle endomysium (0.06%)",
+    "respiratory system smooth muscle (0.08%)",
+    "umbilical smooth muscle (0.08%)"
+  ]
+}

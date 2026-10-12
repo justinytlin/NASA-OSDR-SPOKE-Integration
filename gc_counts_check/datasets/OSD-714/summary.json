@@ -1,0 +1,45 @@
+{
+  "name": "OSD-714",
+  "tissue": "skeletal muscle",
+  "tissue_label": "soleus",
+  "mode": "raw",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-714_GC_anatomy_ranks.tsv",
+  "n_samples": 9,
+  "n_anatomy": 13257,
+  "family_regex": "skeletal muscle|gastrocnemius|quadriceps|soleus|tibialis",
+  "family_exclude": null,
+  "n_family_nodes": 55,
+  "family_median_pct": 55.02837075591092,
+  "in_top_2_5pct": 2,
+  "in_top_10pct": 5,
+  "mwu_p_less": 0.6659567251634686,
+  "ks_p_greater": 0.6834237983027871,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 11,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.67 (fail)",
+    "KS p = 0.68 (fail)",
+    "0/9 samples individually p < 0.05 (fail)",
+    "family ranks 11 of 13 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "skeletal muscle tissue of masseter (1.7%)",
+    "lip skeletal muscle (1.9%)",
+    "skeletal muscle tissue of diaphragm (3.5%)",
+    "tendon of quadriceps femoris (6.0%)",
+    "quadriceps femoris (8.4%)"
+  ],
+  "top_real_anatomy": [
+    "thoracic aortic plexus (0.20%)",
+    "aortic plexus (0.20%)",
+    "abdominal nerve plexus (0.21%)",
+    "principal artery to hindlimb (0.22%)",
+    "principal artery to forelimb (0.24%)",
+    "maxillomandibular placode (0.24%)",
+    "basal vein (0.27%)",
+    "profundal placode (0.28%)",
+    "deep middle cerebral vein (0.29%)",
+    "integumental surface (0.29%)"
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "name": "OSD-244",
+  "tissue": "thymus",
+  "tissue_label": "thymus",
+  "mode": "baseline-corrected",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-244_GC_ranks.npz",
+  "n_samples": 19,
+  "n_anatomy": 13257,
+  "family_regex": "thym",
+  "family_exclude": null,
+  "n_family_nodes": 26,
+  "family_median_pct": 11.036870292953475,
+  "in_top_2_5pct": 1,
+  "in_top_10pct": 12,
+  "mwu_p_less": 9.413103888319411e-06,
+  "ks_p_greater": 2.7594294733156286e-07,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 2,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 9.4e-06 (ok)",
+    "KS p = 2.8e-07 (ok)",
+    "19/19 samples individually p < 0.05 (ok)",
+    "family ranks 2 of 13 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "thymus lymphoid tissue (0.3%)",
+    "thymus (3.3%)",
+    "superficial cervical thymus (3.5%)",
+    "deep cervical thymus (3.5%)",
+    "cervical thymus (3.5%)"
+  ],
+  "top_real_anatomy": [
+    "mammary gland smooth muscle (0.08%)",
+    "uterus (0.18%)",
+    "bipartite uterus (0.20%)",
+    "lymphoid tissue (0.20%)",
+    "bicornuate uterus (0.20%)",
+    "simplex uterus (0.21%)",
+    "duplex uterus (0.21%)",
+    "appendix lymphoid tissue (0.22%)",
+    "red bone marrow (0.23%)",
+    "right uterine horn (0.24%)"
+  ]
+}

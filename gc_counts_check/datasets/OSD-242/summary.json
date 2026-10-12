@@ -1,0 +1,44 @@
+{
+  "name": "OSD-242",
+  "tissue": "liver",
+  "tissue_label": "liver",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-242_GC_anatomy_ranks.tsv",
+  "n_samples": 4,
+  "n_anatomy": 13257,
+  "family_regex": "liver|hepat",
+  "family_exclude": "hepatopancreas|flexure|arthropod|hepatic cecum",
+  "n_family_nodes": 85,
+  "family_median_pct": 43.192275778833825,
+  "in_top_2_5pct": 1,
+  "in_top_10pct": 6,
+  "mwu_p_less": 0.5505274758444965,
+  "ks_p_greater": 0.3597624418333467,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 7,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.55 (fail)",
+    "KS p = 0.36 (fail)",
+    "0/4 samples individually p < 0.05 (fail)",
+    "family ranks 7 of 13 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "hepatic cord (2.4%)",
+    "liver lobule (2.5%)",
+    "hepatic acinus (3.0%)",
+    "liver perisinusoidal space (3.6%)",
+    "extrahepatic duct (6.5%)"
+  ],
+  "top_real_anatomy": [
+    "obsolete ptychocyst (0.20%)",
+    "closed circulatory system (0.24%)",
+    "two-pass circulatory system (0.25%)",
+    "one-pass circulatory system (0.29%)",
+    "zygomaticus muscle (0.31%)",
+    "neurogenic placode (0.31%)",
+    "superior ophthalmic vein (0.32%)",
+    "obsolete cnida (0.33%)",
+    "inferior ophthalmic vein (0.34%)",
+    "obsolete spirocyst (0.35%)"
+  ]
+}

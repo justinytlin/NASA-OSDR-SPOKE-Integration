@@ -1,0 +1,45 @@
+{
+  "name": "OSD-825",
+  "tissue": "heart",
+  "tissue_label": "heart",
+  "mode": "raw",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-825_GC_anatomy_ranks.tsv",
+  "n_samples": 20,
+  "n_anatomy": 13257,
+  "family_regex": "heart|cardiac|myocard",
+  "family_exclude": "cardiac stomach|cardiac gastric|corpus cardiacum|lymph heart|dorsal vessel",
+  "n_family_nodes": 97,
+  "family_median_pct": 33.54190239118956,
+  "in_top_2_5pct": 1,
+  "in_top_10pct": 16,
+  "mwu_p_less": 0.0013652066897756581,
+  "ks_p_greater": 0.0027927941084705137,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 6,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.0014 (ok)",
+    "KS p = 0.0028 (ok)",
+    "20/20 samples individually p < 0.05 (ok)",
+    "family ranks 6 of 13 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "cardiac Purkinje fiber (1.6%)",
+    "cardiac muscle tissue of ventricle (2.7%)",
+    "trabecula carnea cardiac muscle tissue (4.2%)",
+    "cardiac muscle of right ventricle (4.6%)",
+    "cardiac muscle tissue of myocardium (4.6%)"
+  ],
+  "top_real_anatomy": [
+    "glutamatergic system (0.20%)",
+    "serotonergic system (0.21%)",
+    "catecholamine system (0.21%)",
+    "gABAergic system (0.22%)",
+    "histaminergic system (0.23%)",
+    "cholinergic system (0.24%)",
+    "paragigantocellular nucleus (0.26%)",
+    "gemellus muscle (0.28%)",
+    "superior gemellus muscle (0.29%)",
+    "morphological boundary (0.31%)"
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "name": "OSD-295",
+  "tissue": "skeletal muscle",
+  "tissue_label": "soleus",
+  "mode": "raw",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-295_GC_anatomy_ranks.tsv",
+  "n_samples": 18,
+  "n_anatomy": 13257,
+  "family_regex": "skeletal muscle|gastrocnemius|quadriceps|soleus|tibialis",
+  "family_exclude": null,
+  "n_family_nodes": 55,
+  "family_median_pct": 54.98185445005993,
+  "in_top_2_5pct": 2,
+  "in_top_10pct": 5,
+  "mwu_p_less": 0.6207144471283922,
+  "ks_p_greater": 0.5939911112677737,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 12,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.62 (fail)",
+    "KS p = 0.59 (fail)",
+    "0/18 samples individually p < 0.05 (fail)",
+    "family ranks 12 of 13 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "skeletal muscle tissue of masseter (1.7%)",
+    "lip skeletal muscle (1.8%)",
+    "skeletal muscle tissue of diaphragm (3.4%)",
+    "tendon of quadriceps femoris (6.0%)",
+    "quadriceps femoris (8.4%)"
+  ],
+  "top_real_anatomy": [
+    "proper plantar digital artery (0.25%)",
+    "obsolete cnida (0.27%)",
+    "obsolete spirocyst (0.28%)",
+    "dorsal root of spinal cord (0.30%)",
+    "ventral root of spinal cord (0.32%)",
+    "obsolete ptychocyst (0.32%)",
+    "nucleus recessus lateralis (0.32%)",
+    "trigeminal placode complex (0.32%)",
+    "inferior gemellus muscle (0.33%)",
+    "neurogenic placode (0.33%)"
+  ]
+}

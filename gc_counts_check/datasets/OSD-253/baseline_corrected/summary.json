@@ -1,0 +1,45 @@
+{
+  "name": "OSD-253",
+  "tissue": "kidney",
+  "tissue_label": "kidney",
+  "mode": "baseline-corrected",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-253_GC_ranks.npz",
+  "n_samples": 19,
+  "n_anatomy": 13257,
+  "family_regex": "kidney|renal|nephron|glomerul",
+  "family_exclude": "adrenal|suprarenal|interrenal|nephridi|Hatschek|lieno|olfactory|cerebell|preglomerular",
+  "n_family_nodes": 167,
+  "family_median_pct": 10.55053338256254,
+  "in_top_2_5pct": 46,
+  "in_top_10pct": 81,
+  "mwu_p_less": 9.575749902021258e-51,
+  "ks_p_greater": 8.47826317725365e-43,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 2,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 9.6e-51 (ok)",
+    "KS p = 8.5e-43 (ok)",
+    "19/19 samples individually p < 0.05 (ok)",
+    "family ranks 2 of 13 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "renal duct (0.1%)",
+    "renal system (0.2%)",
+    "renal parenchyma (0.4%)",
+    "right kidney interstitium (0.4%)",
+    "left kidney interstitium (0.5%)"
+  ],
+  "top_real_anatomy": [
+    "renal duct (0.09%)",
+    "urorectal septum (0.19%)",
+    "Hatschek's nephridium (0.20%)",
+    "renal system (0.21%)",
+    "excretory gland (0.22%)",
+    "ureteropelvic junction (0.22%)",
+    "mesentery of urinary system (0.22%)",
+    "Marshall's gland (0.27%)",
+    "ureterovesical junction (0.34%)",
+    "renal parenchyma (0.40%)"
+  ]
+}

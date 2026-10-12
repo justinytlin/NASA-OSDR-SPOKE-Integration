@@ -1,0 +1,44 @@
+{
+  "name": "OSD-457_brown-adipose-tissue",
+  "tissue": "adipose tissue",
+  "tissue_label": "brown adipose tissue",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-457_brown-adipose-tissue_GC_anatomy_ranks.tsv",
+  "n_samples": 6,
+  "n_anatomy": 13257,
+  "family_regex": "adipose|fat pad|\\bfat\\b|panniculus",
+  "family_exclude": "adipose fin|adipose eyelid|arthropod",
+  "n_family_nodes": 41,
+  "family_median_pct": 48.255009931859895,
+  "in_top_2_5pct": 2,
+  "in_top_10pct": 3,
+  "mwu_p_less": 0.029450529155638075,
+  "ks_p_greater": 0.00440051305729493,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 8,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.029 (fail)",
+    "KS p = 0.0044 (ok)",
+    "6/6 samples individually p < 0.05 (ok)",
+    "family ranks 8 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "buccal fat pad (2.3%)",
+    "infrapatellar fat pad (2.5%)",
+    "brown adipose tissue (9.2%)",
+    "epididymal fat pad (11.4%)",
+    "omental fat pad (11.6%)"
+  ],
+  "top_real_anatomy": [
+    "principal artery to hindlimb (0.21%)",
+    "dorsal paragigantocellular nucleus (0.23%)",
+    "plantar digital artery (0.23%)",
+    "notochordal ossification (0.24%)",
+    "principal artery to forelimb (0.25%)",
+    "nucleus recessus (0.26%)",
+    "dorsal root of spinal cord (0.27%)",
+    "paragigantocellular nucleus (0.29%)",
+    "nucleus recessus posterioris (0.29%)",
+    "profundal placode (0.30%)"
+  ]
+}

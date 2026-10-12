@@ -1,0 +1,44 @@
+{
+  "name": "OSD-240",
+  "tissue": "skin",
+  "tissue_label": "skin",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-240_GC_anatomy_ranks.tsv",
+  "n_samples": 10,
+  "n_anatomy": 13257,
+  "family_regex": "\\bskin|epidermis|dermis",
+  "family_exclude": "dermatome|hypodermis",
+  "n_family_nodes": 111,
+  "family_median_pct": 52.75552538281662,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 15,
+  "mwu_p_less": 0.44223778353536486,
+  "ks_p_greater": 0.36829355520769474,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 11,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.44 (fail)",
+    "KS p = 0.37 (fail)",
+    "0/10 samples individually p < 0.05 (fail)",
+    "family ranks 11 of 13 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "skin of lip (2.5%)",
+    "skin of knee (2.6%)",
+    "skin of cheek (4.7%)",
+    "skin sebaceous gland (5.0%)",
+    "skin of prepuce of penis (5.2%)"
+  ],
+  "top_real_anatomy": [
+    "lateral paragigantocellular nucleus (0.17%)",
+    "trigeminal placode complex (0.18%)",
+    "paragigantocellular nucleus (0.19%)",
+    "dorsal paragigantocellular nucleus (0.19%)",
+    "common plantar digital arteries (0.20%)",
+    "superior gemellus muscle (0.21%)",
+    "proper plantar digital artery (0.24%)",
+    "inferior gemellus muscle (0.26%)",
+    "principal artery to limb (0.29%)",
+    "integumental surface (0.30%)"
+  ]
+}

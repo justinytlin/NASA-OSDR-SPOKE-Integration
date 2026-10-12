@@ -1,0 +1,45 @@
+{
+  "name": "OSD-294",
+  "tissue": "liver",
+  "tissue_label": "liver",
+  "mode": "raw",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-294_GC_anatomy_ranks.tsv",
+  "n_samples": 15,
+  "n_anatomy": 13257,
+  "family_regex": "liver|hepat",
+  "family_exclude": "hepatopancreas|flexure|arthropod|hepatic cecum",
+  "n_family_nodes": 85,
+  "family_median_pct": 42.76080561212944,
+  "in_top_2_5pct": 1,
+  "in_top_10pct": 6,
+  "mwu_p_less": 0.34561406631322444,
+  "ks_p_greater": 0.0394658370013853,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 8,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.35 (fail)",
+    "KS p = 0.039 (fail)",
+    "0/15 samples individually p < 0.05 (fail)",
+    "family ranks 8 of 13 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "hepatic cord (2.5%)",
+    "liver lobule (2.6%)",
+    "hepatic acinus (3.0%)",
+    "liver perisinusoidal space (3.9%)",
+    "central vein of liver (7.7%)"
+  ],
+  "top_real_anatomy": [
+    "obsolete ptychocyst (0.19%)",
+    "dorsal nerve root of cervical spinal cord (0.20%)",
+    "ventral nerve root of cervical spinal cord (0.21%)",
+    "nucleus recessus (0.21%)",
+    "catecholamine system (0.28%)",
+    "glutamatergic system (0.31%)",
+    "extensor caudae lateralis muscle (0.31%)",
+    "cholinergic system (0.33%)",
+    "olfactory bulb external plexiform layer (0.34%)",
+    "closed circulatory system (0.34%)"
+  ]
+}

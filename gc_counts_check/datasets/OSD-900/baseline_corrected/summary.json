@@ -1,0 +1,45 @@
+{
+  "name": "OSD-900",
+  "tissue": "lung",
+  "tissue_label": "lung",
+  "mode": "baseline-corrected",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-900_GC_ranks.npz",
+  "n_samples": 5,
+  "n_anatomy": 13257,
+  "family_regex": "\\blung|pulmonary|bronch|alveolus of lung|alveolar (?:sac|wall|system|duct)",
+  "family_exclude": "pulmonum",
+  "n_family_nodes": 200,
+  "family_median_pct": 87.40740740740742,
+  "in_top_2_5pct": 5,
+  "in_top_10pct": 14,
+  "mwu_p_less": 1.0,
+  "ks_p_greater": 0.9763003793064315,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 13,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 1 (fail)",
+    "KS p = 0.98 (fail)",
+    "0/5 samples individually p < 0.05 (fail)",
+    "family ranks 13 of 13 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "bronchoalveolar duct junction (0.5%)",
+    "air capillary of parabronchus (0.6%)",
+    "bronchial tube (1.5%)",
+    "pulmonary capillary plexus (1.9%)",
+    "pulmonary vascular system (2.3%)"
+  ],
+  "top_real_anatomy": [
+    "mammary gland smooth muscle (0.01%)",
+    "smooth muscle tissue (0.02%)",
+    "anal region smooth muscle (0.03%)",
+    "ureter smooth muscle (0.03%)",
+    "metanephric smooth muscle tissue (0.04%)",
+    "smooth muscle endomysium (0.05%)",
+    "enteric circular muscle (0.05%)",
+    "kidney pelvis smooth muscle (0.06%)",
+    "spleen smooth muscle (0.07%)",
+    "smooth muscle layer in fatty layer of subcutaneous tissue (0.08%)"
+  ]
+}

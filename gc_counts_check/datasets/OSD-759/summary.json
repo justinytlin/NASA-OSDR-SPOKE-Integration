@@ -1,0 +1,45 @@
+{
+  "name": "OSD-759",
+  "tissue": "optic nerve",
+  "tissue_label": "optic nerve",
+  "mode": "raw",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-759_GC_anatomy_ranks.tsv",
+  "n_samples": 12,
+  "n_anatomy": 13257,
+  "family_regex": "optic nerve|optic disc|optic chiasm|optic tract|cranial nerve II|nerve fiber layer of retina|optic stalk",
+  "family_exclude": null,
+  "n_family_nodes": 10,
+  "family_median_pct": 86.41692439214503,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 0,
+  "mwu_p_less": 0.9928945524227861,
+  "ks_p_greater": 0.9675163356371949,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 14,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.99 (fail)",
+    "KS p = 0.97 (fail)",
+    "0/12 samples individually p < 0.05 (fail)",
+    "family ranks 14 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "accessory nucleus of optic tract (16.6%)",
+    "nucleus of optic tract (39.9%)",
+    "optic stalk (52.8%)",
+    "supraoptic tract (66.7%)",
+    "accessory optic tract (84.6%)"
+  ],
+  "top_real_anatomy": [
+    "basal vein (0.18%)",
+    "deep middle cerebral vein (0.19%)",
+    "maxillomandibular placode (0.20%)",
+    "profundal placode (0.21%)",
+    "perichordal bone (0.21%)",
+    "one-pass circulatory system (0.23%)",
+    "two-pass circulatory system (0.24%)",
+    "closed circulatory system (0.24%)",
+    "orbitosphenoid ossification center (0.25%)",
+    "aortic plexus (0.27%)"
+  ]
+}

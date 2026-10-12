@@ -1,0 +1,45 @@
+{
+  "name": "OSD-876",
+  "tissue": "skeletal muscle",
+  "tissue_label": "gastrocnemius",
+  "mode": "raw",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-876_GC_anatomy_ranks.tsv",
+  "n_samples": 4,
+  "n_anatomy": 13257,
+  "family_regex": "skeletal muscle|gastrocnemius|quadriceps|soleus|tibialis",
+  "family_exclude": null,
+  "n_family_nodes": 55,
+  "family_median_pct": 60.918759900429954,
+  "in_top_2_5pct": 2,
+  "in_top_10pct": 5,
+  "mwu_p_less": 0.7435500496374285,
+  "ks_p_greater": 0.5817508629231493,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 12,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.74 (fail)",
+    "KS p = 0.58 (fail)",
+    "0/4 samples individually p < 0.05 (fail)",
+    "family ranks 12 of 13 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "skeletal muscle tissue of masseter (1.7%)",
+    "lip skeletal muscle (1.8%)",
+    "skeletal muscle tissue of diaphragm (3.2%)",
+    "tendon of quadriceps femoris (6.0%)",
+    "quadriceps femoris (8.0%)"
+  ],
+  "top_real_anatomy": [
+    "plantar digital artery (0.20%)",
+    "principal artery to forelimb (0.21%)",
+    "principal artery to hindlimb (0.22%)",
+    "obsolete ptychocyst (0.24%)",
+    "one-pass circulatory system (0.24%)",
+    "closed circulatory system (0.25%)",
+    "two-pass circulatory system (0.26%)",
+    "alisphenoid ossification center (0.26%)",
+    "obsolete cnida (0.27%)",
+    "perichordal bone (0.28%)"
+  ]
+}

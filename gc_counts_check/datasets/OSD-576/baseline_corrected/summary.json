@@ -1,0 +1,45 @@
+{
+  "name": "OSD-576",
+  "tissue": "skeletal muscle",
+  "tissue_label": "tibialis anterior",
+  "mode": "baseline-corrected",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-576_GC_ranks.npz",
+  "n_samples": 9,
+  "n_anatomy": 13257,
+  "family_regex": "skeletal muscle|gastrocnemius|quadriceps|soleus|tibialis",
+  "family_exclude": null,
+  "n_family_nodes": 55,
+  "family_median_pct": 19.862881664194177,
+  "in_top_2_5pct": 3,
+  "in_top_10pct": 14,
+  "mwu_p_less": 2.8587017065562656e-10,
+  "ks_p_greater": 1.3651814447633878e-09,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 3,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 2.9e-10 (ok)",
+    "KS p = 1.4e-09 (ok)",
+    "9/9 samples individually p < 0.05 (ok)",
+    "family ranks 3 of 13 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "respiratory system skeletal muscle (0.7%)",
+    "skeletal muscle connective tissue (0.7%)",
+    "skeletal muscle tissue of pharynx (0.8%)",
+    "skeletal muscle endomysium (2.5%)",
+    "anal region skeletal muscle (2.9%)"
+  ],
+  "top_real_anatomy": [
+    "cardiovascular system (0.01%)",
+    "heart primordium (0.02%)",
+    "proepicardium (0.02%)",
+    "vascular system (0.03%)",
+    "cardiovascular system elastic tissue (0.05%)",
+    "arterial system (0.05%)",
+    "septum transversum (0.06%)",
+    "primordial vasculature (0.07%)",
+    "smooth muscle endomysium (0.08%)",
+    "metanephric smooth muscle tissue (0.09%)"
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "name": "OSD-813",
+  "tissue": "placenta",
+  "tissue_label": "placenta",
+  "mode": "raw",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-813_GC_anatomy_ranks.tsv",
+  "n_samples": 15,
+  "n_anatomy": 13257,
+  "family_regex": "placent|chorioallantoic|decidua|trophoblast|chorionic (?:plate|villus)|labyrinth layer|junctional zone|ectoplacental",
+  "family_exclude": null,
+  "n_family_nodes": 38,
+  "family_median_pct": 31.22501320057328,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 2,
+  "mwu_p_less": 4.78475647257627e-05,
+  "ks_p_greater": 8.058803003665654e-07,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 7,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 4.8e-05 (ok)",
+    "KS p = 8.1e-07 (ok)",
+    "15/15 samples individually p < 0.05 (ok)",
+    "family ranks 7 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "spongiotrophoblast layer (7.1%)",
+    "chorionic plate (9.3%)",
+    "placentome of cotyledonary placenta (13.7%)",
+    "chorionic villus (13.8%)",
+    "placental labyrinth villous (14.3%)"
+  ],
+  "top_real_anatomy": [
+    "obsolete ptychocyst (0.19%)",
+    "cholinergic system (0.20%)",
+    "serotonergic system (0.20%)",
+    "ventral nerve root of cervical spinal cord (0.22%)",
+    "integumental surface (0.22%)",
+    "glutamatergic system (0.22%)",
+    "morphological boundary (0.24%)",
+    "catecholamine system (0.24%)",
+    "inferior gemellus muscle (0.26%)",
+    "dorsal nerve root of cervical spinal cord (0.27%)"
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "name": "OSD-243",
+  "tissue": "skin",
+  "tissue_label": "skin",
+  "mode": "baseline-corrected",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-243_GC_ranks.npz",
+  "n_samples": 19,
+  "n_anatomy": 13257,
+  "family_regex": "\\bskin|epidermis|dermis",
+  "family_exclude": "dermatome|hypodermis",
+  "n_family_nodes": 111,
+  "family_median_pct": 38.511531147397804,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 10,
+  "mwu_p_less": 0.0002777375030738153,
+  "ks_p_greater": 0.00013754384706413325,
+  "frac_samples_significant": 0.7368421052631579,
+  "family_rank_among_organ_families": 7,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.00028 (ok)",
+    "KS p = 0.00014 (ok)",
+    "14/19 samples individually p < 0.05 (fail)",
+    "family ranks 7 of 13 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "skin apocrine gland (3.0%)",
+    "skin of body (4.6%)",
+    "skin mucous gland (5.5%)",
+    "future dermis (5.8%)",
+    "skin gland (6.5%)"
+  ],
+  "top_real_anatomy": [
+    "cervical mammary gland (0.04%)",
+    "mammary gland smooth muscle (0.04%)",
+    "mammary gland connective tissue (0.25%)",
+    "lobule of mammary gland (0.27%)",
+    "areola (0.33%)",
+    "areolar sweat gland (0.33%)",
+    "mammary gland (0.42%)",
+    "parenchyma of mammary gland (0.47%)",
+    "inguinal mammary gland (0.48%)",
+    "mesenchyme of mammary gland (0.50%)"
+  ]
+}

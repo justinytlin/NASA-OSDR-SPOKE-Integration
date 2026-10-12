@@ -1,0 +1,44 @@
+{
+  "name": "OSD-173",
+  "tissue": "liver",
+  "tissue_label": "liver",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-173_GC_anatomy_ranks.tsv",
+  "n_samples": 2,
+  "n_anatomy": 13257,
+  "family_regex": "liver|hepat",
+  "family_exclude": "hepatopancreas|flexure|arthropod|hepatic cecum",
+  "n_family_nodes": 85,
+  "family_median_pct": 45.68906992532247,
+  "in_top_2_5pct": 1,
+  "in_top_10pct": 6,
+  "mwu_p_less": 0.6206814116938282,
+  "ks_p_greater": 0.44832249306964744,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 7,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.62 (fail)",
+    "KS p = 0.45 (fail)",
+    "0/2 samples individually p < 0.05 (fail)",
+    "family ranks 7 of 13 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "hepatic cord (2.5%)",
+    "liver lobule (2.6%)",
+    "hepatic acinus (3.0%)",
+    "liver perisinusoidal space (3.6%)",
+    "extrahepatic duct (6.6%)"
+  ],
+  "top_real_anatomy": [
+    "nucleus recessus lateralis (0.23%)",
+    "obsolete ptychocyst (0.24%)",
+    "ingested food (0.25%)",
+    "lateral paragigantocellular nucleus (0.25%)",
+    "paragigantocellular nucleus (0.26%)",
+    "glutamatergic system (0.27%)",
+    "notochordal ossification (0.28%)",
+    "deep middle cerebral vein (0.29%)",
+    "proper plantar digital artery (0.30%)",
+    "nucleus recessus posterioris (0.31%)"
+  ]
+}

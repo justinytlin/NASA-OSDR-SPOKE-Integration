@@ -1,0 +1,91 @@
+name	accession	payload	tissue	family	control_type	condition_factors	file	n_controls	raw_tissue
+OSD-47	OSD-47	RR-1	liver	liver	ground control	Spaceflight	GLDS-47_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	3	Liver
+OSD-48	OSD-48	RR-1	liver	liver	ground control	Spaceflight	GLDS-48_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	7	Liver
+OSD-98	OSD-98	RR-1	adrenal gland	adrenal gland	ground control	Spaceflight	GLDS-98_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	5	Adrenal glands- both sides
+OSD-99	OSD-99	RR-1	extensor digitorum longus	skeletal muscle	ground control	Spaceflight	GLDS-99_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	6	Extensor digitorum longus- both sides
+OSD-100	OSD-100		eye	eye	ground control	Spaceflight	GLDS-100_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	6	left eye
+OSD-101	OSD-101	RR-1	gastrocnemius	skeletal muscle	ground control	Spaceflight	GLDS-101_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	6	Left gastrocnemius
+OSD-102	OSD-102	RR-1	kidney	kidney	ground control	Spaceflight	GLDS-102_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	6	Left kidney
+OSD-103	OSD-103	RR-1	quadriceps	skeletal muscle	ground control	Spaceflight	GLDS-103_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	6	Left quadriceps femoris
+OSD-104	OSD-104	RR-1	soleus	skeletal muscle	ground control	Spaceflight	GLDS-104_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	6	Soleus-both sides
+OSD-105	OSD-105	RR-1	tibialis anterior	skeletal muscle	ground control	Spaceflight	GLDS-105_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	6	Left tibialis anterior
+OSD-164_liver	OSD-164	RR-1	liver	liver	ground control	Spaceflight	GLDS-164_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	3	Liver
+OSD-164_spleen	OSD-164	RR-1	spleen	spleen	ground control	Spaceflight	GLDS-164_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	3	Spleen
+OSD-173	OSD-173	BSP135	liver	liver	ground control	Spaceflight	GLDS-173_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	2	Liver
+OSD-201	OSD-201	Hindlimb_Unloading	spleen	spleen	analog control	Hindlimb unloading, tetanus toxoid, vaccine adjuvant	GLDS-201_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	4	Spleen
+OSD-202	OSD-202	Hindlimb_Unloading, Gamma_Irradiation, Low_LET_Irradiation, Low_Dose_Irradiation	brain	brain	analog control	Ionizing Radiation, Hindlimb Unloading	GLDS-202_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	10	brain
+OSD-203	OSD-203	Hindlimb_Unloading, Gamma_Irradiation, Low_Dose_Irradiation, Low_LET_Irradiation	retina	retina	analog control	Ionizing Radiation, Hindlimb Unloading	GLDS-203_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	15	Retina
+OSD-211	OSD-211	Hindlimb_Unloading, Gamma_Irradiation, Low_LET_Irradiation, Low_Dose_Irradiation	spleen	spleen	analog control	Hindlimb Unloading, Ionizing Radiation	GLDS-211_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	6	Spleen
+OSD-214	OSD-214	Hindlimb_Unloading	bone marrow	bone marrow	analog control	Hindlimb Unloading, Tetanus Toxoid, Vaccine Adjuvant	GLDS-214_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	3	Bone Marrow
+OSD-237	OSD-237	Hindlimb_Unloading, Gamma_Irradiation, Low_Dose_Irradiation, Low_LET_Irradiation	skin	skin	analog control	Hindlimb Unloading, Ionizing Radiation	GLDS-237_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	6	dorsal skin
+OSD-238	OSD-238	MHU-2	skin	skin	ground control	Spaceflight	GLDS-238_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	6	dorsal skin
+OSD-239	OSD-239	MHU-2	skin	skin	ground control	Spaceflight	GLDS-239_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	6	femoral skin
+OSD-240	OSD-240	RR-5	skin	skin	ground control	Spaceflight	GLDS-240_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	10	dorsal skin
+OSD-241	OSD-241	RR-5	skin	skin	ground control	Spaceflight	GLDS-241_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	10	femoral lateral skin
+OSD-242	OSD-242	RR-9	liver	liver	ground control	Spaceflight	GLDS-242_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	4	Liver
+OSD-243	OSD-243	RR-6	skin	skin	ground control	Spaceflight	GLDS-243_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	19	dorsal skin
+OSD-247	OSD-247	RR-6	colon	colon	ground control	Spaceflight	GLDS-247_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	17	descending colon
+OSD-248	OSD-248	RR-6	lung	lung	ground control	Spaceflight	GLDS-248_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	19	Left Lung
+OSD-253	OSD-253	RR-7	kidney	kidney	ground control	Spaceflight	GLDS-253_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	19	Left kidney
+OSD-254	OSD-254	RR-7	skin	skin	ground control	Spaceflight	GLDS-254_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	20	dorsal skin
+OSD-255	OSD-255	RR-9	retina	retina	ground control	Spaceflight	GLDS-255_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	8	Right retina
+OSD-294	OSD-294	Low_Dose_Irradiation, Heavy_Ion_HZE_Irradiation, High_LET_Irradiation	liver	liver	analog control	Ionizing Radiation	GLDS-294_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	15	Left Lobe of the Liver
+OSD-295	OSD-295	Hindlimb_Unloading	soleus	skeletal muscle	analog control	Hindlimb Unloading	GLDS-295_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	18	Soleus
+OSD-322	OSD-322	Heavy_Ion_HZE_Irradiation, Low_Dose_Irradiation, High_LET_Irradiation	liver	liver	analog control	Ionizing Radiation	GLDS-322_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	15	Left lobe of liver
+OSD-326	OSD-326	RR-4	quadriceps	skeletal muscle	ground control	Spaceflight	GLDS-326_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	4	Quadriceps femoris
+OSD-379	OSD-379	RRRM-1 (RR-8)	liver	liver	ground control	Spaceflight	GLDS-379_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	35	Left Lobe of the Liver
+OSD-397	OSD-397	RR-1	retina	retina	ground control	Spaceflight	GLDS-397_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	7	Left retina; Right retina
+OSD-401_gastrocnemius	OSD-401	RR-5	gastrocnemius	skeletal muscle	ground control	Spaceflight	GLDS-401_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	3	Gastrocnemius
+OSD-401_quadriceps	OSD-401	RR-5	quadriceps	skeletal muscle	ground control	Spaceflight	GLDS-401_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	3	Quadriceps femoris
+OSD-419	OSD-419	RR-1	gastrocnemius	skeletal muscle	ground control	Spaceflight	GLDS-419_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	8	Right gastrocnemius
+OSD-420	OSD-420	RR-9	spleen	spleen	ground control	Spaceflight	GLDS-420_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	10	Spleen-distal
+OSD-421	OSD-421	RR-9	thymus	thymus	ground control	Spaceflight	GLDS-421_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	10	thymus
+OSD-457_brown-adipose-tissue	OSD-457	MHU-3	brown adipose tissue	adipose tissue	ground control	Genotype, Spaceflight	GLDS-457_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	6	brown adipose tissue
+OSD-457_cerebrum	OSD-457	MHU-3	cerebrum	cerebrum	ground control	Genotype, Spaceflight	GLDS-457_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	6	Cerebrum
+OSD-457_kidney	OSD-457	MHU-3	kidney	kidney	ground control	Genotype, Spaceflight	GLDS-457_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	3	Kidney
+OSD-457_liver	OSD-457	MHU-3	liver	liver	ground control	Genotype, Spaceflight	GLDS-457_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	6	Liver
+OSD-457_mandible	OSD-457	MHU-3	mandible	mandible	ground control	Genotype, Spaceflight	GLDS-457_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	3	Mandibular bone
+OSD-457_spleen	OSD-457	MHU-3	spleen	spleen	ground control	Genotype, Spaceflight	GLDS-457_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	6	Spleen
+OSD-457_temporal-bone	OSD-457	MHU-3	temporal bone	temporal bone	ground control	Genotype, Spaceflight	GLDS-457_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	6	Temporal Bone
+OSD-457_thymus	OSD-457	MHU-3	thymus	thymus	ground control	Genotype, Spaceflight	GLDS-457_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	6	thymus
+OSD-457_white-adipose-tissue	OSD-457	MHU-3	white adipose tissue	adipose tissue	ground control	Genotype, Spaceflight	GLDS-457_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	6	white adipose tissue
+OSD-463	OSD-463	RR-23	liver	liver	ground control	Spaceflight	GLDS-463_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	10	Left Lobe of the Liver
+OSD-464	OSD-464	RR-23	lung	lung	ground control	Spaceflight	GLDS-464_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	9	Left Lung
+OSD-467	OSD-467	Hindlimb_Unloading	bone	bone tissue	analog control	Hindlimb Unloading	GLDS-467_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	8	Cortical Bone
+OSD-506	OSD-506	RR-23	spleen	spleen	ground control	Spaceflight	GLDS-506_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	10	Spleen
+OSD-511	OSD-511	RR-8	mammary gland	mammary gland	ground control	Spaceflight	GLDS-511_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	15	mammary gland
+OSD-512	OSD-512	RR-23	adrenal gland	adrenal gland	ground control	Spaceflight	GLDS-512_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	10	adrenal gland
+OSD-513	OSD-513	RR-23	kidney	kidney	ground control	Spaceflight	GLDS-513_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	10	Left kidney
+OSD-515	OSD-515	RR-23	thymus	thymus	ground control	Spaceflight	GLDS-515_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	10	thymus
+OSD-525	OSD-525	RR-23	cerebellum	cerebellum	ground control	Spaceflight	GLDS-525_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	10	Cerebellum
+OSD-561	OSD-561	RR-17	cerebellum	cerebellum	ground control	Spaceflight	GLDS-556_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	12	right hemisphere of cerebellum
+OSD-562	OSD-562	RR-17	hippocampus	hippocampus	ground control	Spaceflight	GLDS-557_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	12	Right hippocampus
+OSD-563	OSD-563	RR-10	cerebellum	cerebellum	ground control	Spaceflight	GLDS-568_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	5	right hemisphere of cerebellum
+OSD-566	OSD-566	Multiple_Radiation_Types, Heavy_Ion_HZE_Irradiation, Simplified_Galactic_Cosmic_Ray_Simulation_Irradiation, High_Dose_Irradiation	adrenal gland	adrenal gland	analog control	Ionizing Radiation	GLDS-567_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	6	adrenal gland
+OSD-576	OSD-576	RR-23	tibialis anterior	skeletal muscle	ground control	Spaceflight	GLDS-570_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	9	Right tibialis anterior
+OSD-580	OSD-580	RR-17	heart	heart	ground control	Spaceflight	GLDS-573_rna_seq_RSEM_Unnormalized_Counts.csv	20	Heart; heart right ventricle
+OSD-599	OSD-599	RR-12	heart	heart	ground control	Spaceflight	GLDS-596_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	3	Heart
+OSD-612	OSD-612	RR-10	cerebrum	cerebrum	ground control	Spaceflight	GLDS-588_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	5	Left cerebral hemisphere
+OSD-613	OSD-613	RR-17	cerebrum	cerebrum	ground control	Spaceflight	GLDS-589_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	9	Left cerebral hemisphere
+OSD-665	OSD-665	RR-23	extensor digitorum longus	skeletal muscle	ground control	Spaceflight	GLDS-604_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	10	Right extensor digitorum longus
+OSD-666	OSD-666	RR-23	quadriceps	skeletal muscle	ground control	Spaceflight	GLDS-605_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	10	Right quadriceps femoris
+OSD-667	OSD-667	RR-10	colon	colon	ground control	Genotype, Spaceflight	GLDS-606_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	5	Colon
+OSD-686	OSD-686	MHU-2	liver	liver	ground control	Spaceflight	GLDS-617_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	3	Liver
+OSD-690	OSD-690	MHU-3	bone marrow	bone marrow	ground control	Genotype, Spaceflight	GLDS-620_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	6	Bone Marrow
+OSD-714	OSD-714	MHU-1, MHU-4, MHU-5	soleus	skeletal muscle	ground control	Spaceflight	GLDS-638_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	9	Soleus
+OSD-719	OSD-719	Multiple_Radiation_Types, Heavy_Ion_HZE_Irradiation, Simplified_Galactic_Cosmic_Ray_Simulation_Irradiation, High_Dose_Irradiation	blood	whole blood	analog control	Ionizing Radiation	GLDS-641_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	6	Blood
+OSD-720	OSD-720	Simplified_Galactic_Cosmic_Ray_Simulation_Irradiation, Gamma_Irradiation, Low_LET_Irradiation, Multiple_Radiation_Types, High_Dose_Irradiation, Heavy_Ion_HZE_Irradiation	heart	heart	analog control	Ionizing Radiation	GLDS-699_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	20	Left ventricle
+OSD-758	OSD-758	MHU-8	retina	retina	ground control	Spaceflight	GLDS-664_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	12	Right retina
+OSD-759	OSD-759	MHU-8	optic nerve	optic nerve	ground control	Spaceflight	GLDS-665_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	12	Right optic nerve
+OSD-770	OSD-770	RR-23	soleus	skeletal muscle	ground control	Spaceflight	GLDS-673_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	10	Right soleus
+OSD-771	OSD-771	RR-17	kidney	kidney	ground control	Spaceflight	GLDS-674_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	20	Right kidney
+OSD-813	OSD-813		placenta	placenta	analog control	Ionizing Radiation	GLDS-695_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	15	Placenta
+OSD-825	OSD-825		heart	heart	analog control	Diet	GLDS-701_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	20	Left ventricle
+OSD-876	OSD-876	Hindlimb_Unloading	gastrocnemius	skeletal muscle	analog control	Hindlimb Unloading	GLDS-722_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	4	Gastrocnemius
+OSD-880	OSD-880	Hindlimb_Unloading	gastrocnemius	skeletal muscle	analog control	Genotype, Hindlimb Unloading	GLDS-724_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	3	Gastrocnemius
+OSD-881	OSD-881	Simplified_Galactic_Cosmic_Ray_Simulation_Irradiation, Gamma_Irradiation, Multiple_Radiation_Types, High_Dose_Irradiation, High_LET_Irradiation, Low_LET_Irradiation	heart	heart	analog control	Ionizing Radiation, Diet	GLDS-725_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	19	Right ventricle
+OSD-899	OSD-899	RR-10	cecum	cecum	ground control	Genotype, Spaceflight	GLDS-728_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	5	Cecum
+OSD-900	OSD-900	RR-10	lung	lung	ground control	Spaceflight, Genotype	GLDS-729_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	5	Right Lung
+OSD-935	OSD-935	Hindlimb_Unloading, X-Ray_Irradiation, Low_LET_Irradiation, High_Dose_Irradiation	soleus	skeletal muscle	analog control	Hindlimb Unloading, Ionizing Radiation, Treatment	GLDS-763_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	10	Soleus
+OSD-949	OSD-949	Hindlimb_Unloading	soleus	skeletal muscle	analog control	Genotype, Hindlimb Unloading	GLDS-774_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	8	Soleus
+OSD-955	OSD-955		soleus	skeletal muscle	analog control	Minimized Mechanical Stress	GLDS-778_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv	5	Soleus

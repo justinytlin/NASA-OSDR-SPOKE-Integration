@@ -1,0 +1,45 @@
+{
+  "name": "OSD-515",
+  "tissue": "thymus",
+  "tissue_label": "thymus",
+  "mode": "raw",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-515_GC_anatomy_ranks.tsv",
+  "n_samples": 10,
+  "n_anatomy": 13257,
+  "family_regex": "thym",
+  "family_exclude": null,
+  "n_family_nodes": 26,
+  "family_median_pct": 19.315833144753718,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 0,
+  "mwu_p_less": 0.07113363767954294,
+  "ks_p_greater": 0.000558173287799288,
+  "frac_samples_significant": 0.1,
+  "family_rank_among_organ_families": 3,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.071 (fail)",
+    "KS p = 0.00056 (ok)",
+    "1/10 samples individually p < 0.05 (fail)",
+    "family ranks 3 of 13 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "thymus lobe (11.0%)",
+    "medulla of thymus (11.1%)",
+    "thymus trabecula (11.4%)",
+    "thymus lobule (11.6%)",
+    "right thymus lobe (12.5%)"
+  ],
+  "top_real_anatomy": [
+    "trigeminal placode complex (0.20%)",
+    "olfactory bulb external plexiform layer (0.23%)",
+    "olfactory bulb internal plexiform layer (0.29%)",
+    "ventral root of spinal cord (0.29%)",
+    "profundal placode (0.30%)",
+    "ventral nerve root of cervical spinal cord (0.33%)",
+    "dorsal nerve root of cervical spinal cord (0.37%)",
+    "dorsal root of spinal cord (0.39%)",
+    "nucleus recessus posterioris (0.40%)",
+    "proper plantar digital artery (0.40%)"
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "name": "OSD-48",
+  "tissue": "liver",
+  "tissue_label": "liver",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-48_GC_anatomy_ranks.tsv",
+  "n_samples": 7,
+  "n_anatomy": 13257,
+  "family_regex": "liver|hepat",
+  "family_exclude": "hepatopancreas|flexure|arthropod|hepatic cecum",
+  "n_family_nodes": 85,
+  "family_median_pct": 42.75153827088654,
+  "in_top_2_5pct": 1,
+  "in_top_10pct": 6,
+  "mwu_p_less": 0.3322699547462926,
+  "ks_p_greater": 0.03284978268174818,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 8,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.33 (fail)",
+    "KS p = 0.033 (fail)",
+    "0/7 samples individually p < 0.05 (fail)",
+    "family ranks 8 of 13 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "hepatic cord (2.4%)",
+    "liver lobule (2.5%)",
+    "hepatic acinus (2.8%)",
+    "liver perisinusoidal space (3.7%)",
+    "extrahepatic duct (7.1%)"
+  ],
+  "top_real_anatomy": [
+    "extensor caudae muscle (0.21%)",
+    "extensor caudae medialis muscle (0.22%)",
+    "superior gemellus muscle (0.23%)",
+    "extensor caudae lateralis muscle (0.24%)",
+    "inferior gemellus muscle (0.25%)",
+    "gemellus muscle (0.26%)",
+    "deep middle cerebral vein (0.27%)",
+    "morphological boundary (0.28%)",
+    "histaminergic system (0.30%)",
+    "integumental surface (0.31%)"
+  ]
+}

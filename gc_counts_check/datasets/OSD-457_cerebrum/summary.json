@@ -1,0 +1,44 @@
+{
+  "name": "OSD-457_cerebrum",
+  "tissue": "cerebrum",
+  "tissue_label": "cerebrum",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-457_cerebrum_GC_anatomy_ranks.tsv",
+  "n_samples": 6,
+  "n_anatomy": 13257,
+  "family_regex": "cerebral (?:hemisphere|cortex|white matter|lobe|subcortex)|cerebrum|telencephal|neocortex|isocortex|frontal (?:lobe|cortex)|parietal (?:lobe|cortex)|temporal (?:lobe|cortex)|occipital (?:lobe|cortex)|corpus callosum",
+  "family_exclude": "artery|vein|Myxin|protocerebrum",
+  "n_family_nodes": 107,
+  "family_median_pct": 19.912750496592995,
+  "in_top_2_5pct": 13,
+  "in_top_10pct": 25,
+  "mwu_p_less": 2.778273202929558e-19,
+  "ks_p_greater": 3.1788089509826177e-23,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 3,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 2.8e-19 (ok)",
+    "KS p = 3.2e-23 (ok)",
+    "6/6 samples individually p < 0.05 (ok)",
+    "family ranks 3 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "cerebral hemisphere white matter (1.6%)",
+    "lamina terminalis of cerebral hemisphere (1.6%)",
+    "external capsule of telencephalon (1.7%)",
+    "forceps major of corpus callosum (1.7%)",
+    "splenium of the corpus callosum (1.7%)"
+  ],
+  "top_real_anatomy": [
+    "abdominal nerve plexus (0.18%)",
+    "gABAergic system (0.19%)",
+    "aortic plexus (0.20%)",
+    "dorsal nerve root of cervical spinal cord (0.21%)",
+    "serotonergic system (0.21%)",
+    "profundal placode (0.21%)",
+    "thoracic aortic plexus (0.22%)",
+    "plantar digital artery (0.24%)",
+    "principal artery to hindlimb (0.24%)",
+    "histaminergic system (0.27%)"
+  ]
+}

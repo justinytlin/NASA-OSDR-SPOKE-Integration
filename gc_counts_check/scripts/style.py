@@ -8,7 +8,11 @@ GRAY_MARK = "#b3b1aa"
 # fixed categorical order: one slot per tissue, never re-assigned
 TISSUE_COLOR = {"hippocampus": "#2a78d6", "thymus": "#eb6834", "spleen": "#1baf7a", "liver": "#eda100",
                 "kidney": "#008300", "heart": "#e34948", "adrenal gland": "#4a3aa7", "eye": "#e87ba4",
-                "retina": "#e87ba4", "brain": "#2a78d6"}
+                "retina": "#e87ba4", "brain": "#2a78d6", "cerebellum": "#2a78d6", "cerebrum": "#2a78d6",
+                "optic nerve": "#e87ba4", "skeletal muscle": "#e34948", "skin": "#eb6834", "lung": "#1baf7a",
+                "colon": "#eda100", "cecum": "#eda100", "bone marrow": "#4a3aa7", "mammary gland": "#e87ba4",
+                "temporal bone": "#008300", "mandible": "#008300", "bone tissue": "#008300",
+                "adipose tissue": "#eda100", "whole blood": "#e34948", "placenta": "#4a3aa7"}
 TISSUE_MARKER = {"hippocampus": "o", "thymus": "s", "spleen": "^", "liver": "D", "kidney": "o", "heart": "s",
                  "adrenal gland": "^", "eye": "D", "retina": "o", "brain": "s"}
 SEQ_BLUE = ["#cde2fb", "#b7d3f6", "#9ec5f4", "#86b6ef", "#6da7ec", "#5598e7", "#3987e5", "#2a78d6",

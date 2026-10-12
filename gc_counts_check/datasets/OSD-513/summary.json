@@ -1,0 +1,45 @@
+{
+  "name": "OSD-513",
+  "tissue": "kidney",
+  "tissue_label": "kidney",
+  "mode": "raw",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-513_GC_anatomy_ranks.tsv",
+  "n_samples": 10,
+  "n_anatomy": 13257,
+  "family_regex": "kidney|renal|nephron|glomerul",
+  "family_exclude": "adrenal|suprarenal|interrenal|nephridi|Hatschek|lieno|olfactory|cerebell|preglomerular",
+  "n_family_nodes": 167,
+  "family_median_pct": 29.604737120012068,
+  "in_top_2_5pct": 8,
+  "in_top_10pct": 31,
+  "mwu_p_less": 6.016798415016831e-08,
+  "ks_p_greater": 2.3095395363550757e-07,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 4,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 6e-08 (ok)",
+    "KS p = 2.3e-07 (ok)",
+    "10/10 samples individually p < 0.05 (ok)",
+    "family ranks 4 of 13 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "renal papilla (0.9%)",
+    "tip of renal papilla (0.9%)",
+    "region of nephron tubule (2.1%)",
+    "renal convoluted tubule (2.1%)",
+    "renal straight tubule (2.2%)"
+  ],
+  "top_real_anatomy": [
+    "plantar digital artery (0.20%)",
+    "proper plantar digital artery (0.25%)",
+    "dorsal paragigantocellular nucleus (0.25%)",
+    "dorsal nerve root of cervical spinal cord (0.26%)",
+    "paragigantocellular nucleus (0.26%)",
+    "lateral paragigantocellular nucleus (0.27%)",
+    "nucleus recessus posterioris (0.28%)",
+    "ossification center (0.28%)",
+    "ventral nerve root of cervical spinal cord (0.29%)",
+    "notochordal ossification (0.31%)"
+  ]
+}

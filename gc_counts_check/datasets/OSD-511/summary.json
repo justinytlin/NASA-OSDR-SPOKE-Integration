@@ -1,0 +1,45 @@
+{
+  "name": "OSD-511",
+  "tissue": "mammary gland",
+  "tissue_label": "mammary gland",
+  "mode": "raw",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-511_GC_anatomy_ranks.tsv",
+  "n_samples": 15,
+  "n_anatomy": 13257,
+  "family_regex": "mammary|lactiferous|nipple|areola|\\bbreast",
+  "family_exclude": "internal mammary|mammary (?:artery|vein)|mammary body|mamm?illary|feather",
+  "n_family_nodes": 54,
+  "family_median_pct": 77.99200422418345,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 3,
+  "mwu_p_less": 0.9996343481078007,
+  "ks_p_greater": 0.8942512486400332,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 14,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 1 (fail)",
+    "KS p = 0.89 (fail)",
+    "0/15 samples individually p < 0.05 (fail)",
+    "family ranks 14 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "areolar gland (4.3%)",
+    "duct of areolar gland (4.7%)",
+    "acinus of areolar gland (6.5%)",
+    "mammary fat pad (12.6%)",
+    "male mammary gland duct (14.6%)"
+  ],
+  "top_real_anatomy": [
+    "nucleus recessus lateralis (0.18%)",
+    "notochordal ossification (0.19%)",
+    "one-pass circulatory system (0.20%)",
+    "two-pass circulatory system (0.20%)",
+    "dorsal nerve root of cervical spinal cord (0.22%)",
+    "closed circulatory system (0.22%)",
+    "nucleus recessus posterioris (0.24%)",
+    "ventral nerve root of cervical spinal cord (0.25%)",
+    "plantar digital artery (0.25%)",
+    "trigeminal placode complex (0.27%)"
+  ]
+}

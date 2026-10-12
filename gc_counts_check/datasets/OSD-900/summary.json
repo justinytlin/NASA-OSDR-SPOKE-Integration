@@ -1,0 +1,45 @@
+{
+  "name": "OSD-900",
+  "tissue": "lung",
+  "tissue_label": "lung",
+  "mode": "raw",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-900_GC_anatomy_ranks.tsv",
+  "n_samples": 5,
+  "n_anatomy": 13257,
+  "family_regex": "\\blung|pulmonary|bronch|alveolus of lung|alveolar (?:sac|wall|system|duct)",
+  "family_exclude": "pulmonum",
+  "n_family_nodes": 200,
+  "family_median_pct": 58.9092554876669,
+  "in_top_2_5pct": 1,
+  "in_top_10pct": 12,
+  "mwu_p_less": 0.9442172061315176,
+  "ks_p_greater": 1.3564574286321015e-07,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 12,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.94 (fail)",
+    "KS p = 1.4e-07 (ok)",
+    "0/5 samples individually p < 0.05 (fail)",
+    "family ranks 12 of 13 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "pulmonary artery (2.2%)",
+    "pulmonary artery endothelium (5.1%)",
+    "bronchial vein (5.3%)",
+    "alveolar wall (6.4%)",
+    "lung saccule (6.8%)"
+  ],
+  "top_real_anatomy": [
+    "principal artery to hindlimb (0.22%)",
+    "gemellus muscle (0.23%)",
+    "principal artery to forelimb (0.23%)",
+    "nucleus recessus (0.24%)",
+    "common plantar digital arteries (0.25%)",
+    "ventral root of spinal cord (0.27%)",
+    "dorsal root of spinal cord (0.29%)",
+    "superior gemellus muscle (0.29%)",
+    "abdominal nerve plexus (0.30%)",
+    "ventral nerve root of cervical spinal cord (0.31%)"
+  ]
+}

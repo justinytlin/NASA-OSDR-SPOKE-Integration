@@ -1,0 +1,45 @@
+{
+  "name": "OSD-771",
+  "tissue": "kidney",
+  "tissue_label": "kidney",
+  "mode": "raw",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-771_GC_anatomy_ranks.tsv",
+  "n_samples": 20,
+  "n_anatomy": 13257,
+  "family_regex": "kidney|renal|nephron|glomerul",
+  "family_exclude": "adrenal|suprarenal|interrenal|nephridi|Hatschek|lieno|olfactory|cerebell|preglomerular",
+  "n_family_nodes": 167,
+  "family_median_pct": 35.41977823036886,
+  "in_top_2_5pct": 7,
+  "in_top_10pct": 31,
+  "mwu_p_less": 3.4249428515075266e-06,
+  "ks_p_greater": 3.929873076635816e-06,
+  "frac_samples_significant": 0.95,
+  "family_rank_among_organ_families": 7,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 3.4e-06 (ok)",
+    "KS p = 3.9e-06 (ok)",
+    "19/20 samples individually p < 0.05 (ok)",
+    "family ranks 7 of 13 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "renal papilla (0.9%)",
+    "tip of renal papilla (0.9%)",
+    "renal medulla loop of Henle (2.3%)",
+    "region of nephron tubule (2.4%)",
+    "inner medulla of kidney (2.4%)"
+  ],
+  "top_real_anatomy": [
+    "cholinergic system (0.20%)",
+    "ventral nerve root of cervical spinal cord (0.20%)",
+    "trigeminal placode complex (0.20%)",
+    "serotonergic system (0.21%)",
+    "glutamatergic system (0.23%)",
+    "gABAergic system (0.23%)",
+    "extensor caudae muscle (0.24%)",
+    "dorsal nerve root of cervical spinal cord (0.26%)",
+    "deep middle cerebral vein (0.29%)",
+    "superior gemellus muscle (0.29%)"
+  ]
+}

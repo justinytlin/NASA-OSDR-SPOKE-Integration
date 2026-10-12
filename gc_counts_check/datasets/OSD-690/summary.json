@@ -1,0 +1,45 @@
+{
+  "name": "OSD-690",
+  "tissue": "bone marrow",
+  "tissue_label": "bone marrow",
+  "mode": "raw",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-690_GC_anatomy_ranks.tsv",
+  "n_samples": 6,
+  "n_anatomy": 13257,
+  "family_regex": "bone marrow",
+  "family_exclude": null,
+  "n_family_nodes": 5,
+  "family_median_pct": 20.703527696059943,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 0,
+  "mwu_p_less": 0.06999159968755662,
+  "ks_p_greater": 0.04449680136218614,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 2,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.07 (fail)",
+    "KS p = 0.044 (fail)",
+    "0/6 samples individually p < 0.05 (fail)",
+    "family ranks 2 of 13 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "red bone marrow (12.1%)",
+    "bone marrow (18.5%)",
+    "yellow bone marrow (20.7%)",
+    "stroma of bone marrow (27.5%)",
+    "bone marrow cavity (76.1%)"
+  ],
+  "top_real_anatomy": [
+    "proper plantar digital artery (0.20%)",
+    "trigeminal placode complex (0.22%)",
+    "dorsal root of spinal cord (0.24%)",
+    "ventral root of spinal cord (0.24%)",
+    "glutamatergic system (0.25%)",
+    "gABAergic system (0.26%)",
+    "ventral nerve root of cervical spinal cord (0.27%)",
+    "superior gemellus muscle (0.27%)",
+    "ingested food (0.28%)",
+    "bolus of food (0.29%)"
+  ]
+}

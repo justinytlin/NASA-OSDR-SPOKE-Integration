@@ -1,0 +1,45 @@
+{
+  "name": "OSD-512",
+  "tissue": "adrenal gland",
+  "tissue_label": "adrenal gland",
+  "mode": "raw",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-512_GC_anatomy_ranks.tsv",
+  "n_samples": 10,
+  "n_anatomy": 13257,
+  "family_regex": "adrenal|suprarenal|interrenal",
+  "family_exclude": null,
+  "n_family_nodes": 31,
+  "family_median_pct": 59.47574866108471,
+  "in_top_2_5pct": 2,
+  "in_top_10pct": 4,
+  "mwu_p_less": 0.4394006872870006,
+  "ks_p_greater": 0.012229344713684835,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 13,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.44 (fail)",
+    "KS p = 0.012 (fail)",
+    "0/10 samples individually p < 0.05 (fail)",
+    "family ranks 13 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "zona fasciculata of adrenal gland (1.4%)",
+    "zona glomerulosa of adrenal gland (1.5%)",
+    "adrenal medulla (3.1%)",
+    "suprarenal vein (6.7%)",
+    "right suprarenal vein (13.0%)"
+  ],
+  "top_real_anatomy": [
+    "cholinergic system (0.20%)",
+    "dorsal root of spinal cord (0.20%)",
+    "glutamatergic system (0.21%)",
+    "serotonergic system (0.21%)",
+    "ventral root of spinal cord (0.23%)",
+    "trigeminal placode complex (0.23%)",
+    "catecholamine system (0.25%)",
+    "olfactory bulb internal plexiform layer (0.26%)",
+    "extensor caudae medialis muscle (0.28%)",
+    "gABAergic system (0.29%)"
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "name": "OSD-104",
+  "tissue": "skeletal muscle",
+  "tissue_label": "soleus",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-104_GC_anatomy_ranks.tsv",
+  "n_samples": 6,
+  "n_anatomy": 13257,
+  "family_regex": "skeletal muscle|gastrocnemius|quadriceps|soleus|tibialis",
+  "family_exclude": null,
+  "n_family_nodes": 55,
+  "family_median_pct": 55.80196625682029,
+  "in_top_2_5pct": 2,
+  "in_top_10pct": 5,
+  "mwu_p_less": 0.6155581828085921,
+  "ks_p_greater": 0.5973934761761449,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 11,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.62 (fail)",
+    "KS p = 0.6 (fail)",
+    "0/6 samples individually p < 0.05 (fail)",
+    "family ranks 11 of 13 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "skeletal muscle tissue of masseter (1.7%)",
+    "lip skeletal muscle (1.8%)",
+    "skeletal muscle tissue of diaphragm (3.2%)",
+    "tendon of quadriceps femoris (5.7%)",
+    "quadriceps femoris (7.7%)"
+  ],
+  "top_real_anatomy": [
+    "ventral root of spinal cord (0.20%)",
+    "dorsal root of spinal cord (0.21%)",
+    "paragigantocellular nucleus (0.23%)",
+    "integumental surface (0.24%)",
+    "basal vein (0.25%)",
+    "deep middle cerebral vein (0.26%)",
+    "zygomaticus muscle (0.28%)",
+    "serotonergic system (0.29%)",
+    "cholinergic system (0.29%)",
+    "dorsal paragigantocellular nucleus (0.31%)"
+  ]
+}

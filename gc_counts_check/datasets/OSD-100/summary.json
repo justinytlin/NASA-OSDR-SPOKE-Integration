@@ -1,0 +1,44 @@
+{
+  "name": "OSD-100",
+  "tissue": "eye",
+  "tissue_label": "eye",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-100_GC_anatomy_ranks.tsv",
+  "n_samples": 6,
+  "n_anatomy": 13257,
+  "family_regex": "\\beye\\b|eyeball|ocular|cornea|\\blens\\b|retina|sclera|conjunctiv|uvea|\\biris\\b|ciliary body|choroid|vitreous|aqueous humor",
+  "family_exclude": "choroid plexus|choroidal artery|anterior choroidal|eyelid|eyebrow|lens placode|eye primordium|compound eye|ocellus|eyespot|preoptic|supraoptic|optic (?:tract|radiation|tectum|lobe|chiasm)|sensillum|extra-ocular|ocular pre-muscle|eye skin|eye sebaceous|sclerotome|scleral ossicle|retinaculum|macula densa|fovea capitis",
+  "n_family_nodes": 169,
+  "family_median_pct": 66.60757838626135,
+  "in_top_2_5pct": 1,
+  "in_top_10pct": 20,
+  "mwu_p_less": 0.9998941140261924,
+  "ks_p_greater": 0.660962235591015,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 14,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 1 (fail)",
+    "KS p = 0.66 (fail)",
+    "0/6 samples individually p < 0.05 (fail)",
+    "family ranks 14 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "corneal epithelium (2.3%)",
+    "iris (2.6%)",
+    "ciliary body (2.6%)",
+    "muscle of iris (2.6%)",
+    "iris smooth muscle (2.6%)"
+  ],
+  "top_real_anatomy": [
+    "maxillomandibular placode (0.18%)",
+    "trigeminal placode complex (0.19%)",
+    "profundal placode (0.22%)",
+    "gemellus muscle (0.24%)",
+    "common plantar digital arteries (0.25%)",
+    "superior gemellus muscle (0.26%)",
+    "dorsal root of spinal cord (0.26%)",
+    "ossification center (0.27%)",
+    "histaminergic system (0.28%)",
+    "thoracic aortic plexus (0.30%)"
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "name": "OSD-464",
+  "tissue": "lung",
+  "tissue_label": "lung",
+  "mode": "raw",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-464_GC_anatomy_ranks.tsv",
+  "n_samples": 9,
+  "n_anatomy": 13257,
+  "family_regex": "\\blung|pulmonary|bronch|alveolus of lung|alveolar (?:sac|wall|system|duct)",
+  "family_exclude": "pulmonum",
+  "n_family_nodes": 200,
+  "family_median_pct": 53.992020986816186,
+  "in_top_2_5pct": 1,
+  "in_top_10pct": 12,
+  "mwu_p_less": 0.38520310460136997,
+  "ks_p_greater": 6.640866359852672e-10,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 12,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.39 (fail)",
+    "KS p = 6.6e-10 (ok)",
+    "0/9 samples individually p < 0.05 (fail)",
+    "family ranks 12 of 13 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "pulmonary artery (2.4%)",
+    "pulmonary artery endothelium (5.0%)",
+    "bronchial vein (5.2%)",
+    "alveolar wall (6.4%)",
+    "lung saccule (6.8%)"
+  ],
+  "top_real_anatomy": [
+    "olfactory bulb internal plexiform layer (0.20%)",
+    "principal artery to limb (0.21%)",
+    "olfactory bulb external plexiform layer (0.21%)",
+    "catecholamine system (0.22%)",
+    "lateral paragigantocellular nucleus (0.23%)",
+    "integumental surface (0.25%)",
+    "gABAergic system (0.25%)",
+    "deep middle cerebral vein (0.26%)",
+    "basal vein (0.28%)",
+    "plantar digital artery (0.30%)"
+  ]
+}

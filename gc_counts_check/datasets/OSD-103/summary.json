@@ -1,0 +1,44 @@
+{
+  "name": "OSD-103",
+  "tissue": "skeletal muscle",
+  "tissue_label": "quadriceps",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-103_GC_anatomy_ranks.tsv",
+  "n_samples": 6,
+  "n_anatomy": 13257,
+  "family_regex": "skeletal muscle|gastrocnemius|quadriceps|soleus|tibialis",
+  "family_exclude": null,
+  "n_family_nodes": 55,
+  "family_median_pct": 57.521812375851745,
+  "in_top_2_5pct": 2,
+  "in_top_10pct": 6,
+  "mwu_p_less": 0.6393212492651397,
+  "ks_p_greater": 0.589909371489959,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 12,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.64 (fail)",
+    "KS p = 0.59 (fail)",
+    "0/6 samples individually p < 0.05 (fail)",
+    "family ranks 12 of 13 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "skeletal muscle tissue of masseter (1.8%)",
+    "lip skeletal muscle (1.9%)",
+    "skeletal muscle tissue of diaphragm (3.4%)",
+    "tendon of quadriceps femoris (5.5%)",
+    "quadriceps femoris (7.7%)"
+  ],
+  "top_real_anatomy": [
+    "ventral nerve root of cervical spinal cord (0.20%)",
+    "obsolete cnida (0.20%)",
+    "obsolete spirocyst (0.21%)",
+    "plantar digital artery (0.22%)",
+    "dorsal nerve root of cervical spinal cord (0.22%)",
+    "nucleus recessus lateralis (0.23%)",
+    "histaminergic system (0.25%)",
+    "aortic plexus (0.25%)",
+    "catecholamine system (0.26%)",
+    "nucleus recessus posterioris (0.28%)"
+  ]
+}

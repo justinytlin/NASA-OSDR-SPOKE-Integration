@@ -1,0 +1,44 @@
+{
+  "name": "OSD-99",
+  "tissue": "skeletal muscle",
+  "tissue_label": "extensor digitorum longus",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-99_GC_anatomy_ranks.tsv",
+  "n_samples": 6,
+  "n_anatomy": 13257,
+  "family_regex": "skeletal muscle|gastrocnemius|quadriceps|soleus|tibialis",
+  "family_exclude": null,
+  "n_family_nodes": 55,
+  "family_median_pct": 56.54119836061452,
+  "in_top_2_5pct": 2,
+  "in_top_10pct": 6,
+  "mwu_p_less": 0.6773256380962667,
+  "ks_p_greater": 0.5865090812440519,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 11,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.68 (fail)",
+    "KS p = 0.59 (fail)",
+    "0/6 samples individually p < 0.05 (fail)",
+    "family ranks 11 of 13 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "skeletal muscle tissue of masseter (1.7%)",
+    "lip skeletal muscle (1.8%)",
+    "skeletal muscle tissue of diaphragm (3.3%)",
+    "tendon of quadriceps femoris (5.4%)",
+    "quadriceps femoris (7.4%)"
+  ],
+  "top_real_anatomy": [
+    "abdominal nerve plexus (0.20%)",
+    "thoracic aortic plexus (0.21%)",
+    "neurogenic placode (0.22%)",
+    "profundal placode (0.24%)",
+    "basal vein (0.24%)",
+    "maxillomandibular placode (0.26%)",
+    "aortic plexus (0.28%)",
+    "olfactory bulb plexiform layer (0.28%)",
+    "deep middle cerebral vein (0.29%)",
+    "zygomaticus muscle (0.31%)"
+  ]
+}

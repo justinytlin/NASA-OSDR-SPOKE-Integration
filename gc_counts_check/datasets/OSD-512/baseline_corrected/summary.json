@@ -1,0 +1,45 @@
+{
+  "name": "OSD-512",
+  "tissue": "adrenal gland",
+  "tissue_label": "adrenal gland",
+  "mode": "baseline-corrected",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-512_GC_ranks.npz",
+  "n_samples": 10,
+  "n_anatomy": 13257,
+  "family_regex": "adrenal|suprarenal|interrenal",
+  "family_exclude": null,
+  "n_family_nodes": 31,
+  "family_median_pct": 46.7866033039149,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 0,
+  "mwu_p_less": 0.9448316113586405,
+  "ks_p_greater": 0.34501902645834515,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 9,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.94 (fail)",
+    "KS p = 0.35 (fail)",
+    "0/10 samples individually p < 0.05 (fail)",
+    "family ranks 9 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "adrenal cortex (11.6%)",
+    "zona intermedia of adrenal gland (11.6%)",
+    "adrenal gland X zone (11.6%)",
+    "zona fasciculata of adrenal gland (14.2%)",
+    "adrenal gland cortex zone (14.5%)"
+  ],
+  "top_real_anatomy": [
+    "cardiovascular system (0.01%)",
+    "heart primordium (0.02%)",
+    "proepicardium (0.03%)",
+    "smooth muscle tissue (0.06%)",
+    "metanephric smooth muscle tissue (0.06%)",
+    "enteric circular muscle (0.07%)",
+    "smooth muscle endomysium (0.08%)",
+    "anal region smooth muscle (0.09%)",
+    "renal system (0.10%)",
+    "excretory gland (0.10%)"
+  ]
+}

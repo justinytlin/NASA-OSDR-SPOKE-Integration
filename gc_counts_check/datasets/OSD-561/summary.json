@@ -1,0 +1,45 @@
+{
+  "name": "OSD-561",
+  "tissue": "cerebellum",
+  "tissue_label": "cerebellum",
+  "mode": "raw",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-561_GC_anatomy_ranks.tsv",
+  "n_samples": 12,
+  "n_anatomy": 13257,
+  "family_regex": "cerebell",
+  "family_exclude": "artery|vein|spinocerebellar|cerebellar peduncle (?:artery|vein)",
+  "n_family_nodes": 102,
+  "family_median_pct": 28.97462975534937,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 21,
+  "mwu_p_less": 2.1293195855544967e-08,
+  "ks_p_greater": 5.3795987770789327e-11,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 3,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 2.1e-08 (ok)",
+    "KS p = 5.4e-11 (ok)",
+    "12/12 samples individually p < 0.05 (ok)",
+    "family ranks 3 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "cerebellar cortex (4.1%)",
+    "cerebellar layer (4.1%)",
+    "Purkinje cell layer of cerebellar cortex (4.1%)",
+    "molecular layer of cerebellar cortex (4.1%)",
+    "granular layer of cerebellar cortex (4.2%)"
+  ],
+  "top_real_anatomy": [
+    "extensor caudae medialis muscle (0.20%)",
+    "common plantar digital arteries (0.21%)",
+    "extensor caudae muscle (0.23%)",
+    "proper plantar digital artery (0.25%)",
+    "paragigantocellular nucleus (0.26%)",
+    "olfactory bulb external plexiform layer (0.26%)",
+    "notochordal ossification (0.27%)",
+    "extensor caudae lateralis muscle (0.29%)",
+    "ossification center (0.30%)",
+    "catecholamine system (0.30%)"
+  ]
+}

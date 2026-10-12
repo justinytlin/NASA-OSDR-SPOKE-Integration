@@ -1,0 +1,45 @@
+{
+  "name": "OSD-457_temporal-bone",
+  "tissue": "temporal bone",
+  "tissue_label": "temporal bone",
+  "mode": "baseline-corrected",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-457_temporal-bone_GC_ranks.npz",
+  "n_samples": 6,
+  "n_anatomy": 13257,
+  "family_regex": "temporal bone|petrous|mastoid|tympanic (?:ring|bone|part)|squamous part of temporal|otic capsule|periotic",
+  "family_exclude": "sterno|extratemporal|intertemporal|supratemporal",
+  "n_family_nodes": 19,
+  "family_median_pct": 81.53805536697594,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 0,
+  "mwu_p_less": 0.99989559887808,
+  "ks_p_greater": 0.9823585538449785,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 13,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 1 (fail)",
+    "KS p = 0.98 (fail)",
+    "0/6 samples individually p < 0.05 (fail)",
+    "family ranks 13 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "otic capsule (30.4%)",
+    "otic capsule pre-cartilage condensation (30.5%)",
+    "sigmoid process of tympanic bone (39.8%)",
+    "cartilaginous otic capsule (40.7%)",
+    "squamous part of temporal bone primordium (64.3%)"
+  ],
+  "top_real_anatomy": [
+    "mammary gland smooth muscle (0.01%)",
+    "smooth muscle tissue (0.02%)",
+    "smooth muscle endomysium (0.03%)",
+    "metanephric smooth muscle tissue (0.03%)",
+    "enteric circular muscle (0.04%)",
+    "spleen smooth muscle (0.05%)",
+    "anal region smooth muscle (0.06%)",
+    "ureter smooth muscle (0.07%)",
+    "smooth muscle layer in fatty layer of subcutaneous tissue (0.08%)",
+    "umbilical smooth muscle (0.09%)"
+  ]
+}

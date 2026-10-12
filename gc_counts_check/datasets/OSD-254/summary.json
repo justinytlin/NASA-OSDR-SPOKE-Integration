@@ -1,0 +1,44 @@
+{
+  "name": "OSD-254",
+  "tissue": "skin",
+  "tissue_label": "skin",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-254_GC_anatomy_ranks.tsv",
+  "n_samples": 20,
+  "n_anatomy": 13257,
+  "family_regex": "\\bskin|epidermis|dermis",
+  "family_exclude": "dermatome|hypodermis",
+  "n_family_nodes": 111,
+  "family_median_pct": 53.49362600890095,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 12,
+  "mwu_p_less": 0.6676211030711477,
+  "ks_p_greater": 0.6518163238881737,
+  "frac_samples_significant": 0.1,
+  "family_rank_among_organ_families": 11,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.67 (fail)",
+    "KS p = 0.65 (fail)",
+    "2/20 samples individually p < 0.05 (fail)",
+    "family ranks 11 of 13 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "skin of lip (2.7%)",
+    "skin of knee (2.9%)",
+    "skin of cheek (5.2%)",
+    "skin of prepuce of penis (5.5%)",
+    "skin sebaceous gland (5.6%)"
+  ],
+  "top_real_anatomy": [
+    "ossification center (0.24%)",
+    "nucleus recessus (0.25%)",
+    "maxillomandibular placode (0.26%)",
+    "bolus of food (0.28%)",
+    "nucleus recessus lateralis (0.29%)",
+    "aortic plexus (0.33%)",
+    "abdominal nerve plexus (0.33%)",
+    "trigeminal placode complex (0.34%)",
+    "nucleus recessus posterioris (0.34%)",
+    "basal vein (0.34%)"
+  ]
+}

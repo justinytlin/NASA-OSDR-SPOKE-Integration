@@ -1,0 +1,45 @@
+{
+  "name": "OSD-254",
+  "tissue": "skin",
+  "tissue_label": "skin",
+  "mode": "baseline-corrected",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-254_GC_ranks.npz",
+  "n_samples": 20,
+  "n_anatomy": 13257,
+  "family_regex": "\\bskin|epidermis|dermis",
+  "family_exclude": "dermatome|hypodermis",
+  "n_family_nodes": 111,
+  "family_median_pct": 39.312815870860675,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 6,
+  "mwu_p_less": 6.436396998065836e-05,
+  "ks_p_greater": 8.643579042465499e-05,
+  "frac_samples_significant": 0.65,
+  "family_rank_among_organ_families": 7,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 6.4e-05 (ok)",
+    "KS p = 8.6e-05 (ok)",
+    "13/20 samples individually p < 0.05 (fail)",
+    "family ranks 7 of 13 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "skin apocrine gland (3.6%)",
+    "skin scent gland (7.5%)",
+    "future dermis (9.1%)",
+    "skin of body (9.2%)",
+    "skin mucous gland (9.4%)"
+  ],
+  "top_real_anatomy": [
+    "mammary lobe (0.65%)",
+    "areolar sweat gland (0.68%)",
+    "pancreatic fat pad (0.91%)",
+    "stroma of pancreas (1.17%)",
+    "endometrial cavity (1.26%)",
+    "capsule of pancreas (1.33%)",
+    "acinus of lactiferous gland (1.37%)",
+    "exocrine gland of integumental system (1.51%)",
+    "uterine fat pad (1.81%)",
+    "mammary gland luminal epithelium (1.81%)"
+  ]
+}

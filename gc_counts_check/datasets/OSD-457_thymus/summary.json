@@ -1,0 +1,45 @@
+{
+  "name": "OSD-457_thymus",
+  "tissue": "thymus",
+  "tissue_label": "thymus",
+  "mode": "raw",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-457_thymus_GC_anatomy_ranks.tsv",
+  "n_samples": 6,
+  "n_anatomy": 13257,
+  "family_regex": "thym",
+  "family_exclude": null,
+  "n_family_nodes": 26,
+  "family_median_pct": 23.742802544567645,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 0,
+  "mwu_p_less": 0.14829802180818774,
+  "ks_p_greater": 0.0076053038238680145,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 5,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.15 (fail)",
+    "KS p = 0.0076 (ok)",
+    "0/6 samples individually p < 0.05 (fail)",
+    "family ranks 5 of 13 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "thymus lobe (12.3%)",
+    "medulla of thymus (12.5%)",
+    "thymus trabecula (12.7%)",
+    "thymus lobule (13.3%)",
+    "thymoid (15.4%)"
+  ],
+  "top_real_anatomy": [
+    "ingested food (0.22%)",
+    "zygomaticus minor muscle (0.23%)",
+    "bolus of food (0.25%)",
+    "one-pass circulatory system (0.26%)",
+    "ventral root of spinal cord (0.27%)",
+    "dorsal root of spinal cord (0.28%)",
+    "extensor caudae muscle (0.28%)",
+    "two-pass circulatory system (0.29%)",
+    "gemellus muscle (0.30%)",
+    "extensor caudae medialis muscle (0.31%)"
+  ]
+}

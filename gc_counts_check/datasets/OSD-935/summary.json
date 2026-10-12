@@ -1,0 +1,45 @@
+{
+  "name": "OSD-935",
+  "tissue": "skeletal muscle",
+  "tissue_label": "soleus",
+  "mode": "raw",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-935_GC_anatomy_ranks.tsv",
+  "n_samples": 10,
+  "n_anatomy": 13257,
+  "family_regex": "skeletal muscle|gastrocnemius|quadriceps|soleus|tibialis",
+  "family_exclude": null,
+  "n_family_nodes": 55,
+  "family_median_pct": 56.83563400467678,
+  "in_top_2_5pct": 2,
+  "in_top_10pct": 5,
+  "mwu_p_less": 0.67370646787497,
+  "ks_p_greater": 0.6382080870279271,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 12,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.67 (fail)",
+    "KS p = 0.64 (fail)",
+    "0/10 samples individually p < 0.05 (fail)",
+    "family ranks 12 of 13 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "skeletal muscle tissue of masseter (1.7%)",
+    "lip skeletal muscle (1.8%)",
+    "skeletal muscle tissue of diaphragm (3.5%)",
+    "tendon of quadriceps femoris (5.9%)",
+    "quadriceps femoris (7.8%)"
+  ],
+  "top_real_anatomy": [
+    "notochordal ossification (0.20%)",
+    "cholinergic system (0.21%)",
+    "abdominal nerve plexus (0.22%)",
+    "thoracic aortic plexus (0.24%)",
+    "aortic plexus (0.24%)",
+    "histaminergic system (0.25%)",
+    "catecholamine system (0.27%)",
+    "inferior ophthalmic vein (0.29%)",
+    "serotonergic system (0.30%)",
+    "superior gemellus muscle (0.31%)"
+  ]
+}

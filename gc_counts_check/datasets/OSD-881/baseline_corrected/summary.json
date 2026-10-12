@@ -1,0 +1,45 @@
+{
+  "name": "OSD-881",
+  "tissue": "heart",
+  "tissue_label": "heart",
+  "mode": "baseline-corrected",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-881_GC_ranks.npz",
+  "n_samples": 19,
+  "n_anatomy": 13257,
+  "family_regex": "heart|cardiac|myocard",
+  "family_exclude": "cardiac stomach|cardiac gastric|corpus cardiacum|lymph heart|dorsal vessel",
+  "n_family_nodes": 97,
+  "family_median_pct": 13.066383995744056,
+  "in_top_2_5pct": 28,
+  "in_top_10pct": 46,
+  "mwu_p_less": 7.263753657453817e-21,
+  "ks_p_greater": 2.5830005695081535e-18,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 3,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 7.3e-21 (ok)",
+    "KS p = 2.6e-18 (ok)",
+    "19/19 samples individually p < 0.05 (ok)",
+    "family ranks 3 of 13 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "heart primordium (0.0%)",
+    "myocardium (0.2%)",
+    "outflow tract myocardium (0.3%)",
+    "myocardial layer (0.3%)",
+    "bulbus cordis myocardium (0.4%)"
+  ],
+  "top_real_anatomy": [
+    "cardiovascular system (0.01%)",
+    "heart primordium (0.02%)",
+    "proepicardium (0.02%)",
+    "septum transversum (0.07%)",
+    "vascular system (0.07%)",
+    "arterial system (0.10%)",
+    "enteric musculature (0.11%)",
+    "renal system (0.13%)",
+    "excretory gland (0.13%)",
+    "Marshall's gland (0.13%)"
+  ]
+}

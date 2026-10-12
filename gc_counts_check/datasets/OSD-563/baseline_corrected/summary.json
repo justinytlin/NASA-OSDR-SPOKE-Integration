@@ -1,0 +1,45 @@
+{
+  "name": "OSD-563",
+  "tissue": "cerebellum",
+  "tissue_label": "cerebellum",
+  "mode": "baseline-corrected",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-563_GC_ranks.npz",
+  "n_samples": 5,
+  "n_anatomy": 13257,
+  "family_regex": "cerebell",
+  "family_exclude": "artery|vein|spinocerebellar|cerebellar peduncle (?:artery|vein)",
+  "n_family_nodes": 102,
+  "family_median_pct": 55.49294712227503,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 13,
+  "mwu_p_less": 0.9739271891395105,
+  "ks_p_greater": 0.5600485236263296,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 9,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.97 (fail)",
+    "KS p = 0.56 (fail)",
+    "0/5 samples individually p < 0.05 (fail)",
+    "family ranks 9 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "white matter of the cerebellar cortex (3.2%)",
+    "middle cerebellar peduncle (6.3%)",
+    "nucleus of cerebellar nuclear complex (6.7%)",
+    "cerebellar layer (6.7%)",
+    "Purkinje cell layer of cerebellar cortex (6.7%)"
+  ],
+  "top_real_anatomy": [
+    "forebrain (0.01%)",
+    "secondary prosencephalon (0.02%)",
+    "superficial feature part of forebrain (0.02%)",
+    "telencephalon diencephalon boundary (0.03%)",
+    "basal forebrain (0.04%)",
+    "postnatal subventricular zone (0.05%)",
+    "gray matter of forebrain (0.05%)",
+    "meninx of telencephalon (0.06%)",
+    "forebrain meninges (0.07%)",
+    "telencephalon dura mater (0.08%)"
+  ]
+}

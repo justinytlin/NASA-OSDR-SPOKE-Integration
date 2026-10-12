@@ -1,0 +1,45 @@
+{
+  "name": "OSD-525",
+  "tissue": "cerebellum",
+  "tissue_label": "cerebellum",
+  "mode": "raw",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-525_GC_anatomy_ranks.tsv",
+  "n_samples": 10,
+  "n_anatomy": 13257,
+  "family_regex": "cerebell",
+  "family_exclude": "artery|vein|spinocerebellar|cerebellar peduncle (?:artery|vein)",
+  "n_family_nodes": 102,
+  "family_median_pct": 27.716300822207135,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 22,
+  "mwu_p_less": 5.044334460313096e-10,
+  "ks_p_greater": 5.3563132988455524e-14,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 4,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 5e-10 (ok)",
+    "KS p = 5.4e-14 (ok)",
+    "10/10 samples individually p < 0.05 (ok)",
+    "family ranks 4 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "cerebellar cortex (4.7%)",
+    "cerebellar layer (4.7%)",
+    "Purkinje cell layer of cerebellar cortex (4.8%)",
+    "molecular layer of cerebellar cortex (4.8%)",
+    "granular layer of cerebellar cortex (5.0%)"
+  ],
+  "top_real_anatomy": [
+    "abdominal nerve plexus (0.24%)",
+    "inferior ophthalmic vein (0.25%)",
+    "ventral root of spinal cord (0.26%)",
+    "dorsal root of spinal cord (0.27%)",
+    "aortic plexus (0.29%)",
+    "basal vein (0.29%)",
+    "closed circulatory system (0.29%)",
+    "one-pass circulatory system (0.29%)",
+    "thoracic aortic plexus (0.32%)",
+    "two-pass circulatory system (0.32%)"
+  ]
+}

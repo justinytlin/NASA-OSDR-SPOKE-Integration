@@ -1,0 +1,44 @@
+{
+  "name": "OSD-47",
+  "tissue": "liver",
+  "tissue_label": "liver",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-47_GC_anatomy_ranks.tsv",
+  "n_samples": 3,
+  "n_anatomy": 13257,
+  "family_regex": "liver|hepat",
+  "family_exclude": "hepatopancreas|flexure|arthropod|hepatic cecum",
+  "n_family_nodes": 85,
+  "family_median_pct": 45.11327349073446,
+  "in_top_2_5pct": 1,
+  "in_top_10pct": 6,
+  "mwu_p_less": 0.5326369030688117,
+  "ks_p_greater": 0.18906577928029136,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 7,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.53 (fail)",
+    "KS p = 0.19 (fail)",
+    "0/3 samples individually p < 0.05 (fail)",
+    "family ranks 7 of 13 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "hepatic cord (2.4%)",
+    "liver lobule (2.6%)",
+    "hepatic acinus (2.9%)",
+    "liver perisinusoidal space (3.6%)",
+    "extrahepatic duct (7.0%)"
+  ],
+  "top_real_anatomy": [
+    "notochordal ossification (0.20%)",
+    "common plantar digital arteries (0.21%)",
+    "plantar digital artery (0.21%)",
+    "principal artery to forelimb (0.22%)",
+    "principal artery to hindlimb (0.23%)",
+    "perichordal bone (0.23%)",
+    "dorsal root of spinal cord (0.24%)",
+    "zygomaticus minor muscle (0.26%)",
+    "ventral root of spinal cord (0.28%)",
+    "bolus of food (0.28%)"
+  ]
+}

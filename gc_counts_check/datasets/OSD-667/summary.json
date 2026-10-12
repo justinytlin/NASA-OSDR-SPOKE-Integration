@@ -1,0 +1,45 @@
+{
+  "name": "OSD-667",
+  "tissue": "colon",
+  "tissue_label": "colon",
+  "mode": "raw",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-667_GC_anatomy_ranks.tsv",
+  "n_samples": 5,
+  "n_anatomy": 13257,
+  "family_regex": "colon\\b|colonic|large intestine|rectum",
+  "family_exclude": "colonic (?:artery|vein)|mesocolon",
+  "n_family_nodes": 60,
+  "family_median_pct": 25.6475824092932,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 5,
+  "mwu_p_less": 2.0035967390839313e-09,
+  "ks_p_greater": 1.3316408937957868e-11,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 4,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 2e-09 (ok)",
+    "KS p = 1.3e-11 (ok)",
+    "5/5 samples individually p < 0.05 (ok)",
+    "family ranks 4 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "muscle layer of large intestine (6.1%)",
+    "transverse fold of rectum (6.8%)",
+    "large intestine smooth muscle longitudinal layer (8.5%)",
+    "large intestine smooth muscle circular layer (8.6%)",
+    "muscle layer of rectum (9.5%)"
+  ],
+  "top_real_anatomy": [
+    "dorsal root of spinal cord (0.20%)",
+    "morphological boundary (0.22%)",
+    "trigeminal placode complex (0.23%)",
+    "ventral root of spinal cord (0.24%)",
+    "integumental surface (0.25%)",
+    "gemellus muscle (0.26%)",
+    "notochordal ossification (0.26%)",
+    "superior gemellus muscle (0.28%)",
+    "olfactory bulb plexiform layer (0.28%)",
+    "one-pass circulatory system (0.30%)"
+  ]
+}

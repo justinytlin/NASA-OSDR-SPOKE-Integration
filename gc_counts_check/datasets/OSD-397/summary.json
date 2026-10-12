@@ -1,0 +1,44 @@
+{
+  "name": "OSD-397",
+  "tissue": "retina",
+  "tissue_label": "retina",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-397_GC_anatomy_ranks.tsv",
+  "n_samples": 7,
+  "n_anatomy": 13257,
+  "family_regex": "retina|photoreceptor|optic disc|fovea centralis|foveola|macula lutea|parafovea|perifovea",
+  "family_exclude": "retinaculum",
+  "n_family_nodes": 37,
+  "family_median_pct": 93.09906356749535,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 0,
+  "mwu_p_less": 0.9999999999998547,
+  "ks_p_greater": 0.8356287863171673,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 14,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 1 (fail)",
+    "KS p = 0.84 (fail)",
+    "0/7 samples individually p < 0.05 (fail)",
+    "family ranks 14 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "presumptive neural retina (30.0%)",
+    "presumptive retinal pigmented epithelium (30.0%)",
+    "pigmented layer of retina (40.1%)",
+    "photoreceptor array (53.4%)",
+    "chorioretinal region (68.6%)"
+  ],
+  "top_real_anatomy": [
+    "aortic plexus (0.18%)",
+    "abdominal nerve plexus (0.19%)",
+    "nucleus recessus (0.20%)",
+    "thoracic aortic plexus (0.20%)",
+    "catecholamine system (0.22%)",
+    "dorsal paragigantocellular nucleus (0.22%)",
+    "bolus of food (0.22%)",
+    "lateral paragigantocellular nucleus (0.23%)",
+    "paragigantocellular nucleus (0.24%)",
+    "ingested food (0.25%)"
+  ]
+}

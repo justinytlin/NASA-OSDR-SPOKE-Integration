@@ -1,0 +1,45 @@
+{
+  "name": "OSD-457_mandible",
+  "tissue": "mandible",
+  "tissue_label": "mandible",
+  "mode": "baseline-corrected",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-457_mandible_GC_ranks.npz",
+  "n_samples": 3,
+  "n_anatomy": 13257,
+  "family_regex": "mandib|dentary|lower jaw",
+  "family_exclude": "mandibular (?:nerve|artery|vein|gland|lymph)|submandibular|maxillomandibular|mandibular (?:arch|process|prominence) (?:mesenchyme|ectoderm|endoderm)",
+  "n_family_nodes": 103,
+  "family_median_pct": 47.49943426114506,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 2,
+  "mwu_p_less": 0.3021010200748413,
+  "ks_p_greater": 0.004977477949998309,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 7,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.3 (fail)",
+    "KS p = 0.005 (ok)",
+    "0/3 samples individually p < 0.05 (fail)",
+    "family ranks 7 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "pterygomandibular raphe (6.0%)",
+    "space between upper and lower jaws (7.0%)",
+    "mandibular symphysis (11.1%)",
+    "dentary replacement tooth trench (13.6%)",
+    "1st arch mandibular endoderm (14.5%)"
+  ],
+  "top_real_anatomy": [
+    "mammary gland smooth muscle (0.01%)",
+    "smooth muscle tissue (0.02%)",
+    "metanephric smooth muscle tissue (0.02%)",
+    "anal region smooth muscle (0.03%)",
+    "enteric circular muscle (0.04%)",
+    "ureter smooth muscle (0.05%)",
+    "renal system (0.07%)",
+    "spleen smooth muscle (0.07%)",
+    "smooth muscle endomysium (0.07%)",
+    "excretory gland (0.07%)"
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "name": "OSD-47",
+  "tissue": "liver",
+  "tissue_label": "liver",
+  "mode": "baseline-corrected",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-47_GC_ranks.npz",
+  "n_samples": 3,
+  "n_anatomy": 13257,
+  "family_regex": "liver|hepat",
+  "family_exclude": "hepatopancreas|flexure|arthropod|hepatic cecum",
+  "n_family_nodes": 85,
+  "family_median_pct": 30.85916874104247,
+  "in_top_2_5pct": 1,
+  "in_top_10pct": 14,
+  "mwu_p_less": 0.016216791235582638,
+  "ks_p_greater": 0.0002847273406973323,
+  "frac_samples_significant": 0.6666666666666666,
+  "family_rank_among_organ_families": 6,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.016 (fail)",
+    "KS p = 0.00028 (ok)",
+    "2/3 samples individually p < 0.05 (fail)",
+    "family ranks 6 of 13 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "hepatic duct smooth muscle (1.2%)",
+    "hepatobiliary system (2.5%)",
+    "hepatic duct (4.1%)",
+    "hepatic acinus (4.3%)",
+    "hepatic diverticulum (4.8%)"
+  ],
+  "top_real_anatomy": [
+    "renal duct (0.01%)",
+    "kidney (0.01%)",
+    "kidney corticomedullary boundary (0.02%)",
+    "renal collecting system (0.03%)",
+    "upper urinary tract (0.04%)",
+    "right kidney (0.05%)",
+    "left kidney (0.06%)",
+    "renal fat pad (0.06%)",
+    "renal system (0.06%)",
+    "excretory gland (0.07%)"
+  ]
+}

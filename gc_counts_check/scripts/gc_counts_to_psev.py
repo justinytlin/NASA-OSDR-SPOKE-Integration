@@ -22,8 +22,14 @@ OSD-4 (Affymetrix thymus) was excluded at the user's request; the 'array'
 kind is kept for reference.
 
 Usage:
+  gc_counts_to_psev.py --manifest data/_catalog/manifest.json [--names a,b] --compact --skip-done   (OSDR-wide run)
   gc_counts_to_psev.py [--only OSD-564 ...] [--prep-only] [--threads 4]
   gc_counts_to_psev.py --counts PATH.csv --name OSD-xxx --tissue liver [--samples _GC_]   (any dataset)
+With --compact the .npz also holds the raw per-sample scores, the dataset's
+uniform-weight profile (every gene weighted 1) and each sample's mean weight, so
+that the baseline-corrected score  scores[s] - mean_weight[s] * uniform  (the
+covariance across genes between expression weight and node rank) can be formed.
+
 Outputs (GC Counts Check/psev_out/):
   <name>_GC_weights.tsv                        prepared gene x sample weights
   <name>_GC_counts_ranks_and_rank_by_type_for_meta0_1.tsv   rank table
@@ -31,7 +37,8 @@ Outputs (GC Counts Check/psev_out/):
 import argparse
 import sys
 import time
-from concurrent.futures import ThreadPoolExecutor
+from concurrent.futures import ThreadPoolExecutor, wait, FIRST_COMPLETED
+from threading import Lock
 from pathlib import Path
 
 import numpy as np
@@ -45,6 +52,7 @@ from psev_pipeline import (PsevStore, load_gene_indices_df, load_homologene_mous
                            get_order_rank_vector, get_rank_by_type_vector)
 from counts_to_psev import load_ensembl_to_entrez
 
+UNIFORM = "__uniform__"            # pseudo-sample with weight 1 for every gene: the tissue-independent baseline
 DATA = ROOT / "data"
 OUT = ROOT / "psev_out"
 
@@ -94,9 +102,9 @@ def mouse_ensembl_to_spoke(e2e, m2h, spoke_genes):
     return e2e[e2e.Node.isin(spoke_genes)][["ENSEMBL", "Node"]].drop_duplicates()
 
 
-def prep_counts(path, filters, min_cpm=1.0):
+def prep_counts(path, filters, min_cpm=1.0, columns=None):
     df = pd.read_csv(path, header=0, index_col=0)
-    keep = [c for c in df.columns if any(s in c for s in filters)]
+    keep = [c for c in df.columns if c in set(columns)] if columns else [c for c in df.columns if any(s in c for s in filters)]
     df = df[keep]
     cpm = df / df.sum(axis=0) * 1e6
     expressed = (cpm >= min_cpm).any(axis=1)
@@ -121,8 +129,12 @@ def prep_array(path, filters):
 def prepare(ds, e2e_map, spoke_genes, m2h):
     path = Path(ds["file"]) if Path(str(ds["file"])).is_absolute() else DATA / ds["file"]
     if ds["kind"] == "counts":
-        w, info = prep_counts(path, ds["samples"])
+        w, info = prep_counts(path, ds.get("samples") or [], columns=ds.get("columns"))
         emap = e2e_map
+        if ds.get("exclude_genes"):      # e.g. a housekeeping-gene list (mouse Ensembl ids, one per line)
+            excl = set(l.strip() for l in open(ds["exclude_genes"]) if l.strip())
+            n0 = len(w); w = w[~w.ENSEMBL.isin(excl)]
+            info += f"; {n0 - len(w)} excluded by {Path(ds['exclude_genes']).name}"
     else:
         w, info = prep_array(path, ds["samples"])
         ann = pd.read_csv(path, usecols=["ENSEMBL", "ENTREZID"], low_memory=False)
@@ -150,6 +162,18 @@ def main():
     ap.add_argument("--tissue", default="unknown", help="ad hoc dataset: tissue label (informational)")
     ap.add_argument("--samples", action="append", default=None,
                     help="ad hoc dataset: substring(s) selecting sample columns (default _GC_)")
+    ap.add_argument("--manifest", default=None, help="manifest.json from build_manifest.py (explicit control sample lists)")
+    ap.add_argument("--zscore-arm", action="store_true",
+                    help="also accumulate scores with the gene's z-scores instead of within-gene ranks (scores_z, uniform_z in the npz)")
+    ap.add_argument("--perm-cov", default=None,
+                    help="TSV with Node + hub_rank (gene_hub_rank.py): also accumulate --n-perm weight permutations within "
+                         "--perm-bins quantile bins of hub_rank, Anatomy nodes only (perm_scores in the npz)")
+    ap.add_argument("--n-perm", type=int, default=100); ap.add_argument("--perm-bins", type=int, default=20)
+    ap.add_argument("--names", default=None, help="with --manifest: comma-separated entry names to run (default all)")
+    ap.add_argument("--compact", action="store_true",
+                    help="write <name>_GC_anatomy_ranks.tsv (Anatomy rows only) + <name>_GC_ranks.npz (int32 overall "
+                         "ranks of all nodes per sample) instead of the full TSV")
+    ap.add_argument("--skip-done", action="store_true", help="skip datasets whose output already exists")
     ap.add_argument("--prep-only", action="store_true")
     ap.add_argument("--threads", type=int, default=4)
     ap.add_argument("--chunk", type=int, default=128)
@@ -170,7 +194,13 @@ def main():
     m2h = load_homologene_mouse_to_human(args.homologene)
     e2e_map = mouse_ensembl_to_spoke(load_ensembl_to_entrez(args.gene_map), m2h, spoke_genes)
 
-    if args.counts:
+    if args.manifest:
+        import json
+        want = set(args.names.split(",")) if args.names else None
+        todo = [dict(name=e["name"], tissue=e["tissue"], kind="counts", file=e["file"], columns=e["samples"],
+                     exclude_genes=e.get("exclude_genes"))
+                for e in json.load(open(args.manifest)) if not want or e["name"] in want]
+    elif args.counts:
         cp = Path(args.counts)
         todo = [dict(name=args.name or cp.stem.split("_")[0], tissue=args.tissue, kind="counts",
                      file=cp.resolve(), samples=args.samples or ["_GC_"])]
@@ -179,6 +209,14 @@ def main():
         if args.only:
             only = [n for o in args.only for n in (RR3 if o.upper() == "RR3" else [o])]
         todo = [d for d in DATASETS if not only or d["name"] in only]
+    def out_path(name):
+        return OUT / (f"{name}_GC_anatomy_ranks.tsv" if args.compact
+                      else f"{name}_GC_counts_ranks_and_rank_by_type_for_meta{save_str}.tsv")
+    if args.skip_done:
+        todo = [d for d in todo if not out_path(d["name"]).exists()]
+        print(f"{len(todo)} datasets to run", flush=True)
+    if not todo:
+        return
     prepared = {}
     for ds in todo:
         kept, samples = prepare(ds, e2e_map, spoke_genes, m2h)
@@ -194,12 +232,30 @@ def main():
         if args.limit_groups:
             rounds = rounds[:args.limit_groups]
         st = {}
+        ana_idx = np.where(node_info.Node_Type.values == "Anatomy")[0]
+        cov = pd.read_csv(args.perm_cov, sep="\t", dtype={"Node": str}) if args.perm_cov else None
+        prng = np.random.default_rng(0)
         for name, (kept, samples) in prepared.items():
             gi = gi_all.merge(kept[["Node"]], on="Node")
-            exp = kept.merge(gi[["Node", "Round", "round_index"]], on="Node")
-            st[name] = dict(gi=gi, exp=exp, samples=samples, total=len(gi),
+            exp = kept.assign(**{UNIFORM: 1.0}).merge(gi[["Node", "Round", "round_index"]], on="Node")
+            st[name] = dict(gi=gi, exp=exp, samples=samples, wcols=samples + [UNIFORM], total=len(gi),
                             s=np.zeros(n_nodes), ss=np.zeros(n_nodes),
-                            psev=np.zeros((len(samples), n_nodes)))
+                            psev=np.zeros((len(samples) + 1, n_nodes)),
+                            psev_z=np.zeros((len(samples) + 1, n_nodes)) if args.zscore_arm else None,
+                            mean_weight=exp[samples].mean(axis=0).values, perm=None, lock=Lock())
+            if cov is not None:
+                # permute each sample's weights among genes with similar hub_rank (quantile bins)
+                h = exp[["Node"]].merge(cov[["Node", "hub_rank"]], on="Node", how="left").hub_rank.fillna(cov.hub_rank.median()).values
+                bins = pd.qcut(h, args.perm_bins, labels=False, duplicates="drop")
+                W = exp[samples].values; P = np.empty((len(exp), args.n_perm * len(samples)))
+                for k in range(args.n_perm):
+                    perm = np.arange(len(exp))
+                    for b in np.unique(bins):
+                        ib = np.where(bins == b)[0]; perm[ib] = prng.permutation(ib)
+                    P[:, k * len(samples):(k + 1) * len(samples)] = W[perm]
+                pcols = [f"__perm{k}_{j}" for k in range(args.n_perm) for j in range(len(samples))]
+                exp = pd.concat([exp.reset_index(drop=True), pd.DataFrame(P, columns=pcols)], axis=1)
+                st[name].update(exp=exp, pcols=pcols, perm=np.zeros((len(pcols), len(ana_idx))))
             print(f"  {name}: genes with PSEVs: {len(gi)}", flush=True)
 
         # ---- pass 1: per-dataset mean / std over its genes ----
@@ -223,30 +279,59 @@ def main():
         def work(mat, idx, d):
             z = np.nan_to_num((mat[idx].astype(np.float64) - d["avg"]) / d["std"])
             ranked = rank_rows(z)
-            del z
-            fc = d["exp"][d["exp"].Round == r].set_index("round_index").loc[idx, d["samples"]].values
-            return fc.T @ ranked
+            rows = d["exp"][d["exp"].Round == r].set_index("round_index").loc[idx]
+            fc = rows[d["wcols"]].values
+            a_ = fc.T @ ranked
+            b_ = fc.T @ z if d["psev_z"] is not None else None
+            c_ = rows[d["pcols"]].values.T @ ranked[:, ana_idx] if d["perm"] is not None else None
+            del z, ranked
+            with d["lock"]:                       # accumulate in place; nothing large is returned
+                d["psev"] += a_
+                if b_ is not None: d["psev_z"] += b_
+                if c_ is not None: d["perm"] += c_
+            return True
 
         for r in rounds:
             mat = zf.load_group(r, save_str)
-            futs = []
-            for name, d in st.items():
-                idx = d["gi"][d["gi"].Round == r].round_index.values
-                for i in range(0, len(idx), args.chunk):
-                    futs.append((name, pool.submit(work, mat, idx[i:i + args.chunk], d)))
-            for name, f in futs:
-                st[name]["psev"] += f.result()
+            jobs = [(idx[i:i + args.chunk], d) for d in st.values()
+                    for idx in [d["gi"][d["gi"].Round == r].round_index.values] for i in range(0, len(idx), args.chunk)]
+            pending = set()
+            for j_idx, d in jobs:                 # bounded number of chunks in flight (memory stays flat)
+                if len(pending) >= 2 * args.threads:
+                    done, pending = wait(pending, return_when=FIRST_COMPLETED)
+                    for f in done: f.result()
+                pending.add(pool.submit(work, mat, j_idx, d))
+            for f in pending: f.result()
             del mat
             print(f"  pass2 group {r} done ({time.time() - t0:.0f}s)", flush=True)
 
     for name, d in st.items():
-        sp = d["psev"] / float(d["total"])
+        sp_all = d["psev"] / float(d["total"])
+        sp, uniform = sp_all[:-1], sp_all[-1]          # per-sample scores, uniform-weight (all genes = 1) profile
         ranked_out = np.array([get_order_rank_vector(row, np.arange(n_nodes)) for row in sp])
-        res = pd.concat((node_info, pd.DataFrame(ranked_out.T, columns=d["samples"])), axis=1)
-        for s in d["samples"]:
-            res["Rank_by_type_" + s] = get_rank_by_type_vector(res[s].values, node_info.Node_Type.values)
-        out = OUT / f"{name}_GC_counts_ranks_and_rank_by_type_for_meta{save_str}.tsv"
-        res.to_csv(out, sep="\t", index=False)
+        out = out_path(name)
+        if args.compact:
+            types = node_info.Node_Type.values
+            ana = types == "Anatomy"
+            cols = {"Rank_by_type_" + s: get_rank_by_type_vector(ranked_out[j].astype(float), types)[ana]
+                    for j, s in enumerate(d["samples"])}
+            res = pd.concat((node_info[ana].reset_index(drop=True), pd.DataFrame(cols)), axis=1)
+            res.to_csv(out, sep="\t", index=False)
+            extra = {}
+            if d["psev_z"] is not None:
+                spz = d["psev_z"] / float(d["total"])
+                extra.update(scores_z=spz[:-1].astype(np.float32), uniform_z=spz[-1].astype(np.float32))
+            if d["perm"] is not None:
+                extra.update(perm_scores=(d["perm"] / float(d["total"])).reshape(args.n_perm, len(d["samples"]), -1).astype(np.float32),
+                             perm_anatomy_index=ana_idx)
+            np.savez_compressed(OUT / f"{name}_GC_ranks.npz", ranks=ranked_out.astype(np.int32),
+                                scores=sp.astype(np.float32), uniform=uniform.astype(np.float32),
+                                mean_weight=d["mean_weight"], samples=np.array(d["samples"]), n_genes=d["total"], **extra)
+        else:
+            res = pd.concat((node_info, pd.DataFrame(ranked_out.T, columns=d["samples"])), axis=1)
+            for s in d["samples"]:
+                res["Rank_by_type_" + s] = get_rank_by_type_vector(res[s].values, node_info.Node_Type.values)
+            res.to_csv(out, sep="\t", index=False)
         print(f"  wrote {out}", flush=True)
     print(f"done in {time.time() - t0:.0f}s")
 

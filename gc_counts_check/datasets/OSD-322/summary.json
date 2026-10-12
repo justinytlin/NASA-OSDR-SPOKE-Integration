@@ -1,0 +1,45 @@
+{
+  "name": "OSD-322",
+  "tissue": "liver",
+  "tissue_label": "liver",
+  "mode": "raw",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-322_GC_anatomy_ranks.tsv",
+  "n_samples": 15,
+  "n_anatomy": 13257,
+  "family_regex": "liver|hepat",
+  "family_exclude": "hepatopancreas|flexure|arthropod|hepatic cecum",
+  "n_family_nodes": 85,
+  "family_median_pct": 44.15327751376632,
+  "in_top_2_5pct": 1,
+  "in_top_10pct": 6,
+  "mwu_p_less": 0.43826487927860547,
+  "ks_p_greater": 0.059777586745433174,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 8,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.44 (fail)",
+    "KS p = 0.06 (fail)",
+    "0/15 samples individually p < 0.05 (fail)",
+    "family ranks 8 of 13 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "hepatic cord (2.4%)",
+    "liver lobule (2.5%)",
+    "hepatic acinus (2.9%)",
+    "liver perisinusoidal space (3.6%)",
+    "extrahepatic duct (7.2%)"
+  ],
+  "top_real_anatomy": [
+    "zygomaticus minor muscle (0.20%)",
+    "one-pass circulatory system (0.22%)",
+    "bolus of food (0.22%)",
+    "closed circulatory system (0.24%)",
+    "zygomaticus muscle (0.24%)",
+    "histaminergic system (0.25%)",
+    "two-pass circulatory system (0.25%)",
+    "notochordal ossification (0.26%)",
+    "perichordal bone (0.29%)",
+    "dorsal nerve root of cervical spinal cord (0.30%)"
+  ]
+}

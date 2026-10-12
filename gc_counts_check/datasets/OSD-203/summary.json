@@ -1,0 +1,45 @@
+{
+  "name": "OSD-203",
+  "tissue": "retina",
+  "tissue_label": "retina",
+  "mode": "raw",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-203_GC_anatomy_ranks.tsv",
+  "n_samples": 15,
+  "n_anatomy": 13257,
+  "family_regex": "retina|photoreceptor|optic disc|fovea centralis|foveola|macula lutea|parafovea|perifovea",
+  "family_exclude": "retinaculum",
+  "n_family_nodes": 37,
+  "family_median_pct": 93.77033516884163,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 0,
+  "mwu_p_less": 0.9999999999841485,
+  "ks_p_greater": 0.8506277890426778,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 14,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 1 (fail)",
+    "KS p = 0.85 (fail)",
+    "0/15 samples individually p < 0.05 (fail)",
+    "family ranks 14 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "presumptive retinal pigmented epithelium (30.6%)",
+    "presumptive neural retina (30.6%)",
+    "pigmented layer of retina (45.0%)",
+    "macula lutea (53.0%)",
+    "parafoveal part of retina (53.7%)"
+  ],
+  "top_real_anatomy": [
+    "glutamatergic system (0.17%)",
+    "gABAergic system (0.18%)",
+    "serotonergic system (0.19%)",
+    "cholinergic system (0.21%)",
+    "catecholamine system (0.21%)",
+    "histaminergic system (0.23%)",
+    "dorsal paragigantocellular nucleus (0.24%)",
+    "closed circulatory system (0.26%)",
+    "extensor caudae muscle (0.26%)",
+    "notochordal ossification (0.27%)"
+  ]
+}

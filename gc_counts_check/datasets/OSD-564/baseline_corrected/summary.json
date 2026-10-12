@@ -1,0 +1,45 @@
+{
+  "name": "OSD-564",
+  "tissue": "hippocampus",
+  "tissue_label": "hippocampus",
+  "mode": "baseline-corrected",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-564_GC_ranks.npz",
+  "n_samples": 5,
+  "n_anatomy": 13257,
+  "family_regex": "hippocamp|dentate gyrus|Ammon|subiculum",
+  "family_exclude": null,
+  "n_family_nodes": 51,
+  "family_median_pct": 10.76714188730482,
+  "in_top_2_5pct": 1,
+  "in_top_10pct": 19,
+  "mwu_p_less": 4.0354797547196596e-21,
+  "ks_p_greater": 4.147400666403733e-26,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 1,
+  "verdict": "CLEAR",
+  "criteria": [
+    "pooled Mann-Whitney p = 4e-21 (ok)",
+    "KS p = 4.1e-26 (ok)",
+    "5/5 samples individually p < 0.05 (ok)",
+    "family ranks 1 of 13 organ families by median percentile (ok)"
+  ],
+  "best_family_nodes": [
+    "septohippocampal nucleus (0.7%)",
+    "hippocampus fimbria (2.7%)",
+    "Ammon's horn (4.2%)",
+    "hippocampal commissure (5.1%)",
+    "hilus of dentate gyrus (5.3%)"
+  ],
+  "top_real_anatomy": [
+    "forebrain (0.01%)",
+    "secondary prosencephalon (0.02%)",
+    "superficial feature part of forebrain (0.02%)",
+    "telencephalon diencephalon boundary (0.03%)",
+    "basal forebrain (0.04%)",
+    "postnatal subventricular zone (0.05%)",
+    "gray matter of forebrain (0.05%)",
+    "forebrain meninges (0.06%)",
+    "white matter of forebrain (0.07%)",
+    "substantia innominata (0.08%)"
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "name": "OSD-899",
+  "tissue": "cecum",
+  "tissue_label": "cecum",
+  "mode": "raw",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-899_GC_anatomy_ranks.tsv",
+  "n_samples": 5,
+  "n_anatomy": 13257,
+  "family_regex": "c(?:a)?ecum|c(?:a)?ecal|ileoc(?:a)?ecal|vermiform appendix",
+  "family_exclude": "hepatic cecum|pyloric c|gastric c|intestinal c|buccal|foramen c",
+  "n_family_nodes": 10,
+  "family_median_pct": 21.997435317190916,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 1,
+  "mwu_p_less": 0.009716599990490297,
+  "ks_p_greater": 0.011631206676179898,
+  "frac_samples_significant": 0.8,
+  "family_rank_among_organ_families": 3,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.0097 (ok)",
+    "KS p = 0.012 (fail)",
+    "4/5 samples individually p < 0.05 (ok)",
+    "family ranks 3 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "cecal tonsil (9.5%)",
+    "ileocecal junction (13.4%)",
+    "ileocecal valve (14.7%)",
+    "caecum dorsal mesentery (17.2%)",
+    "cecum mucosa (21.5%)"
+  ],
+  "top_real_anatomy": [
+    "maxillomandibular placode (0.20%)",
+    "extensor caudae muscle (0.21%)",
+    "extensor caudae lateralis muscle (0.21%)",
+    "profundal placode (0.21%)",
+    "plantar digital artery (0.23%)",
+    "catecholamine system (0.24%)",
+    "lateral paragigantocellular nucleus (0.25%)",
+    "glutamatergic system (0.25%)",
+    "trigeminal placode complex (0.27%)",
+    "abdominal nerve plexus (0.27%)"
+  ]
+}

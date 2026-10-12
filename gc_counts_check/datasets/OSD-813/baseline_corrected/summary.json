@@ -1,0 +1,45 @@
+{
+  "name": "OSD-813",
+  "tissue": "placenta",
+  "tissue_label": "placenta",
+  "mode": "baseline-corrected",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-813_GC_ranks.npz",
+  "n_samples": 15,
+  "n_anatomy": 13257,
+  "family_regex": "placent|chorioallantoic|decidua|trophoblast|chorionic (?:plate|villus)|labyrinth layer|junctional zone|ectoplacental",
+  "family_exclude": null,
+  "n_family_nodes": 38,
+  "family_median_pct": 33.17618365140429,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 9,
+  "mwu_p_less": 1.714309137534836e-06,
+  "ks_p_greater": 6.551907429297441e-08,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 8,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 1.7e-06 (ok)",
+    "KS p = 6.6e-08 (ok)",
+    "15/15 samples individually p < 0.05 (ok)",
+    "family ranks 8 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "placenta metrial gland (3.6%)",
+    "chorion syncytiotrophoblast (4.0%)",
+    "decidua parietalis (4.3%)",
+    "placental cotyledon (4.3%)",
+    "decidua basalis (4.3%)"
+  ],
+  "top_real_anatomy": [
+    "mammary gland smooth muscle (0.01%)",
+    "respiratory system lymphatic vessel smooth muscle (0.02%)",
+    "metanephric smooth muscle tissue (0.03%)",
+    "smooth muscle tissue (0.03%)",
+    "respiratory system smooth muscle (0.03%)",
+    "enteric circular muscle (0.04%)",
+    "anal region smooth muscle (0.05%)",
+    "spleen smooth muscle (0.07%)",
+    "ureter smooth muscle (0.07%)",
+    "smooth muscle endomysium (0.08%)"
+  ]
+}

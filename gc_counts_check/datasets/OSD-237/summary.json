@@ -1,0 +1,45 @@
+{
+  "name": "OSD-237",
+  "tissue": "skin",
+  "tissue_label": "skin",
+  "mode": "raw",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-237_GC_anatomy_ranks.tsv",
+  "n_samples": 6,
+  "n_anatomy": 13257,
+  "family_regex": "\\bskin|epidermis|dermis",
+  "family_exclude": "dermatome|hypodermis",
+  "n_family_nodes": 111,
+  "family_median_pct": 50.57831082949889,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 15,
+  "mwu_p_less": 0.35577682458546456,
+  "ks_p_greater": 0.2370766259316234,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 10,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.36 (fail)",
+    "KS p = 0.24 (fail)",
+    "0/6 samples individually p < 0.05 (fail)",
+    "family ranks 10 of 13 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "skin of lip (2.6%)",
+    "skin of knee (2.6%)",
+    "skin of cheek (4.7%)",
+    "skin sebaceous gland (5.0%)",
+    "skin of prepuce of penis (5.3%)"
+  ],
+  "top_real_anatomy": [
+    "inferior ophthalmic vein (0.21%)",
+    "ingested food (0.23%)",
+    "bolus of food (0.23%)",
+    "superior gemellus muscle (0.24%)",
+    "gemellus muscle (0.26%)",
+    "inferior gemellus muscle (0.26%)",
+    "extensor caudae medialis muscle (0.28%)",
+    "glutamatergic system (0.29%)",
+    "superior ophthalmic vein (0.30%)",
+    "catecholamine system (0.31%)"
+  ]
+}

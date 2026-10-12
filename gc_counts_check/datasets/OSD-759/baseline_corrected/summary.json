@@ -1,0 +1,45 @@
+{
+  "name": "OSD-759",
+  "tissue": "optic nerve",
+  "tissue_label": "optic nerve",
+  "mode": "baseline-corrected",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-759_GC_ranks.npz",
+  "n_samples": 12,
+  "n_anatomy": 13257,
+  "family_regex": "optic nerve|optic disc|optic chiasm|optic tract|cranial nerve II|nerve fiber layer of retina|optic stalk",
+  "family_exclude": null,
+  "n_family_nodes": 10,
+  "family_median_pct": 74.26611098539136,
+  "in_top_2_5pct": 1,
+  "in_top_10pct": 1,
+  "mwu_p_less": 0.9798961683239084,
+  "ks_p_greater": 0.8231489857483113,
+  "frac_samples_significant": 0.08333333333333333,
+  "family_rank_among_organ_families": 12,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.98 (fail)",
+    "KS p = 0.82 (fail)",
+    "1/12 samples individually p < 0.05 (fail)",
+    "family ranks 12 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "nerve fiber layer of retina (1.9%)",
+    "accessory nucleus of optic tract (42.2%)",
+    "optic disc (60.5%)",
+    "optic stalk (68.3%)",
+    "accessory optic tract (70.4%)"
+  ],
+  "top_real_anatomy": [
+    "mammary gland smooth muscle (0.02%)",
+    "cardiovascular system (0.04%)",
+    "heart primordium (0.04%)",
+    "proepicardium (0.06%)",
+    "smooth muscle endomysium (0.09%)",
+    "enteric circular muscle (0.11%)",
+    "metanephric smooth muscle tissue (0.12%)",
+    "smooth muscle tissue (0.12%)",
+    "myocardium (0.13%)",
+    "cervical mammary gland (0.14%)"
+  ]
+}

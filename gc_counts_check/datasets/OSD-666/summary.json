@@ -1,0 +1,45 @@
+{
+  "name": "OSD-666",
+  "tissue": "skeletal muscle",
+  "tissue_label": "quadriceps",
+  "mode": "raw",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-666_GC_anatomy_ranks.tsv",
+  "n_samples": 10,
+  "n_anatomy": 13257,
+  "family_regex": "skeletal muscle|gastrocnemius|quadriceps|soleus|tibialis",
+  "family_exclude": null,
+  "n_family_nodes": 55,
+  "family_median_pct": 57.370445802217695,
+  "in_top_2_5pct": 2,
+  "in_top_10pct": 6,
+  "mwu_p_less": 0.6578827387147616,
+  "ks_p_greater": 0.5586932168830863,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 12,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.66 (fail)",
+    "KS p = 0.56 (fail)",
+    "0/10 samples individually p < 0.05 (fail)",
+    "family ranks 12 of 13 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "skeletal muscle tissue of masseter (1.7%)",
+    "lip skeletal muscle (1.8%)",
+    "skeletal muscle tissue of diaphragm (3.3%)",
+    "tendon of quadriceps femoris (5.6%)",
+    "quadriceps femoris (7.6%)"
+  ],
+  "top_real_anatomy": [
+    "extensor caudae lateralis muscle (0.21%)",
+    "extensor caudae medialis muscle (0.22%)",
+    "zygomaticus minor muscle (0.22%)",
+    "one-pass circulatory system (0.23%)",
+    "closed circulatory system (0.25%)",
+    "plantar digital artery (0.27%)",
+    "extensor caudae muscle (0.28%)",
+    "aortic plexus (0.28%)",
+    "perichordal bone (0.28%)",
+    "integumental surface (0.31%)"
+  ]
+}

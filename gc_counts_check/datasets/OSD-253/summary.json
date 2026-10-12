@@ -1,0 +1,44 @@
+{
+  "name": "OSD-253",
+  "tissue": "kidney",
+  "tissue_label": "kidney",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-253_GC_anatomy_ranks.tsv",
+  "n_samples": 19,
+  "n_anatomy": 13257,
+  "family_regex": "kidney|renal|nephron|glomerul",
+  "family_exclude": "adrenal|suprarenal|interrenal|nephridi|Hatschek|lieno|olfactory|cerebell|preglomerular",
+  "n_family_nodes": 167,
+  "family_median_pct": 38.41664582365621,
+  "in_top_2_5pct": 7,
+  "in_top_10pct": 29,
+  "mwu_p_less": 1.1351447326254228e-05,
+  "ks_p_greater": 4.9112263313233976e-05,
+  "frac_samples_significant": 0.9473684210526315,
+  "family_rank_among_organ_families": 7,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 1.1e-05 (ok)",
+    "KS p = 4.9e-05 (ok)",
+    "18/19 samples individually p < 0.05 (ok)",
+    "family ranks 7 of 13 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "tip of renal papilla (0.9%)",
+    "renal papilla (0.9%)",
+    "region of nephron tubule (2.3%)",
+    "renal convoluted tubule (2.3%)",
+    "renal straight tubule (2.3%)"
+  ],
+  "top_real_anatomy": [
+    "gemellus muscle (0.19%)",
+    "superior gemellus muscle (0.20%)",
+    "inferior gemellus muscle (0.22%)",
+    "cholinergic system (0.24%)",
+    "integumental surface (0.25%)",
+    "paragigantocellular nucleus (0.26%)",
+    "lateral paragigantocellular nucleus (0.26%)",
+    "gABAergic system (0.27%)",
+    "catecholamine system (0.28%)",
+    "deep middle cerebral vein (0.28%)"
+  ]
+}

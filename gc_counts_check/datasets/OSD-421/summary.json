@@ -1,0 +1,44 @@
+{
+  "name": "OSD-421",
+  "tissue": "thymus",
+  "tissue_label": "thymus",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-421_GC_anatomy_ranks.tsv",
+  "n_samples": 10,
+  "n_anatomy": 13257,
+  "family_regex": "thym",
+  "family_exclude": null,
+  "n_family_nodes": 26,
+  "family_median_pct": 18.2326318171532,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 0,
+  "mwu_p_less": 0.07028686252323632,
+  "ks_p_greater": 0.0004068365979727351,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 3,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.07 (fail)",
+    "KS p = 0.00041 (ok)",
+    "0/10 samples individually p < 0.05 (fail)",
+    "family ranks 3 of 13 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "thymus lobule (10.2%)",
+    "medulla of thymus (10.6%)",
+    "thymus lobe (10.8%)",
+    "right thymus lobe (11.3%)",
+    "left thymus lobe (11.3%)"
+  ],
+  "top_real_anatomy": [
+    "proper plantar digital artery (0.20%)",
+    "profundal placode (0.21%)",
+    "maxillomandibular placode (0.21%)",
+    "ingested food (0.22%)",
+    "notochordal ossification (0.22%)",
+    "zygomaticus muscle (0.24%)",
+    "basal vein (0.26%)",
+    "ossification center (0.26%)",
+    "bolus of food (0.26%)",
+    "deep middle cerebral vein (0.27%)"
+  ]
+}

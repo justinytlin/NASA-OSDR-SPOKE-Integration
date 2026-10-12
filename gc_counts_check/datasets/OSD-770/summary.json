@@ -1,0 +1,45 @@
+{
+  "name": "OSD-770",
+  "tissue": "skeletal muscle",
+  "tissue_label": "soleus",
+  "mode": "raw",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-770_GC_anatomy_ranks.tsv",
+  "n_samples": 10,
+  "n_anatomy": 13257,
+  "family_regex": "skeletal muscle|gastrocnemius|quadriceps|soleus|tibialis",
+  "family_exclude": null,
+  "n_family_nodes": 55,
+  "family_median_pct": 57.227125292298425,
+  "in_top_2_5pct": 2,
+  "in_top_10pct": 5,
+  "mwu_p_less": 0.6930723305680819,
+  "ks_p_greater": 0.5939911112677737,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 11,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.69 (fail)",
+    "KS p = 0.59 (fail)",
+    "0/10 samples individually p < 0.05 (fail)",
+    "family ranks 11 of 13 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "skeletal muscle tissue of masseter (1.7%)",
+    "lip skeletal muscle (1.8%)",
+    "skeletal muscle tissue of diaphragm (3.3%)",
+    "tendon of quadriceps femoris (5.9%)",
+    "quadriceps femoris (8.1%)"
+  ],
+  "top_real_anatomy": [
+    "integumental surface (0.20%)",
+    "morphological boundary (0.21%)",
+    "superior gemellus muscle (0.22%)",
+    "inferior gemellus muscle (0.23%)",
+    "gemellus muscle (0.26%)",
+    "ingested food (0.27%)",
+    "bolus of food (0.31%)",
+    "profundal placode (0.31%)",
+    "obsolete ptychocyst (0.31%)",
+    "maxillomandibular placode (0.32%)"
+  ]
+}

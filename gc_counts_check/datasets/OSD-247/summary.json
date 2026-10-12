@@ -1,0 +1,44 @@
+{
+  "name": "OSD-247",
+  "tissue": "colon",
+  "tissue_label": "colon",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-247_GC_anatomy_ranks.tsv",
+  "n_samples": 17,
+  "n_anatomy": 13257,
+  "family_regex": "colon\\b|colonic|large intestine|rectum",
+  "family_exclude": "colonic (?:artery|vein)|mesocolon",
+  "n_family_nodes": 60,
+  "family_median_pct": 22.409026973541174,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 5,
+  "mwu_p_less": 4.671441036786842e-11,
+  "ks_p_greater": 6.440068379320257e-13,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 4,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 4.7e-11 (ok)",
+    "KS p = 6.4e-13 (ok)",
+    "17/17 samples individually p < 0.05 (ok)",
+    "family ranks 4 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "muscle layer of large intestine (5.5%)",
+    "transverse fold of rectum (6.6%)",
+    "large intestine smooth muscle longitudinal layer (7.9%)",
+    "large intestine smooth muscle circular layer (8.0%)",
+    "muscle layer of rectum (8.9%)"
+  ],
+  "top_real_anatomy": [
+    "obsolete cnida (0.17%)",
+    "obsolete spirocyst (0.18%)",
+    "orbitosphenoid ossification center (0.20%)",
+    "perichordal bone (0.21%)",
+    "olfactory bulb external plexiform layer (0.22%)",
+    "olfactory bulb internal plexiform layer (0.23%)",
+    "dorsal root of spinal cord (0.28%)",
+    "alisphenoid ossification center (0.28%)",
+    "principal artery to forelimb (0.29%)",
+    "nucleus recessus posterioris (0.32%)"
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "name": "OSD-457_mandible",
+  "tissue": "mandible",
+  "tissue_label": "mandible",
+  "mode": "raw",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-457_mandible_GC_anatomy_ranks.tsv",
+  "n_samples": 3,
+  "n_anatomy": 13257,
+  "family_regex": "mandib|dentary|lower jaw",
+  "family_exclude": "mandibular (?:nerve|artery|vein|gland|lymph)|submandibular|maxillomandibular|mandibular (?:arch|process|prominence) (?:mesenchyme|ectoderm|endoderm)",
+  "n_family_nodes": 103,
+  "family_median_pct": 52.28935656634231,
+  "in_top_2_5pct": 7,
+  "in_top_10pct": 16,
+  "mwu_p_less": 0.8471445960821573,
+  "ks_p_greater": 0.4151291053305616,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 12,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.85 (fail)",
+    "KS p = 0.42 (fail)",
+    "0/3 samples individually p < 0.05 (fail)",
+    "family ranks 12 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "quadrate-hyomandibula joint (1.3%)",
+    "hyomandibular-otic region joint (1.3%)",
+    "hyomandibula-metapterygoid joint (1.4%)",
+    "preopercle vertical limb-hyomandibula joint (1.5%)",
+    "hyomandibula-opercle joint (1.5%)"
+  ],
+  "top_real_anatomy": [
+    "orbitosphenoid ossification center (0.23%)",
+    "olfactory bulb plexiform layer (0.23%)",
+    "ingested food (0.24%)",
+    "notochordal ossification (0.26%)",
+    "alisphenoid ossification center (0.26%)",
+    "common plantar digital arteries (0.28%)",
+    "extensor caudae muscle (0.28%)",
+    "dorsal root of spinal cord (0.28%)",
+    "cholinergic system (0.29%)",
+    "ventral root of spinal cord (0.30%)"
+  ]
+}
