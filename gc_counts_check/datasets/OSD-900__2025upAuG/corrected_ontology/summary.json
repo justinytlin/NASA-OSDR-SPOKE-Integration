@@ -1,0 +1,47 @@
+{
+  "name": "OSD-900__2025upAuG",
+  "tissue": "lung",
+  "tissue_label": "lung",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "score_key": "scores",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-900__2025upAuG_GC_ranks.npz",
+  "n_samples": 5,
+  "n_anatomy": 13895,
+  "family_regex": "\\blung|pulmonary|bronch|alveolus of lung|alveolar (?:sac|wall|system|duct)",
+  "family_exclude": "pulmonum",
+  "n_family_nodes": 151,
+  "family_median_pct": 65.36595897804966,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 2,
+  "mwu_p_less": 0.9999985527482008,
+  "ks_p_greater": 0.1725478549458028,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 8,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 1 (fail)",
+    "KS p = 0.17 (fail)",
+    "0/5 samples individually p < 0.05 (fail)",
+    "family ranks 8 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "alveolus of lung (3.0%)",
+    "sputum (9.5%)",
+    "blood-air barrier (11.0%)",
+    "upper lobe of left lung (17.1%)",
+    "epithelial lining fluid (18.2%)"
+  ],
+  "top_real_anatomy": [
+    "catecholamine system (0.01%)",
+    "gABAergic system (0.02%)",
+    "histaminergic system (0.02%)",
+    "serotonergic system (0.03%)",
+    "glutamatergic system (0.04%)",
+    "cholinergic system (0.05%)",
+    "abdominal nerve plexus (0.08%)",
+    "chorionic mesenchymal villus (0.09%)",
+    "aortic plexus (0.10%)",
+    "nucleus recessus (0.10%)"
+  ]
+}

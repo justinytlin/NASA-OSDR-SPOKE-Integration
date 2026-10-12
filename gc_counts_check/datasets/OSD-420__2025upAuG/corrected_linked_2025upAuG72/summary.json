@@ -1,0 +1,25 @@
+{
+  "name": "OSD-420__2025upAuG",
+  "tissue": "spleen",
+  "tissue_label": "spleen",
+  "n_samples": 10,
+  "n_linked": 72,
+  "proxy": false,
+  "target_nodes": [
+    "spleen (rank 5)"
+  ],
+  "best_target_rank": 5,
+  "frac_samples_target_rank1": 0.0,
+  "frac_samples_target_top3": 0.0,
+  "verdict": "PARTIAL",
+  "top_linked_nodes": [
+    "blood",
+    "ectocervix",
+    "ovary",
+    "endocervix",
+    "spleen",
+    "cortex of kidney",
+    "left fallopian tube",
+    "descending thoracic aorta"
+  ]
+}

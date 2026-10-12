@@ -1,0 +1,25 @@
+{
+  "name": "OSD-164_spleen__2025upAuG",
+  "tissue": "spleen",
+  "tissue_label": "spleen",
+  "n_samples": 3,
+  "n_linked": 44,
+  "proxy": false,
+  "target_nodes": [
+    "spleen (rank 2)"
+  ],
+  "best_target_rank": 2,
+  "frac_samples_target_rank1": 0.0,
+  "frac_samples_target_top3": 1.0,
+  "verdict": "PARTIAL",
+  "top_linked_nodes": [
+    "blood",
+    "spleen",
+    "gastrocnemius",
+    "upper lobe of left lung",
+    "small intestine Peyer's patch",
+    "right lobe of liver",
+    "left adrenal gland cortex",
+    "left adrenal gland"
+  ]
+}

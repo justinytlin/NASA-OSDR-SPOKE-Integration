@@ -1,0 +1,45 @@
+Node	Node_Name	pooled_rank	mean_rank	target
+UBERON:0000178	blood	1	1.0	False
+UBERON:0002106	spleen	2	2.0	True
+UBERON:0001388	gastrocnemius	3	3.0	False
+UBERON:0008952	upper lobe of left lung	4	4.2	False
+UBERON:0035825	left adrenal gland cortex	5	5.1	False
+UBERON:0001234	left adrenal gland	6	5.7	False
+UBERON:0001114	right lobe of liver	7	7.4	False
+UBERON:0002118	right ovary	8	7.6	False
+UBERON:0002119	left ovary	9	9.1	False
+UBERON:0003454	small intestine Peyer's patch	10	10.1	False
+UBERON:0010414	omental fat pad	11	11.1	False
+UBERON:0001515	thoracic aorta	12	12.3	False
+UBERON:0002190	subcutaneous adipose tissue	13	12.4	False
+UBERON:0007610	tibial artery	14	14.4	False
+UBERON:0001416	skin of abdomen	15	14.6	False
+UBERON:0002469	esophagus mucosa	16	16.1	False
+UBERON:0001511	skin of leg	17	17.4	False
+UBERON:0001496	ascending aorta	18	17.9	False
+UBERON:0006469	C1 segment of cervical spinal cord	19	19.1	False
+UBERON:0000996	vagina	20	19.5	False
+UBERON:0001157	transverse colon	21	21.0	False
+UBERON:0002367	prostate gland	22	22.0	False
+UBERON:0001296	myometrium	23	23.4	False
+UBERON:0001120	left lobe of thyroid gland	24	24.5	False
+UBERON:0009853	body of uterus	25	24.6	False
+UBERON:0001323	tibial nerve	26	25.9	False
+UBERON:0001119	right lobe of thyroid gland	27	26.6	False
+UBERON:0002046	thyroid gland	28	28.1	False
+UBERON:0002038	substantia nigra	29	28.9	False
+UBERON:0002196	adenohypophysis	30	30.0	False
+UBERON:0001876	amygdala	31	31.0	False
+UBERON:0001874	putamen	32	32.1	False
+UBERON:0001954	Ammon's horn	33	32.9	False
+UBERON:0009834	dorsolateral prefrontal cortex	34	34.2	False
+UBERON:0009835	anterior cingulate cortex	35	35.2	False
+UBERON:0001882	nucleus accumbens	36	36.4	False
+UBERON:0002245	cerebellar hemisphere	37	36.8	False
+UBERON:0001873	caudate nucleus	38	38.4	False
+UBERON:0000007	pituitary gland	39	38.5	False
+UBERON:0001898	hypothalamus	40	39.6	False
+UBERON:0004534	right testis	41	41.3	False
+UBERON:0002810	right frontal lobe	42	41.9	False
+UBERON:0004533	left testis	43	42.7	False
+UBERON:0014890	right hemisphere of cerebellum	44	44.0	False

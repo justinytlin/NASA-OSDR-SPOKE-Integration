@@ -1,0 +1,25 @@
+{
+  "name": "OSD-900__2025upAuG",
+  "tissue": "lung",
+  "tissue_label": "lung",
+  "n_samples": 5,
+  "n_linked": 72,
+  "proxy": false,
+  "target_nodes": [
+    "upper lobe of left lung (rank 5)"
+  ],
+  "best_target_rank": 5,
+  "frac_samples_target_rank1": 0.0,
+  "frac_samples_target_top3": 0.4,
+  "verdict": "PARTIAL",
+  "top_linked_nodes": [
+    "descending thoracic aorta",
+    "tibial artery",
+    "left coronary artery",
+    "thoracic aorta",
+    "upper lobe of left lung",
+    "subcutaneous adipose tissue",
+    "ectocervix",
+    "heart"
+  ]
+}

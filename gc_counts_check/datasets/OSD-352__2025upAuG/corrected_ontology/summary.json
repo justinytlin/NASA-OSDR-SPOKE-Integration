@@ -1,0 +1,47 @@
+{
+  "name": "OSD-352__2025upAuG",
+  "tissue": "brain",
+  "tissue_label": "brain",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "score_key": "scores",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-352__2025upAuG_GC_ranks.npz",
+  "n_samples": 3,
+  "n_anatomy": 13895,
+  "family_regex": "brain|cerebr|cerebell|hippocamp|thalam|amygdala|striatum|telenceph|dienceph|midbrain|hindbrain|\\bpons\\b|medulla oblongata|olfactory bulb|forebrain|neocortex|isocortex|pallium|basal ganglia|substantia nigra|corpus callosum",
+  "family_exclude": "cerebral vein|cerebral artery|braincase|Myxin|ascidian|protocerebrum|cerebral ganglion",
+  "n_family_nodes": 1783,
+  "family_median_pct": 6.515533165407221,
+  "in_top_2_5pct": 340,
+  "in_top_10pct": 1297,
+  "mwu_p_less": 0.0,
+  "ks_p_greater": 0.0,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 3,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 0 (ok)",
+    "KS p = 0 (ok)",
+    "3/3 samples individually p < 0.05 (ok)",
+    "family ranks 3 of 15 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "primary motor cortex layer 1 (0.0%)",
+    "primary motor cortex layer 5 (0.0%)",
+    "primary motor cortex layer 6 (0.0%)",
+    "primary somatosensory cortex layer 6 (0.0%)",
+    "cortical layer IV/V (0.0%)"
+  ],
+  "top_real_anatomy": [
+    "primary motor cortex layer 1 (0.01%)",
+    "primary motor cortex layer 5 (0.01%)",
+    "primary motor cortex layer 6 (0.02%)",
+    "primary somatosensory cortex layer 6 (0.03%)",
+    "cortical layer IV/V (0.04%)",
+    "lower layers of the cortex (0.04%)",
+    "cortical layer II/III (0.05%)",
+    "cortical layer V/VI (0.06%)",
+    "upper layers of the cortex (0.06%)",
+    "laminar subdivision of the cortex (0.07%)"
+  ]
+}

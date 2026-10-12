@@ -1,0 +1,47 @@
+{
+  "name": "OSD-564__2025upAuG",
+  "tissue": "hippocampus",
+  "tissue_label": "hippocampus",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "score_key": "scores",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-564__2025upAuG_GC_ranks.npz",
+  "n_samples": 5,
+  "n_anatomy": 13895,
+  "family_regex": "hippocamp|dentate gyrus|Ammon|subiculum",
+  "family_exclude": null,
+  "n_family_nodes": 116,
+  "family_median_pct": 4.736955739474631,
+  "in_top_2_5pct": 15,
+  "in_top_10pct": 111,
+  "mwu_p_less": 1.7047530155200184e-64,
+  "ks_p_greater": 7.189157573479511e-78,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 1,
+  "verdict": "CLEAR",
+  "criteria": [
+    "pooled Mann-Whitney p = 1.7e-64 (ok)",
+    "KS p = 7.2e-78 (ok)",
+    "5/5 samples individually p < 0.05 (ok)",
+    "family ranks 1 of 14 organ families by median percentile (ok)"
+  ],
+  "best_family_nodes": [
+    "hilus of dentate gyrus (0.4%)",
+    "induseum griseum (0.7%)",
+    "anterior column of fornix (0.7%)",
+    "precommissural fornix of forebrain (0.8%)",
+    "CA1 field of hippocampus (1.0%)"
+  ],
+  "top_real_anatomy": [
+    "primary motor cortex layer 1 (0.01%)",
+    "primary motor cortex layer 5 (0.01%)",
+    "primary motor cortex layer 6 (0.02%)",
+    "laminar subdivision of the cortex (0.03%)",
+    "lower layers of the cortex (0.04%)",
+    "upper layers of the cortex (0.05%)",
+    "cortical layer IV/V (0.05%)",
+    "cortical layer V/VI (0.05%)",
+    "cortical layer II/III (0.06%)",
+    "primary somatosensory cortex layer 6 (0.07%)"
+  ]
+}

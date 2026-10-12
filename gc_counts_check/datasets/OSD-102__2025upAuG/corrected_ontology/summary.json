@@ -1,0 +1,47 @@
+{
+  "name": "OSD-102__2025upAuG",
+  "tissue": "kidney",
+  "tissue_label": "kidney",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "score_key": "scores",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-102__2025upAuG_GC_ranks.npz",
+  "n_samples": 6,
+  "n_anatomy": 13895,
+  "family_regex": "kidney|renal|nephron|glomerul",
+  "family_exclude": "adrenal|suprarenal|interrenal|nephridi|Hatschek|lieno|olfactory|cerebell|preglomerular",
+  "n_family_nodes": 275,
+  "family_median_pct": 42.40973971452561,
+  "in_top_2_5pct": 8,
+  "in_top_10pct": 31,
+  "mwu_p_less": 0.0008341794967672382,
+  "ks_p_greater": 6.381697497090101e-05,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 5,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.00083 (ok)",
+    "KS p = 6.4e-05 (ok)",
+    "6/6 samples individually p < 0.05 (ok)",
+    "family ranks 5 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "proximal tubule (0.0%)",
+    "nephron tubule (0.1%)",
+    "loop of Henle (0.3%)",
+    "renal papilla (1.1%)",
+    "proximal tubular epithelium (1.9%)"
+  ],
+  "top_real_anatomy": [
+    "mollusc venom (0.01%)",
+    "baroreceptor (0.02%)",
+    "arterial baroreceptor (0.03%)",
+    "proximal tubule (0.03%)",
+    "low-pressure baroreceptor (0.03%)",
+    "cardiac baroreceptor (0.05%)",
+    "pulmonary baroreceptor (0.05%)",
+    "vein baroreceptor (0.05%)",
+    "cardiac Purkinje fiber (0.07%)",
+    "muscle tissue (0.08%)"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "name": "OSD-562__2025upAuG",
+  "tissue": "hippocampus",
+  "tissue_label": "hippocampus",
+  "n_samples": 12,
+  "n_linked": 60,
+  "proxy": false,
+  "target_nodes": [
+    "Ammon's horn (rank 4)"
+  ],
+  "best_target_rank": 4,
+  "frac_samples_target_rank1": 0.0,
+  "frac_samples_target_top3": 0.0,
+  "verdict": "PARTIAL",
+  "top_linked_nodes": [
+    "dorsolateral prefrontal cortex",
+    "anterior cingulate cortex",
+    "right frontal lobe",
+    "Ammon's horn",
+    "amygdala",
+    "nucleus accumbens",
+    "putamen",
+    "caudate nucleus"
+  ]
+}

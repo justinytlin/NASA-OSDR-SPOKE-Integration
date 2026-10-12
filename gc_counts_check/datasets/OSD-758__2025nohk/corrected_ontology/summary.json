@@ -1,0 +1,47 @@
+{
+  "name": "OSD-758__2025nohk",
+  "tissue": "retina",
+  "tissue_label": "retina",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "score_key": "scores",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-758__2025nohk_GC_ranks.npz",
+  "n_samples": 12,
+  "n_anatomy": 13895,
+  "family_regex": "retina|photoreceptor|optic disc|fovea centralis|foveola|macula lutea|parafovea|perifovea",
+  "family_exclude": "retinaculum",
+  "n_family_nodes": 52,
+  "family_median_pct": 8.453580424613168,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 31,
+  "mwu_p_less": 1.2585300538497923e-23,
+  "ks_p_greater": 1.9006253571072843e-30,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 3,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 1.3e-23 (ok)",
+    "KS p = 1.9e-30 (ok)",
+    "12/12 samples individually p < 0.05 (ok)",
+    "family ranks 3 of 15 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "inner nuclear layer of retina (5.3%)",
+    "optic disc (5.7%)",
+    "retina (6.4%)",
+    "fovea centralis (7.5%)",
+    "Henle's fiber layer (8.0%)"
+  ],
+  "top_real_anatomy": [
+    "intraculminate fissure of cerebellum (0.01%)",
+    "vestibulolateralis lobe (0.02%)",
+    "parallel fiber, bifurcated (0.03%)",
+    "parallel fiber (0.03%)",
+    "granular eminence (0.04%)",
+    "superficial feature part of the cerebellum (0.04%)",
+    "eminentia granularis (0.05%)",
+    "gross anatomical parts of the cerebellum (0.05%)",
+    "vestibulocerebellum (0.06%)",
+    "white matter lamina of cerebellum (0.07%)"
+  ]
+}

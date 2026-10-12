@@ -1,0 +1,47 @@
+{
+  "name": "OSD-813__2025upAuG",
+  "tissue": "placenta",
+  "tissue_label": "placenta",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "score_key": "scores",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-813__2025upAuG_GC_ranks.npz",
+  "n_samples": 15,
+  "n_anatomy": 13895,
+  "family_regex": "placent|chorioallantoic|decidua|trophoblast|chorionic (?:plate|villus)|labyrinth layer|junctional zone|ectoplacental",
+  "family_exclude": null,
+  "n_family_nodes": 40,
+  "family_median_pct": 28.88449082403742,
+  "in_top_2_5pct": 8,
+  "in_top_10pct": 8,
+  "mwu_p_less": 6.380077725262141e-05,
+  "ks_p_greater": 1.1108158225967568e-05,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 4,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 6.4e-05 (ok)",
+    "KS p = 1.1e-05 (ok)",
+    "15/15 samples individually p < 0.05 (ok)",
+    "family ranks 4 of 15 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "placenta (0.9%)",
+    "zonary placenta (0.9%)",
+    "hemochorial placenta (0.9%)",
+    "endotheliochorial placenta (0.9%)",
+    "cotyledonary placenta (1.0%)"
+  ],
+  "top_real_anatomy": [
+    "supraclavicular lymph node (0.01%)",
+    "left supraclavicular lymph node (0.02%)",
+    "right supraclavicular lymph node (0.02%)",
+    "Virchow's lymph node (0.03%)",
+    "catecholamine system (0.04%)",
+    "gABAergic system (0.06%)",
+    "glutamatergic system (0.06%)",
+    "histaminergic system (0.06%)",
+    "cholinergic system (0.07%)",
+    "serotonergic system (0.08%)"
+  ]
+}

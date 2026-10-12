@@ -1,0 +1,26 @@
+{
+  "name": "OSD-243__2025upAuG",
+  "tissue": "skin",
+  "tissue_label": "skin",
+  "n_samples": 19,
+  "n_linked": 60,
+  "proxy": false,
+  "target_nodes": [
+    "skin of abdomen (rank 1)",
+    "skin of leg (rank 2)"
+  ],
+  "best_target_rank": 1,
+  "frac_samples_target_rank1": 0.3684210526315789,
+  "frac_samples_target_top3": 0.7894736842105263,
+  "verdict": "CLEAR",
+  "top_linked_nodes": [
+    "skin of abdomen",
+    "skin of leg",
+    "descending thoracic aorta",
+    "gastrocnemius",
+    "muscle of leg",
+    "heart left ventricle",
+    "esophagus mucosa",
+    "right adrenal gland cortex"
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "name": "OSD-401_gastrocnemius__2025upAuG",
+  "tissue": "skeletal muscle",
+  "tissue_label": "gastrocnemius",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "score_key": "scores",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-401_gastrocnemius__2025upAuG_GC_ranks.npz",
+  "n_samples": 3,
+  "n_anatomy": 13895,
+  "family_regex": "skeletal muscle|gastrocnemius|quadriceps|soleus|tibialis",
+  "family_exclude": null,
+  "n_family_nodes": 501,
+  "family_median_pct": 4.025428811323018,
+  "in_top_2_5pct": 198,
+  "in_top_10pct": 291,
+  "mwu_p_less": 5.253568846265477e-156,
+  "ks_p_greater": 1.4046776311927258e-131,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 2,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 5.3e-156 (ok)",
+    "KS p = 1.4e-131 (ok)",
+    "3/3 samples individually p < 0.05 (ok)",
+    "family ranks 2 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "arrector muscle (0.0%)",
+    "longitudinal hypochordal (0.0%)",
+    "hypural musculature (0.0%)",
+    "interradialis (0.0%)",
+    "abductor muscle (0.0%)"
+  ],
+  "top_real_anatomy": [
+    "arrector muscle (0.01%)",
+    "longitudinal hypochordal (0.02%)",
+    "hypural musculature (0.02%)",
+    "interradialis (0.03%)",
+    "abductor muscle (0.04%)",
+    "ventral pelvic arrector (0.05%)",
+    "intrinsic muscle (0.06%)",
+    "dorsal pelvic arrector (0.06%)",
+    "pelvic abductor profundus (0.06%)",
+    "superficial pelvic abductor (0.07%)"
+  ]
+}

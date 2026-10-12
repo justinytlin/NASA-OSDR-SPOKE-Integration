@@ -1,0 +1,25 @@
+{
+  "name": "OSD-813__2025upAuG",
+  "tissue": "placenta",
+  "tissue_label": "placenta",
+  "n_samples": 15,
+  "n_linked": 72,
+  "proxy": false,
+  "target_nodes": [
+    "placenta (rank 5)"
+  ],
+  "best_target_rank": 5,
+  "frac_samples_target_rank1": 0.0,
+  "frac_samples_target_top3": 0.0,
+  "verdict": "PARTIAL",
+  "top_linked_nodes": [
+    "ectocervix",
+    "descending thoracic aorta",
+    "cortex of kidney",
+    "endocervix",
+    "placenta",
+    "left fallopian tube",
+    "heart",
+    "urinary bladder"
+  ]
+}

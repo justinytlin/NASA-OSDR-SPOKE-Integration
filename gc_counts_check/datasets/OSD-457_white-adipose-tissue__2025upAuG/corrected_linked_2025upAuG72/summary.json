@@ -1,0 +1,26 @@
+{
+  "name": "OSD-457_white-adipose-tissue__2025upAuG",
+  "tissue": "adipose tissue",
+  "tissue_label": "white adipose tissue",
+  "n_samples": 6,
+  "n_linked": 72,
+  "proxy": false,
+  "target_nodes": [
+    "subcutaneous adipose tissue (rank 1)",
+    "omental fat pad (rank 5)"
+  ],
+  "best_target_rank": 1,
+  "frac_samples_target_rank1": 1.0,
+  "frac_samples_target_top3": 1.0,
+  "verdict": "CLEAR",
+  "top_linked_nodes": [
+    "subcutaneous adipose tissue",
+    "descending thoracic aorta",
+    "heart",
+    "ectocervix",
+    "omental fat pad",
+    "liver",
+    "gastrocnemius",
+    "brain"
+  ]
+}

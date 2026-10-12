@@ -1,0 +1,26 @@
+{
+  "name": "OSD-666__2025upAuG",
+  "tissue": "skeletal muscle",
+  "tissue_label": "quadriceps",
+  "n_samples": 10,
+  "n_linked": 72,
+  "proxy": false,
+  "target_nodes": [
+    "gastrocnemius (rank 1)",
+    "muscle of leg (rank 2)"
+  ],
+  "best_target_rank": 1,
+  "frac_samples_target_rank1": 1.0,
+  "frac_samples_target_top3": 1.0,
+  "verdict": "CLEAR",
+  "top_linked_nodes": [
+    "gastrocnemius",
+    "muscle of leg",
+    "heart left ventricle",
+    "heart",
+    "right atrium auricular region",
+    "brain",
+    "ectocervix",
+    "prefrontal cortex"
+  ]
+}

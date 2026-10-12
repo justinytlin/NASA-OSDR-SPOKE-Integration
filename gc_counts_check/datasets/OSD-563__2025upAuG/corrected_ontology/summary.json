@@ -1,0 +1,47 @@
+{
+  "name": "OSD-563__2025upAuG",
+  "tissue": "cerebellum",
+  "tissue_label": "cerebellum",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "score_key": "scores",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-563__2025upAuG_GC_ranks.npz",
+  "n_samples": 5,
+  "n_anatomy": 13895,
+  "family_regex": "cerebell",
+  "family_exclude": "artery|vein|spinocerebellar|cerebellar peduncle (?:artery|vein)",
+  "n_family_nodes": 115,
+  "family_median_pct": 2.634041021950342,
+  "in_top_2_5pct": 55,
+  "in_top_10pct": 87,
+  "mwu_p_less": 1.7266916456365123e-51,
+  "ks_p_greater": 4.3459210164054404e-47,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 1,
+  "verdict": "CLEAR",
+  "criteria": [
+    "pooled Mann-Whitney p = 1.7e-51 (ok)",
+    "KS p = 4.3e-47 (ok)",
+    "5/5 samples individually p < 0.05 (ok)",
+    "family ranks 1 of 15 organ families by median percentile (ok)"
+  ],
+  "best_family_nodes": [
+    "precentral fissure of cerebellum (0.3%)",
+    "paramedian lobule (0.4%)",
+    "cerebellum vermis lobule (0.4%)",
+    "cerebellum posterior vermis (0.4%)",
+    "cerebellum vermis lobule VIII (0.4%)"
+  ],
+  "top_real_anatomy": [
+    "primary motor cortex layer 6 (0.12%)",
+    "primary motor cortex layer 5 (0.12%)",
+    "primary motor cortex layer 1 (0.13%)",
+    "perforant path (0.16%)",
+    "laminar subdivision of the cortex (0.17%)",
+    "intralaminar nuclear group (0.17%)",
+    "cortical layer II/III (0.17%)",
+    "cortical layer IV/V (0.18%)",
+    "lower layers of the cortex (0.18%)",
+    "upper layers of the cortex (0.18%)"
+  ]
+}

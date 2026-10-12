@@ -1,0 +1,47 @@
+{
+  "name": "OSD-254__2025upAuG",
+  "tissue": "skin",
+  "tissue_label": "skin",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "score_key": "scores",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-254__2025upAuG_GC_ranks.npz",
+  "n_samples": 20,
+  "n_anatomy": 13895,
+  "family_regex": "\\bskin|epidermis|dermis",
+  "family_exclude": "dermatome|hypodermis",
+  "n_family_nodes": 305,
+  "family_median_pct": 29.203670385030584,
+  "in_top_2_5pct": 2,
+  "in_top_10pct": 55,
+  "mwu_p_less": 9.776772466292648e-23,
+  "ks_p_greater": 6.817310734575138e-19,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 3,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 9.8e-23 (ok)",
+    "KS p = 6.8e-19 (ok)",
+    "20/20 samples individually p < 0.05 (ok)",
+    "family ranks 3 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "lower eyelash (1.9%)",
+    "upper eyelash (2.2%)",
+    "mole (2.9%)",
+    "pollical pad (3.2%)",
+    "manual autopod pad (3.6%)"
+  ],
+  "top_real_anatomy": [
+    "serotonergic system (1.25%)",
+    "cholinergic system (1.25%)",
+    "gABAergic system (1.25%)",
+    "histaminergic system (1.27%)",
+    "glutamatergic system (1.27%)",
+    "catecholamine system (1.28%)",
+    "lymphomyeloid tissue (1.45%)",
+    "integumental surface (1.56%)",
+    "morphological boundary (1.59%)",
+    "superior gemellus muscle (1.60%)"
+  ]
+}

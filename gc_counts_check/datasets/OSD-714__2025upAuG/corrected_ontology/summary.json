@@ -1,0 +1,47 @@
+{
+  "name": "OSD-714__2025upAuG",
+  "tissue": "skeletal muscle",
+  "tissue_label": "soleus",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "score_key": "scores",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-714__2025upAuG_GC_ranks.npz",
+  "n_samples": 9,
+  "n_anatomy": 13895,
+  "family_regex": "skeletal muscle|gastrocnemius|quadriceps|soleus|tibialis",
+  "family_exclude": null,
+  "n_family_nodes": 501,
+  "family_median_pct": 5.729479029227139,
+  "in_top_2_5pct": 198,
+  "in_top_10pct": 285,
+  "mwu_p_less": 9.603934032652478e-155,
+  "ks_p_greater": 4.373532727563408e-136,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 2,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 9.6e-155 (ok)",
+    "KS p = 4.4e-136 (ok)",
+    "9/9 samples individually p < 0.05 (ok)",
+    "family ranks 2 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "hypural musculature (0.0%)",
+    "interradialis (0.0%)",
+    "longitudinal hypochordal (0.0%)",
+    "arrector muscle (0.0%)",
+    "abductor muscle (0.1%)"
+  ],
+  "top_real_anatomy": [
+    "cardiac Purkinje fiber (0.02%)",
+    "hypural musculature (0.02%)",
+    "interradialis (0.03%)",
+    "longitudinal hypochordal (0.03%)",
+    "cardiac muscle tissue of papillary muscle (0.04%)",
+    "arrector muscle (0.04%)",
+    "Purkinje fiber network (0.05%)",
+    "abductor muscle (0.05%)",
+    "intrinsic muscle (0.07%)",
+    "ventral pelvic arrector (0.07%)"
+  ]
+}

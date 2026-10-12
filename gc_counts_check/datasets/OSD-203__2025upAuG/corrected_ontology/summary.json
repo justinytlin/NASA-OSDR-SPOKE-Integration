@@ -1,0 +1,47 @@
+{
+  "name": "OSD-203__2025upAuG",
+  "tissue": "retina",
+  "tissue_label": "retina",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "score_key": "scores",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-203__2025upAuG_GC_ranks.npz",
+  "n_samples": 15,
+  "n_anatomy": 13895,
+  "family_regex": "retina|photoreceptor|optic disc|fovea centralis|foveola|macula lutea|parafovea|perifovea",
+  "family_exclude": "retinaculum",
+  "n_family_nodes": 52,
+  "family_median_pct": 16.470672903922278,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 4,
+  "mwu_p_less": 1.5383067264903872e-14,
+  "ks_p_greater": 2.2261963956571215e-18,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 3,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 1.5e-14 (ok)",
+    "KS p = 2.2e-18 (ok)",
+    "15/15 samples individually p < 0.05 (ok)",
+    "family ranks 3 of 15 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "optic disc (5.0%)",
+    "fovea centralis (5.4%)",
+    "macula lutea (6.9%)",
+    "retina (9.1%)",
+    "central retinal artery (11.3%)"
+  ],
+  "top_real_anatomy": [
+    "paramedian lobule (0.01%)",
+    "cerebellum vermis lobule (0.02%)",
+    "cerebellum posterior vermis (0.02%)",
+    "cerebellum vermis lobule VIII (0.03%)",
+    "cerebellum vermis lobule VII (0.04%)",
+    "central lobule (0.04%)",
+    "cerebellum vermis lobule VI (0.05%)",
+    "cerebellum vermis lobule II (0.05%)",
+    "cerebellum vermis lobule III (0.06%)",
+    "cerebellum anterior vermis (0.07%)"
+  ]
+}

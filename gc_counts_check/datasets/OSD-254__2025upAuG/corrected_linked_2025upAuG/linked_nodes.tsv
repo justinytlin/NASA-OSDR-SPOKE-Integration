@@ -1,0 +1,45 @@
+Node	Node_Name	pooled_rank	mean_rank	target
+UBERON:0001416	skin of abdomen	1	4.3	True
+UBERON:0007610	tibial artery	2	4.95	False
+UBERON:0001511	skin of leg	3	5.3	True
+UBERON:0001515	thoracic aorta	4	5.9	False
+UBERON:0001388	gastrocnemius	5	6.0	False
+UBERON:0002190	subcutaneous adipose tissue	6	7.45	False
+UBERON:0000996	vagina	7	8.9	False
+UBERON:0001496	ascending aorta	8	9.25	False
+UBERON:0002469	esophagus mucosa	9	9.4	False
+UBERON:0002118	right ovary	10	10.05	False
+UBERON:0009853	body of uterus	11	11.15	False
+UBERON:0002119	left ovary	12	12.25	False
+UBERON:0010414	omental fat pad	13	12.85	False
+UBERON:0001114	right lobe of liver	14	14.35	False
+UBERON:0001296	myometrium	15	14.55	False
+UBERON:0001323	tibial nerve	16	15.05	False
+UBERON:0001234	left adrenal gland	17	17.1	False
+UBERON:0035825	left adrenal gland cortex	18	17.15	False
+UBERON:0000178	blood	19	19.25	False
+UBERON:0002367	prostate gland	20	20.05	False
+UBERON:0008952	upper lobe of left lung	21	20.55	False
+UBERON:0006469	C1 segment of cervical spinal cord	22	21.7	False
+UBERON:0001157	transverse colon	23	22.25	False
+UBERON:0001120	left lobe of thyroid gland	24	23.7	False
+UBERON:0001119	right lobe of thyroid gland	25	24.95	False
+UBERON:0002046	thyroid gland	26	25.85	False
+UBERON:0003454	small intestine Peyer's patch	27	26.8	False
+UBERON:0002038	substantia nigra	28	28.05	False
+UBERON:0002196	adenohypophysis	29	29.0	False
+UBERON:0002106	spleen	30	29.65	False
+UBERON:0002245	cerebellar hemisphere	31	29.8	False
+UBERON:0001876	amygdala	32	31.8	False
+UBERON:0001874	putamen	33	32.7	False
+UBERON:0001954	Ammon's horn	34	33.0	False
+UBERON:0001873	caudate nucleus	35	36.2	False
+UBERON:0001882	nucleus accumbens	36	36.65	False
+UBERON:0009835	anterior cingulate cortex	37	37.3	False
+UBERON:0009834	dorsolateral prefrontal cortex	38	37.95	False
+UBERON:0004534	right testis	39	38.25	False
+UBERON:0000007	pituitary gland	40	38.45	False
+UBERON:0014890	right hemisphere of cerebellum	41	39.65	False
+UBERON:0004533	left testis	42	39.65	False
+UBERON:0002810	right frontal lobe	43	40.3	False
+UBERON:0001898	hypothalamus	44	40.55	False

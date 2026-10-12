@@ -1,0 +1,25 @@
+{
+  "name": "OSD-173__2025upAuG",
+  "tissue": "liver",
+  "tissue_label": "liver",
+  "n_samples": 2,
+  "n_linked": 60,
+  "proxy": false,
+  "target_nodes": [
+    "right lobe of liver (rank 1)"
+  ],
+  "best_target_rank": 1,
+  "frac_samples_target_rank1": 1.0,
+  "frac_samples_target_top3": 1.0,
+  "verdict": "CLEAR",
+  "top_linked_nodes": [
+    "right lobe of liver",
+    "adult mammalian kidney",
+    "left adrenal gland",
+    "right adrenal gland",
+    "gastrocnemius",
+    "left adrenal gland cortex",
+    "heart left ventricle",
+    "right adrenal gland cortex"
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "name": "OSD-506__2025noAeG",
+  "tissue": "spleen",
+  "tissue_label": "spleen",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "score_key": "scores",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-506__2025noAeG_GC_ranks.npz",
+  "n_samples": 10,
+  "n_anatomy": 13895,
+  "family_regex": "spleen|splenic",
+  "family_exclude": "flexure",
+  "n_family_nodes": 29,
+  "family_median_pct": 97.21338611011154,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 0,
+  "mwu_p_less": 0.9999999999999313,
+  "ks_p_greater": 0.9954310875120589,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 14,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 1 (fail)",
+    "KS p = 1 (fail)",
+    "0/10 samples individually p < 0.05 (fail)",
+    "family ranks 14 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "spleen follicular dendritic cell network (33.8%)",
+    "spleen germinal center (34.9%)",
+    "spleen secondary B follicle (43.2%)",
+    "spleen B cell corona (65.4%)",
+    "spleen primary B follicle (89.2%)"
+  ],
+  "top_real_anatomy": [
+    "lymph node germinal center (0.01%)",
+    "lymph node germinal center light zone (0.01%)",
+    "germinal center (0.02%)",
+    "lymph node follicle marginal zone (0.03%)",
+    "tonsil germinal center (0.04%)",
+    "lymphoid nodule (0.05%)",
+    "descending colon (0.05%)",
+    "lymphoid tissue (0.05%)",
+    "ascending colon (0.06%)",
+    "appendix lymphoid tissue (0.08%)"
+  ]
+}

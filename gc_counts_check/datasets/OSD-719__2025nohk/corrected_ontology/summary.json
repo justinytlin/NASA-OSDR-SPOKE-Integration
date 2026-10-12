@@ -1,0 +1,47 @@
+{
+  "name": "OSD-719__2025nohk",
+  "tissue": "whole blood",
+  "tissue_label": "blood",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "score_key": "scores",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-719__2025nohk_GC_ranks.npz",
+  "n_samples": 6,
+  "n_anatomy": 13895,
+  "family_regex": "\\bblood\\b|plasma|serum",
+  "family_exclude": "blood (?:vessel|island|brain|nerve|vasculature)|blood-|vessel|barrier|plasma membrane|sinus|feather",
+  "n_family_nodes": 8,
+  "family_median_pct": 97.6310423413698,
+  "in_top_2_5pct": 2,
+  "in_top_10pct": 3,
+  "mwu_p_less": 0.884950291386229,
+  "ks_p_greater": 0.11767217624613775,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 15,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.88 (fail)",
+    "KS p = 0.12 (fail)",
+    "0/6 samples individually p < 0.05 (fail)",
+    "family ranks 15 of 15 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "blood serum (0.1%)",
+    "blood plasma (0.4%)",
+    "umbilical cord blood (3.0%)",
+    "arterial blood (95.5%)",
+    "venous blood (99.8%)"
+  ],
+  "top_real_anatomy": [
+    "lymph node germinal center (0.01%)",
+    "secondary follicle corona (0.01%)",
+    "secondary nodular lymphoid tissue (0.02%)",
+    "immune system (0.03%)",
+    "lymph node germinal center light zone (0.04%)",
+    "lymph node secondary follicle (0.04%)",
+    "spleen B cell corona (0.05%)",
+    "blood serum (0.06%)",
+    "spleen secondary B follicle (0.07%)",
+    "lymph node interfollicular cortex (0.07%)"
+  ]
+}

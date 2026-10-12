@@ -1,0 +1,47 @@
+{
+  "name": "OSD-420__2025upAuG",
+  "tissue": "spleen",
+  "tissue_label": "spleen",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "score_key": "scores",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-420__2025upAuG_GC_ranks.npz",
+  "n_samples": 10,
+  "n_anatomy": 13895,
+  "family_regex": "spleen|splenic",
+  "family_exclude": "flexure",
+  "n_family_nodes": 29,
+  "family_median_pct": 36.576466354803884,
+  "in_top_2_5pct": 4,
+  "in_top_10pct": 7,
+  "mwu_p_less": 0.014479032244698108,
+  "ks_p_greater": 0.07160935740277784,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 6,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.014 (fail)",
+    "KS p = 0.072 (fail)",
+    "10/10 samples individually p < 0.05 (ok)",
+    "family ranks 6 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "spleen (0.7%)",
+    "hilum of spleen (0.9%)",
+    "spleen smooth muscle (1.1%)",
+    "vasculature of spleen (1.5%)",
+    "spleen perifollicular zone (3.9%)"
+  ],
+  "top_real_anatomy": [
+    "extensor caudae lateralis muscle (0.04%)",
+    "extensor caudae muscle (0.04%)",
+    "vertebral venous plexus (0.04%)",
+    "right supraclavicular lymph node (0.06%)",
+    "supraclavicular lymph node (0.06%)",
+    "superior mediastinal lymph node (0.06%)",
+    "left supraclavicular lymph node (0.06%)",
+    "external vertebral venous plexus (0.07%)",
+    "extensor caudae medialis muscle (0.07%)",
+    "orbitosphenoid ossification center (0.07%)"
+  ]
+}

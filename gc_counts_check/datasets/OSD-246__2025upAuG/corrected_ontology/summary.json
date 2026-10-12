@@ -1,0 +1,47 @@
+{
+  "name": "OSD-246__2025upAuG",
+  "tissue": "spleen",
+  "tissue_label": "spleen",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "score_key": "scores",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-246__2025upAuG_GC_ranks.npz",
+  "n_samples": 16,
+  "n_anatomy": 13895,
+  "family_regex": "spleen|splenic",
+  "family_exclude": "flexure",
+  "n_family_nodes": 29,
+  "family_median_pct": 27.330874415257284,
+  "in_top_2_5pct": 3,
+  "in_top_10pct": 6,
+  "mwu_p_less": 0.004607075847554566,
+  "ks_p_greater": 0.006483088125523691,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 3,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.0046 (ok)",
+    "KS p = 0.0065 (ok)",
+    "16/16 samples individually p < 0.05 (ok)",
+    "family ranks 3 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "spleen smooth muscle (1.4%)",
+    "spleen (1.5%)",
+    "hilum of spleen (1.9%)",
+    "vasculature of spleen (4.3%)",
+    "splenic arteriole (7.1%)"
+  ],
+  "top_real_anatomy": [
+    "hematopoietic system (0.01%)",
+    "germinal center (0.01%)",
+    "left supraclavicular lymph node (0.03%)",
+    "supraclavicular lymph node (0.03%)",
+    "Virchow's lymph node (0.04%)",
+    "right supraclavicular lymph node (0.04%)",
+    "external vertebral venous plexus (0.10%)",
+    "paragigantocellular nucleus (0.12%)",
+    "dorsal paragigantocellular nucleus (0.13%)",
+    "one-pass circulatory system (0.15%)"
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "name": "OSD-289__2025upAuG",
+  "tissue": "thymus",
+  "tissue_label": "thymus",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "score_key": "scores",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-289__2025upAuG_GC_ranks.npz",
+  "n_samples": 6,
+  "n_anatomy": 13895,
+  "family_regex": "thym",
+  "family_exclude": null,
+  "n_family_nodes": 17,
+  "family_median_pct": 83.94866258846109,
+  "in_top_2_5pct": 1,
+  "in_top_10pct": 5,
+  "mwu_p_less": 0.9498437481000374,
+  "ks_p_greater": 0.19940253243106856,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 13,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.95 (fail)",
+    "KS p = 0.2 (fail)",
+    "0/6 samples individually p < 0.05 (fail)",
+    "family ranks 13 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "thymus lymphoid tissue (1.2%)",
+    "thymus (3.2%)",
+    "cervical thymus (8.5%)",
+    "deep cervical thymus (8.5%)",
+    "superficial cervical thymus (8.5%)"
+  ],
+  "top_real_anatomy": [
+    "right supraclavicular lymph node (0.01%)",
+    "Virchow's lymph node (0.01%)",
+    "left supraclavicular lymph node (0.02%)",
+    "supraclavicular lymph node (0.03%)",
+    "catecholamine system (0.04%)",
+    "glutamatergic system (0.05%)",
+    "histaminergic system (0.06%)",
+    "cholinergic system (0.06%)",
+    "serotonergic system (0.07%)",
+    "gABAergic system (0.08%)"
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "name": "OSD-457_white-adipose-tissue__2025upAuG",
+  "tissue": "adipose tissue",
+  "tissue_label": "white adipose tissue",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "score_key": "scores",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-457_white-adipose-tissue__2025upAuG_GC_ranks.npz",
+  "n_samples": 6,
+  "n_anatomy": 13895,
+  "family_regex": "adipose|fat pad|\\bfat\\b|panniculus",
+  "family_exclude": "adipose fin|adipose eyelid|arthropod",
+  "n_family_nodes": 46,
+  "family_median_pct": 31.01055535564352,
+  "in_top_2_5pct": 8,
+  "in_top_10pct": 14,
+  "mwu_p_less": 2.550306126722472e-05,
+  "ks_p_greater": 1.5045431815777236e-05,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 3,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 2.6e-05 (ok)",
+    "KS p = 1.5e-05 (ok)",
+    "6/6 samples individually p < 0.05 (ok)",
+    "family ranks 3 of 15 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "subcutaneous adipose tissue (0.6%)",
+    "subcutaneous abdominal adipose tissue (0.6%)",
+    "panniculus adiposus (0.7%)",
+    "white adipose tissue (0.8%)",
+    "intramuscular adipose tissue (1.4%)"
+  ],
+  "top_real_anatomy": [
+    "superior gemellus muscle (0.01%)",
+    "inferior gemellus muscle (0.02%)",
+    "lateral crico-arytenoid (0.02%)",
+    "gemellus muscle (0.03%)",
+    "two-pass circulatory system (0.04%)",
+    "common plantar digital arteries (0.04%)",
+    "one-pass circulatory system (0.05%)",
+    "ossification center (0.06%)",
+    "thoracic aortic plexus (0.07%)",
+    "zygomaticus minor muscle (0.07%)"
+  ]
+}

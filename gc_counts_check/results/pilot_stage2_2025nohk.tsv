@@ -1,0 +1,11 @@
+tissue	rank_2019	n_linked_2019	verdict_2019	onto_2019	onto_pct_2019	rank_2025nohk	n_linked_2025nohk	verdict_2025nohk	targets_2025nohk	top_2025nohk	onto_2025nohk	onto_pct_2025nohk
+retina	1	74	CLEAR	CLEAR	0.2		92	NO LINKED NODE (proxy)			PARTIAL	8.5
+kidney	1	74	CLEAR	CLEAR	6.2	20.0	92	NONE	cortex of kidney (rank 20); adult mammalian kidney (rank 84)	cerebellum, corpus callosum, skeletal muscle tissue	PARTIAL	44.9
+heart	2	74	PARTIAL	PARTIAL	22.1	7.0	92	PARTIAL	apex of heart (rank 7); right coronary artery (rank 9)	skeletal muscle tissue, popliteal artery, cerebellum	PARTIAL	36.0
+spleen	2	74	PARTIAL (proxy)	PARTIAL	8.3	74.0	92	NONE	spleen (rank 74)	skeletal muscle tissue, adrenal gland, popliteal artery	NONE	93.8
+liver	57	74	NONE	NONE	57.1	31.0	92	NONE	liver (rank 31); right lobe of liver (rank 73)	corpus callosum, skeletal muscle tissue, esophagus	NONE	81.7
+adrenal gland	37	74	NONE	NONE	99.6	5.0	92	PARTIAL	adrenal gland (rank 5); right adrenal gland cortex (rank 38)	skeletal muscle tissue, cerebellum, popliteal artery	NONE	79.4
+lung	69	74	NONE	PARTIAL	47.3	11.0	92	NONE	right lung (rank 11); lung (rank 18)	skeletal muscle tissue, popliteal artery, adrenal gland	NONE	47.3
+cerebellum	68	74	NONE	NONE	80.4	1.0	92	CLEAR	cerebellum (rank 1); right hemisphere of cerebellum (rank 26)	cerebellum, corpus callosum, skeletal muscle tissue	PARTIAL	8.4
+white adipose tissue	65	74	NONE	NONE	36.6	10.0	92	NONE	adipose tissue (rank 10); subcutaneous adipose tissue (rank 54)	cerebellum, skeletal muscle tissue, corpus callosum	NONE	90.0
+blood	13	74	NONE	NONE	89.9	79.0	92	NONE	blood (rank 79)	corpus callosum, skeletal muscle tissue, cerebellum	NONE	97.6

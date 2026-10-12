@@ -1,0 +1,47 @@
+{
+  "name": "OSD-421__2025upAuG",
+  "tissue": "thymus",
+  "tissue_label": "thymus",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "score_key": "scores",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-421__2025upAuG_GC_ranks.npz",
+  "n_samples": 10,
+  "n_anatomy": 13895,
+  "family_regex": "thym",
+  "family_exclude": null,
+  "n_family_nodes": 17,
+  "family_median_pct": 87.33645196113712,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 2,
+  "mwu_p_less": 0.9697300937945735,
+  "ks_p_greater": 0.3314978531432838,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 13,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.97 (fail)",
+    "KS p = 0.33 (fail)",
+    "0/10 samples individually p < 0.05 (fail)",
+    "family ranks 13 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "thymus lymphoid tissue (2.6%)",
+    "thymus (6.0%)",
+    "cervical thymus (12.4%)",
+    "deep cervical thymus (12.4%)",
+    "superficial cervical thymus (12.4%)"
+  ],
+  "top_real_anatomy": [
+    "supraclavicular lymph node (0.01%)",
+    "left supraclavicular lymph node (0.02%)",
+    "Virchow's lymph node (0.02%)",
+    "right supraclavicular lymph node (0.03%)",
+    "trigeminal placode complex (0.08%)",
+    "profundal placode (0.09%)",
+    "aortic plexus (0.10%)",
+    "inferior ophthalmic vein (0.10%)",
+    "thoracic aortic plexus (0.12%)",
+    "maxillomandibular placode (0.12%)"
+  ]
+}

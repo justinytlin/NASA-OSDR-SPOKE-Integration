@@ -1,0 +1,25 @@
+{
+  "name": "OSD-457_spleen__2025upAuG",
+  "tissue": "spleen",
+  "tissue_label": "spleen",
+  "n_samples": 6,
+  "n_linked": 44,
+  "proxy": false,
+  "target_nodes": [
+    "spleen (rank 1)"
+  ],
+  "best_target_rank": 1,
+  "frac_samples_target_rank1": 1.0,
+  "frac_samples_target_top3": 1.0,
+  "verdict": "CLEAR",
+  "top_linked_nodes": [
+    "spleen",
+    "blood",
+    "upper lobe of left lung",
+    "gastrocnemius",
+    "small intestine Peyer's patch",
+    "subcutaneous adipose tissue",
+    "left adrenal gland cortex",
+    "tibial artery"
+  ]
+}

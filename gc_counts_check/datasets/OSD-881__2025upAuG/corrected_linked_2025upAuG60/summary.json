@@ -1,0 +1,27 @@
+{
+  "name": "OSD-881__2025upAuG",
+  "tissue": "heart",
+  "tissue_label": "heart",
+  "n_samples": 19,
+  "n_linked": 60,
+  "proxy": false,
+  "target_nodes": [
+    "heart left ventricle (rank 2)",
+    "right atrium auricular region (rank 4)",
+    "left coronary artery (rank 8)"
+  ],
+  "best_target_rank": 2,
+  "frac_samples_target_rank1": 0.05263157894736842,
+  "frac_samples_target_top3": 1.0,
+  "verdict": "PARTIAL",
+  "top_linked_nodes": [
+    "gastrocnemius",
+    "heart left ventricle",
+    "muscle of leg",
+    "right atrium auricular region",
+    "descending thoracic aorta",
+    "right adrenal gland",
+    "right adrenal gland cortex",
+    "left coronary artery"
+  ]
+}

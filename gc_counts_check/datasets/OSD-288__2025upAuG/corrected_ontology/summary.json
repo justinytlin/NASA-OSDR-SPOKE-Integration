@@ -1,0 +1,47 @@
+{
+  "name": "OSD-288__2025upAuG",
+  "tissue": "spleen",
+  "tissue_label": "spleen",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "score_key": "scores",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-288__2025upAuG_GC_ranks.npz",
+  "n_samples": 3,
+  "n_anatomy": 13895,
+  "family_regex": "spleen|splenic",
+  "family_exclude": "flexure",
+  "n_family_nodes": 29,
+  "family_median_pct": 29.61976730238695,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 3,
+  "mwu_p_less": 0.010518337001152685,
+  "ks_p_greater": 0.007842271528047123,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 3,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.011 (fail)",
+    "KS p = 0.0078 (ok)",
+    "3/3 samples individually p < 0.05 (ok)",
+    "family ranks 3 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "spleen smooth muscle (3.8%)",
+    "spleen (4.5%)",
+    "hilum of spleen (5.8%)",
+    "splenic arteriole (10.6%)",
+    "vasculature of spleen (11.2%)"
+  ],
+  "top_real_anatomy": [
+    "germinal center (0.01%)",
+    "hematopoietic system (0.01%)",
+    "tonsil germinal center (0.02%)",
+    "bone marrow (0.03%)",
+    "blood serum (0.04%)",
+    "lymphoid tissue (0.05%)",
+    "blood plasma (0.05%)",
+    "lymphoid nodule (0.05%)",
+    "reticuloendothelial system (0.06%)",
+    "left supraclavicular lymph node (0.08%)"
+  ]
+}

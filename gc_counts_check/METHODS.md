@@ -204,3 +204,175 @@ top-ranked real Anatomy nodes after removing UBERON life-stage and organism pseu
 - NCBI HomoloGene build 68 — mouse/human orthology.
 - GeneLab bulk RNA-seq processing pipeline (GLbulkRNAseq) — source of the RSEM counts and gene annotation.
 - Mann HB, Whitney DR (1947); Kolmogorov (1933) / Smirnov (1939) — the two tests, as implemented in SciPy.
+
+---
+
+# Part 2. OSDR-wide run and the baseline-corrected check (added 2026-10-04)
+
+## 13. Which datasets and which samples
+
+`scripts/survey_osdr.py` queries OSDR for every *Mus musculus* study with an RNA-seq assay
+(111 studies), caches each study's file listing and ISA metadata, and keeps those with a GeneLab
+`RSEM_Unnormalized_Counts` file (106). `scripts/build_manifest.py` then turns the sample tables
+into a manifest with one entry per (study, tissue):
+
+- **Control samples.** For spaceflight studies, samples whose `Spaceflight` factor is exactly
+  "Ground Control" (basal, vivarium, cohort and rerun controls are not used). For ground-analog
+  studies (hindlimb unloading, radiation, diet), samples at the baseline level of every condition
+  factor: normally loaded, sham or non-irradiated, not injected, non-treated, normal diet. These
+  are labelled `analog control` so they can be filtered out. Genotype is restricted to wild type /
+  control. Factors that are not conditions (age, sex, strain, duration, dissection, mission) are pooled.
+- **Tissue.** From the `Tissue` factor when a study has several tissues, otherwise from
+  `Characteristics[Material Type]`; left/right and regional names are merged (for example "Left
+  kidney" → kidney). Multi-tissue studies are split into one entry per tissue (`OSD-457_spleen`).
+- **Skipped**, with the reason recorded in `data/_catalog/manifest_skipped.tsv`: cell cultures,
+  tumours, plasma, sample-preservation and methods studies with no control group, studies whose ISA
+  sample names do not match the counts columns, and entries with fewer than two control samples.
+
+The first 14 datasets (sections 1–12) were run before the manifest existed and keep their original
+sample selection (`_GC_` columns).
+
+## 14. Why a baseline correction is needed
+
+With all-positive weights, a sample's score for node *n* is
+
+    score[s, n] = (1/|G|) Σ_g w[g, s] · rank[g, n]
+
+and most of it does not depend on the tissue. Across datasets from different tissues the pooled
+Anatomy percentiles correlate at Spearman ≈ 0.96, and 96 % of their variance is one shared profile.
+That profile is set by the shape of each node's PSEV distribution across genes, not by expression:
+sparsely annotated nodes (hepatic cord, renal papilla, masseter, hippocampal commissure) sit in the
+top 1–3 % in every tissue, while heavily annotated organ nodes (liver, kidney, retina) sit near the
+bottom in every tissue. The raw check in sections 6–11 therefore mostly measures where a family
+happens to fall in this fixed profile, plus a small tissue-specific shift.
+
+## 15. The baseline-corrected score
+
+The tissue-independent part is what the score would be if every gene had the same weight:
+
+    uniform[n] = (1/|G|) Σ_g rank[g, n]
+
+`gc_counts_to_psev.py --compact` computes it in the same pass by carrying one extra pseudo-sample
+whose weights are all 1, and stores it with the raw scores in `<name>_GC_ranks.npz`. The corrected
+score subtracts it, scaled by the sample's mean weight:
+
+    corrected[s, n] = score[s, n] − mean_g(w[g, s]) · uniform[n]
+                    = (1/|G|) Σ_g (w[g, s] − mean_g w[·, s]) · rank[g, n]
+
+which is the covariance, across the dataset's genes, between how strongly a gene is expressed in the
+sample and how strongly that gene is linked to node *n*. It is positive when the sample's highly
+expressed genes are the ones SPOKE connects to the node, zero when expression and connectivity are
+unrelated, and negative when the node's genes are the weakly expressed ones. It uses only the
+dataset's own genes and samples; no other dataset enters.
+
+`check_anatomy.py --npz <name>_GC_ranks.npz --corrected` ranks the Anatomy nodes by this corrected
+score within each sample (highest = percentile 0) and then runs exactly the same three figures,
+tests and verdict as sections 6–11, writing them to `datasets/<name>/baseline_corrected/`.
+
+What the correction does not remove: genes that are highly expressed in every tissue (housekeeping
+genes) also tend to be well connected in SPOKE, so nodes linked to ubiquitous genes keep a mild
+advantage in every tissue. Removing that needs a reference expression profile, which is a
+cross-dataset operation (see the machine-learning notes in the README).
+
+## 16. The compiled tables
+
+`scripts/compile_results.py` reads every `datasets/*/summary.json` (raw) and
+`datasets/*/baseline_corrected/summary.json` and writes `results/compiled_verdicts.tsv` (one row per
+dataset, raw and corrected columns side by side), `results/tissue_summary.tsv` (one row per tissue)
+and `results/tissue_separation_overview*.png`. It tabulates verdicts; it does not test datasets
+against each other.
+
+## 17. Ontology-based tissue families
+
+`scripts/ontology_families.py` reads UBERON (`data/_ontology/uberon-basic.obo`, release 2026-10-01)
+and defines each family as a root term (liver, kidney, retina, hippocampal formation, telencephalon
+for cerebrum, cranial nerve II for optic nerve, ...) plus every term below it through `is_a` and
+`part_of`, intersected with SPOKE's Anatomy nodes. `develops_from` is not followed, so primordia are
+excluded. `check_anatomy.py --families ontology` uses these masks for the tissue and for the
+competition families (minimum 3 nodes; the tissue's own family may be as small as 1) and writes to
+`datasets/<name>/corrected_ontology/`. Tests, figures and verdict are unchanged.
+
+## 18. Which Anatomy nodes have gene links, and the linked-node check
+
+The 2019 edge list is not distributed with the PSEVs, so gene links are read from the PSEVs
+themselves. `scripts/extract_anatomy_psev.py` stores the 19,567 × 13,257 matrix of gene-PSEV values at
+Anatomy nodes. A random walk restarted at gene *g* deposits a floor of about 0.09 / degree(*g*) on each
+direct neighbour, so a node linked to a gene has a visibly higher value than one reached only through
+other nodes. 74 Anatomy nodes exceed 1e-4 for more than 99 % of genes; the 75th (gall bladder) does so
+for 6 %. Those 74 are the linked set. A node's mean PSEV value across genes is used as its link
+weight (in an undirected walk the stationary mass is proportional to degree).
+
+`scripts/check_linked.py` ranks the 74 linked nodes by baseline-corrected score within each sample
+(1 = top), averages the ranks over samples, and reports the rank of the tissue's own linked node(s):
+the linked nodes inside its ontology family, or, if there are none, the nearest linked ancestors of
+the root term (flagged proxy). CLEAR = a target ranked 1st; PARTIAL = best target in the top 7;
+NONE otherwise; NO LINKED NODE when neither the family nor any ancestor is linked. Figures:
+`A_linked_nodes` (top 20 of the 74 with the targets highlighted) and `C_per_sample`.
+
+## 19. Stage-1 pilot: four ways of scoring (2026-10-11)
+
+Ten datasets, one per tissue (retina, kidney, heart, spleen, liver, adrenal gland, lung,
+cerebellum, white adipose tissue, blood), scored four ways and judged on the gene-linked nodes
+(section 18) and on ontology families (section 17). All arms are baseline-corrected and each dataset
+is processed alone. `scripts/pilot_stage1.py` runs the checks and tabulates `results/pilot_stage1.tsv`.
+
+| arm | what changes | flag |
+|---|---|---|
+| A | nothing: within-gene ranks, log2(CPM+1) weights (the current method) | — |
+| Z | the gene's z-scores are weighted directly instead of their within-gene ranks | `--zscore-arm`, `--score-key zscore` |
+| B | observed corrected score converted to a z against 50 permutations of the sample's weights among genes with similar hub rank (20 quantile bins of `hub_rank` from `gene_hub_rank.py`) | `--perm-cov`, `--score-key perm` |
+| D | housekeeping genes removed before weighting (HRT Atlas mouse list, 3,174 Ensembl ids; about a quarter of expressed genes) | `exclude_genes` in the manifest |
+
+`hub_rank` is, for each gene, the mean within-gene rank it assigns to the 74 linked Anatomy
+nodes, computed once over all 19,567 genes; `n_high_z` (nodes with z > 3) is stored alongside.
+Permuting weights within hub-rank bins keeps each sample's overall tendency to push the hub nodes
+up while breaking the gene-specific pairing, so a node's permutation z reflects only the
+tissue-specific part.
+
+Success measures fixed before running: number of tissues whose own linked node ranks first (and in
+the top three) of 74; Spearman between a linked node's link weight and its rank in its own tissue
+(−0.85 under arm A; the goal is near zero); ontology-family verdicts.
+
+**Result.** Own-node ranks (of 74) were unchanged within a few places across all four arms for the
+failing tissues (liver 48–57, lung 60–69, cerebellum 64–68, adipose 63–65, adrenal cortex 34–42) and
+the link-weight relationship stayed at Spearman −0.87 to −0.93. Arm D equals arm A; arm Z lifts
+blood plasma (13 → 3) and some family medians but not the organ nodes; arm B does not help. Arm A
+is retained. The pilot projections (`psev_out/*__pilot_GC_ranks.npz`, with `scores_z`, `uniform_z`
+and `perm_scores`; `*__nohk_*`) and checks (`datasets/*__pilot/`, `datasets/*__nohk/`) are kept.
+
+## 20. Stage 2: other SPOKE builds
+
+The same scripts run on any gene-PSEV build directory: `gc_counts_to_psev.py --zip <dir> --spoke <dir>`
+(the build's own `node_info.tsv` defines the node universe; 2025 builds have 547,873 nodes),
+`extract_anatomy_psev.py --build <dir> --spoke <dir> --out psev_out/_anatomy_psev_<tag>.npz` to find
+that build's gene-linked Anatomy nodes, `check_linked.py --spoke <dir> --anatomy-psev ... --tag <tag>`
+and `check_anatomy.py --corrected --families ontology --spoke <dir>`. `pilot_stage2.py --tag <tag>
+--build <dir> --run-checks` runs both for the pilot datasets and writes `results/pilot_stage2_<tag>.tsv`;
+`plot_stage2.py` draws the build comparison. The 2025 Anatomy vocabulary with gene links is GTEx-like
+(right lobe of liver, upper lobe of left lung, skin of leg), so the ontology families pick them up
+through `part_of` without any change to the family definitions.
+
+## 21. Full run on the 2025 'upregulates-only' build
+
+`run_upauG_all.sh` projects all 104 control sets (`data/_catalog/manifest_2025upAuG.json`: the 90 manifest
+entries plus the first 14 with their original `_GC_` column selection) on
+`/Volumes/justinytlin/SPOKE_psev/gene_psev_spoke2025-03_upAuG_only` in three batches and runs
+`check_build.py` (linked-node check with `psev_out/_anatomy_psev_2025upAuG.npz`, 44 linked nodes, and the
+ontology-family check against that build's node table) after each. `compile_build.py --tag 2025upAuG`
+tabulates them. Outputs sit beside the 2019 ones as `datasets/<name>__2025upAuG/`.
+
+## 22. Cell-type route
+
+`scripts/celltype_check.py --tag <tag> --build <dir>` takes the baseline-corrected scores already stored
+in `<name>_GC_ranks.npz` (all 547,873 nodes), keeps the CellType columns, ranks them per sample (1 = top),
+pools the ranks over samples, and reports the best-ranked cell type whose name matches a tissue regex
+(`FAM` in the script) together with the top five cell types. No projection is re-run. Cell types reach
+the walk through their own Gene edges (59 cell types) and through `PARTOF_CTpA` links to Anatomy nodes.
+
+## 23. Linked set from the edge list
+
+When the live graph is reachable, `inspect_aug_coverage.py` writes the per-Anatomy counts of the three
+Anatomy–Gene edge types. `check_linked.py --linked-ids FILE` then uses an explicit UBERON id list as the
+linked set instead of the PSEV-threshold detection of section 18, which under-counts nodes with few
+edges. The 60-node set (≥ 200 `UPREGULATES_AuG` edges) is the default for the upregulates-only build;
+the 72-node set (≥ 1 edge) is kept for reference (`corrected_linked_2025upAuG72/`).

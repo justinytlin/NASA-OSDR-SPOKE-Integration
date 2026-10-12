@@ -1,0 +1,47 @@
+{
+  "name": "OSD-512__2025upAuG",
+  "tissue": "adrenal gland",
+  "tissue_label": "adrenal gland",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "score_key": "scores",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-512__2025upAuG_GC_ranks.npz",
+  "n_samples": 10,
+  "n_anatomy": 13895,
+  "family_regex": "adrenal|suprarenal|interrenal",
+  "family_exclude": null,
+  "n_family_nodes": 15,
+  "family_median_pct": 31.655271680460594,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 3,
+  "mwu_p_less": 0.030746219696388515,
+  "ks_p_greater": 0.04584752547331352,
+  "frac_samples_significant": 0.9,
+  "family_rank_among_organ_families": 3,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.031 (fail)",
+    "KS p = 0.046 (fail)",
+    "9/10 samples individually p < 0.05 (ok)",
+    "family ranks 3 of 15 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "right adrenal gland (8.3%)",
+    "right adrenal gland medulla (8.3%)",
+    "right adrenal gland cortex (8.9%)",
+    "left adrenal gland (12.0%)",
+    "left adrenal gland medulla (12.0%)"
+  ],
+  "top_real_anatomy": [
+    "extensor caudae muscle (0.01%)",
+    "extensor caudae medialis muscle (0.02%)",
+    "nucleus recessus posterioris (0.03%)",
+    "extensor caudae lateralis muscle (0.04%)",
+    "vertebral venous plexus (0.04%)",
+    "external vertebral venous plexus (0.05%)",
+    "ventral nerve root of cervical spinal cord (0.06%)",
+    "superior mediastinal lymph node (0.06%)",
+    "lateral crico-arytenoid (0.07%)",
+    "lateral paragigantocellular nucleus (0.08%)"
+  ]
+}

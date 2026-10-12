@@ -1,0 +1,47 @@
+{
+  "name": "OSD-955__2025upAuG",
+  "tissue": "skeletal muscle",
+  "tissue_label": "soleus",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "score_key": "scores",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-955__2025upAuG_GC_ranks.npz",
+  "n_samples": 5,
+  "n_anatomy": 13895,
+  "family_regex": "skeletal muscle|gastrocnemius|quadriceps|soleus|tibialis",
+  "family_exclude": null,
+  "n_family_nodes": 501,
+  "family_median_pct": 5.774739114789492,
+  "in_top_2_5pct": 160,
+  "in_top_10pct": 277,
+  "mwu_p_less": 1.156453406268958e-160,
+  "ks_p_greater": 1.3975658886753895e-146,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 2,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 1.2e-160 (ok)",
+    "KS p = 1.4e-146 (ok)",
+    "5/5 samples individually p < 0.05 (ok)",
+    "family ranks 2 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "triceps surae (0.0%)",
+    "soleus muscle (0.1%)",
+    "hindlimb zeugopod muscle (0.1%)",
+    "plantaris (0.1%)",
+    "gastrocnemius externus (0.1%)"
+  ],
+  "top_real_anatomy": [
+    "cardiac Purkinje fiber (0.01%)",
+    "triceps surae (0.03%)",
+    "musculature of hindlimb zeugopod (0.04%)",
+    "Purkinje fiber network (0.06%)",
+    "soleus muscle (0.07%)",
+    "cardiac muscle tissue of papillary muscle (0.09%)",
+    "hindlimb zeugopod muscle (0.11%)",
+    "plantaris (0.12%)",
+    "gastrocnemius externus (0.13%)",
+    "ventral pelvic arrector (0.13%)"
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "name": "OSD-525__2025noAeG",
+  "tissue": "cerebellum",
+  "tissue_label": "cerebellum",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "score_key": "scores",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-525__2025noAeG_GC_ranks.npz",
+  "n_samples": 10,
+  "n_anatomy": 13895,
+  "family_regex": "cerebell",
+  "family_exclude": "artery|vein|spinocerebellar|cerebellar peduncle (?:artery|vein)",
+  "n_family_nodes": 115,
+  "family_median_pct": 64.68873695573949,
+  "in_top_2_5pct": 14,
+  "in_top_10pct": 25,
+  "mwu_p_less": 0.9866412883177769,
+  "ks_p_greater": 0.0037742849446484768,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 6,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.99 (fail)",
+    "KS p = 0.0038 (ok)",
+    "0/10 samples individually p < 0.05 (fail)",
+    "family ranks 6 of 15 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "cerebellar nuclear complex (0.1%)",
+    "emboliform nucleus (0.4%)",
+    "cerebellum globose nucleus (0.4%)",
+    "cerebellum interpositus nucleus (0.5%)",
+    "fastigial nucleus (0.5%)"
+  ],
+  "top_real_anatomy": [
+    "lateral nuclear group of thalamus (0.01%)",
+    "intralaminar nuclear group (0.01%)",
+    "lateral posterior nucleus of thalamus (0.03%)",
+    "lateral dorsal nucleus (0.03%)",
+    "endopeduncular nucleus (0.04%)",
+    "parafascicular nucleus (0.04%)",
+    "caudal intralaminar nuclear group (0.05%)",
+    "centromedian nucleus of thalamus (0.05%)",
+    "subthalamic nucleus (0.06%)",
+    "perforant path (0.07%)"
+  ]
+}

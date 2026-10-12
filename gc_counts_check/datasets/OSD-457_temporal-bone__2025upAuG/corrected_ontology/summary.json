@@ -1,0 +1,47 @@
+{
+  "name": "OSD-457_temporal-bone__2025upAuG",
+  "tissue": "temporal bone",
+  "tissue_label": "temporal bone",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "score_key": "scores",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-457_temporal-bone__2025upAuG_GC_ranks.npz",
+  "n_samples": 6,
+  "n_anatomy": 13895,
+  "family_regex": "temporal bone|petrous|mastoid|tympanic (?:ring|bone|part)|squamous part of temporal|otic capsule|periotic",
+  "family_exclude": "sterno|extratemporal|intertemporal|supratemporal",
+  "n_family_nodes": 53,
+  "family_median_pct": 31.819599376274443,
+  "in_top_2_5pct": 1,
+  "in_top_10pct": 12,
+  "mwu_p_less": 0.006505984390039565,
+  "ks_p_greater": 0.0004895922930621695,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 3,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.0065 (ok)",
+    "KS p = 0.00049 (ok)",
+    "6/6 samples individually p < 0.05 (ok)",
+    "family ranks 3 of 15 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "jugular foramen (1.0%)",
+    "endolymph (3.9%)",
+    "otolymph (5.2%)",
+    "perilymph (5.5%)",
+    "scala tympani (5.9%)"
+  ],
+  "top_real_anatomy": [
+    "catecholamine system (0.04%)",
+    "histaminergic system (0.05%)",
+    "glutamatergic system (0.06%)",
+    "serotonergic system (0.07%)",
+    "cholinergic system (0.08%)",
+    "gABAergic system (0.08%)",
+    "plantar digital artery (0.10%)",
+    "lateral paragigantocellular nucleus (0.11%)",
+    "posterior crico-arytenoid (0.11%)",
+    "paragigantocellular nucleus (0.11%)"
+  ]
+}

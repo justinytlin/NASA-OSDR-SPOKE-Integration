@@ -1,0 +1,26 @@
+{
+  "name": "OSD-513__2025",
+  "tissue": "kidney",
+  "tissue_label": "kidney",
+  "n_samples": 10,
+  "n_linked": 92,
+  "proxy": false,
+  "target_nodes": [
+    "cortex of kidney (rank 21)",
+    "adult mammalian kidney (rank 88)"
+  ],
+  "best_target_rank": 21,
+  "frac_samples_target_rank1": 0.0,
+  "frac_samples_target_top3": 0.0,
+  "verdict": "NONE",
+  "top_linked_nodes": [
+    "cerebellum",
+    "corpus callosum",
+    "skeletal muscle tissue",
+    "popliteal artery",
+    "adrenal gland",
+    "mucosa of transverse colon",
+    "right fallopian tube",
+    "esophagus"
+  ]
+}

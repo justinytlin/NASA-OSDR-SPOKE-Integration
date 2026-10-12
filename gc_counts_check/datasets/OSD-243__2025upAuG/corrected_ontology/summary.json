@@ -1,0 +1,47 @@
+{
+  "name": "OSD-243__2025upAuG",
+  "tissue": "skin",
+  "tissue_label": "skin",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "score_key": "scores",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-243__2025upAuG_GC_ranks.npz",
+  "n_samples": 19,
+  "n_anatomy": 13895,
+  "family_regex": "\\bskin|epidermis|dermis",
+  "family_exclude": "dermatome|hypodermis",
+  "n_family_nodes": 305,
+  "family_median_pct": 28.0437870494877,
+  "in_top_2_5pct": 13,
+  "in_top_10pct": 74,
+  "mwu_p_less": 1.669250146008916e-21,
+  "ks_p_greater": 4.358490189291084e-18,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 3,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 1.7e-21 (ok)",
+    "KS p = 4.4e-18 (ok)",
+    "19/19 samples individually p < 0.05 (ok)",
+    "family ranks 3 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "forelimb skin (0.7%)",
+    "skin of manus (1.4%)",
+    "skin of limb (1.5%)",
+    "skin of forelimb wing (1.5%)",
+    "humeral patagium (1.5%)"
+  ],
+  "top_real_anatomy": [
+    "forelimb skin (0.70%)",
+    "hindlimb (0.96%)",
+    "hind flipper (0.97%)",
+    "atrioventricular node (1.26%)",
+    "skin of manus (1.42%)",
+    "fascia lata (1.46%)",
+    "oculomotor muscle (1.47%)",
+    "pulmonary valve (1.48%)",
+    "rectus extraocular muscle (1.48%)",
+    "oblique extraocular muscle (1.48%)"
+  ]
+}

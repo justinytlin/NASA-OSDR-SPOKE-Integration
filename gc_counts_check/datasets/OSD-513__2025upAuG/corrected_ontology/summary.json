@@ -1,0 +1,47 @@
+{
+  "name": "OSD-513__2025upAuG",
+  "tissue": "kidney",
+  "tissue_label": "kidney",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "score_key": "scores",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-513__2025upAuG_GC_ranks.npz",
+  "n_samples": 10,
+  "n_anatomy": 13895,
+  "family_regex": "kidney|renal|nephron|glomerul",
+  "family_exclude": "adrenal|suprarenal|interrenal|nephridi|Hatschek|lieno|olfactory|cerebell|preglomerular",
+  "n_family_nodes": 275,
+  "family_median_pct": 37.74163368118029,
+  "in_top_2_5pct": 36,
+  "in_top_10pct": 67,
+  "mwu_p_less": 5.217653041363633e-10,
+  "ks_p_greater": 1.0904138044311296e-07,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 4,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 5.2e-10 (ok)",
+    "KS p = 1.1e-07 (ok)",
+    "10/10 samples individually p < 0.05 (ok)",
+    "family ranks 4 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "proximal tubular epithelium (0.0%)",
+    "nephron tubule epithelium (0.0%)",
+    "proximal tubule (0.0%)",
+    "proximal straight tubule (0.0%)",
+    "distal tubular epithelium (0.1%)"
+  ],
+  "top_real_anatomy": [
+    "proximal tubular epithelium (0.01%)",
+    "nephron tubule epithelium (0.02%)",
+    "proximal tubule (0.03%)",
+    "cochlear nucleus (0.03%)",
+    "proximal straight tubule (0.04%)",
+    "posteroventral cochlear nucleus (0.04%)",
+    "anteroventral cochlear nucleus (0.05%)",
+    "ventral cochlear nucleus (0.06%)",
+    "distal tubular epithelium (0.06%)",
+    "lateral nuclear group of thalamus (0.07%)"
+  ]
+}

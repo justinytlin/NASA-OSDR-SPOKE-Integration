@@ -1,0 +1,28 @@
+{
+  "name": "OSD-580__2025upAuG",
+  "tissue": "heart",
+  "tissue_label": "heart",
+  "n_samples": 20,
+  "n_linked": 72,
+  "proxy": false,
+  "target_nodes": [
+    "heart left ventricle (rank 2)",
+    "right atrium auricular region (rank 4)",
+    "heart (rank 5)",
+    "left coronary artery (rank 16)"
+  ],
+  "best_target_rank": 2,
+  "frac_samples_target_rank1": 0.0,
+  "frac_samples_target_top3": 0.9,
+  "verdict": "PARTIAL",
+  "top_linked_nodes": [
+    "gastrocnemius",
+    "heart left ventricle",
+    "muscle of leg",
+    "right atrium auricular region",
+    "heart",
+    "brain",
+    "liver",
+    "descending thoracic aorta"
+  ]
+}

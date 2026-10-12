@@ -1,0 +1,26 @@
+{
+  "name": "OSD-457_white-adipose-tissue__2025noAeG",
+  "tissue": "adipose tissue",
+  "tissue_label": "white adipose tissue",
+  "n_samples": 6,
+  "n_linked": 73,
+  "proxy": false,
+  "target_nodes": [
+    "subcutaneous adipose tissue (rank 37)",
+    "omental fat pad (rank 55)"
+  ],
+  "best_target_rank": 37,
+  "frac_samples_target_rank1": 0.0,
+  "frac_samples_target_top3": 0.0,
+  "verdict": "NONE",
+  "top_linked_nodes": [
+    "amygdala",
+    "Ammon's horn",
+    "putamen",
+    "body of pancreas",
+    "caudate nucleus",
+    "prefrontal cortex",
+    "substantia nigra",
+    "blood"
+  ]
+}

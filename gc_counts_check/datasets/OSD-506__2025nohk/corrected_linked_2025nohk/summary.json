@@ -1,0 +1,25 @@
+{
+  "name": "OSD-506__2025nohk",
+  "tissue": "spleen",
+  "tissue_label": "spleen",
+  "n_samples": 10,
+  "n_linked": 92,
+  "proxy": false,
+  "target_nodes": [
+    "spleen (rank 74)"
+  ],
+  "best_target_rank": 74,
+  "frac_samples_target_rank1": 0.0,
+  "frac_samples_target_top3": 0.0,
+  "verdict": "NONE",
+  "top_linked_nodes": [
+    "skeletal muscle tissue",
+    "adrenal gland",
+    "popliteal artery",
+    "right coronary artery",
+    "adipose tissue",
+    "lower esophagus",
+    "right fallopian tube",
+    "esophagus"
+  ]
+}

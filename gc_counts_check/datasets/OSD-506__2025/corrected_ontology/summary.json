@@ -1,0 +1,47 @@
+{
+  "name": "OSD-506__2025",
+  "tissue": "spleen",
+  "tissue_label": "spleen",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "score_key": "scores",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-506__2025_GC_ranks.npz",
+  "n_samples": 10,
+  "n_anatomy": 13895,
+  "family_regex": "spleen|splenic",
+  "family_exclude": "flexure",
+  "n_family_nodes": 29,
+  "family_median_pct": 94.62612450521772,
+  "in_top_2_5pct": 4,
+  "in_top_10pct": 4,
+  "mwu_p_less": 0.99999992718942,
+  "ks_p_greater": 0.4156575926120091,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 11,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 1 (fail)",
+    "KS p = 0.42 (fail)",
+    "0/10 samples individually p < 0.05 (fail)",
+    "family ranks 11 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "spleen secondary B follicle (1.7%)",
+    "spleen germinal center (2.1%)",
+    "spleen follicular dendritic cell network (2.1%)",
+    "spleen B cell corona (2.3%)",
+    "spleen primary B follicle (26.7%)"
+  ],
+  "top_real_anatomy": [
+    "skeletal muscle endomysium (0.01%)",
+    "dorsal inclinator muscle (0.02%)",
+    "dorsal depressor muscle (0.02%)",
+    "dorsal erector muscle (0.02%)",
+    "anal fin musculature (0.04%)",
+    "skeletal muscle tissue of biceps brachii (0.05%)",
+    "skeletal muscle tissue of digastric (0.05%)",
+    "skeletal muscle tissue of trapezius (0.06%)",
+    "anal region skeletal muscle (0.08%)",
+    "anal depressor (0.08%)"
+  ]
+}

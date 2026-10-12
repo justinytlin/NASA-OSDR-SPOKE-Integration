@@ -1,0 +1,47 @@
+{
+  "name": "OSD-512__2025",
+  "tissue": "adrenal gland",
+  "tissue_label": "adrenal gland",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "score_key": "scores",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-512__2025_GC_ranks.npz",
+  "n_samples": 10,
+  "n_anatomy": 13895,
+  "family_regex": "adrenal|suprarenal|interrenal",
+  "family_exclude": null,
+  "n_family_nodes": 15,
+  "family_median_pct": 82.59661748830514,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 0,
+  "mwu_p_less": 0.99998005357579,
+  "ks_p_greater": 0.9949503457128515,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 7,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 1 (fail)",
+    "KS p = 0.99 (fail)",
+    "0/10 samples individually p < 0.05 (fail)",
+    "family ranks 7 of 15 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "adrenal cortex (27.9%)",
+    "adrenal medulla (28.9%)",
+    "adrenal gland cortex zone (55.8%)",
+    "type 3 adrenal tissue (82.6%)",
+    "adrenal tissue (82.6%)"
+  ],
+  "top_real_anatomy": [
+    "tonsillar pillar (0.01%)",
+    "facial modiolus (0.02%)",
+    "muscle tissue (0.04%)",
+    "ceratoglossus (0.05%)",
+    "chondroglossus muscle (0.05%)",
+    "vagus nerve (0.06%)",
+    "hyoglossus muscle (0.06%)",
+    "ramus auricularis of the vagus nerve (0.06%)",
+    "entire myelin sheath (0.10%)",
+    "cutaneous muscle (0.11%)"
+  ]
+}

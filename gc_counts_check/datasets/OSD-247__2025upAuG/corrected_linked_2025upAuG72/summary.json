@@ -1,0 +1,25 @@
+{
+  "name": "OSD-247__2025upAuG",
+  "tissue": "colon",
+  "tissue_label": "colon",
+  "n_samples": 17,
+  "n_linked": 72,
+  "proxy": false,
+  "target_nodes": [
+    "muscle layer of sigmoid colon (rank 27)"
+  ],
+  "best_target_rank": 27,
+  "frac_samples_target_rank1": 0.0,
+  "frac_samples_target_top3": 0.0,
+  "verdict": "NONE",
+  "top_linked_nodes": [
+    "ectocervix",
+    "cortex of kidney",
+    "heart",
+    "descending thoracic aorta",
+    "ovary",
+    "endocervix",
+    "urinary bladder",
+    "liver"
+  ]
+}

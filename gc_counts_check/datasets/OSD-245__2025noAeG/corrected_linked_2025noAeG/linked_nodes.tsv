@@ -1,0 +1,74 @@
+Node	Node_Name	pooled_rank	mean_rank	target
+UBERON:0001874	putamen	1	3.05	False
+UBERON:0000451	prefrontal cortex	2	3.74	False
+UBERON:0001876	amygdala	3	3.89	False
+UBERON:0001870	frontal cortex	4	3.95	False
+UBERON:0001954	Ammon's horn	5	5.37	False
+UBERON:0001873	caudate nucleus	6	7.47	False
+UBERON:0009835	anterior cingulate cortex	7	9.84	False
+UBERON:0002810	right frontal lobe	8	10.47	False
+UBERON:0001898	hypothalamus	9	11.21	False
+UBERON:0001882	nucleus accumbens	10	11.58	False
+UBERON:0000178	blood	11	13.0	False
+UBERON:0000955	brain	12	13.05	False
+UBERON:0001987	placenta	13	14.58	False
+UBERON:0000473	testis	14	16.74	False
+UBERON:0000458	endocervix	15	16.89	False
+UBERON:0002118	right ovary	16	17.37	False
+UBERON:0002038	substantia nigra	17	18.53	False
+UBERON:0009834	dorsolateral prefrontal cortex	18	19.32	False
+UBERON:0001303	left fallopian tube	19	19.37	False
+UBERON:0000992	ovary	20	19.74	False
+UBERON:0001323	tibial nerve	21	24.37	False
+UBERON:0006469	C1 segment of cervical spinal cord	22	24.68	False
+UBERON:0012249	ectocervix	23	25.42	False
+UBERON:0002345	descending thoracic aorta	24	27.63	False
+UBERON:0008952	upper lobe of left lung	25	28.84	False
+UBERON:0001234	left adrenal gland	26	28.89	False
+UBERON:0002119	left ovary	27	29.42	False
+UBERON:0002190	subcutaneous adipose tissue	28	29.79	False
+UBERON:0001233	right adrenal gland	29	30.95	False
+UBERON:0001157	transverse colon	30	32.0	False
+UBERON:0001225	cortex of kidney	31	32.21	False
+UBERON:0001255	urinary bladder	32	33.68	False
+UBERON:0000996	vagina	33	34.21	False
+UBERON:0001160	fundus of stomach	34	34.21	False
+UBERON:0010414	omental fat pad	35	36.37	False
+UBERON:0003454	small intestine Peyer's patch	36	37.53	False
+UBERON:0002084	heart left ventricle	37	38.11	False
+UBERON:0005200	thoracic mammary gland	38	38.68	False
+UBERON:0035825	left adrenal gland cortex	39	39.37	False
+UBERON:0001120	left lobe of thyroid gland	40	40.26	False
+UBERON:0002367	prostate gland	41	40.47	False
+UBERON:0001515	thoracic aorta	42	42.95	False
+UBERON:0001830	minor salivary gland	43	43.95	False
+UBERON:0001511	skin of leg	44	44.84	False
+UBERON:0001114	right lobe of liver	45	45.79	True
+UBERON:0001416	skin of abdomen	46	46.11	False
+UBERON:0001626	left coronary artery	47	46.68	False
+UBERON:0002046	thyroid gland	48	46.79	False
+UBERON:0001119	right lobe of thyroid gland	49	47.0	False
+UBERON:0001496	ascending aorta	50	47.84	False
+UBERON:0000948	heart	51	47.84	False
+UBERON:0000082	adult mammalian kidney	52	49.0	False
+UBERON:0035827	right adrenal gland cortex	53	50.16	False
+UBERON:0009853	body of uterus	54	54.05	False
+UBERON:0002196	adenohypophysis	55	54.11	False
+UBERON:0035805	muscle layer of sigmoid colon	56	54.32	False
+UBERON:0035833	lower esophagus muscularis layer	57	55.16	False
+UBERON:0001296	myometrium	58	55.53	False
+UBERON:0001161	body of stomach	59	55.68	False
+UBERON:0001383	muscle of leg	60	57.26	False
+UBERON:0035841	esophagogastric junction muscularis propria	61	58.53	False
+UBERON:0000007	pituitary gland	62	59.42	False
+UBERON:0004534	right testis	63	59.58	False
+UBERON:0002469	esophagus mucosa	64	60.89	False
+UBERON:0007610	tibial artery	65	61.63	False
+UBERON:0004533	left testis	66	62.16	False
+UBERON:0002245	cerebellar hemisphere	67	62.63	False
+UBERON:0014890	right hemisphere of cerebellum	68	64.74	False
+UBERON:0006631	right atrium auricular region	69	65.11	False
+UBERON:0002106	spleen	70	66.26	False
+UBERON:0002107	liver	71	67.21	True
+UBERON:0001150	body of pancreas	72	70.74	False
+UBERON:0001388	gastrocnemius	73	70.79	False

@@ -1,0 +1,47 @@
+{
+  "name": "OSD-464__2025upAuG",
+  "tissue": "lung",
+  "tissue_label": "lung",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "score_key": "scores",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-464__2025upAuG_GC_ranks.npz",
+  "n_samples": 9,
+  "n_anatomy": 13895,
+  "family_regex": "\\blung|pulmonary|bronch|alveolus of lung|alveolar (?:sac|wall|system|duct)",
+  "family_exclude": "pulmonum",
+  "n_family_nodes": 151,
+  "family_median_pct": 68.61940746071728,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 7,
+  "mwu_p_less": 0.999999937683126,
+  "ks_p_greater": 0.38011720305037155,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 10,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 1 (fail)",
+    "KS p = 0.38 (fail)",
+    "0/9 samples individually p < 0.05 (fail)",
+    "family ranks 10 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "blood-air barrier (4.3%)",
+    "upper lobe of left lung (4.5%)",
+    "sputum (5.0%)",
+    "lobar bronchus of left lung upper lobe (5.5%)",
+    "left lung upper lobe bronchiole (6.1%)"
+  ],
+  "top_real_anatomy": [
+    "trigeminal placode complex (0.06%)",
+    "catecholamine system (0.06%)",
+    "notochordal ossification (0.07%)",
+    "alisphenoid ossification center (0.07%)",
+    "histaminergic system (0.07%)",
+    "gABAergic system (0.08%)",
+    "glutamatergic system (0.09%)",
+    "ossification center (0.09%)",
+    "dorsal paragigantocellular nucleus (0.10%)",
+    "lateral crico-arytenoid (0.10%)"
+  ]
+}

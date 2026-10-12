@@ -1,0 +1,45 @@
+Node	Node_Name	pooled_rank	mean_rank	target
+UBERON:0001388	gastrocnemius	1	1.0	True
+UBERON:0007610	tibial artery	2	2.0	False
+UBERON:0035825	left adrenal gland cortex	3	3.17	False
+UBERON:0001515	thoracic aorta	4	4.67	False
+UBERON:0001234	left adrenal gland	5	4.67	False
+UBERON:0001114	right lobe of liver	6	6.17	False
+UBERON:0001496	ascending aorta	7	7.33	False
+UBERON:0000178	blood	8	7.67	False
+UBERON:0002190	subcutaneous adipose tissue	9	8.33	False
+UBERON:0002118	right ovary	10	10.33	False
+UBERON:0006469	C1 segment of cervical spinal cord	11	11.83	False
+UBERON:0010414	omental fat pad	12	11.83	False
+UBERON:0002119	left ovary	13	12.33	False
+UBERON:0001416	skin of abdomen	14	13.67	False
+UBERON:0001511	skin of leg	15	15.0	False
+UBERON:0002367	prostate gland	16	16.33	False
+UBERON:0000996	vagina	17	16.67	False
+UBERON:0002469	esophagus mucosa	18	19.17	False
+UBERON:0001157	transverse colon	19	19.5	False
+UBERON:0002038	substantia nigra	20	20.0	False
+UBERON:0001296	myometrium	21	20.33	False
+UBERON:0009853	body of uterus	22	21.17	False
+UBERON:0001323	tibial nerve	23	23.33	False
+UBERON:0001874	putamen	24	23.5	False
+UBERON:0001876	amygdala	25	25.0	False
+UBERON:0001954	Ammon's horn	26	26.0	False
+UBERON:0009834	dorsolateral prefrontal cortex	27	27.5	False
+UBERON:0002196	adenohypophysis	28	28.67	False
+UBERON:0009835	anterior cingulate cortex	29	29.0	False
+UBERON:0001120	left lobe of thyroid gland	30	29.0	False
+UBERON:0001882	nucleus accumbens	31	31.17	False
+UBERON:0001873	caudate nucleus	32	32.67	False
+UBERON:0001119	right lobe of thyroid gland	33	32.83	False
+UBERON:0001898	hypothalamus	34	33.67	False
+UBERON:0002810	right frontal lobe	35	35.17	False
+UBERON:0002245	cerebellar hemisphere	36	36.17	False
+UBERON:0002046	thyroid gland	37	37.0	False
+UBERON:0003454	small intestine Peyer's patch	38	38.0	False
+UBERON:0008952	upper lobe of left lung	39	38.67	False
+UBERON:0014890	right hemisphere of cerebellum	40	39.5	False
+UBERON:0000007	pituitary gland	41	41.33	False
+UBERON:0002106	spleen	42	41.67	False
+UBERON:0004534	right testis	43	43.0	False
+UBERON:0004533	left testis	44	44.0	False

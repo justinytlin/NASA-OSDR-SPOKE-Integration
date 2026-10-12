@@ -1,0 +1,25 @@
+{
+  "name": "OSD-164_liver__2025upAuG",
+  "tissue": "liver",
+  "tissue_label": "liver",
+  "n_samples": 3,
+  "n_linked": 44,
+  "proxy": false,
+  "target_nodes": [
+    "right lobe of liver (rank 1)"
+  ],
+  "best_target_rank": 1,
+  "frac_samples_target_rank1": 1.0,
+  "frac_samples_target_top3": 1.0,
+  "verdict": "CLEAR",
+  "top_linked_nodes": [
+    "right lobe of liver",
+    "left adrenal gland",
+    "gastrocnemius",
+    "left adrenal gland cortex",
+    "transverse colon",
+    "omental fat pad",
+    "subcutaneous adipose tissue",
+    "esophagus mucosa"
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "name": "OSD-245__2025noAeG",
+  "tissue": "liver",
+  "tissue_label": "liver",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "score_key": "scores",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-245__2025noAeG_GC_ranks.npz",
+  "n_samples": 19,
+  "n_anatomy": 13895,
+  "family_regex": "liver|hepat",
+  "family_exclude": "hepatopancreas|flexure|arthropod|hepatic cecum",
+  "n_family_nodes": 70,
+  "family_median_pct": 89.95757656104998,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 0,
+  "mwu_p_less": 1.0,
+  "ks_p_greater": 0.9623891895413936,
+  "frac_samples_significant": 0.10526315789473684,
+  "family_rank_among_organ_families": 11,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 1 (fail)",
+    "KS p = 0.96 (fail)",
+    "2/19 samples individually p < 0.05 (fail)",
+    "family ranks 11 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "liver lobule centrilobular region (15.4%)",
+    "liver lobule midzonal region (15.4%)",
+    "bile canaliculus (19.1%)",
+    "liver perisinusoidal space (34.2%)",
+    "liver lobule periportal region (37.0%)"
+  ],
+  "top_real_anatomy": [
+    "proximal tubule (0.44%)",
+    "intramuscular adipose tissue (0.50%)",
+    "cleidooccipital muscle (0.88%)",
+    "skeletal muscle organ, vertebrate (0.89%)",
+    "caudalipuboischiotibialis (0.89%)",
+    "flexor caudalis muscle (0.89%)",
+    "ventral intermandibularis anterior (0.90%)",
+    "sternocephalicus muscle (0.90%)",
+    "ventral intermandibularis posterior (0.91%)",
+    "omotransversarius muscle (0.92%)"
+  ]
+}

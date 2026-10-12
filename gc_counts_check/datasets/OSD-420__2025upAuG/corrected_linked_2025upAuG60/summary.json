@@ -1,0 +1,25 @@
+{
+  "name": "OSD-420__2025upAuG",
+  "tissue": "spleen",
+  "tissue_label": "spleen",
+  "n_samples": 10,
+  "n_linked": 60,
+  "proxy": false,
+  "target_nodes": [
+    "spleen (rank 2)"
+  ],
+  "best_target_rank": 2,
+  "frac_samples_target_rank1": 0.0,
+  "frac_samples_target_top3": 1.0,
+  "verdict": "PARTIAL",
+  "top_linked_nodes": [
+    "blood",
+    "spleen",
+    "descending thoracic aorta",
+    "right adrenal gland cortex",
+    "muscle of leg",
+    "gastrocnemius",
+    "heart left ventricle",
+    "right adrenal gland"
+  ]
+}

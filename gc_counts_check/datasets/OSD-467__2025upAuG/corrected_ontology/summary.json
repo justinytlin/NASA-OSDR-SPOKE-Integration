@@ -1,0 +1,47 @@
+{
+  "name": "OSD-467__2025upAuG",
+  "tissue": "bone tissue",
+  "tissue_label": "bone",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "score_key": "scores",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-467__2025upAuG_GC_ranks.npz",
+  "n_samples": 8,
+  "n_anatomy": 13895,
+  "family_regex": "bone tissue|compact bone|cortical bone|trabecular bone|cancellous bone|spongy bone|osteon|periosteum|endosteum|diaphysis|\\bfemur\\b|\\btibia\\b|long bone|bone element",
+  "family_exclude": "arthropod",
+  "n_family_nodes": 27,
+  "family_median_pct": 23.92407340770061,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 3,
+  "mwu_p_less": 8.900687418209152e-05,
+  "ks_p_greater": 2.0527462776817804e-05,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 5,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 8.9e-05 (ok)",
+    "KS p = 2.1e-05 (ok)",
+    "8/8 samples individually p < 0.05 (ok)",
+    "family ranks 5 of 15 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "bone tissue (5.7%)",
+    "hypertrophic cartilage zone (7.6%)",
+    "intramembranous bone tissue (9.3%)",
+    "endochondral bone tissue (12.5%)",
+    "lamellar bone (15.0%)"
+  ],
+  "top_real_anatomy": [
+    "histaminergic system (0.01%)",
+    "catecholamine system (0.02%)",
+    "gABAergic system (0.02%)",
+    "serotonergic system (0.04%)",
+    "cholinergic system (0.04%)",
+    "glutamatergic system (0.05%)",
+    "ossification center (0.07%)",
+    "crico-arytenoid muscle (0.08%)",
+    "alisphenoid ossification center (0.09%)",
+    "principal artery to forelimb (0.09%)"
+  ]
+}

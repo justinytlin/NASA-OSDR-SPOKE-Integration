@@ -1,0 +1,25 @@
+{
+  "name": "OSD-511__2025upAuG",
+  "tissue": "mammary gland",
+  "tissue_label": "mammary gland",
+  "n_samples": 15,
+  "n_linked": 72,
+  "proxy": false,
+  "target_nodes": [
+    "thoracic mammary gland (rank 15)"
+  ],
+  "best_target_rank": 15,
+  "frac_samples_target_rank1": 0.0,
+  "frac_samples_target_top3": 0.0,
+  "verdict": "NONE",
+  "top_linked_nodes": [
+    "descending thoracic aorta",
+    "cortex of kidney",
+    "subcutaneous adipose tissue",
+    "ovary",
+    "ectocervix",
+    "liver",
+    "heart",
+    "placenta"
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "name": "OSD-513__2025nohk",
+  "tissue": "kidney",
+  "tissue_label": "kidney",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "score_key": "scores",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-513__2025nohk_GC_ranks.npz",
+  "n_samples": 10,
+  "n_anatomy": 13895,
+  "family_regex": "kidney|renal|nephron|glomerul",
+  "family_exclude": "adrenal|suprarenal|interrenal|nephridi|Hatschek|lieno|olfactory|cerebell|preglomerular",
+  "n_family_nodes": 275,
+  "family_median_pct": 44.92407340770061,
+  "in_top_2_5pct": 43,
+  "in_top_10pct": 74,
+  "mwu_p_less": 8.521718275478778e-05,
+  "ks_p_greater": 1.842524651590317e-09,
+  "frac_samples_significant": 0.9,
+  "family_rank_among_organ_families": 5,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 8.5e-05 (ok)",
+    "KS p = 1.8e-09 (ok)",
+    "9/10 samples individually p < 0.05 (ok)",
+    "family ranks 5 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "nephron tubule basement membrane (0.0%)",
+    "nephron tubule epithelium (0.0%)",
+    "proximal convoluted tubule brush border (0.0%)",
+    "pronephric proximal convoluted tubule (0.0%)",
+    "pronephric proximal straight tubule (0.0%)"
+  ],
+  "top_real_anatomy": [
+    "nephron tubule basement membrane (0.01%)",
+    "nephron tubule epithelium (0.02%)",
+    "proximal convoluted tubule brush border (0.03%)",
+    "pronephric proximal convoluted tubule (0.04%)",
+    "pronephric proximal straight tubule (0.04%)",
+    "brush border layer (0.05%)",
+    "proximal straight tubule (0.07%)",
+    "pronephric proximal tubule (0.07%)",
+    "muscle tissue (0.08%)",
+    "chondroglossus muscle (0.09%)"
+  ]
+}

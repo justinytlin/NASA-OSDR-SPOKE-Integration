@@ -1,0 +1,26 @@
+{
+  "name": "OSD-237__2025upAuG",
+  "tissue": "skin",
+  "tissue_label": "skin",
+  "n_samples": 6,
+  "n_linked": 44,
+  "proxy": false,
+  "target_nodes": [
+    "skin of leg (rank 2)",
+    "skin of abdomen (rank 3)"
+  ],
+  "best_target_rank": 2,
+  "frac_samples_target_rank1": 0.3333333333333333,
+  "frac_samples_target_top3": 0.8333333333333334,
+  "verdict": "PARTIAL",
+  "top_linked_nodes": [
+    "gastrocnemius",
+    "skin of leg",
+    "skin of abdomen",
+    "tibial artery",
+    "thoracic aorta",
+    "vagina",
+    "subcutaneous adipose tissue",
+    "ascending aorta"
+  ]
+}

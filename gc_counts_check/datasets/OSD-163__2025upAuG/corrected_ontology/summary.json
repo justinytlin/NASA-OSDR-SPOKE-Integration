@@ -1,0 +1,47 @@
+{
+  "name": "OSD-163__2025upAuG",
+  "tissue": "kidney",
+  "tissue_label": "kidney",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "score_key": "scores",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-163__2025upAuG_GC_ranks.npz",
+  "n_samples": 6,
+  "n_anatomy": 13895,
+  "family_regex": "kidney|renal|nephron|glomerul",
+  "family_exclude": "adrenal|suprarenal|interrenal|nephridi|Hatschek|lieno|olfactory|cerebell|preglomerular",
+  "n_family_nodes": 275,
+  "family_median_pct": 34.0506177281996,
+  "in_top_2_5pct": 34,
+  "in_top_10pct": 72,
+  "mwu_p_less": 4.4154647286459574e-14,
+  "ks_p_greater": 1.0098666246116144e-09,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 5,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 4.4e-14 (ok)",
+    "KS p = 1e-09 (ok)",
+    "6/6 samples individually p < 0.05 (ok)",
+    "family ranks 5 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "proximal tubular epithelium (0.0%)",
+    "proximal tubule (0.0%)",
+    "proximal straight tubule (0.1%)",
+    "nephron tubule epithelium (0.2%)",
+    "loop of Henle (0.2%)"
+  ],
+  "top_real_anatomy": [
+    "proximal tubular epithelium (0.01%)",
+    "proximal tubule (0.01%)",
+    "mollusc venom (0.03%)",
+    "cardiac Purkinje fiber (0.03%)",
+    "zygomaticus muscle (0.08%)",
+    "ossification center (0.09%)",
+    "trigeminal placode complex (0.10%)",
+    "meningeal myeloid tissue (0.10%)",
+    "subcarinal lymph node (0.10%)",
+    "ophthalmic vein (0.12%)"
+  ]
+}

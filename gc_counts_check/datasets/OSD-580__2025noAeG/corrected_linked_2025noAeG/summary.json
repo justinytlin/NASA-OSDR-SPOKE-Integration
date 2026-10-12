@@ -1,0 +1,28 @@
+{
+  "name": "OSD-580__2025noAeG",
+  "tissue": "heart",
+  "tissue_label": "heart",
+  "n_samples": 20,
+  "n_linked": 73,
+  "proxy": false,
+  "target_nodes": [
+    "left coronary artery (rank 45)",
+    "heart left ventricle (rank 66)",
+    "heart (rank 71)",
+    "right atrium auricular region (rank 72)"
+  ],
+  "best_target_rank": 45,
+  "frac_samples_target_rank1": 0.0,
+  "frac_samples_target_top3": 0.0,
+  "verdict": "NONE",
+  "top_linked_nodes": [
+    "blood",
+    "Ammon's horn",
+    "right lobe of liver",
+    "frontal cortex",
+    "putamen",
+    "prefrontal cortex",
+    "amygdala",
+    "body of pancreas"
+  ]
+}

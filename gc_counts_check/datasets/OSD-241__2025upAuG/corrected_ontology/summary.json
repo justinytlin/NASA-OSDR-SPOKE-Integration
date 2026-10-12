@@ -1,0 +1,47 @@
+{
+  "name": "OSD-241__2025upAuG",
+  "tissue": "skin",
+  "tissue_label": "skin",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "score_key": "scores",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-241__2025upAuG_GC_ranks.npz",
+  "n_samples": 10,
+  "n_anatomy": 13895,
+  "family_regex": "\\bskin|epidermis|dermis",
+  "family_exclude": "dermatome|hypodermis",
+  "n_family_nodes": 305,
+  "family_median_pct": 26.284274919035624,
+  "in_top_2_5pct": 41,
+  "in_top_10pct": 105,
+  "mwu_p_less": 4.1790713542645184e-26,
+  "ks_p_greater": 2.450741814128248e-20,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 1,
+  "verdict": "CLEAR",
+  "criteria": [
+    "pooled Mann-Whitney p = 4.2e-26 (ok)",
+    "KS p = 2.5e-20 (ok)",
+    "10/10 samples individually p < 0.05 (ok)",
+    "family ranks 1 of 14 organ families by median percentile (ok)"
+  ],
+  "best_family_nodes": [
+    "eyelash (0.5%)",
+    "forelimb skin (0.5%)",
+    "mole (0.6%)",
+    "skin of limb (0.6%)",
+    "hair follicle (0.6%)"
+  ],
+  "top_real_anatomy": [
+    "Virchow's lymph node (0.01%)",
+    "right supraclavicular lymph node (0.02%)",
+    "left supraclavicular lymph node (0.02%)",
+    "supraclavicular lymph node (0.03%)",
+    "gABAergic system (0.08%)",
+    "superior gemellus muscle (0.08%)",
+    "cholinergic system (0.09%)",
+    "inferior gemellus muscle (0.09%)",
+    "gemellus muscle (0.09%)",
+    "serotonergic system (0.09%)"
+  ]
+}

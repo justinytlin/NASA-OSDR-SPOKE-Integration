@@ -1,0 +1,26 @@
+{
+  "name": "OSD-513__2025noAeG",
+  "tissue": "kidney",
+  "tissue_label": "kidney",
+  "n_samples": 10,
+  "n_linked": 73,
+  "proxy": false,
+  "target_nodes": [
+    "cortex of kidney (rank 38)",
+    "adult mammalian kidney (rank 57)"
+  ],
+  "best_target_rank": 38,
+  "frac_samples_target_rank1": 0.0,
+  "frac_samples_target_top3": 0.0,
+  "verdict": "NONE",
+  "top_linked_nodes": [
+    "putamen",
+    "blood",
+    "amygdala",
+    "prefrontal cortex",
+    "frontal cortex",
+    "Ammon's horn",
+    "caudate nucleus",
+    "right lobe of liver"
+  ]
+}

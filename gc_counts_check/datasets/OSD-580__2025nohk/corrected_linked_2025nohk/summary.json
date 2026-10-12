@@ -1,0 +1,30 @@
+{
+  "name": "OSD-580__2025nohk",
+  "tissue": "heart",
+  "tissue_label": "heart",
+  "n_samples": 20,
+  "n_linked": 92,
+  "proxy": false,
+  "target_nodes": [
+    "apex of heart (rank 7)",
+    "right coronary artery (rank 9)",
+    "heart (rank 45)",
+    "left coronary artery (rank 55)",
+    "right atrium auricular region (rank 88)",
+    "heart left ventricle (rank 92)"
+  ],
+  "best_target_rank": 7,
+  "frac_samples_target_rank1": 0.0,
+  "frac_samples_target_top3": 0.15,
+  "verdict": "PARTIAL",
+  "top_linked_nodes": [
+    "skeletal muscle tissue",
+    "popliteal artery",
+    "cerebellum",
+    "adrenal gland",
+    "corpus callosum",
+    "esophagus",
+    "apex of heart",
+    "lower esophagus"
+  ]
+}

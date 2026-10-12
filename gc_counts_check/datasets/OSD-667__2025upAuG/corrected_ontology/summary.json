@@ -1,0 +1,47 @@
+{
+  "name": "OSD-667__2025upAuG",
+  "tissue": "colon",
+  "tissue_label": "colon",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "score_key": "scores",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-667__2025upAuG_GC_ranks.npz",
+  "n_samples": 5,
+  "n_anatomy": 13895,
+  "family_regex": "colon\\b|colonic|large intestine|rectum",
+  "family_exclude": "colonic (?:artery|vein)|mesocolon",
+  "n_family_nodes": 45,
+  "family_median_pct": 22.426772220223103,
+  "in_top_2_5pct": 1,
+  "in_top_10pct": 6,
+  "mwu_p_less": 2.0899577416623436e-06,
+  "ks_p_greater": 1.1766400282918338e-05,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 1,
+  "verdict": "CLEAR",
+  "criteria": [
+    "pooled Mann-Whitney p = 2.1e-06 (ok)",
+    "KS p = 1.2e-05 (ok)",
+    "5/5 samples individually p < 0.05 (ok)",
+    "family ranks 1 of 15 organ families by median percentile (ok)"
+  ],
+  "best_family_nodes": [
+    "submucosa of descending colon (1.5%)",
+    "mucosa of descending colon (2.8%)",
+    "submucosa of ascending colon (4.1%)",
+    "submucosa of cecum (7.7%)",
+    "mucosa of ascending colon (8.0%)"
+  ],
+  "top_real_anatomy": [
+    "left supraclavicular lymph node (0.02%)",
+    "right supraclavicular lymph node (0.02%)",
+    "supraclavicular lymph node (0.02%)",
+    "Virchow's lymph node (0.02%)",
+    "cholinergic system (0.04%)",
+    "serotonergic system (0.05%)",
+    "histaminergic system (0.05%)",
+    "gABAergic system (0.06%)",
+    "glutamatergic system (0.06%)",
+    "catecholamine system (0.07%)"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "name": "OSD-525__2025noAeG",
+  "tissue": "cerebellum",
+  "tissue_label": "cerebellum",
+  "n_samples": 10,
+  "n_linked": 73,
+  "proxy": false,
+  "target_nodes": [
+    "cerebellar hemisphere (rank 20)",
+    "right hemisphere of cerebellum (rank 57)"
+  ],
+  "best_target_rank": 20,
+  "frac_samples_target_rank1": 0.0,
+  "frac_samples_target_top3": 0.0,
+  "verdict": "NONE",
+  "top_linked_nodes": [
+    "right lobe of liver",
+    "adult mammalian kidney",
+    "blood",
+    "liver",
+    "heart",
+    "heart left ventricle",
+    "body of pancreas",
+    "placenta"
+  ]
+}

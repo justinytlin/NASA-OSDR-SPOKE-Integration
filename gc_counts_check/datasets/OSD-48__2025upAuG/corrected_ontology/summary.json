@@ -1,0 +1,47 @@
+{
+  "name": "OSD-48__2025upAuG",
+  "tissue": "liver",
+  "tissue_label": "liver",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "score_key": "scores",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-48__2025upAuG_GC_ranks.npz",
+  "n_samples": 7,
+  "n_anatomy": 13895,
+  "family_regex": "liver|hepat",
+  "family_exclude": "hepatopancreas|flexure|arthropod|hepatic cecum",
+  "n_family_nodes": 70,
+  "family_median_pct": 0.29558422865367806,
+  "in_top_2_5pct": 58,
+  "in_top_10pct": 63,
+  "mwu_p_less": 5.8605856627060873e-39,
+  "ks_p_greater": 1.9554040080998544e-43,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 1,
+  "verdict": "CLEAR",
+  "criteria": [
+    "pooled Mann-Whitney p = 5.9e-39 (ok)",
+    "KS p = 2e-43 (ok)",
+    "7/7 samples individually p < 0.05 (ok)",
+    "family ranks 1 of 14 organ families by median percentile (ok)"
+  ],
+  "best_family_nodes": [
+    "liver lobule midzonal region (0.0%)",
+    "liver lobule centrilobular region (0.0%)",
+    "liver lobule periportal region (0.0%)",
+    "lobe of liver (0.0%)",
+    "right hepatic vein (0.0%)"
+  ],
+  "top_real_anatomy": [
+    "liver lobule midzonal region (0.01%)",
+    "liver lobule centrilobular region (0.01%)",
+    "liver lobule periportal region (0.02%)",
+    "lobe of liver (0.03%)",
+    "right hepatic vein (0.04%)",
+    "right lobe of liver (0.05%)",
+    "quadrate lobe of liver (0.05%)",
+    "parenchyma of quadrate lobe of liver (0.06%)",
+    "liver right lobe parenchyma (0.07%)",
+    "anterior sector of right lobe of liver (0.08%)"
+  ]
+}

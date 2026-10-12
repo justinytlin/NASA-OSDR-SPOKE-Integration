@@ -1,0 +1,25 @@
+{
+  "name": "OSD-667__2025upAuG",
+  "tissue": "colon",
+  "tissue_label": "colon",
+  "n_samples": 5,
+  "n_linked": 60,
+  "proxy": false,
+  "target_nodes": [
+    "muscle layer of sigmoid colon (rank 6)"
+  ],
+  "best_target_rank": 6,
+  "frac_samples_target_rank1": 0.0,
+  "frac_samples_target_top3": 0.0,
+  "verdict": "PARTIAL",
+  "top_linked_nodes": [
+    "descending thoracic aorta",
+    "transverse colon",
+    "gastrocnemius",
+    "muscle of leg",
+    "lower esophagus muscularis layer",
+    "muscle layer of sigmoid colon",
+    "right adrenal gland cortex",
+    "body of stomach"
+  ]
+}

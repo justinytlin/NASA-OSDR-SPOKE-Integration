@@ -1,0 +1,26 @@
+{
+  "name": "OSD-457_kidney__2025upAuG",
+  "tissue": "kidney",
+  "tissue_label": "kidney",
+  "n_samples": 3,
+  "n_linked": 72,
+  "proxy": false,
+  "target_nodes": [
+    "adult mammalian kidney (rank 3)",
+    "cortex of kidney (rank 4)"
+  ],
+  "best_target_rank": 3,
+  "frac_samples_target_rank1": 0.0,
+  "frac_samples_target_top3": 1.0,
+  "verdict": "PARTIAL",
+  "top_linked_nodes": [
+    "liver",
+    "right lobe of liver",
+    "adult mammalian kidney",
+    "cortex of kidney",
+    "brain",
+    "heart",
+    "gastrocnemius",
+    "right adrenal gland"
+  ]
+}

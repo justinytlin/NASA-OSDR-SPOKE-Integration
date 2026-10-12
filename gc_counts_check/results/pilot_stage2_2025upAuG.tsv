@@ -1,0 +1,11 @@
+tissue	rank_2019	n_linked_2019	verdict_2019	onto_2019	onto_pct_2019	rank_2025upAuG	n_linked_2025upAuG	verdict_2025upAuG	targets_2025upAuG	top_2025upAuG	onto_2025upAuG	onto_pct_2025upAuG
+retina	1	74	CLEAR	CLEAR	0.2		44	NO LINKED NODE (proxy)			PARTIAL	21.8
+kidney	1	74	CLEAR	CLEAR	6.2		44	NO LINKED NODE (proxy)			PARTIAL	37.7
+heart	2	74	PARTIAL	PARTIAL	22.1		44	NO LINKED NODE (proxy)			CLEAR	10.7
+spleen	2	74	PARTIAL (proxy)	PARTIAL	8.3	2.0	44	PARTIAL	spleen (rank 2)	blood, spleen, upper lobe of left lung	PARTIAL	20.2
+liver	57	74	NONE	NONE	57.1	1.0	44	CLEAR	right lobe of liver (rank 1)	right lobe of liver, left adrenal gland, left adrenal gland cortex	CLEAR	0.4
+adrenal gland	37	74	NONE	NONE	99.6	2.0	44	PARTIAL	left adrenal gland (rank 2); left adrenal gland cortex (rank 3)	gastrocnemius, left adrenal gland, left adrenal gland cortex	PARTIAL	31.7
+lung	69	74	NONE	PARTIAL	47.3	3.0	44	PARTIAL	upper lobe of left lung (rank 3)	thoracic aorta, tibial artery, upper lobe of left lung	NONE	58.5
+cerebellum	68	74	NONE	NONE	80.4	1.0	44	CLEAR	cerebellar hemisphere (rank 1); right hemisphere of cerebellum (rank 9)	cerebellar hemisphere, dorsolateral prefrontal cortex, anterior cingulate cortex	CLEAR	2.2
+white adipose tissue	65	74	NONE	NONE	36.6	1.0	44	CLEAR	subcutaneous adipose tissue (rank 1); omental fat pad (rank 2)	subcutaneous adipose tissue, omental fat pad, gastrocnemius	PARTIAL	31.0
+blood	13	74	NONE	NONE	89.9	1.0	44	CLEAR	blood (rank 1)	blood, spleen, upper lobe of left lung	PARTIAL	0.4

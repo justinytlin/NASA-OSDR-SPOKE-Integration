@@ -1,0 +1,47 @@
+{
+  "name": "OSD-580__2025upAuG",
+  "tissue": "heart",
+  "tissue_label": "heart",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "score_key": "scores",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-580__2025upAuG_GC_ranks.npz",
+  "n_samples": 20,
+  "n_anatomy": 13895,
+  "family_regex": "heart|cardiac|myocard",
+  "family_exclude": "cardiac stomach|cardiac gastric|corpus cardiacum|lymph heart|dorsal vessel",
+  "n_family_nodes": 230,
+  "family_median_pct": 10.662648434688736,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 60,
+  "mwu_p_less": 1.1513960526139638e-117,
+  "ks_p_greater": 1.8552996874360236e-125,
+  "frac_samples_significant": 0.9,
+  "family_rank_among_organ_families": 1,
+  "verdict": "CLEAR",
+  "criteria": [
+    "pooled Mann-Whitney p = 1.2e-117 (ok)",
+    "KS p = 1.9e-125 (ok)",
+    "18/20 samples individually p < 0.05 (ok)",
+    "family ranks 1 of 14 organ families by median percentile (ok)"
+  ],
+  "best_family_nodes": [
+    "papillary muscle of left ventricle (8.5%)",
+    "chorda tendinea of left ventricle (8.6%)",
+    "trabecula carnea of left ventricle (8.8%)",
+    "endocardium of left ventricle (8.8%)",
+    "outflow part of left ventricle (8.8%)"
+  ],
+  "top_real_anatomy": [
+    "muscle of manus (6.10%)",
+    "flexor pollicis brevis muscle (6.10%)",
+    "musculature of upper limb (6.23%)",
+    "abductor pollicis brevis muscle (6.25%)",
+    "intrinsic muscle of manus (6.53%)",
+    "extensor digitorum brevis manus (6.55%)",
+    "rumen (6.57%)",
+    "flexor pollicis longus muscle (6.60%)",
+    "forelimb zeugopod muscle (6.60%)",
+    "forelimb muscle (6.72%)"
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "name": "OSD-580__2025nohk",
+  "tissue": "heart",
+  "tissue_label": "heart",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "score_key": "scores",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-580__2025nohk_GC_ranks.npz",
+  "n_samples": 20,
+  "n_anatomy": 13895,
+  "family_regex": "heart|cardiac|myocard",
+  "family_exclude": "cardiac stomach|cardiac gastric|corpus cardiacum|lymph heart|dorsal vessel",
+  "n_family_nodes": 230,
+  "family_median_pct": 35.989384670744876,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 43,
+  "mwu_p_less": 1.1895866409817829e-07,
+  "ks_p_greater": 1.8467394695533097e-13,
+  "frac_samples_significant": 0.55,
+  "family_rank_among_organ_families": 5,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 1.2e-07 (ok)",
+    "KS p = 1.8e-13 (ok)",
+    "11/20 samples individually p < 0.05 (fail)",
+    "family ranks 5 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "interventricular septum muscular part (4.3%)",
+    "cardiac Purkinje fiber (5.5%)",
+    "myocardium (6.2%)",
+    "cardiac muscle tissue of interventricular septum (6.3%)",
+    "bundle of His (6.3%)"
+  ],
+  "top_real_anatomy": [
+    "vagus nerve (3.41%)",
+    "ramus auricularis of the vagus nerve (3.42%)",
+    "interventricular septum muscular part (4.28%)",
+    "muscle tissue (4.35%)",
+    "ceratoglossus (4.37%)",
+    "chondroglossus muscle (4.37%)",
+    "hyoglossus muscle (4.38%)",
+    "sympathetic nervous system (4.45%)",
+    "cutaneous muscle (4.72%)",
+    "cutaneous trunci muscle (4.73%)"
+  ]
+}

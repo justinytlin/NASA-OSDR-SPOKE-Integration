@@ -1,0 +1,38 @@
+{
+  "name": "OSD-202__2025upAuG",
+  "tissue": "brain",
+  "tissue_label": "brain",
+  "n_samples": 10,
+  "n_linked": 44,
+  "proxy": false,
+  "target_nodes": [
+    "dorsolateral prefrontal cortex (rank 1)",
+    "right frontal lobe (rank 2)",
+    "anterior cingulate cortex (rank 3)",
+    "Ammon's horn (rank 4)",
+    "cerebellar hemisphere (rank 5)",
+    "nucleus accumbens (rank 6)",
+    "amygdala (rank 7)",
+    "right hemisphere of cerebellum (rank 8)",
+    "putamen (rank 9)",
+    "caudate nucleus (rank 10)",
+    "substantia nigra (rank 11)",
+    "hypothalamus (rank 12)",
+    "adenohypophysis (rank 18)",
+    "pituitary gland (rank 25)"
+  ],
+  "best_target_rank": 1,
+  "frac_samples_target_rank1": 1.0,
+  "frac_samples_target_top3": 1.0,
+  "verdict": "CLEAR",
+  "top_linked_nodes": [
+    "dorsolateral prefrontal cortex",
+    "right frontal lobe",
+    "anterior cingulate cortex",
+    "Ammon's horn",
+    "cerebellar hemisphere",
+    "nucleus accumbens",
+    "amygdala",
+    "right hemisphere of cerebellum"
+  ]
+}

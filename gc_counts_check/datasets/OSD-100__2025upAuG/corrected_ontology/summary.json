@@ -1,0 +1,47 @@
+{
+  "name": "OSD-100__2025upAuG",
+  "tissue": "eye",
+  "tissue_label": "eye",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "score_key": "scores",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-100__2025upAuG_GC_ranks.npz",
+  "n_samples": 6,
+  "n_anatomy": 13895,
+  "family_regex": "\\beye\\b|eyeball|ocular|cornea|\\blens\\b|retina|sclera|conjunctiv|uvea|\\biris\\b|ciliary body|choroid|vitreous|aqueous humor",
+  "family_exclude": "choroid plexus|choroidal artery|anterior choroidal|eyelid|eyebrow|lens placode|eye primordium|compound eye|ocellus|eyespot|preoptic|supraoptic|optic (?:tract|radiation|tectum|lobe|chiasm)|sensillum|extra-ocular|ocular pre-muscle|eye skin|eye sebaceous|sclerotome|scleral ossicle|retinaculum|macula densa|fovea capitis",
+  "n_family_nodes": 261,
+  "family_median_pct": 32.758786134100994,
+  "in_top_2_5pct": 38,
+  "in_top_10pct": 68,
+  "mwu_p_less": 4.967843876728173e-20,
+  "ks_p_greater": 5.546728717382341e-17,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 3,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 5e-20 (ok)",
+    "KS p = 5.5e-17 (ok)",
+    "6/6 samples individually p < 0.05 (ok)",
+    "family ranks 3 of 15 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "Descemet's membrane (0.0%)",
+    "pupil (0.1%)",
+    "anterior segment of eyeball (0.1%)",
+    "optic disc (0.1%)",
+    "sclera (0.1%)"
+  ],
+  "top_real_anatomy": [
+    "oculomotor muscle (0.01%)",
+    "rectus extraocular muscle (0.02%)",
+    "oblique extraocular muscle (0.02%)",
+    "oculomotor nerve (0.03%)",
+    "trochlear nerve (0.04%)",
+    "Descemet's membrane (0.05%)",
+    "muscle spindle (0.07%)",
+    "ophthalmic artery (0.08%)",
+    "primary muscle spindle (0.08%)",
+    "secondary muscle spindle (0.08%)"
+  ]
+}

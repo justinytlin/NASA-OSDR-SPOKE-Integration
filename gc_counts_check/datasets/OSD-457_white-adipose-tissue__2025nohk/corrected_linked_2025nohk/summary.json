@@ -1,0 +1,27 @@
+{
+  "name": "OSD-457_white-adipose-tissue__2025nohk",
+  "tissue": "adipose tissue",
+  "tissue_label": "white adipose tissue",
+  "n_samples": 6,
+  "n_linked": 92,
+  "proxy": false,
+  "target_nodes": [
+    "adipose tissue (rank 10)",
+    "subcutaneous adipose tissue (rank 54)",
+    "omental fat pad (rank 58)"
+  ],
+  "best_target_rank": 10,
+  "frac_samples_target_rank1": 0.0,
+  "frac_samples_target_top3": 0.0,
+  "verdict": "NONE",
+  "top_linked_nodes": [
+    "cerebellum",
+    "skeletal muscle tissue",
+    "corpus callosum",
+    "popliteal artery",
+    "esophagus",
+    "right fallopian tube",
+    "adrenal gland",
+    "lower esophagus"
+  ]
+}

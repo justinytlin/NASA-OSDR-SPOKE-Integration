@@ -1,0 +1,47 @@
+{
+  "name": "OSD-690__2025upAuG",
+  "tissue": "bone marrow",
+  "tissue_label": "bone marrow",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "score_key": "scores",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-690__2025upAuG_GC_ranks.npz",
+  "n_samples": 6,
+  "n_anatomy": 13895,
+  "family_regex": "bone marrow",
+  "family_exclude": null,
+  "n_family_nodes": 6,
+  "family_median_pct": 5.704689936427972,
+  "in_top_2_5pct": 2,
+  "in_top_10pct": 4,
+  "mwu_p_less": 0.0017170380213895435,
+  "ks_p_greater": 0.003413881703467546,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 2,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.0017 (ok)",
+    "KS p = 0.0034 (ok)",
+    "6/6 samples individually p < 0.05 (ok)",
+    "family ranks 2 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "bone marrow (0.6%)",
+    "red bone marrow (2.4%)",
+    "red bone marrow of sternum (5.3%)",
+    "yellow bone marrow (6.2%)",
+    "red bone marrow of iliac crest (17.4%)"
+  ],
+  "top_real_anatomy": [
+    "left supraclavicular lymph node (0.01%)",
+    "right supraclavicular lymph node (0.01%)",
+    "supraclavicular lymph node (0.02%)",
+    "Virchow's lymph node (0.03%)",
+    "dorsal paragigantocellular nucleus (0.11%)",
+    "lateral paragigantocellular nucleus (0.11%)",
+    "principal artery to limb (0.12%)",
+    "hematopoietic system (0.13%)",
+    "arterial blood (0.13%)",
+    "paragigantocellular nucleus (0.13%)"
+  ]
+}

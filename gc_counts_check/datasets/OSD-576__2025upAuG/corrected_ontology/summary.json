@@ -1,0 +1,47 @@
+{
+  "name": "OSD-576__2025upAuG",
+  "tissue": "skeletal muscle",
+  "tissue_label": "tibialis anterior",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "score_key": "scores",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-576__2025upAuG_GC_ranks.npz",
+  "n_samples": 9,
+  "n_anatomy": 13895,
+  "family_regex": "skeletal muscle|gastrocnemius|quadriceps|soleus|tibialis",
+  "family_exclude": null,
+  "n_family_nodes": 501,
+  "family_median_pct": 5.180120746871376,
+  "in_top_2_5pct": 187,
+  "in_top_10pct": 295,
+  "mwu_p_less": 1.7395386896916897e-163,
+  "ks_p_greater": 4.369789907043288e-155,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 2,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 1.7e-163 (ok)",
+    "KS p = 4.4e-155 (ok)",
+    "9/9 samples individually p < 0.05 (ok)",
+    "family ranks 2 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "triceps surae (0.0%)",
+    "soleus muscle (0.0%)",
+    "gastrocnemius (0.0%)",
+    "hindlimb zeugopod muscle (0.0%)",
+    "plantaris (0.0%)"
+  ],
+  "top_real_anatomy": [
+    "triceps surae (0.01%)",
+    "soleus muscle (0.02%)",
+    "gastrocnemius (0.02%)",
+    "hindlimb zeugopod muscle (0.03%)",
+    "plantaris (0.04%)",
+    "gastrocnemius externus (0.04%)",
+    "gastrocnemius internus (0.05%)",
+    "fibularis longus (0.06%)",
+    "fibularis tertius (0.07%)",
+    "fibularis brevis (0.07%)"
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "name": "OSD-457_white-adipose-tissue__2025noAeG",
+  "tissue": "adipose tissue",
+  "tissue_label": "white adipose tissue",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "score_key": "scores",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-457_white-adipose-tissue__2025noAeG_GC_ranks.npz",
+  "n_samples": 6,
+  "n_anatomy": 13895,
+  "family_regex": "adipose|fat pad|\\bfat\\b|panniculus",
+  "family_exclude": "adipose fin|adipose eyelid|arthropod",
+  "n_family_nodes": 46,
+  "family_median_pct": 69.43025068969652,
+  "in_top_2_5pct": 2,
+  "in_top_10pct": 6,
+  "mwu_p_less": 0.9983545022328109,
+  "ks_p_greater": 0.6716013723982045,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 6,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 1 (fail)",
+    "KS p = 0.67 (fail)",
+    "0/6 samples individually p < 0.05 (fail)",
+    "family ranks 6 of 15 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "intramuscular adipose tissue (0.1%)",
+    "brown adipose tissue (1.6%)",
+    "white adipose tissue (5.6%)",
+    "adipose tissue (6.4%)",
+    "pararenal fat (6.4%)"
+  ],
+  "top_real_anatomy": [
+    "tendon (0.01%)",
+    "vinculum of tendon (0.02%)",
+    "tendon of semitendinosus (0.03%)",
+    "entire myelin sheath (0.03%)",
+    "vagus nerve (0.03%)",
+    "ramus auricularis of the vagus nerve (0.04%)",
+    "accessory XI nerve cranial component (0.06%)",
+    "intramuscular adipose tissue (0.07%)",
+    "long head of biceps brachii (0.08%)",
+    "short head of biceps brachii (0.09%)"
+  ]
+}

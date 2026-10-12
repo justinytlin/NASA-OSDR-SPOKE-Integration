@@ -1,0 +1,26 @@
+{
+  "name": "OSD-98__2025upAuG",
+  "tissue": "adrenal gland",
+  "tissue_label": "adrenal gland",
+  "n_samples": 5,
+  "n_linked": 44,
+  "proxy": false,
+  "target_nodes": [
+    "left adrenal gland cortex (rank 1)",
+    "left adrenal gland (rank 3)"
+  ],
+  "best_target_rank": 1,
+  "frac_samples_target_rank1": 0.6,
+  "frac_samples_target_top3": 0.8,
+  "verdict": "CLEAR",
+  "top_linked_nodes": [
+    "left adrenal gland cortex",
+    "gastrocnemius",
+    "left adrenal gland",
+    "tibial artery",
+    "thoracic aorta",
+    "ascending aorta",
+    "right ovary",
+    "left ovary"
+  ]
+}

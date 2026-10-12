@@ -1,0 +1,26 @@
+{
+  "name": "OSD-563__2025upAuG",
+  "tissue": "cerebellum",
+  "tissue_label": "cerebellum",
+  "n_samples": 5,
+  "n_linked": 72,
+  "proxy": false,
+  "target_nodes": [
+    "cerebellar hemisphere (rank 1)",
+    "right hemisphere of cerebellum (rank 6)"
+  ],
+  "best_target_rank": 1,
+  "frac_samples_target_rank1": 0.8,
+  "frac_samples_target_top3": 0.8,
+  "verdict": "CLEAR",
+  "top_linked_nodes": [
+    "cerebellar hemisphere",
+    "dorsolateral prefrontal cortex",
+    "prefrontal cortex",
+    "anterior cingulate cortex",
+    "brain",
+    "right hemisphere of cerebellum",
+    "right frontal lobe",
+    "frontal cortex"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "name": "OSD-525__2025",
+  "tissue": "cerebellum",
+  "tissue_label": "cerebellum",
+  "n_samples": 10,
+  "n_linked": 92,
+  "proxy": false,
+  "target_nodes": [
+    "cerebellum (rank 1)",
+    "right hemisphere of cerebellum (rank 26)",
+    "cerebellar hemisphere (rank 27)"
+  ],
+  "best_target_rank": 1,
+  "frac_samples_target_rank1": 0.9,
+  "frac_samples_target_top3": 1.0,
+  "verdict": "CLEAR",
+  "top_linked_nodes": [
+    "cerebellum",
+    "corpus callosum",
+    "skeletal muscle tissue",
+    "popliteal artery",
+    "esophagus",
+    "adrenal gland",
+    "lymph node",
+    "lower esophagus"
+  ]
+}

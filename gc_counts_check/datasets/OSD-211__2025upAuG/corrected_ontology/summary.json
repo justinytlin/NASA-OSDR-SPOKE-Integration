@@ -1,0 +1,47 @@
+{
+  "name": "OSD-211__2025upAuG",
+  "tissue": "spleen",
+  "tissue_label": "spleen",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "score_key": "scores",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-211__2025upAuG_GC_ranks.npz",
+  "n_samples": 6,
+  "n_anatomy": 13895,
+  "family_regex": "spleen|splenic",
+  "family_exclude": "flexure",
+  "n_family_nodes": 29,
+  "family_median_pct": 25.751469353484467,
+  "in_top_2_5pct": 2,
+  "in_top_10pct": 5,
+  "mwu_p_less": 0.003323379225757786,
+  "ks_p_greater": 0.007064309029824856,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 3,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.0033 (ok)",
+    "KS p = 0.0071 (ok)",
+    "6/6 samples individually p < 0.05 (ok)",
+    "family ranks 3 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "spleen smooth muscle (2.2%)",
+    "spleen (2.3%)",
+    "hilum of spleen (3.1%)",
+    "vasculature of spleen (6.4%)",
+    "splenic arteriole (7.9%)"
+  ],
+  "top_real_anatomy": [
+    "hematopoietic system (0.01%)",
+    "germinal center (0.02%)",
+    "right supraclavicular lymph node (0.03%)",
+    "Virchow's lymph node (0.04%)",
+    "supraclavicular lymph node (0.04%)",
+    "left supraclavicular lymph node (0.05%)",
+    "common plantar digital arteries (0.12%)",
+    "extensor caudae muscle (0.12%)",
+    "alisphenoid ossification center (0.13%)",
+    "extensor caudae medialis muscle (0.14%)"
+  ]
+}

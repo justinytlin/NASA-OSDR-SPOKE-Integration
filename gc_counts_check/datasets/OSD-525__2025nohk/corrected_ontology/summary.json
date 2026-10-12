@@ -1,0 +1,47 @@
+{
+  "name": "OSD-525__2025nohk",
+  "tissue": "cerebellum",
+  "tissue_label": "cerebellum",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "score_key": "scores",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-525__2025nohk_GC_ranks.npz",
+  "n_samples": 10,
+  "n_anatomy": 13895,
+  "family_regex": "cerebell",
+  "family_exclude": "artery|vein|spinocerebellar|cerebellar peduncle (?:artery|vein)",
+  "n_family_nodes": 115,
+  "family_median_pct": 8.36200071968334,
+  "in_top_2_5pct": 51,
+  "in_top_10pct": 58,
+  "mwu_p_less": 3.155000844614091e-11,
+  "ks_p_greater": 8.58153213813019e-23,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 3,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 3.2e-11 (ok)",
+    "KS p = 8.6e-23 (ok)",
+    "10/10 samples individually p < 0.05 (ok)",
+    "family ranks 3 of 15 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "white matter lamina of cerebellum (0.0%)",
+    "superior medullary velum (0.0%)",
+    "eminentia granularis (0.0%)",
+    "superficial feature part of the cerebellum (0.0%)",
+    "granular eminence (0.0%)"
+  ],
+  "top_real_anatomy": [
+    "white matter lamina of cerebellum (0.02%)",
+    "superior medullary velum (0.03%)",
+    "eminentia granularis (0.04%)",
+    "superficial feature part of the cerebellum (0.04%)",
+    "granular eminence (0.04%)",
+    "gross anatomical parts of the cerebellum (0.05%)",
+    "vestibulolateralis lobe (0.07%)",
+    "vestibulocerebellum (0.07%)",
+    "cerebellum marginal layer (0.08%)",
+    "parallel fiber (0.10%)"
+  ]
+}

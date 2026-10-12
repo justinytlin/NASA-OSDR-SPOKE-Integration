@@ -1,0 +1,47 @@
+{
+  "name": "OSD-580__2025noAeG",
+  "tissue": "heart",
+  "tissue_label": "heart",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "score_key": "scores",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-580__2025noAeG_GC_ranks.npz",
+  "n_samples": 20,
+  "n_anatomy": 13895,
+  "family_regex": "heart|cardiac|myocard",
+  "family_exclude": "cardiac stomach|cardiac gastric|corpus cardiacum|lymph heart|dorsal vessel",
+  "n_family_nodes": 230,
+  "family_median_pct": 77.18873695573947,
+  "in_top_2_5pct": 12,
+  "in_top_10pct": 45,
+  "mwu_p_less": 0.9999999992393366,
+  "ks_p_greater": 3.059495421079222e-05,
+  "frac_samples_significant": 0.15,
+  "family_rank_among_organ_families": 9,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 1 (fail)",
+    "KS p = 3.1e-05 (ok)",
+    "3/20 samples individually p < 0.05 (fail)",
+    "family ranks 9 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "cardiac Purkinje fiber (0.1%)",
+    "bundle of His (0.1%)",
+    "atrioventricular node (0.1%)",
+    "sinoatrial node (0.4%)",
+    "interventricular septum muscular part (0.5%)"
+  ],
+  "top_real_anatomy": [
+    "cardiac Purkinje fiber (0.06%)",
+    "bundle of His (0.10%)",
+    "atrioventricular node (0.13%)",
+    "sinoatrial node (0.43%)",
+    "cleidooccipital muscle (0.45%)",
+    "chordate pharyngeal muscle (0.53%)",
+    "interventricular septum muscular part (0.53%)",
+    "ceratohyoideus muscle (0.53%)",
+    "transversus epibranchialis 2 (0.54%)",
+    "caudal levator (0.55%)"
+  ]
+}

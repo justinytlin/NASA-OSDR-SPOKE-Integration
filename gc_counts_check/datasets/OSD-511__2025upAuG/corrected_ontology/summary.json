@@ -1,0 +1,47 @@
+{
+  "name": "OSD-511__2025upAuG",
+  "tissue": "mammary gland",
+  "tissue_label": "mammary gland",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "score_key": "scores",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-511__2025upAuG_GC_ranks.npz",
+  "n_samples": 15,
+  "n_anatomy": 13895,
+  "family_regex": "mammary|lactiferous|nipple|areola|\\bbreast",
+  "family_exclude": "internal mammary|mammary (?:artery|vein)|mammary body|mamm?illary|feather",
+  "n_family_nodes": 35,
+  "family_median_pct": 61.67062492503298,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 0,
+  "mwu_p_less": 0.986454589019663,
+  "ks_p_greater": 0.8869448945465834,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 9,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.99 (fail)",
+    "KS p = 0.89 (fail)",
+    "0/15 samples individually p < 0.05 (fail)",
+    "family ranks 9 of 15 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "mammary gland fat (21.7%)",
+    "thoracic mammary gland (23.7%)",
+    "nipple (28.0%)",
+    "suspensory ligament of breast (32.1%)",
+    "cervical mammary gland (33.8%)"
+  ],
+  "top_real_anatomy": [
+    "left supraclavicular lymph node (0.05%)",
+    "Virchow's lymph node (0.05%)",
+    "right supraclavicular lymph node (0.05%)",
+    "supraclavicular lymph node (0.06%)",
+    "gABAergic system (0.06%)",
+    "glutamatergic system (0.07%)",
+    "superior mediastinal lymph node (0.08%)",
+    "cholinergic system (0.08%)",
+    "serotonergic system (0.08%)",
+    "catecholamine system (0.09%)"
+  ]
+}

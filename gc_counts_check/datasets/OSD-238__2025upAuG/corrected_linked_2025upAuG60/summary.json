@@ -1,0 +1,26 @@
+{
+  "name": "OSD-238__2025upAuG",
+  "tissue": "skin",
+  "tissue_label": "skin",
+  "n_samples": 6,
+  "n_linked": 60,
+  "proxy": false,
+  "target_nodes": [
+    "skin of abdomen (rank 2)",
+    "skin of leg (rank 3)"
+  ],
+  "best_target_rank": 2,
+  "frac_samples_target_rank1": 0.16666666666666666,
+  "frac_samples_target_top3": 1.0,
+  "verdict": "PARTIAL",
+  "top_linked_nodes": [
+    "descending thoracic aorta",
+    "skin of abdomen",
+    "skin of leg",
+    "left coronary artery",
+    "vagina",
+    "thoracic aorta",
+    "tibial artery",
+    "gastrocnemius"
+  ]
+}

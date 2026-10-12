@@ -1,0 +1,11 @@
+tissue	rank_2019	n_linked_2019	verdict_2019	onto_2019	onto_pct_2019	rank_2025noAeG	n_linked_2025noAeG	verdict_2025noAeG	targets_2025noAeG	top_2025noAeG	onto_2025noAeG	onto_pct_2025noAeG
+retina	1	74	CLEAR	CLEAR	0.2		73	NO LINKED NODE (proxy)			CLEAR	19.0
+kidney	1	74	CLEAR	CLEAR	6.2	38.0	73	NONE	cortex of kidney (rank 38); adult mammalian kidney (rank 57)	putamen, blood, amygdala	NONE	65.1
+heart	2	74	PARTIAL	PARTIAL	22.1	45.0	73	NONE	left coronary artery (rank 45); heart left ventricle (rank 66)	blood, Ammon's horn, right lobe of liver	NONE	77.2
+spleen	2	74	PARTIAL (proxy)	PARTIAL	8.3	48.0	73	NONE	spleen (rank 48)	liver, amygdala, putamen	NONE	97.2
+liver	57	74	NONE	NONE	57.1	45.0	73	NONE	right lobe of liver (rank 45); liver (rank 71)	putamen, prefrontal cortex, amygdala	NONE	90.0
+adrenal gland	37	74	NONE	NONE	99.6	38.0	73	NONE	right adrenal gland (rank 38); right adrenal gland cortex (rank 52)	amygdala, putamen, blood	NONE	62.4
+lung	69	74	NONE	PARTIAL	47.3	30.0	73	NONE	upper lobe of left lung (rank 30)	liver, putamen, amygdala	NONE	84.1
+cerebellum	68	74	NONE	NONE	80.4	20.0	73	NONE	cerebellar hemisphere (rank 20); right hemisphere of cerebellum (rank 57)	right lobe of liver, adult mammalian kidney, blood	NONE	64.7
+white adipose tissue	65	74	NONE	NONE	36.6	37.0	73	NONE	subcutaneous adipose tissue (rank 37); omental fat pad (rank 55)	amygdala, Ammon's horn, putamen	NONE	69.4
+blood	13	74	NONE	NONE	89.9	73.0	73	NONE	blood (rank 73)	putamen, hypothalamus, adult mammalian kidney	NONE	100.0

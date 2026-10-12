@@ -1,0 +1,47 @@
+{
+  "name": "OSD-561__2025upAuG",
+  "tissue": "cerebellum",
+  "tissue_label": "cerebellum",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "score_key": "scores",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-561__2025upAuG_GC_ranks.npz",
+  "n_samples": 12,
+  "n_anatomy": 13895,
+  "family_regex": "cerebell",
+  "family_exclude": "artery|vein|spinocerebellar|cerebellar peduncle (?:artery|vein)",
+  "n_family_nodes": 115,
+  "family_median_pct": 5.647715005397625,
+  "in_top_2_5pct": 15,
+  "in_top_10pct": 86,
+  "mwu_p_less": 1.998932685586366e-47,
+  "ks_p_greater": 1.4712922503380797e-46,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 1,
+  "verdict": "CLEAR",
+  "criteria": [
+    "pooled Mann-Whitney p = 2e-47 (ok)",
+    "KS p = 1.5e-46 (ok)",
+    "12/12 samples individually p < 0.05 (ok)",
+    "family ranks 1 of 15 organ families by median percentile (ok)"
+  ],
+  "best_family_nodes": [
+    "cerebellar nuclear complex (0.8%)",
+    "nucleus of cerebellar nuclear complex (2.0%)",
+    "fastigial nucleus (2.0%)",
+    "cerebellum interpositus nucleus (2.0%)",
+    "cerebellum globose nucleus (2.0%)"
+  ],
+  "top_real_anatomy": [
+    "primary motor cortex layer 6 (0.11%)",
+    "intralaminar nuclear group (0.11%)",
+    "primary motor cortex layer 5 (0.12%)",
+    "lateral nuclear group of thalamus (0.12%)",
+    "perforant path (0.12%)",
+    "primary motor cortex layer 1 (0.12%)",
+    "laminar subdivision of the cortex (0.12%)",
+    "cortical layer II/III (0.13%)",
+    "lower layers of the cortex (0.14%)",
+    "cortical layer IV/V (0.14%)"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "name": "OSD-401_gastrocnemius__2025upAuG",
+  "tissue": "skeletal muscle",
+  "tissue_label": "gastrocnemius",
+  "n_samples": 3,
+  "n_linked": 60,
+  "proxy": false,
+  "target_nodes": [
+    "gastrocnemius (rank 1)",
+    "muscle of leg (rank 2)"
+  ],
+  "best_target_rank": 1,
+  "frac_samples_target_rank1": 1.0,
+  "frac_samples_target_top3": 1.0,
+  "verdict": "CLEAR",
+  "top_linked_nodes": [
+    "gastrocnemius",
+    "muscle of leg",
+    "heart left ventricle",
+    "right atrium auricular region",
+    "descending thoracic aorta",
+    "lower esophagus muscularis layer",
+    "right adrenal gland cortex",
+    "esophagogastric junction muscularis propria"
+  ]
+}

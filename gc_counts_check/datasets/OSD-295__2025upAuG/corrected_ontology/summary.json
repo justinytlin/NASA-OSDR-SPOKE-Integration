@@ -1,0 +1,47 @@
+{
+  "name": "OSD-295__2025upAuG",
+  "tissue": "skeletal muscle",
+  "tissue_label": "soleus",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "score_key": "scores",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-295__2025upAuG_GC_ranks.npz",
+  "n_samples": 18,
+  "n_anatomy": 13895,
+  "family_regex": "skeletal muscle|gastrocnemius|quadriceps|soleus|tibialis",
+  "family_exclude": null,
+  "n_family_nodes": 501,
+  "family_median_pct": 5.3716364799488225,
+  "in_top_2_5pct": 174,
+  "in_top_10pct": 291,
+  "mwu_p_less": 1.969399856199758e-158,
+  "ks_p_greater": 2.246532866525352e-135,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 2,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 2e-158 (ok)",
+    "KS p = 2.2e-135 (ok)",
+    "18/18 samples individually p < 0.05 (ok)",
+    "family ranks 2 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "triceps surae (0.0%)",
+    "soleus muscle (0.1%)",
+    "ventral pelvic arrector (0.1%)",
+    "dorsal pelvic arrector (0.1%)",
+    "hindlimb zeugopod muscle (0.1%)"
+  ],
+  "top_real_anatomy": [
+    "triceps surae (0.03%)",
+    "soleus muscle (0.05%)",
+    "musculature of hindlimb zeugopod (0.08%)",
+    "ventral pelvic arrector (0.09%)",
+    "dorsal pelvic arrector (0.09%)",
+    "hindlimb zeugopod muscle (0.10%)",
+    "plantaris (0.11%)",
+    "gastrocnemius externus (0.12%)",
+    "gastrocnemius internus (0.12%)",
+    "interradialis (0.13%)"
+  ]
+}

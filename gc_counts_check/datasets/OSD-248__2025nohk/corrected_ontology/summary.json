@@ -1,0 +1,47 @@
+{
+  "name": "OSD-248__2025nohk",
+  "tissue": "lung",
+  "tissue_label": "lung",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "score_key": "scores",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-248__2025nohk_GC_ranks.npz",
+  "n_samples": 19,
+  "n_anatomy": 13895,
+  "family_regex": "\\blung|pulmonary|bronch|alveolus of lung|alveolar (?:sac|wall|system|duct)",
+  "family_exclude": "pulmonum",
+  "n_family_nodes": 151,
+  "family_median_pct": 47.33395200848469,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 4,
+  "mwu_p_less": 0.08127287972737385,
+  "ks_p_greater": 0.028782612414605693,
+  "frac_samples_significant": 0.42105263157894735,
+  "family_rank_among_organ_families": 5,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.081 (fail)",
+    "KS p = 0.029 (fail)",
+    "8/19 samples individually p < 0.05 (fail)",
+    "family ranks 5 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "alveolus of lung (5.9%)",
+    "epithelial lining fluid (6.3%)",
+    "right lung alveolus (7.8%)",
+    "left lung alveolus (9.6%)",
+    "alveolar smooth muscle (11.6%)"
+  ],
+  "top_real_anatomy": [
+    "skeletal muscle tissue of digastric (0.02%)",
+    "skeletal muscle endomysium (0.03%)",
+    "anal fin musculature (0.03%)",
+    "skeletal muscle tissue of trapezius (0.04%)",
+    "skeletal muscle tissue of mylohyoid (0.05%)",
+    "dorsal erector muscle (0.07%)",
+    "dorsal inclinator muscle (0.07%)",
+    "dorsal depressor muscle (0.08%)",
+    "epimysium (0.11%)",
+    "perimysium (0.11%)"
+  ]
+}

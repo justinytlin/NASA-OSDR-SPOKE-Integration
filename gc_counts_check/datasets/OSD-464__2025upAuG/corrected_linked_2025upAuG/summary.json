@@ -1,0 +1,25 @@
+{
+  "name": "OSD-464__2025upAuG",
+  "tissue": "lung",
+  "tissue_label": "lung",
+  "n_samples": 9,
+  "n_linked": 44,
+  "proxy": false,
+  "target_nodes": [
+    "upper lobe of left lung (rank 3)"
+  ],
+  "best_target_rank": 3,
+  "frac_samples_target_rank1": 0.2222222222222222,
+  "frac_samples_target_top3": 0.7777777777777778,
+  "verdict": "PARTIAL",
+  "top_linked_nodes": [
+    "tibial artery",
+    "thoracic aorta",
+    "upper lobe of left lung",
+    "subcutaneous adipose tissue",
+    "ascending aorta",
+    "omental fat pad",
+    "gastrocnemius",
+    "blood"
+  ]
+}

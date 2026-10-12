@@ -1,0 +1,25 @@
+{
+  "name": "OSD-326__2025upAuG",
+  "tissue": "skeletal muscle",
+  "tissue_label": "quadriceps",
+  "n_samples": 4,
+  "n_linked": 44,
+  "proxy": false,
+  "target_nodes": [
+    "gastrocnemius (rank 1)"
+  ],
+  "best_target_rank": 1,
+  "frac_samples_target_rank1": 1.0,
+  "frac_samples_target_top3": 1.0,
+  "verdict": "CLEAR",
+  "top_linked_nodes": [
+    "gastrocnemius",
+    "right lobe of liver",
+    "left adrenal gland cortex",
+    "left adrenal gland",
+    "tibial artery",
+    "right ovary",
+    "blood",
+    "left ovary"
+  ]
+}

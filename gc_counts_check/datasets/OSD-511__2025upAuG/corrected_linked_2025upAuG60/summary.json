@@ -1,0 +1,25 @@
+{
+  "name": "OSD-511__2025upAuG",
+  "tissue": "mammary gland",
+  "tissue_label": "mammary gland",
+  "n_samples": 15,
+  "n_linked": 60,
+  "proxy": false,
+  "target_nodes": [
+    "thoracic mammary gland (rank 5)"
+  ],
+  "best_target_rank": 5,
+  "frac_samples_target_rank1": 0.0,
+  "frac_samples_target_top3": 0.0,
+  "verdict": "PARTIAL",
+  "top_linked_nodes": [
+    "subcutaneous adipose tissue",
+    "descending thoracic aorta",
+    "omental fat pad",
+    "right adrenal gland cortex",
+    "thoracic mammary gland",
+    "left coronary artery",
+    "gastrocnemius",
+    "right adrenal gland"
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "name": "OSD-612__2025upAuG",
+  "tissue": "cerebrum",
+  "tissue_label": "cerebrum",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "score_key": "scores",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-612__2025upAuG_GC_ranks.npz",
+  "n_samples": 5,
+  "n_anatomy": 13895,
+  "family_regex": "cerebral (?:hemisphere|cortex|white matter|lobe|subcortex)|cerebrum|telencephal|neocortex|isocortex|frontal (?:lobe|cortex)|parietal (?:lobe|cortex)|temporal (?:lobe|cortex)|occipital (?:lobe|cortex)|corpus callosum",
+  "family_exclude": "artery|vein|Myxin|protocerebrum",
+  "n_family_nodes": 666,
+  "family_median_pct": 5.5458798128823314,
+  "in_top_2_5pct": 132,
+  "in_top_10pct": 485,
+  "mwu_p_less": 0.0,
+  "ks_p_greater": 0.0,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 1,
+  "verdict": "CLEAR",
+  "criteria": [
+    "pooled Mann-Whitney p = 0 (ok)",
+    "KS p = 0 (ok)",
+    "5/5 samples individually p < 0.05 (ok)",
+    "family ranks 1 of 15 organ families by median percentile (ok)"
+  ],
+  "best_family_nodes": [
+    "primary motor cortex layer 5 (0.1%)",
+    "primary motor cortex layer 1 (0.1%)",
+    "primary motor cortex layer 6 (0.2%)",
+    "layer of neocortex (0.2%)",
+    "cortical layer VIb (0.2%)"
+  ],
+  "top_real_anatomy": [
+    "primary motor cortex layer 5 (0.15%)",
+    "primary motor cortex layer 1 (0.15%)",
+    "primary motor cortex layer 6 (0.16%)",
+    "layer of neocortex (0.20%)",
+    "cortical layer VIb (0.20%)",
+    "laminar subdivision of the cortex (0.21%)",
+    "cortical layer IV/V (0.22%)",
+    "cortical layer II/III (0.22%)",
+    "cortical layer VI (0.22%)",
+    "lower layers of the cortex (0.23%)"
+  ]
+}

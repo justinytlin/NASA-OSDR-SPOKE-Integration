@@ -1,0 +1,32 @@
+{
+  "name": "OSD-612__2025upAuG",
+  "tissue": "cerebrum",
+  "tissue_label": "cerebrum",
+  "n_samples": 5,
+  "n_linked": 60,
+  "proxy": false,
+  "target_nodes": [
+    "dorsolateral prefrontal cortex (rank 1)",
+    "anterior cingulate cortex (rank 2)",
+    "right frontal lobe (rank 3)",
+    "Ammon's horn (rank 5)",
+    "amygdala (rank 8)",
+    "putamen (rank 9)",
+    "nucleus accumbens (rank 11)",
+    "caudate nucleus (rank 13)"
+  ],
+  "best_target_rank": 1,
+  "frac_samples_target_rank1": 0.6,
+  "frac_samples_target_top3": 1.0,
+  "verdict": "CLEAR",
+  "top_linked_nodes": [
+    "dorsolateral prefrontal cortex",
+    "anterior cingulate cortex",
+    "right frontal lobe",
+    "cerebellar hemisphere",
+    "Ammon's horn",
+    "right hemisphere of cerebellum",
+    "substantia nigra",
+    "amygdala"
+  ]
+}

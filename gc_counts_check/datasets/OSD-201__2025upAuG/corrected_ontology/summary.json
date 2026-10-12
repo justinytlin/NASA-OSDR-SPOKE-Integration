@@ -1,0 +1,47 @@
+{
+  "name": "OSD-201__2025upAuG",
+  "tissue": "spleen",
+  "tissue_label": "spleen",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "score_key": "scores",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-201__2025upAuG_GC_ranks.npz",
+  "n_samples": 4,
+  "n_anatomy": 13895,
+  "family_regex": "spleen|splenic",
+  "family_exclude": "flexure",
+  "n_family_nodes": 29,
+  "family_median_pct": 21.73083843109032,
+  "in_top_2_5pct": 5,
+  "in_top_10pct": 9,
+  "mwu_p_less": 6.334082635890055e-05,
+  "ks_p_greater": 0.000382900352714113,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 3,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 6.3e-05 (ok)",
+    "KS p = 0.00038 (ok)",
+    "4/4 samples individually p < 0.05 (ok)",
+    "family ranks 3 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "spleen (0.7%)",
+    "spleen smooth muscle (0.8%)",
+    "hilum of spleen (0.8%)",
+    "vasculature of spleen (1.3%)",
+    "splenic arteriole (2.4%)"
+  ],
+  "top_real_anatomy": [
+    "hematopoietic system (0.01%)",
+    "germinal center (0.01%)",
+    "gABAergic system (0.04%)",
+    "catecholamine system (0.04%)",
+    "glutamatergic system (0.05%)",
+    "cholinergic system (0.06%)",
+    "serotonergic system (0.06%)",
+    "histaminergic system (0.08%)",
+    "principal artery to forelimb (0.10%)",
+    "tertiary chorionic villus (0.11%)"
+  ]
+}

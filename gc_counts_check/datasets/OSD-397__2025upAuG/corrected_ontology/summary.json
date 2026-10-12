@@ -1,0 +1,47 @@
+{
+  "name": "OSD-397__2025upAuG",
+  "tissue": "retina",
+  "tissue_label": "retina",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "score_key": "scores",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-397__2025upAuG_GC_ranks.npz",
+  "n_samples": 7,
+  "n_anatomy": 13895,
+  "family_regex": "retina|photoreceptor|optic disc|fovea centralis|foveola|macula lutea|parafovea|perifovea",
+  "family_exclude": "retinaculum",
+  "n_family_nodes": 52,
+  "family_median_pct": 16.309566647817817,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 7,
+  "mwu_p_less": 1.0990648368372e-15,
+  "ks_p_greater": 4.920199983202405e-18,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 3,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 1.1e-15 (ok)",
+    "KS p = 4.9e-18 (ok)",
+    "7/7 samples individually p < 0.05 (ok)",
+    "family ranks 3 of 15 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "optic disc (3.0%)",
+    "fovea centralis (3.2%)",
+    "macula lutea (4.4%)",
+    "retina (6.5%)",
+    "central retinal artery (8.4%)"
+  ],
+  "top_real_anatomy": [
+    "intralaminar nuclear group (0.21%)",
+    "endopeduncular nucleus (0.23%)",
+    "perforant path (0.23%)",
+    "reticular formation (0.33%)",
+    "subthalamic nucleus (0.37%)",
+    "superior colliculus (0.38%)",
+    "centromedian nucleus of thalamus (0.39%)",
+    "parafascicular nucleus (0.39%)",
+    "caudal intralaminar nuclear group (0.40%)",
+    "cerebellar nuclear complex (0.61%)"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "name": "OSD-464__2025upAuG",
+  "tissue": "lung",
+  "tissue_label": "lung",
+  "n_samples": 9,
+  "n_linked": 72,
+  "proxy": false,
+  "target_nodes": [
+    "upper lobe of left lung (rank 10)"
+  ],
+  "best_target_rank": 10,
+  "frac_samples_target_rank1": 0.1111111111111111,
+  "frac_samples_target_top3": 0.1111111111111111,
+  "verdict": "NONE",
+  "top_linked_nodes": [
+    "descending thoracic aorta",
+    "ectocervix",
+    "left coronary artery",
+    "tibial artery",
+    "heart",
+    "cortex of kidney",
+    "thoracic aorta",
+    "endocervix"
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "name": "OSD-899__2025upAuG",
+  "tissue": "cecum",
+  "tissue_label": "cecum",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "score_key": "scores",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-899__2025upAuG_GC_ranks.npz",
+  "n_samples": 5,
+  "n_anatomy": 13895,
+  "family_regex": "c(?:a)?ecum|c(?:a)?ecal|ileoc(?:a)?ecal|vermiform appendix",
+  "family_exclude": "hepatic cecum|pyloric c|gastric c|intestinal c|buccal|foramen c",
+  "n_family_nodes": 7,
+  "family_median_pct": 20.669305505577547,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 1,
+  "mwu_p_less": 0.007811002982497344,
+  "ks_p_greater": 0.0046356017954745895,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 1,
+  "verdict": "CLEAR",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.0078 (ok)",
+    "KS p = 0.0046 (ok)",
+    "5/5 samples individually p < 0.05 (ok)",
+    "family ranks 1 of 15 organ families by median percentile (ok)"
+  ],
+  "best_family_nodes": [
+    "submucosa of cecum (7.3%)",
+    "cecum mucosa (16.3%)",
+    "caecum (16.6%)",
+    "caecum mesentery (20.7%)",
+    "caecum dorsal mesentery (24.4%)"
+  ],
+  "top_real_anatomy": [
+    "supraclavicular lymph node (0.01%)",
+    "right supraclavicular lymph node (0.02%)",
+    "left supraclavicular lymph node (0.02%)",
+    "Virchow's lymph node (0.03%)",
+    "glutamatergic system (0.04%)",
+    "cholinergic system (0.04%)",
+    "catecholamine system (0.05%)",
+    "histaminergic system (0.06%)",
+    "serotonergic system (0.06%)",
+    "gABAergic system (0.07%)"
+  ]
+}

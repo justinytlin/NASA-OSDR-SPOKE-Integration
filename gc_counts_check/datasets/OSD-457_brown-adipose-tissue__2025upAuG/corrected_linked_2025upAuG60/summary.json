@@ -1,0 +1,26 @@
+{
+  "name": "OSD-457_brown-adipose-tissue__2025upAuG",
+  "tissue": "adipose tissue",
+  "tissue_label": "brown adipose tissue",
+  "n_samples": 6,
+  "n_linked": 60,
+  "proxy": false,
+  "target_nodes": [
+    "subcutaneous adipose tissue (rank 12)",
+    "omental fat pad (rank 16)"
+  ],
+  "best_target_rank": 12,
+  "frac_samples_target_rank1": 0.0,
+  "frac_samples_target_top3": 0.0,
+  "verdict": "NONE",
+  "top_linked_nodes": [
+    "gastrocnemius",
+    "heart left ventricle",
+    "muscle of leg",
+    "right lobe of liver",
+    "right adrenal gland",
+    "right adrenal gland cortex",
+    "left adrenal gland",
+    "right atrium auricular region"
+  ]
+}

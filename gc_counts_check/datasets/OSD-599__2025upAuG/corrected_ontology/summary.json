@@ -1,0 +1,47 @@
+{
+  "name": "OSD-599__2025upAuG",
+  "tissue": "heart",
+  "tissue_label": "heart",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "score_key": "scores",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-599__2025upAuG_GC_ranks.npz",
+  "n_samples": 3,
+  "n_anatomy": 13895,
+  "family_regex": "heart|cardiac|myocard",
+  "family_exclude": "cardiac stomach|cardiac gastric|corpus cardiacum|lymph heart|dorsal vessel",
+  "n_family_nodes": 230,
+  "family_median_pct": 2.088281156291232,
+  "in_top_2_5pct": 131,
+  "in_top_10pct": 189,
+  "mwu_p_less": 9.84566432400565e-110,
+  "ks_p_greater": 1.4656916673214445e-110,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 1,
+  "verdict": "CLEAR",
+  "criteria": [
+    "pooled Mann-Whitney p = 9.8e-110 (ok)",
+    "KS p = 1.5e-110 (ok)",
+    "3/3 samples individually p < 0.05 (ok)",
+    "family ranks 1 of 14 organ families by median percentile (ok)"
+  ],
+  "best_family_nodes": [
+    "cardiac Purkinje fiber (0.0%)",
+    "Purkinje fiber network (0.0%)",
+    "cardiac muscle tissue of ventricle (0.0%)",
+    "cardiac muscle tissue of papillary muscle (0.1%)",
+    "papillary muscle of left ventricle (0.1%)"
+  ],
+  "top_real_anatomy": [
+    "cardiac Purkinje fiber (0.01%)",
+    "Purkinje fiber network (0.01%)",
+    "cardiac muscle tissue of ventricle (0.02%)",
+    "cardiac muscle tissue of papillary muscle (0.05%)",
+    "triceps surae (0.06%)",
+    "soleus muscle (0.07%)",
+    "hindlimb zeugopod muscle (0.10%)",
+    "gastrocnemius externus (0.12%)",
+    "plantaris (0.12%)",
+    "gastrocnemius internus (0.12%)"
+  ]
+}

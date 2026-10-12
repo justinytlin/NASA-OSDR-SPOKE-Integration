@@ -1,0 +1,26 @@
+{
+  "name": "OSD-240__2025upAuG",
+  "tissue": "skin",
+  "tissue_label": "skin",
+  "n_samples": 10,
+  "n_linked": 60,
+  "proxy": false,
+  "target_nodes": [
+    "skin of abdomen (rank 2)",
+    "skin of leg (rank 4)"
+  ],
+  "best_target_rank": 2,
+  "frac_samples_target_rank1": 0.3,
+  "frac_samples_target_top3": 0.6,
+  "verdict": "PARTIAL",
+  "top_linked_nodes": [
+    "descending thoracic aorta",
+    "skin of abdomen",
+    "gastrocnemius",
+    "skin of leg",
+    "muscle of leg",
+    "heart left ventricle",
+    "left coronary artery",
+    "right adrenal gland cortex"
+  ]
+}

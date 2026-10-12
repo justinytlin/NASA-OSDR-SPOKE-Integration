@@ -1,0 +1,47 @@
+{
+  "name": "OSD-240__2025upAuG",
+  "tissue": "skin",
+  "tissue_label": "skin",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "score_key": "scores",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-240__2025upAuG_GC_ranks.npz",
+  "n_samples": 10,
+  "n_anatomy": 13895,
+  "family_regex": "\\bskin|epidermis|dermis",
+  "family_exclude": "dermatome|hypodermis",
+  "n_family_nodes": 305,
+  "family_median_pct": 27.355883411299033,
+  "in_top_2_5pct": 33,
+  "in_top_10pct": 91,
+  "mwu_p_less": 3.931839878899024e-21,
+  "ks_p_greater": 2.5792889246470084e-15,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 3,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 3.9e-21 (ok)",
+    "KS p = 2.6e-15 (ok)",
+    "10/10 samples individually p < 0.05 (ok)",
+    "family ranks 3 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "eyelash (0.5%)",
+    "forelimb skin (0.6%)",
+    "mole (0.6%)",
+    "lower eyelash (0.7%)",
+    "hair follicle (0.7%)"
+  ],
+  "top_real_anatomy": [
+    "left supraclavicular lymph node (0.01%)",
+    "Virchow's lymph node (0.02%)",
+    "supraclavicular lymph node (0.02%)",
+    "right supraclavicular lymph node (0.03%)",
+    "histaminergic system (0.04%)",
+    "catecholamine system (0.05%)",
+    "cholinergic system (0.06%)",
+    "serotonergic system (0.06%)",
+    "glutamatergic system (0.07%)",
+    "gABAergic system (0.08%)"
+  ]
+}

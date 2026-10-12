@@ -1,0 +1,47 @@
+{
+  "name": "OSD-719__2025upAuG",
+  "tissue": "whole blood",
+  "tissue_label": "blood",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "score_key": "scores",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-719__2025upAuG_GC_ranks.npz",
+  "n_samples": 6,
+  "n_anatomy": 13895,
+  "family_regex": "\\bblood\\b|plasma|serum",
+  "family_exclude": "blood (?:vessel|island|brain|nerve|vasculature)|blood-|vessel|barrier|plasma membrane|sinus|feather",
+  "n_family_nodes": 8,
+  "family_median_pct": 0.43780736475950577,
+  "in_top_2_5pct": 8,
+  "in_top_10pct": 8,
+  "mwu_p_less": 5.878122490166498e-07,
+  "ks_p_greater": 8.732809365844816e-08,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 2,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 5.9e-07 (ok)",
+    "KS p = 8.7e-08 (ok)",
+    "6/6 samples individually p < 0.05 (ok)",
+    "family ranks 2 of 15 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "blood plasma (0.0%)",
+    "blood serum (0.0%)",
+    "arterial blood (0.3%)",
+    "blood (0.4%)",
+    "venous blood (0.4%)"
+  ],
+  "top_real_anatomy": [
+    "hematopoietic system (0.01%)",
+    "lymph node germinal center (0.02%)",
+    "blood plasma (0.02%)",
+    "lymph node secondary follicle (0.03%)",
+    "blood serum (0.03%)",
+    "germinal center (0.05%)",
+    "lymph node germinal center light zone (0.05%)",
+    "secondary follicle corona (0.06%)",
+    "hemolymphoid system (0.07%)",
+    "immune system (0.09%)"
+  ]
+}

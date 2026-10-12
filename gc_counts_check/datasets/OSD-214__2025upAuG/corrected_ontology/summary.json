@@ -1,0 +1,47 @@
+{
+  "name": "OSD-214__2025upAuG",
+  "tissue": "bone marrow",
+  "tissue_label": "bone marrow",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "score_key": "scores",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-214__2025upAuG_GC_ranks.npz",
+  "n_samples": 3,
+  "n_anatomy": 13895,
+  "family_regex": "bone marrow",
+  "family_exclude": null,
+  "n_family_nodes": 6,
+  "family_median_pct": 9.863260165527167,
+  "in_top_2_5pct": 1,
+  "in_top_10pct": 3,
+  "mwu_p_less": 0.0048419872961008095,
+  "ks_p_greater": 0.013187601071936292,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 2,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.0048 (ok)",
+    "KS p = 0.013 (fail)",
+    "3/3 samples individually p < 0.05 (ok)",
+    "family ranks 2 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "bone marrow (0.6%)",
+    "red bone marrow (6.0%)",
+    "red bone marrow of sternum (8.0%)",
+    "yellow bone marrow (11.7%)",
+    "red bone marrow of iliac crest (25.7%)"
+  ],
+  "top_real_anatomy": [
+    "gABAergic system (0.02%)",
+    "catecholamine system (0.03%)",
+    "glutamatergic system (0.03%)",
+    "cholinergic system (0.04%)",
+    "left supraclavicular lymph node (0.04%)",
+    "serotonergic system (0.04%)",
+    "supraclavicular lymph node (0.06%)",
+    "right supraclavicular lymph node (0.06%)",
+    "Virchow's lymph node (0.06%)",
+    "histaminergic system (0.06%)"
+  ]
+}

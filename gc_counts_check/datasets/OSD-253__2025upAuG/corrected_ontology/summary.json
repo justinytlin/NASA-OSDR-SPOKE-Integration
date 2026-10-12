@@ -1,0 +1,47 @@
+{
+  "name": "OSD-253__2025upAuG",
+  "tissue": "kidney",
+  "tissue_label": "kidney",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "score_key": "scores",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-253__2025upAuG_GC_ranks.npz",
+  "n_samples": 19,
+  "n_anatomy": 13895,
+  "family_regex": "kidney|renal|nephron|glomerul",
+  "family_exclude": "adrenal|suprarenal|interrenal|nephridi|Hatschek|lieno|olfactory|cerebell|preglomerular",
+  "n_family_nodes": 275,
+  "family_median_pct": 34.27624476809152,
+  "in_top_2_5pct": 22,
+  "in_top_10pct": 52,
+  "mwu_p_less": 2.155429711581595e-15,
+  "ks_p_greater": 2.021227737750622e-11,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 4,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 2.2e-15 (ok)",
+    "KS p = 2e-11 (ok)",
+    "19/19 samples individually p < 0.05 (ok)",
+    "family ranks 4 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "proximal tubule (0.1%)",
+    "proximal tubular epithelium (0.2%)",
+    "distal tubular epithelium (0.4%)",
+    "nephron tubule epithelium (0.5%)",
+    "loop of Henle (0.5%)"
+  ],
+  "top_real_anatomy": [
+    "proximal tubule (0.05%)",
+    "cardiac Purkinje fiber (0.17%)",
+    "proximal tubular epithelium (0.23%)",
+    "bundle of His (0.36%)",
+    "distal tubular epithelium (0.41%)",
+    "nephron tubule epithelium (0.50%)",
+    "loop of Henle (0.51%)",
+    "baroreceptor (0.51%)",
+    "arterial baroreceptor (0.52%)",
+    "cardiac baroreceptor (0.53%)"
+  ]
+}

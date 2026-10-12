@@ -1,0 +1,47 @@
+{
+  "name": "OSD-525__2025upAuG",
+  "tissue": "cerebellum",
+  "tissue_label": "cerebellum",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "score_key": "scores",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-525__2025upAuG_GC_ranks.npz",
+  "n_samples": 10,
+  "n_anatomy": 13895,
+  "family_regex": "cerebell",
+  "family_exclude": "artery|vein|spinocerebellar|cerebellar peduncle (?:artery|vein)",
+  "n_family_nodes": 115,
+  "family_median_pct": 2.231018351925153,
+  "in_top_2_5pct": 60,
+  "in_top_10pct": 87,
+  "mwu_p_less": 1.0911911849738395e-50,
+  "ks_p_greater": 9.671647977320045e-46,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 1,
+  "verdict": "CLEAR",
+  "criteria": [
+    "pooled Mann-Whitney p = 1.1e-50 (ok)",
+    "KS p = 9.7e-46 (ok)",
+    "10/10 samples individually p < 0.05 (ok)",
+    "family ranks 1 of 15 organ families by median percentile (ok)"
+  ],
+  "best_family_nodes": [
+    "cerebellum posterior vermis (0.0%)",
+    "cerebellum vermis lobule VIII (0.0%)",
+    "cerebellum vermis lobule VII (0.1%)",
+    "cerebellum vermis lobule VI (0.1%)",
+    "paramedian lobule (0.1%)"
+  ],
+  "top_real_anatomy": [
+    "cerebellum posterior vermis (0.04%)",
+    "cerebellum vermis lobule VIII (0.05%)",
+    "cerebellum vermis lobule VII (0.05%)",
+    "cerebellum vermis lobule VI (0.06%)",
+    "paramedian lobule (0.06%)",
+    "cerebellum vermis lobule (0.08%)",
+    "central lobule (0.11%)",
+    "precentral fissure of cerebellum (0.11%)",
+    "cerebellum vermis lobule VIIAf (0.11%)",
+    "cerebellum vermis lobule III (0.12%)"
+  ]
+}

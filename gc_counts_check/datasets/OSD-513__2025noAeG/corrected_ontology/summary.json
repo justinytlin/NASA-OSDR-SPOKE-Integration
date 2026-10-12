@@ -1,0 +1,47 @@
+{
+  "name": "OSD-513__2025noAeG",
+  "tissue": "kidney",
+  "tissue_label": "kidney",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "score_key": "scores",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-513__2025noAeG_GC_ranks.npz",
+  "n_samples": 10,
+  "n_anatomy": 13895,
+  "family_regex": "kidney|renal|nephron|glomerul",
+  "family_exclude": "adrenal|suprarenal|interrenal|nephridi|Hatschek|lieno|olfactory|cerebell|preglomerular",
+  "n_family_nodes": 275,
+  "family_median_pct": 65.07160849226341,
+  "in_top_2_5pct": 6,
+  "in_top_10pct": 15,
+  "mwu_p_less": 0.9999999999885285,
+  "ks_p_greater": 0.9057574786794428,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 6,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 1 (fail)",
+    "KS p = 0.91 (fail)",
+    "0/10 samples individually p < 0.05 (fail)",
+    "family ranks 6 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "proximal tubule (0.1%)",
+    "distal tubular epithelium (0.2%)",
+    "nephron tubule epithelium (0.5%)",
+    "nephron tubule basement membrane (0.6%)",
+    "proximal tubular epithelium (0.8%)"
+  ],
+  "top_real_anatomy": [
+    "entire myelin sheath (0.01%)",
+    "muscle tissue (0.02%)",
+    "ceratoglossus (0.02%)",
+    "chondroglossus muscle (0.03%)",
+    "hyoglossus muscle (0.04%)",
+    "cerebral peduncle (0.06%)",
+    "extrapyramidal tract system (0.06%)",
+    "pterygoid muscle (0.06%)",
+    "proximal tubule (0.06%)",
+    "lateral pterygoid muscle (0.07%)"
+  ]
+}

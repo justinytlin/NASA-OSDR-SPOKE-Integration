@@ -1,0 +1,26 @@
+{
+  "name": "OSD-240__2025upAuG",
+  "tissue": "skin",
+  "tissue_label": "skin",
+  "n_samples": 10,
+  "n_linked": 72,
+  "proxy": false,
+  "target_nodes": [
+    "skin of abdomen (rank 8)",
+    "skin of leg (rank 11)"
+  ],
+  "best_target_rank": 8,
+  "frac_samples_target_rank1": 0.0,
+  "frac_samples_target_top3": 0.3,
+  "verdict": "NONE",
+  "top_linked_nodes": [
+    "ectocervix",
+    "heart",
+    "cortex of kidney",
+    "descending thoracic aorta",
+    "ovary",
+    "gastrocnemius",
+    "placenta",
+    "skin of abdomen"
+  ]
+}

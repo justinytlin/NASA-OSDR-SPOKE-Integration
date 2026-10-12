@@ -1,0 +1,47 @@
+{
+  "name": "OSD-720__2025upAuG",
+  "tissue": "heart",
+  "tissue_label": "heart",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "score_key": "scores",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-720__2025upAuG_GC_ranks.npz",
+  "n_samples": 20,
+  "n_anatomy": 13895,
+  "family_regex": "heart|cardiac|myocard",
+  "family_exclude": "cardiac stomach|cardiac gastric|corpus cardiacum|lymph heart|dorsal vessel",
+  "n_family_nodes": 230,
+  "family_median_pct": 1.980208708168406,
+  "in_top_2_5pct": 134,
+  "in_top_10pct": 199,
+  "mwu_p_less": 1.6933072481062536e-121,
+  "ks_p_greater": 1.6810307837931512e-125,
+  "frac_samples_significant": 1.0,
+  "family_rank_among_organ_families": 1,
+  "verdict": "CLEAR",
+  "criteria": [
+    "pooled Mann-Whitney p = 1.7e-121 (ok)",
+    "KS p = 1.7e-125 (ok)",
+    "20/20 samples individually p < 0.05 (ok)",
+    "family ranks 1 of 14 organ families by median percentile (ok)"
+  ],
+  "best_family_nodes": [
+    "cardiac Purkinje fiber (0.0%)",
+    "Purkinje fiber network (0.0%)",
+    "cardiac muscle tissue of papillary muscle (0.0%)",
+    "cardiac muscle tissue of ventricle (0.0%)",
+    "papillary muscle of heart (0.0%)"
+  ],
+  "top_real_anatomy": [
+    "cardiac Purkinje fiber (0.01%)",
+    "Purkinje fiber network (0.01%)",
+    "cardiac muscle tissue of papillary muscle (0.02%)",
+    "cardiac muscle tissue of ventricle (0.03%)",
+    "papillary muscle of heart (0.04%)",
+    "papillary muscle of right ventricle (0.05%)",
+    "bundle of His (0.07%)",
+    "chorda tendinea of right ventricle (0.07%)",
+    "chorda tendineae (0.07%)",
+    "sinoatrial node (0.08%)"
+  ]
+}

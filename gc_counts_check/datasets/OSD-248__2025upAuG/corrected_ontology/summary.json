@@ -1,0 +1,47 @@
+{
+  "name": "OSD-248__2025upAuG",
+  "tissue": "lung",
+  "tissue_label": "lung",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "score_key": "scores",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-248__2025upAuG_GC_ranks.npz",
+  "n_samples": 19,
+  "n_anatomy": 13895,
+  "family_regex": "\\blung|pulmonary|bronch|alveolus of lung|alveolar (?:sac|wall|system|duct)",
+  "family_exclude": "pulmonum",
+  "n_family_nodes": 151,
+  "family_median_pct": 58.538664040453796,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 3,
+  "mwu_p_less": 0.979923031093145,
+  "ks_p_greater": 0.0004236872674452613,
+  "frac_samples_significant": 0.10526315789473684,
+  "family_rank_among_organ_families": 9,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.98 (fail)",
+    "KS p = 0.00042 (ok)",
+    "2/19 samples individually p < 0.05 (fail)",
+    "family ranks 9 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "alveolus of lung (7.6%)",
+    "sputum (9.0%)",
+    "upper lobe of left lung (10.0%)",
+    "blood-air barrier (10.4%)",
+    "lobar bronchus of left lung upper lobe (10.9%)"
+  ],
+  "top_real_anatomy": [
+    "sinus of Valsalva (0.75%)",
+    "right supraclavicular lymph node (0.96%)",
+    "Virchow's lymph node (0.96%)",
+    "left supraclavicular lymph node (0.97%)",
+    "supraclavicular lymph node (0.97%)",
+    "tunica intima (1.00%)",
+    "blood vessel internal elastic membrane (1.00%)",
+    "atrioventricular node (1.03%)",
+    "carotid sinus (1.04%)",
+    "eye trabecular meshwork (1.04%)"
+  ]
+}

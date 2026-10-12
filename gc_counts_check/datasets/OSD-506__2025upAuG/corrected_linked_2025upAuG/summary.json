@@ -1,0 +1,25 @@
+{
+  "name": "OSD-506__2025upAuG",
+  "tissue": "spleen",
+  "tissue_label": "spleen",
+  "n_samples": 10,
+  "n_linked": 44,
+  "proxy": false,
+  "target_nodes": [
+    "spleen (rank 2)"
+  ],
+  "best_target_rank": 2,
+  "frac_samples_target_rank1": 0.4,
+  "frac_samples_target_top3": 1.0,
+  "verdict": "PARTIAL",
+  "top_linked_nodes": [
+    "blood",
+    "spleen",
+    "upper lobe of left lung",
+    "gastrocnemius",
+    "right ovary",
+    "subcutaneous adipose tissue",
+    "omental fat pad",
+    "left adrenal gland cortex"
+  ]
+}

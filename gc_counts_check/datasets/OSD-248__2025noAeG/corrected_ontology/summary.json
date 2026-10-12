@@ -1,0 +1,47 @@
+{
+  "name": "OSD-248__2025noAeG",
+  "tissue": "lung",
+  "tissue_label": "lung",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "score_key": "scores",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-248__2025noAeG_GC_ranks.npz",
+  "n_samples": 19,
+  "n_anatomy": 13895,
+  "family_regex": "\\blung|pulmonary|bronch|alveolus of lung|alveolar (?:sac|wall|system|duct)",
+  "family_exclude": "pulmonum",
+  "n_family_nodes": 151,
+  "family_median_pct": 84.13666407833185,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 3,
+  "mwu_p_less": 1.0,
+  "ks_p_greater": 0.9381649795868143,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 10,
+  "verdict": "NONE",
+  "criteria": [
+    "pooled Mann-Whitney p = 1 (fail)",
+    "KS p = 0.94 (fail)",
+    "0/19 samples individually p < 0.05 (fail)",
+    "family ranks 10 of 14 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "alveolus of lung (4.9%)",
+    "epithelial lining fluid (6.3%)",
+    "lung (8.9%)",
+    "sputum (10.7%)",
+    "pulmonary alveolar parenchyma (18.0%)"
+  ],
+  "top_real_anatomy": [
+    "microcirculatory vessel (0.04%)",
+    "carotid sinus (0.16%)",
+    "lymph node endothelium (0.33%)",
+    "external jugular vein (0.40%)",
+    "anterior jugular vein (0.40%)",
+    "jugular vein (0.40%)",
+    "alimentary part of gastrointestinal system (0.44%)",
+    "ramus auricularis of the vagus nerve (0.46%)",
+    "vagus nerve (0.46%)",
+    "sternum (0.47%)"
+  ]
+}

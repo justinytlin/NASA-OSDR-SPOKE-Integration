@@ -1,0 +1,29 @@
+{
+  "name": "OSD-512__2025nohk",
+  "tissue": "adrenal gland",
+  "tissue_label": "adrenal gland",
+  "n_samples": 10,
+  "n_linked": 92,
+  "proxy": false,
+  "target_nodes": [
+    "adrenal gland (rank 5)",
+    "right adrenal gland cortex (rank 38)",
+    "right adrenal gland (rank 46)",
+    "left adrenal gland cortex (rank 56)",
+    "left adrenal gland (rank 61)"
+  ],
+  "best_target_rank": 5,
+  "frac_samples_target_rank1": 0.0,
+  "frac_samples_target_top3": 0.0,
+  "verdict": "PARTIAL",
+  "top_linked_nodes": [
+    "skeletal muscle tissue",
+    "cerebellum",
+    "popliteal artery",
+    "corpus callosum",
+    "adrenal gland",
+    "esophagus",
+    "right fallopian tube",
+    "right coronary artery"
+  ]
+}

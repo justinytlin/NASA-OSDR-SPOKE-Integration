@@ -1,0 +1,47 @@
+{
+  "name": "OSD-98__2025upAuG",
+  "tissue": "adrenal gland",
+  "tissue_label": "adrenal gland",
+  "mode": "corrected_ontology",
+  "families": "ontology",
+  "score_key": "scores",
+  "ranks": "/Users/justinlin/Desktop/Research /SPOKE/GC Counts Check/psev_out/OSD-98__2025upAuG_GC_ranks.npz",
+  "n_samples": 5,
+  "n_anatomy": 13895,
+  "family_regex": "adrenal|suprarenal|interrenal",
+  "family_exclude": null,
+  "n_family_nodes": 15,
+  "family_median_pct": 34.99100395825836,
+  "in_top_2_5pct": 0,
+  "in_top_10pct": 6,
+  "mwu_p_less": 0.037047932747580545,
+  "ks_p_greater": 0.036619505480513646,
+  "frac_samples_significant": 0.8,
+  "family_rank_among_organ_families": 3,
+  "verdict": "PARTIAL",
+  "criteria": [
+    "pooled Mann-Whitney p = 0.037 (fail)",
+    "KS p = 0.037 (fail)",
+    "4/5 samples individually p < 0.05 (ok)",
+    "family ranks 3 of 15 organ families by median percentile (fail)"
+  ],
+  "best_family_nodes": [
+    "right adrenal gland (3.9%)",
+    "right adrenal gland medulla (3.9%)",
+    "right adrenal gland cortex (4.2%)",
+    "left adrenal gland cortex (7.3%)",
+    "left adrenal gland (7.9%)"
+  ],
+  "top_real_anatomy": [
+    "subiliac lymph node (0.01%)",
+    "chorionic mesenchymal villus (0.01%)",
+    "meningeal myeloid tissue (0.02%)",
+    "subcarinal lymph node (0.03%)",
+    "profundal placode (0.04%)",
+    "aortic plexus (0.05%)",
+    "inferior gemellus muscle (0.05%)",
+    "maxillomandibular placode (0.06%)",
+    "abdominal nerve plexus (0.07%)",
+    "gemellus muscle (0.08%)"
+  ]
+}

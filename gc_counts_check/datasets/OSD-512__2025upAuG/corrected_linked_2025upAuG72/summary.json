@@ -1,0 +1,28 @@
+{
+  "name": "OSD-512__2025upAuG",
+  "tissue": "adrenal gland",
+  "tissue_label": "adrenal gland",
+  "n_samples": 10,
+  "n_linked": 72,
+  "proxy": false,
+  "target_nodes": [
+    "right adrenal gland (rank 11)",
+    "right adrenal gland cortex (rank 14)",
+    "left adrenal gland (rank 17)",
+    "left adrenal gland cortex (rank 19)"
+  ],
+  "best_target_rank": 11,
+  "frac_samples_target_rank1": 0.0,
+  "frac_samples_target_top3": 0.0,
+  "verdict": "NONE",
+  "top_linked_nodes": [
+    "heart",
+    "descending thoracic aorta",
+    "ovary",
+    "ectocervix",
+    "cortex of kidney",
+    "gastrocnemius",
+    "liver",
+    "placenta"
+  ]
+}
