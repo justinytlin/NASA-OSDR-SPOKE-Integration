@@ -6,20 +6,20 @@
   "n_linked": 72,
   "proxy": false,
   "target_nodes": [
-    "upper lobe of left lung (rank 5)"
+    "upper lobe of left lung (rank 12)"
   ],
-  "best_target_rank": 5,
-  "frac_samples_target_rank1": 0.10526315789473684,
-  "frac_samples_target_top3": 0.42105263157894735,
-  "verdict": "PARTIAL",
+  "best_target_rank": 12,
+  "frac_samples_target_rank1": 0.05263157894736842,
+  "frac_samples_target_top3": 0.2631578947368421,
+  "verdict": "NONE",
   "top_linked_nodes": [
     "descending thoracic aorta",
+    "ectocervix",
+    "heart",
+    "cortex of kidney",
+    "endocervix",
     "thoracic aorta",
     "tibial artery",
-    "ectocervix",
-    "upper lobe of left lung",
-    "heart",
-    "endocervix",
-    "left coronary artery"
+    "ovary"
   ]
 }

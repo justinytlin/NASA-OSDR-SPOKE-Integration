@@ -1,0 +1,87 @@
+{
+ "stage2_rows": [
+  [
+   "retina",
+   "no node",
+   "no node",
+   "no node",
+   "no node"
+  ],
+  [
+   "kidney",
+   "21",
+   "38",
+   "20",
+   "no node"
+  ],
+  [
+   "heart",
+   "8",
+   "45",
+   "7",
+   "no node"
+  ],
+  [
+   "spleen",
+   "75",
+   "48",
+   "74",
+   "2"
+  ],
+  [
+   "liver",
+   "35",
+   "45",
+   "31",
+   "1"
+  ],
+  [
+   "adrenal gland",
+   "5",
+   "38",
+   "5",
+   "2"
+  ],
+  [
+   "lung",
+   "11",
+   "30",
+   "11",
+   "3"
+  ],
+  [
+   "cerebellum",
+   "1",
+   "20",
+   "1",
+   "1"
+  ],
+  [
+   "white adipose tissue",
+   "10",
+   "37",
+   "10",
+   "1"
+  ],
+  [
+   "blood",
+   "82",
+   "73",
+   "79",
+   "1"
+  ]
+ ],
+ "n_linked_full": 92,
+ "n_linked_noAeG": 73,
+ "n_linked_nohk": 92,
+ "n_linked_up": 44,
+ "spearman_full": "\u22120.95",
+ "spearman_noAeG": "\u22120.35",
+ "spearman_nohk": "\u22120.95",
+ "spearman_up": "\u22120.18",
+ "liver_full": 35,
+ "liver_full_ordinal": "35th",
+ "spleen_full": "75",
+ "blood_full": "82",
+ "kidney_full": "21"
+}

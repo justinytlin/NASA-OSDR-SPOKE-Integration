@@ -20,14 +20,15 @@ MARK = {"2019": "o", "2025": "s", "2025noAeG": "^", "2025upAuG": "D", "2025nohk"
 
 
 def main():
-    ap = argparse.ArgumentParser(); ap.add_argument("--tags", nargs="+", default=["2025", "2025noAeG", "2025upAuG"]); a = ap.parse_args()
+    ap = argparse.ArgumentParser(); ap.add_argument("--tags", nargs="+", default=["2025", "2025noAeG", "2025upAuG"])
+    ap.add_argument("--no-2019", action="store_true", help="leave out the 2019 Zenodo series"); a = ap.parse_args()
     frames = {}
     for t in a.tags:
         d = pd.read_csv(ROOT / "results" / f"pilot_stage2_{t}.tsv", sep="\t")
         frames[t] = d.set_index("tissue")
     tissues = list(frames[a.tags[0]].index)
     base = frames[a.tags[0]]
-    series = [("2019", base.rank_2019, base.n_linked_2019)] + [(t, frames[t][f"rank_{t}"], frames[t][f"n_linked_{t}"]) for t in a.tags]
+    series = ([] if a.no_2019 else [("2019", base.rank_2019, base.n_linked_2019)]) + [(t, frames[t][f"rank_{t}"], frames[t][f"n_linked_{t}"]) for t in a.tags]
     S.setup()
     fig, ax = plt.subplots(figsize=(9.5, 0.55 * len(tissues) + 2.4)); h = 0.55 * len(tissues) + 2.4
     fig.subplots_adjust(left=0.2, right=0.97, top=1 - 0.6 / h, bottom=1.7 / h)
@@ -44,8 +45,9 @@ def main():
     ax.grid(axis="x", color=S.GRID, lw=0.7); ax.set_axisbelow(True); S.despine(ax); ax.tick_params(axis="y", length=0)
     ax.legend(handles=[Line2D([], [], marker=MARK[t], ls="", color=COLOR[t], ms=7, label=LABEL[t]) for t, _, _ in series],
               loc="upper center", bbox_to_anchor=(0.45, -0.9 / (0.55 * len(tissues))), ncol=2, frameon=False, fontsize=8.5, handletextpad=0.5)
-    ax.set_title("Own-tissue node rank by SPOKE build, ten pilot tissues (baseline-corrected)", fontsize=12, pad=10)
-    out = ROOT / "results/pilot_stage2_builds.png"; fig.savefig(out, dpi=180); fig.savefig(out.with_suffix(".svg")); print("wrote", out)
+    ax.set_title("Own-tissue node rank by SPOKE 2025 edge set, ten pilot tissues (baseline-corrected)" if a.no_2019 else
+                 "Own-tissue node rank by SPOKE build, ten pilot tissues (baseline-corrected)", fontsize=12, pad=10)
+    out = ROOT / ("results/pilot_stage2_builds_2025only.png" if a.no_2019 else "results/pilot_stage2_builds.png"); fig.savefig(out, dpi=180); fig.savefig(out.with_suffix(".svg")); print("wrote", out)
 
 
 if __name__ == "__main__":

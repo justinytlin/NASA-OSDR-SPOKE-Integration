@@ -6,19 +6,19 @@
   "n_linked": 60,
   "proxy": false,
   "target_nodes": [
-    "upper lobe of left lung (rank 4)"
+    "upper lobe of left lung (rank 6)"
   ],
-  "best_target_rank": 4,
-  "frac_samples_target_rank1": 0.10526315789473684,
-  "frac_samples_target_top3": 0.5789473684210527,
+  "best_target_rank": 6,
+  "frac_samples_target_rank1": 0.05263157894736842,
+  "frac_samples_target_top3": 0.5263157894736842,
   "verdict": "PARTIAL",
   "top_linked_nodes": [
-    "thoracic aorta",
     "descending thoracic aorta",
+    "thoracic aorta",
     "tibial artery",
-    "upper lobe of left lung",
-    "subcutaneous adipose tissue",
     "left coronary artery",
+    "subcutaneous adipose tissue",
+    "upper lobe of left lung",
     "ascending aorta",
     "omental fat pad"
   ]

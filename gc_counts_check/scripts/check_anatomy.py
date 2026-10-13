@@ -226,7 +226,7 @@ def main():
                     f"family ranks {fam_rank} of {len(comp)} organ families")
 
     def finish(fig, letter, title, sub, fname):
-        fig.suptitle(f"{name.split('_')[0]} {label}: {title}{mode}", x=0.5, ha="center", y=0.97, fontsize=12.5 if not mode else 11)
+        fig.suptitle(f"{name.split('_')[0]} {label}: {title}", x=0.5, ha="center", y=0.97, fontsize=12)   # variant is in the folder name, not the title
         fig.savefig(out / f"{fname}.png", dpi=180); fig.savefig(out / f"{fname}.svg"); plt.close(fig)
 
     # ---------- figures (one file each) ----------

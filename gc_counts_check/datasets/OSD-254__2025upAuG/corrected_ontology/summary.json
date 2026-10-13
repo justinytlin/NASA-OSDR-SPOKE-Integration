@@ -11,37 +11,37 @@
   "family_regex": "\\bskin|epidermis|dermis",
   "family_exclude": "dermatome|hypodermis",
   "n_family_nodes": 305,
-  "family_median_pct": 29.203670385030584,
-  "in_top_2_5pct": 2,
-  "in_top_10pct": 55,
-  "mwu_p_less": 9.776772466292648e-23,
-  "ks_p_greater": 6.817310734575138e-19,
+  "family_median_pct": 28.39222741993523,
+  "in_top_2_5pct": 13,
+  "in_top_10pct": 72,
+  "mwu_p_less": 2.9466144743248606e-18,
+  "ks_p_greater": 8.090930476194617e-14,
   "frac_samples_significant": 1.0,
-  "family_rank_among_organ_families": 3,
+  "family_rank_among_organ_families": 4,
   "verdict": "PARTIAL",
   "criteria": [
-    "pooled Mann-Whitney p = 9.8e-23 (ok)",
-    "KS p = 6.8e-19 (ok)",
+    "pooled Mann-Whitney p = 2.9e-18 (ok)",
+    "KS p = 8.1e-14 (ok)",
     "20/20 samples individually p < 0.05 (ok)",
-    "family ranks 3 of 14 organ families by median percentile (fail)"
+    "family ranks 4 of 14 organ families by median percentile (fail)"
   ],
   "best_family_nodes": [
-    "lower eyelash (1.9%)",
-    "upper eyelash (2.2%)",
-    "mole (2.9%)",
-    "pollical pad (3.2%)",
-    "manual autopod pad (3.6%)"
+    "eyelash (0.5%)",
+    "lower eyelash (0.7%)",
+    "nail (0.8%)",
+    "toilet claw (0.9%)",
+    "mole (0.9%)"
   ],
   "top_real_anatomy": [
-    "serotonergic system (1.25%)",
-    "cholinergic system (1.25%)",
-    "gABAergic system (1.25%)",
-    "histaminergic system (1.27%)",
-    "glutamatergic system (1.27%)",
-    "catecholamine system (1.28%)",
-    "lymphomyeloid tissue (1.45%)",
-    "integumental surface (1.56%)",
-    "morphological boundary (1.59%)",
-    "superior gemellus muscle (1.60%)"
+    "histaminergic system (0.02%)",
+    "cholinergic system (0.02%)",
+    "catecholamine system (0.04%)",
+    "glutamatergic system (0.04%)",
+    "serotonergic system (0.04%)",
+    "gABAergic system (0.05%)",
+    "chorionic mesenchymal villus (0.08%)",
+    "subcarinal lymph node (0.09%)",
+    "perichordal bone (0.10%)",
+    "thoracic aortic plexus (0.10%)"
   ]
 }

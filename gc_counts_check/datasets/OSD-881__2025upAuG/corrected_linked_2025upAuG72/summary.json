@@ -9,10 +9,10 @@
     "heart left ventricle (rank 2)",
     "heart (rank 4)",
     "right atrium auricular region (rank 5)",
-    "left coronary artery (rank 17)"
+    "left coronary artery (rank 19)"
   ],
   "best_target_rank": 2,
-  "frac_samples_target_rank1": 0.05263157894736842,
+  "frac_samples_target_rank1": 0.0,
   "frac_samples_target_top3": 1.0,
   "verdict": "PARTIAL",
   "top_linked_nodes": [
@@ -21,8 +21,8 @@
     "muscle of leg",
     "heart",
     "right atrium auricular region",
+    "liver",
     "descending thoracic aorta",
-    "right adrenal gland",
     "ectocervix"
   ]
 }

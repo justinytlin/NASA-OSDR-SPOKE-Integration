@@ -9,8 +9,8 @@
     "upper lobe of left lung (rank 3)"
   ],
   "best_target_rank": 3,
-  "frac_samples_target_rank1": 0.3684210526315789,
-  "frac_samples_target_top3": 0.6842105263157895,
+  "frac_samples_target_rank1": 0.47368421052631576,
+  "frac_samples_target_top3": 0.631578947368421,
   "verdict": "PARTIAL",
   "top_linked_nodes": [
     "thoracic aorta",
@@ -19,7 +19,7 @@
     "subcutaneous adipose tissue",
     "ascending aorta",
     "omental fat pad",
-    "body of uterus",
+    "gastrocnemius",
     "right ovary"
   ]
 }

@@ -6,25 +6,25 @@
   "n_linked": 92,
   "proxy": false,
   "target_nodes": [
-    "apex of heart (rank 7)",
-    "right coronary artery (rank 10)",
-    "heart (rank 49)",
-    "left coronary artery (rank 67)",
-    "right atrium auricular region (rank 87)",
-    "heart left ventricle (rank 92)"
+    "apex of heart (rank 8)",
+    "right coronary artery (rank 12)",
+    "left coronary artery (rank 55)",
+    "heart (rank 74)",
+    "right atrium auricular region (rank 85)",
+    "heart left ventricle (rank 91)"
   ],
-  "best_target_rank": 7,
+  "best_target_rank": 8,
   "frac_samples_target_rank1": 0.0,
-  "frac_samples_target_top3": 0.1,
-  "verdict": "PARTIAL",
+  "frac_samples_target_top3": 0.0,
+  "verdict": "NONE",
   "top_linked_nodes": [
-    "skeletal muscle tissue",
     "cerebellum",
+    "skeletal muscle tissue",
     "corpus callosum",
     "popliteal artery",
-    "adrenal gland",
     "esophagus",
-    "apex of heart",
-    "right fallopian tube"
+    "adrenal gland",
+    "right fallopian tube",
+    "apex of heart"
   ]
 }

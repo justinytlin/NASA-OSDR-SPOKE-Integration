@@ -6,21 +6,21 @@
   "n_linked": 44,
   "proxy": false,
   "target_nodes": [
-    "skin of abdomen (rank 1)",
-    "skin of leg (rank 3)"
+    "skin of abdomen (rank 2)",
+    "skin of leg (rank 5)"
   ],
-  "best_target_rank": 1,
-  "frac_samples_target_rank1": 0.5,
-  "frac_samples_target_top3": 0.7,
-  "verdict": "CLEAR",
+  "best_target_rank": 2,
+  "frac_samples_target_rank1": 0.35,
+  "frac_samples_target_top3": 0.6,
+  "verdict": "PARTIAL",
   "top_linked_nodes": [
+    "gastrocnemius",
     "skin of abdomen",
     "tibial artery",
-    "skin of leg",
     "thoracic aorta",
-    "gastrocnemius",
+    "skin of leg",
     "subcutaneous adipose tissue",
-    "vagina",
-    "ascending aorta"
+    "ascending aorta",
+    "vagina"
   ]
 }

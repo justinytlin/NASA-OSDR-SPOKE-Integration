@@ -6,21 +6,21 @@
   "n_linked": 72,
   "proxy": false,
   "target_nodes": [
-    "adult mammalian kidney (rank 2)",
-    "cortex of kidney (rank 5)"
+    "adult mammalian kidney (rank 3)",
+    "cortex of kidney (rank 4)"
   ],
-  "best_target_rank": 2,
+  "best_target_rank": 3,
   "frac_samples_target_rank1": 0.0,
-  "frac_samples_target_top3": 0.7894736842105263,
+  "frac_samples_target_top3": 0.8947368421052632,
   "verdict": "PARTIAL",
   "top_linked_nodes": [
     "liver",
-    "adult mammalian kidney",
-    "heart",
     "brain",
+    "adult mammalian kidney",
     "cortex of kidney",
     "right lobe of liver",
-    "right adrenal gland",
+    "heart",
+    "right adrenal gland cortex",
     "gastrocnemius"
   ]
 }

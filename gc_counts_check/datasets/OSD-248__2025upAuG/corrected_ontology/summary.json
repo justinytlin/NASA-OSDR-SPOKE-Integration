@@ -11,37 +11,37 @@
   "family_regex": "\\blung|pulmonary|bronch|alveolus of lung|alveolar (?:sac|wall|system|duct)",
   "family_exclude": "pulmonum",
   "n_family_nodes": 151,
-  "family_median_pct": 58.538664040453796,
+  "family_median_pct": 68.38014431544858,
   "in_top_2_5pct": 0,
   "in_top_10pct": 3,
-  "mwu_p_less": 0.979923031093145,
-  "ks_p_greater": 0.0004236872674452613,
-  "frac_samples_significant": 0.10526315789473684,
-  "family_rank_among_organ_families": 9,
+  "mwu_p_less": 0.999999966676294,
+  "ks_p_greater": 0.09868218187166837,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 10,
   "verdict": "NONE",
   "criteria": [
-    "pooled Mann-Whitney p = 0.98 (fail)",
-    "KS p = 0.00042 (ok)",
-    "2/19 samples individually p < 0.05 (fail)",
-    "family ranks 9 of 14 organ families by median percentile (fail)"
+    "pooled Mann-Whitney p = 1 (fail)",
+    "KS p = 0.099 (fail)",
+    "0/19 samples individually p < 0.05 (fail)",
+    "family ranks 10 of 14 organ families by median percentile (fail)"
   ],
   "best_family_nodes": [
-    "alveolus of lung (7.6%)",
-    "sputum (9.0%)",
-    "upper lobe of left lung (10.0%)",
-    "blood-air barrier (10.4%)",
-    "lobar bronchus of left lung upper lobe (10.9%)"
+    "sputum (4.9%)",
+    "blood-air barrier (5.9%)",
+    "alveolus of lung (8.7%)",
+    "upper lobe of left lung (13.4%)",
+    "lobar bronchus of left lung upper lobe (15.0%)"
   ],
   "top_real_anatomy": [
-    "sinus of Valsalva (0.75%)",
-    "right supraclavicular lymph node (0.96%)",
-    "Virchow's lymph node (0.96%)",
-    "left supraclavicular lymph node (0.97%)",
-    "supraclavicular lymph node (0.97%)",
-    "tunica intima (1.00%)",
-    "blood vessel internal elastic membrane (1.00%)",
-    "atrioventricular node (1.03%)",
-    "carotid sinus (1.04%)",
-    "eye trabecular meshwork (1.04%)"
+    "alisphenoid ossification center (0.05%)",
+    "left supraclavicular lymph node (0.06%)",
+    "nucleus recessus lateralis (0.06%)",
+    "right supraclavicular lymph node (0.07%)",
+    "orbitosphenoid ossification center (0.07%)",
+    "Virchow's lymph node (0.07%)",
+    "supraclavicular lymph node (0.08%)",
+    "nucleus recessus posterioris (0.08%)",
+    "inferior gemellus muscle (0.08%)",
+    "bolus of food (0.09%)"
   ]
 }

@@ -11,37 +11,37 @@
   "family_regex": "kidney|renal|nephron|glomerul",
   "family_exclude": "adrenal|suprarenal|interrenal|nephridi|Hatschek|lieno|olfactory|cerebell|preglomerular",
   "n_family_nodes": 275,
-  "family_median_pct": 30.138539042821158,
-  "in_top_2_5pct": 43,
-  "in_top_10pct": 68,
-  "mwu_p_less": 1.6260626676195077e-26,
-  "ks_p_greater": 6.41490441393339e-20,
+  "family_median_pct": 36.68082043900684,
+  "in_top_2_5pct": 35,
+  "in_top_10pct": 59,
+  "mwu_p_less": 7.261072122606424e-11,
+  "ks_p_greater": 1.7516516549024855e-07,
   "frac_samples_significant": 1.0,
-  "family_rank_among_organ_families": 4,
+  "family_rank_among_organ_families": 5,
   "verdict": "PARTIAL",
   "criteria": [
-    "pooled Mann-Whitney p = 1.6e-26 (ok)",
-    "KS p = 6.4e-20 (ok)",
+    "pooled Mann-Whitney p = 7.3e-11 (ok)",
+    "KS p = 1.8e-07 (ok)",
     "20/20 samples individually p < 0.05 (ok)",
-    "family ranks 4 of 14 organ families by median percentile (fail)"
+    "family ranks 5 of 14 organ families by median percentile (fail)"
   ],
   "best_family_nodes": [
+    "proximal tubular epithelium (0.0%)",
     "proximal tubule (0.0%)",
     "nephron tubule epithelium (0.0%)",
-    "distal tubular epithelium (0.0%)",
-    "proximal tubular epithelium (0.1%)",
-    "pronephric proximal tubule (0.1%)"
+    "distal tubular epithelium (0.1%)",
+    "proximal straight tubule (0.1%)"
   ],
   "top_real_anatomy": [
+    "proximal tubular epithelium (0.01%)",
     "proximal tubule (0.01%)",
+    "cardiac Purkinje fiber (0.04%)",
     "nephron tubule epithelium (0.05%)",
-    "distal tubular epithelium (0.05%)",
-    "cardiac Purkinje fiber (0.07%)",
-    "proximal tubular epithelium (0.08%)",
-    "pronephric proximal tubule (0.08%)",
-    "proximal straight tubule (0.08%)",
-    "pronephric proximal straight tubule (0.15%)",
-    "metanephric proximal straight tubule (0.19%)",
-    "region of nephron tubule (0.22%)"
+    "mollusc venom (0.05%)",
+    "cochlear nucleus (0.06%)",
+    "distal tubular epithelium (0.06%)",
+    "posteroventral cochlear nucleus (0.07%)",
+    "muscle tissue (0.07%)",
+    "anteroventral cochlear nucleus (0.07%)"
   ]
 }

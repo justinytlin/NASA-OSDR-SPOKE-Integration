@@ -6,21 +6,21 @@
   "n_linked": 60,
   "proxy": false,
   "target_nodes": [
-    "skin of abdomen (rank 2)",
-    "skin of leg (rank 5)"
+    "skin of abdomen (rank 3)",
+    "skin of leg (rank 8)"
   ],
-  "best_target_rank": 2,
-  "frac_samples_target_rank1": 0.25,
+  "best_target_rank": 3,
+  "frac_samples_target_rank1": 0.05,
   "frac_samples_target_top3": 0.5,
   "verdict": "PARTIAL",
   "top_linked_nodes": [
     "descending thoracic aorta",
-    "skin of abdomen",
-    "tibial artery",
     "gastrocnemius",
-    "skin of leg",
+    "skin of abdomen",
+    "muscle of leg",
     "left coronary artery",
+    "tibial artery",
     "thoracic aorta",
-    "muscle of leg"
+    "skin of leg"
   ]
 }

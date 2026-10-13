@@ -11,16 +11,16 @@
   ],
   "best_target_rank": 1,
   "frac_samples_target_rank1": 0.9714285714285714,
-  "frac_samples_target_top3": 0.9714285714285714,
+  "frac_samples_target_top3": 1.0,
   "verdict": "CLEAR",
   "top_linked_nodes": [
     "right lobe of liver",
     "liver",
+    "brain",
     "left adrenal gland",
     "right adrenal gland",
-    "brain",
     "adult mammalian kidney",
-    "left adrenal gland cortex",
-    "right adrenal gland cortex"
+    "cortex of kidney",
+    "left adrenal gland cortex"
   ]
 }

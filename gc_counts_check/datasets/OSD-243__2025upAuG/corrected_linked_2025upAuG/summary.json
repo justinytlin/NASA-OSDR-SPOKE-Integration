@@ -7,20 +7,20 @@
   "proxy": false,
   "target_nodes": [
     "skin of abdomen (rank 1)",
-    "skin of leg (rank 2)"
+    "skin of leg (rank 3)"
   ],
   "best_target_rank": 1,
-  "frac_samples_target_rank1": 0.631578947368421,
-  "frac_samples_target_top3": 1.0,
+  "frac_samples_target_rank1": 0.5789473684210527,
+  "frac_samples_target_top3": 0.9473684210526315,
   "verdict": "CLEAR",
   "top_linked_nodes": [
     "skin of abdomen",
-    "skin of leg",
     "gastrocnemius",
-    "esophagus mucosa",
+    "skin of leg",
     "tibial artery",
-    "vagina",
+    "esophagus mucosa",
     "thoracic aorta",
-    "subcutaneous adipose tissue"
+    "vagina",
+    "right lobe of liver"
   ]
 }

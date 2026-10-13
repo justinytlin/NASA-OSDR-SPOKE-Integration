@@ -8,11 +8,11 @@
   "target_nodes": [
     "heart left ventricle (rank 2)",
     "right atrium auricular region (rank 4)",
-    "left coronary artery (rank 8)"
+    "left coronary artery (rank 9)"
   ],
   "best_target_rank": 2,
-  "frac_samples_target_rank1": 0.0,
-  "frac_samples_target_top3": 0.9,
+  "frac_samples_target_rank1": 0.05,
+  "frac_samples_target_top3": 1.0,
   "verdict": "PARTIAL",
   "top_linked_nodes": [
     "gastrocnemius",
@@ -22,6 +22,6 @@
     "descending thoracic aorta",
     "right adrenal gland cortex",
     "right adrenal gland",
-    "left coronary artery"
+    "right lobe of liver"
   ]
 }

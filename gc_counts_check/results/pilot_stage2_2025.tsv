@@ -1,11 +1,11 @@
 tissue	rank_2019	n_linked_2019	verdict_2019	onto_2019	onto_pct_2019	rank_2025	n_linked_2025	verdict_2025	targets_2025	top_2025	onto_2025	onto_pct_2025
 retina	1	74	CLEAR	CLEAR	0.2		92	NO LINKED NODE (proxy)			PARTIAL	10.4
 kidney	1	74	CLEAR	CLEAR	6.2	21.0	92	NONE	cortex of kidney (rank 21); adult mammalian kidney (rank 88)	cerebellum, corpus callosum, skeletal muscle tissue	NONE	55.5
-heart	2	74	PARTIAL	PARTIAL	22.1	7.0	92	PARTIAL	apex of heart (rank 7); right coronary artery (rank 10)	skeletal muscle tissue, cerebellum, corpus callosum	PARTIAL	45.7
+heart	2	74	PARTIAL	PARTIAL	22.1	8.0	92	NONE	apex of heart (rank 8); right coronary artery (rank 12)	cerebellum, skeletal muscle tissue, corpus callosum	NONE	78.2
 spleen	2	74	PARTIAL (proxy)	PARTIAL	8.3	75.0	92	NONE	spleen (rank 75)	skeletal muscle tissue, popliteal artery, adrenal gland	NONE	94.6
-liver	57	74	NONE	NONE	57.1	35.0	92	NONE	liver (rank 35); right lobe of liver (rank 70)	corpus callosum, skeletal muscle tissue, esophagus	NONE	83.1
+liver	57	74	NONE	NONE	57.1	35.0	92	NONE	liver (rank 35); right lobe of liver (rank 77)	cerebellum, corpus callosum, skeletal muscle tissue	NONE	92.4
 adrenal gland	37	74	NONE	NONE	99.6	5.0	92	PARTIAL	adrenal gland (rank 5); right adrenal gland cortex (rank 39)	skeletal muscle tissue, cerebellum, popliteal artery	NONE	82.6
-lung	69	74	NONE	PARTIAL	47.3	11.0	92	NONE	right lung (rank 11); lung (rank 18)	skeletal muscle tissue, popliteal artery, corpus callosum	NONE	56.7
+lung	69	74	NONE	PARTIAL	47.3	11.0	92	NONE	right lung (rank 11); lung (rank 18)	skeletal muscle tissue, popliteal artery, cerebellum	NONE	87.6
 cerebellum	68	74	NONE	NONE	80.4	1.0	92	CLEAR	cerebellum (rank 1); right hemisphere of cerebellum (rank 26)	cerebellum, corpus callosum, skeletal muscle tissue	PARTIAL	13.0
 white adipose tissue	65	74	NONE	NONE	36.6	10.0	92	NONE	adipose tissue (rank 10); subcutaneous adipose tissue (rank 52)	cerebellum, skeletal muscle tissue, corpus callosum	NONE	90.6
 blood	13	74	NONE	NONE	89.9	82.0	92	NONE	blood (rank 82)	corpus callosum, skeletal muscle tissue, cerebellum	NONE	97.9

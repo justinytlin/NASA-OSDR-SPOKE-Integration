@@ -11,37 +11,37 @@
   "family_regex": "liver|hepat",
   "family_exclude": "hepatopancreas|flexure|arthropod|hepatic cecum",
   "n_family_nodes": 70,
-  "family_median_pct": 0.4164693850495256,
-  "in_top_2_5pct": 52,
-  "in_top_10pct": 58,
-  "mwu_p_less": 6.928669787193935e-33,
-  "ks_p_greater": 9.524035524851767e-39,
+  "family_median_pct": 0.30870627450237687,
+  "in_top_2_5pct": 54,
+  "in_top_10pct": 59,
+  "mwu_p_less": 6.820274968822299e-34,
+  "ks_p_greater": 8.314276909556186e-39,
   "frac_samples_significant": 1.0,
   "family_rank_among_organ_families": 1,
   "verdict": "CLEAR",
   "criteria": [
-    "pooled Mann-Whitney p = 6.9e-33 (ok)",
-    "KS p = 9.5e-39 (ok)",
+    "pooled Mann-Whitney p = 6.8e-34 (ok)",
+    "KS p = 8.3e-39 (ok)",
     "19/19 samples individually p < 0.05 (ok)",
     "family ranks 1 of 14 organ families by median percentile (ok)"
   ],
   "best_family_nodes": [
     "liver lobule midzonal region (0.0%)",
-    "liver lobule periportal region (0.0%)",
     "liver lobule centrilobular region (0.0%)",
-    "metabolic zone of liver (0.1%)",
-    "liver lobule (0.1%)"
+    "liver lobule periportal region (0.0%)",
+    "metabolic zone of liver (0.0%)",
+    "lobe of liver (0.0%)"
   ],
   "top_real_anatomy": [
-    "liver lobule midzonal region (0.02%)",
+    "liver lobule midzonal region (0.01%)",
+    "liver lobule centrilobular region (0.01%)",
     "liver lobule periportal region (0.02%)",
-    "liver lobule centrilobular region (0.02%)",
-    "metabolic zone of liver (0.06%)",
-    "clivus of fovea centralis (0.06%)",
-    "liver lobule (0.09%)",
-    "lobe of liver (0.16%)",
-    "liver perisinusoidal space (0.16%)",
-    "preorbital bone region (0.18%)",
-    "left hepatic vein (0.19%)"
+    "metabolic zone of liver (0.03%)",
+    "lobe of liver (0.04%)",
+    "right hepatic vein (0.05%)",
+    "right lobe of liver (0.07%)",
+    "left hepatic vein (0.08%)",
+    "parenchyma of quadrate lobe of liver (0.08%)",
+    "liver right lobe parenchyma (0.08%)"
   ]
 }

@@ -43,6 +43,7 @@ from pathlib import Path
 
 import numpy as np
 import pandas as pd
+pd.set_option("compute.use_numexpr", False)   # numexpr 2.10.1 + numpy 2.4 returned wrong elementwise results on >1e6-cell frames
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent                 # GC Counts Check/
@@ -106,9 +107,10 @@ def prep_counts(path, filters, min_cpm=1.0, columns=None):
     df = pd.read_csv(path, header=0, index_col=0)
     keep = [c for c in df.columns if c in set(columns)] if columns else [c for c in df.columns if any(s in c for s in filters)]
     df = df[keep]
-    cpm = df / df.sum(axis=0) * 1e6
+    v = df.to_numpy(dtype=np.float64)                  # explicit numpy maths (pandas' numexpr path gave wrong values)
+    cpm = v / v.sum(axis=0, keepdims=True) * 1e6
     expressed = (cpm >= min_cpm).any(axis=1)
-    w = np.log2(cpm[expressed] + 1.0)
+    w = pd.DataFrame(np.log2(cpm[expressed] + 1.0), index=df.index[expressed], columns=keep)
     w.index.name = "ENSEMBL"
     info = f"{df.shape[0]} genes, {len(keep)} GC samples, {int(expressed.sum())} with CPM>={min_cpm}"
     return w.reset_index(), info

@@ -11,17 +11,17 @@
   "family_regex": "heart|cardiac|myocard",
   "family_exclude": "cardiac stomach|cardiac gastric|corpus cardiacum|lymph heart|dorsal vessel",
   "n_family_nodes": 230,
-  "family_median_pct": 1.980208708168406,
-  "in_top_2_5pct": 134,
-  "in_top_10pct": 199,
-  "mwu_p_less": 1.6933072481062536e-121,
-  "ks_p_greater": 1.6810307837931512e-125,
+  "family_median_pct": 2.241453760345448,
+  "in_top_2_5pct": 122,
+  "in_top_10pct": 189,
+  "mwu_p_less": 3.822423785979098e-108,
+  "ks_p_greater": 2.0271926751109368e-108,
   "frac_samples_significant": 1.0,
   "family_rank_among_organ_families": 1,
   "verdict": "CLEAR",
   "criteria": [
-    "pooled Mann-Whitney p = 1.7e-121 (ok)",
-    "KS p = 1.7e-125 (ok)",
+    "pooled Mann-Whitney p = 3.8e-108 (ok)",
+    "KS p = 2e-108 (ok)",
     "20/20 samples individually p < 0.05 (ok)",
     "family ranks 1 of 14 organ families by median percentile (ok)"
   ],
@@ -37,11 +37,11 @@
     "Purkinje fiber network (0.01%)",
     "cardiac muscle tissue of papillary muscle (0.02%)",
     "cardiac muscle tissue of ventricle (0.03%)",
-    "papillary muscle of heart (0.04%)",
-    "papillary muscle of right ventricle (0.05%)",
-    "bundle of His (0.07%)",
-    "chorda tendinea of right ventricle (0.07%)",
-    "chorda tendineae (0.07%)",
-    "sinoatrial node (0.08%)"
+    "papillary muscle of heart (0.03%)",
+    "chorda tendineae (0.04%)",
+    "bundle of His (0.05%)",
+    "papillary muscle of right ventricle (0.06%)",
+    "sinoatrial node (0.07%)",
+    "chorda tendinea of right ventricle (0.08%)"
   ]
 }

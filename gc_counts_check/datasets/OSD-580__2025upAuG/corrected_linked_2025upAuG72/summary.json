@@ -9,11 +9,11 @@
     "heart left ventricle (rank 2)",
     "right atrium auricular region (rank 4)",
     "heart (rank 5)",
-    "left coronary artery (rank 16)"
+    "left coronary artery (rank 20)"
   ],
   "best_target_rank": 2,
-  "frac_samples_target_rank1": 0.0,
-  "frac_samples_target_top3": 0.9,
+  "frac_samples_target_rank1": 0.05,
+  "frac_samples_target_top3": 1.0,
   "verdict": "PARTIAL",
   "top_linked_nodes": [
     "gastrocnemius",
@@ -23,6 +23,6 @@
     "heart",
     "brain",
     "liver",
-    "descending thoracic aorta"
+    "cortex of kidney"
   ]
 }

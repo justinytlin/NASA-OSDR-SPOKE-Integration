@@ -6,20 +6,20 @@
   "n_linked": 60,
   "proxy": false,
   "target_nodes": [
-    "adult mammalian kidney (rank 1)"
+    "adult mammalian kidney (rank 2)"
   ],
-  "best_target_rank": 1,
-  "frac_samples_target_rank1": 0.4,
-  "frac_samples_target_top3": 0.85,
-  "verdict": "CLEAR",
+  "best_target_rank": 2,
+  "frac_samples_target_rank1": 0.35,
+  "frac_samples_target_top3": 1.0,
+  "verdict": "PARTIAL",
   "top_linked_nodes": [
-    "adult mammalian kidney",
     "right lobe of liver",
-    "right adrenal gland",
-    "gastrocnemius",
+    "adult mammalian kidney",
     "heart left ventricle",
-    "left adrenal gland",
+    "gastrocnemius",
+    "right adrenal gland",
     "right adrenal gland cortex",
-    "muscle of leg"
+    "muscle of leg",
+    "left adrenal gland"
   ]
 }

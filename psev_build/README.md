@@ -141,9 +141,10 @@ pipeline's cross-gene z-scoring handles the second, nothing handles the first.
 
 ### Anatomy-edge variants (2026-09-14)
 
-The expression-weighted anatomy check (`replication/counts_to_psev.py` on
-ground-control counts, then `anatomy_check.py --tissue-regex`) works on the
-2019 PSEVs and not on the 2025 build, and two variant builds show why:
+The raw (uncorrected) expression-weighted anatomy check
+(`replication/counts_to_psev.py` on ground-control counts, then
+`anatomy_check.py --tissue-regex`) gave different answers on the four builds,
+and two variant builds show why:
 
 | Build (`--exclude-rel-types` added to the default four) | hippocampal family, OSD-564 GC | liver family |
 |---|---|---|
@@ -164,7 +165,10 @@ ground-control counts, then `anatomy_check.py --tissue-regex`) works on the
   liver: 4 of 113) but the anatomy extreme is still owned by liver/kidney via
   `LOCALIZES_DlA` disease-literature edges (57k in 2025 vs 7k in v1).
 
-Use the main build with the null control for fold-change-weighted work; if
-tissue identity from a single-group expression profile matters, the up-only
-variant is the least bad 2025 option, and the 2019 zip remains the reference
-for that check.
+Use the main build with the null control for fold-change-weighted work. For
+tissue identity from a single-group expression profile, the up-only variant
+with a within-dataset baseline correction and the gene-linked-node test is the
+validated configuration: on 104 OSDR control sets the tissue's own node ranks
+first in 50 and in the top seven in 32 more
+([`gc_counts_check/README.md`](../gc_counts_check/README.md)); the table
+above predates that correction.

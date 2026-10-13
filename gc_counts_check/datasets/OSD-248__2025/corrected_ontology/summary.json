@@ -11,37 +11,37 @@
   "family_regex": "\\blung|pulmonary|bronch|alveolus of lung|alveolar (?:sac|wall|system|duct)",
   "family_exclude": "pulmonum",
   "n_family_nodes": 151,
-  "family_median_pct": 56.690971761898446,
+  "family_median_pct": 87.55894774720176,
   "in_top_2_5pct": 0,
-  "in_top_10pct": 1,
-  "mwu_p_less": 0.9984143097679083,
-  "ks_p_greater": 0.6756367534230467,
-  "frac_samples_significant": 0.3157894736842105,
-  "family_rank_among_organ_families": 5,
+  "in_top_10pct": 2,
+  "mwu_p_less": 1.0,
+  "ks_p_greater": 0.9479511655031214,
+  "frac_samples_significant": 0.0,
+  "family_rank_among_organ_families": 9,
   "verdict": "NONE",
   "criteria": [
     "pooled Mann-Whitney p = 1 (fail)",
-    "KS p = 0.68 (fail)",
-    "6/19 samples individually p < 0.05 (fail)",
-    "family ranks 5 of 14 organ families by median percentile (fail)"
+    "KS p = 0.95 (fail)",
+    "0/19 samples individually p < 0.05 (fail)",
+    "family ranks 9 of 14 organ families by median percentile (fail)"
   ],
   "best_family_nodes": [
-    "alveolus of lung (9.8%)",
-    "epithelial lining fluid (13.2%)",
-    "right lung alveolus (17.4%)",
-    "left lung alveolus (22.4%)",
-    "right lung alveolar system (22.9%)"
+    "epithelial lining fluid (9.9%)",
+    "alveolus of lung (9.9%)",
+    "sputum (29.9%)",
+    "right lung alveolus (34.0%)",
+    "left lung alveolus (36.9%)"
   ],
   "top_real_anatomy": [
     "skeletal muscle tissue of digastric (0.02%)",
-    "skeletal muscle tissue of trapezius (0.03%)",
+    "anal fin musculature (0.03%)",
     "skeletal muscle tissue of mylohyoid (0.04%)",
-    "anal fin musculature (0.05%)",
-    "skeletal muscle endomysium (0.05%)",
+    "skeletal muscle tissue of trapezius (0.04%)",
+    "skeletal muscle endomysium (0.04%)",
     "dorsal erector muscle (0.07%)",
-    "dorsal inclinator muscle (0.07%)",
     "dorsal depressor muscle (0.07%)",
-    "epimysium (0.12%)",
-    "perimysium (0.12%)"
+    "dorsal inclinator muscle (0.07%)",
+    "skeletal muscle tissue of biceps brachii (0.10%)",
+    "skeletal muscle tissue of masseter (0.10%)"
   ]
 }

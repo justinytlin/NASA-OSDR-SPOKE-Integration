@@ -1,425 +1,249 @@
-# GC Counts Check — does a ground-control expression profile point at its own tissue in SPOKE?
+# GC Counts Check — does a control transcriptome point at its own tissue in SPOKE?
 
-Each OSDR dataset is judged **on its own**: its ground-control (GC) counts are projected onto the
-2019 SPOKE gene PSEVs (Nelson et al., Life 2021; Zenodo 10.5281/zenodo.4404618), and the resulting
-Anatomy-node ranking is checked for separation of the known source tissue. Nothing is compared
-across datasets.
+Each OSDR dataset is judged **on its own**: its control-sample gene counts are projected onto the gene PSEVs of
+the SPOKE 2025-03 snapshot built with only the up-regulation Anatomy–Gene edges, the projection is corrected
+for the graph's own baseline, and the resulting Anatomy ranking is checked for the known source tissue. Nothing
+is compared across datasets. Run on every mouse bulk RNA-seq control set on OSDR (94 studies, 104 control sets,
+31 tissues, 916 samples), the tissue's own gene-linked Anatomy node ranks **first in 50 datasets and in the top
+seven in 32 more**; 20 datasets belong to tissues without a gene-linked Anatomy node and are covered by the
+cell-type route; two fail. The same pipeline, packaged for any counts table, is
+[SPOKE-GeneCounts-Anatomy-Pipeline](https://github.com/justinytlin/SPOKE-GeneCounts-Anatomy-Pipeline).
+`METHODS.md` explains every step; `PRESENTER_GUIDE.md` walks through `results/SPOKE_tissue_validation.pptx`.
 
 ## Folder layout
 
 ```
-scripts/gc_counts_to_psev.py   counts -> per-sample SPOKE rank table (2019 PSEVs), any dataset via --counts
-scripts/check_anatomy.py       single-dataset anatomy check -> datasets/<name>/ (3 figures + stats + verdict)
-scripts/families.py            Anatomy node families (UBERON name regexes) used by the check
-scripts/style.py               figure style (white background, fixed tissue colours)
-run_all.sh                     projection + one check per dataset for the first 14 datasets
-run_osdr_wide.sh               OSDR-wide run (survey -> manifest -> projection -> checks -> compile)
-data/                          GeneLab RSEM unnormalized counts + ISA metadata (OSD-564, 244, 245, 246, 288, 289)
-psev_out/                      rank tables (Rank_by_type_<sample> columns), prepared gene weights, run log
-datasets/<OSD>/                A_qq_plot, B_organ_families, C_per_sample (.png/.svg), summary.json,
-                               organ_families.tsv, per_sample.tsv
-archive/                       earlier cross-dataset analysis (see below); not part of the check
+scripts/gc_counts_to_psev.py    counts -> per-sample SPOKE scores (--manifest, --zip/--spoke build dir, --compact)
+scripts/check_linked.py         primary test: rank of the tissue's own node among the 60 gene-linked Anatomy nodes
+scripts/check_anatomy.py        secondary test: UBERON family vs all Anatomy nodes (QQ, MWU, KS, per sample)
+scripts/celltype_check.py       fallback: rank of the tissue's cell type among the 2,745 CellType nodes
+scripts/ontology_families.py    UBERON families (root term + is_a/part_of descendants); families.py = old name regexes
+scripts/check_build.py          run the checks for every manifest entry; compile_build.py -> results tables + overview
+scripts/plot_celltype.py        cell-type route figures; pilot_stage2.py / plot_stage2.py = edge-set comparison
+scripts/survey_osdr.py, build_manifest.py   OSDR survey -> data/_catalog/manifest*.json (which samples are controls)
+scripts/inspect_edges.py, inspect_aug_coverage.py   read-only Neo4j queries behind the edge table below
+scripts/extract_anatomy_psev.py, gene_hub_rank.py, pilot_stage1.py, check_manifest.py, compile_results.py
+                                earlier tooling (PSEV-based linked-node detection, scoring-variant pilot, 2019 run)
+run_upauG_all.sh                the full 104-dataset run on the upregulates-only build (three batches)
+deck/build.js                   source of results/SPOKE_tissue_validation.pptx (pptxgenjs)
+data/                           GeneLab counts + ISA metadata (fetch_data.sh), _catalog/ (manifests), _ontology/, _genesets/
+psev_out/                       <name>__2025upAuG_GC_ranks.npz (per-sample scores over all 547,869 nodes, uniform profile,
+                                mean weights) and _GC_weights.tsv; not in git
+datasets/<name>__2025upAuG/     corrected_linked_2025upAuG60/ (primary), corrected_ontology/ (secondary),
+                                corrected_linked_2025upAuG[72]/ (44- and 72-node sets, for reference)
+results/                        compiled tables and overview figures (see below); archive_2019/ = results on the 2019 PSEVs
+archive/                        earlier cross-dataset analysis; not part of the check
 ```
 
-## Datasets (GC samples only, `_GC_` columns)
+## Running the check
 
-| dataset | tissue | GC samples | note |
-|---|---|---|---|
-| OSD-564 | hippocampus | 5 | RR-10 |
-| OSD-244 | thymus | 19 | RR-1; 9 LAR + 10 ISS-T (carcass-dissected) |
-| OSD-289 | thymus | 6 | MHU-1/2; the 3 MHU-2 "GC" columns are vivarium controls per ISA |
-| OSD-246 | spleen | 16 | RR-1 |
-| OSD-288 | spleen | 3 | MHU-1 |
-| OSD-245 | liver | 19 | RR-1 |
-
-OSD-4 (Affymetrix thymus, no counts) was excluded at the user's request.
-
-RR-3 (SpaceX-8) payload, added 2026-09-08 (`gc_counts_to_psev.py --only RR3`):
-
-| dataset | tissue | GC samples | note |
-|---|---|---|---|
-| OSD-137 | liver | 6 | |
-| OSD-161 | adrenal gland | 5 | |
-| OSD-162 | eye | 5 | whole eye |
-| OSD-163 | kidney | 6 | left kidney |
-| OSD-168 | liver | 4 | RR-1 + RR-3 study; only the `_RR3_GC_` (with ERCC spike-in) columns used |
-| OSD-194 | retina | 4 | left/right retina |
-| OSD-270 | heart | 2 | |
-| OSD-352 | brain | 3 | bulk RNA-seq columns of a multi-modal study |
-
-## Running the check on any dataset
+The build (40 GB) lives on the external drive: `/Volumes/justinytlin/SPOKE_psev/gene_psev_spoke2025-03_upAuG_only`
+(how it was made: `psev_build/README.md`; only `UPREGULATES_AuG` connects Anatomy to Gene nodes, everything else
+in SPOKE is unchanged).
 
 ```bash
-# from an existing rank table
-python3 scripts/check_anatomy.py --ranks psev_out/OSD-246_GC_counts_ranks_and_rank_by_type_for_meta0_1.tsv --tissue spleen --name OSD-246
-# from a raw GeneLab counts file (runs the ~7 min projection first; needs psev_data/gene_psev.zip)
-python3 scripts/check_anatomy.py --counts path/to/GLDS-xxx_rna_seq_RSEM_Unnormalized_Counts_GLbulkRNAseq.csv --tissue liver --name OSD-xxx --samples _GC_
+B=/Volumes/justinytlin/SPOKE_psev/gene_psev_spoke2025-03_upAuG_only
+# one or more manifest entries, one pass over the build (~8 min for one dataset, ~55 min for 13)
+python3 scripts/gc_counts_to_psev.py --manifest data/_catalog/manifest_2025upAuG.json --names OSD-245__2025upAuG --compact --zip $B --spoke $B --threads 4
+# primary test (60-node set), secondary test, cell-type route
+python3 scripts/check_linked.py  --npz psev_out/OSD-245__2025upAuG_GC_ranks.npz --tissue liver --name OSD-245__2025upAuG --spoke $B --linked-ids results/aug_linked_nodes_ge200.tsv --tag 2025upAuG60
+python3 scripts/check_anatomy.py --npz psev_out/OSD-245__2025upAuG_GC_ranks.npz --tissue liver --name OSD-245__2025upAuG --spoke $B --corrected --families ontology
+python3 scripts/celltype_check.py --tag 2025upAuG --build $B      # all manifest entries -> results/celltype_check_2025upAuG.tsv
+# everything at once for the whole manifest, then the tables
+python3 scripts/check_build.py --tag 2025upAuG --build $B [--names a,b] [--force]
+python3 scripts/compile_build.py --tag 2025upAuG --linked-tag 2025upAuG60
 ```
 
-`--tissue` is a built-in family (hippocampus, thymus, spleen, liver, heart, kidney, lung, skeletal
-muscle, bone marrow, skin, intestine, testis, blood, cerebral cortex) or use `--family-regex` /
-`--exclude-regex` for any other UBERON term. `--out` changes the destination (default `datasets/`).
+For a counts file that is not on OSDR, or for a one-command run, use the standalone repository:
+`python run_check.py --counts COUNTS.csv --tissue liver --samples _GC_ --build $B`.
 
-## Method
+## Datasets and samples
 
-A step-by-step guide with the statistics explained is in `METHODS.md`.
+`scripts/survey_osdr.py` lists every *Mus musculus* RNA-seq study on OSDR with a GeneLab
+`RSEM_Unnormalized_Counts` file; `scripts/build_manifest.py` picks the control samples from the ISA tables
+(spaceflight studies: `Spaceflight` factor exactly "Ground Control"; ground-analog studies: the baseline level
+of every condition factor, labelled `analog control`; wild type only; one entry per study × tissue; skipped
+studies and reasons in `data/_catalog/manifest_skipped.tsv`). `data/_catalog/manifest_2025upAuG.json` holds
+the 104 control sets with explicit sample columns: 83 spaceflight ground-control sets and 21 analog baselines.
 
-1. **Projection.** Per gene and GC sample the weight is log2(CPM+1) (genes with CPM ≥ 1 in ≥ 1 sample);
-   ENSEMBL → mouse Entrez (GeneLab annotation) → human Entrez (HomoloGene build 68) → SPOKE v2 gene
-   node. Same maths as `replication/psev_pipeline.py` (z-score each gene PSEV over the dataset's genes,
-   rank nodes within the gene, expression-weighted mean, rank; `Rank_by_type_` per sample).
-2. **Anatomy check** on the 13,257 Anatomy nodes, percentile of rank-by-type (0 = most associated with
-   the sample's expressed genes), pooled over the dataset's samples:
-   - **A. QQ plot** — sorted percentiles of the tissue family's nodes vs the percentiles a random set of
-     Anatomy nodes would have; 95 % envelope from 2,000 random sets of the same size; one-sided KS test
-     and Mann-Whitney U (family vs all other Anatomy nodes).
-   - **B. Organ families** — the family's median percentile against the other organ families in the
-     same dataset (black bar = median); rank among families.
-   - **C. Per sample** — each sample's family median and its own Mann-Whitney p.
-3. **Verdict** (thresholds are flags): CLEAR = pooled MWU p < 0.01, KS p < 0.01, ≥ 80 % of samples
-   individually p < 0.05, family ranked first; PARTIAL = pooled p < 0.05 but a criterion fails;
-   NONE = no pooled shift.
+| tissue | sets | tissue | sets | tissue | sets |
+|---|---|---|---|---|---|
+| liver | 14 | adrenal gland | 4 | bone marrow | 2 |
+| spleen | 8 | quadriceps | 4 | colon | 2 |
+| skin | 7 | lung | 3 | hippocampus | 2 |
+| soleus | 7 | cerebellum | 3 | tibialis anterior | 2 |
+| kidney | 6 | cerebrum | 3 | extensor digitorum longus | 2 |
+| heart | 6 | brain | 2 | eye | 2 |
+| gastrocnemius | 5 | | | | |
+| retina | 5 | one set each: blood, white adipose tissue, brown adipose tissue, mammary gland, placenta, cecum, bone, mandible, temporal bone, optic nerve | | | |
+| thymus | 5 | | | | |
 
-## Results (2026-09-08)
+## Method in brief
 
-| dataset | tissue | verdict | pooled MWU p | KS p | samples p<0.05 | family rank |
-|---|---|---|---|---|---|---|
-| OSD-564 | hippocampus | CLEAR | 1.8e-18 | 3e-24 | 5/5 | 1/13 |
-| OSD-246 | spleen | CLEAR | 1.6e-3 | 2e-5 | 16/16 | 1/13 |
-| OSD-244 | thymus | PARTIAL | 0.024 | 3.3e-5 | 18/19 | 2/13 (behind the 5-node bone marrow family) |
-| OSD-288 | spleen | PARTIAL | 4.0e-3 | 1e-4 | 3/3 | 4/13 |
-| OSD-289 | thymus | NONE | 0.11 | 4e-3 | 0/6 | 5/13 |
-| OSD-245 | liver | NONE | 0.44 | 0.13 | 2/19 | 8/13 |
+1. **Weights.** Per sample, CPM from the sample's own library size; genes with CPM ≥ 1 in at least one
+   control sample; weight log2(CPM + 1). Mouse Ensembl → mouse Entrez (GeneLab annotation) → human Entrez
+   (HomoloGene 68) → SPOKE gene node; 10–14k genes per dataset reach a PSEV.
+2. **Projection.** For each gene, z-score its PSEV over the dataset's genes and rank the 547,869 nodes
+   within the gene; each sample's score for a node is the expression-weighted mean rank over genes.
+3. **Baseline correction.** The same projection with every gene weighted 1 (the uniform profile) is
+   subtracted, scaled by the sample's mean weight. What remains is the covariance across genes between
+   expression and the node's gene links. Without it the raw ranking is nearly the same in every tissue:
+   it correlates with the uniform profile at Spearman 0.93, the raw rankings of liver, kidney, spleen,
+   retina, heart, cerebellum and muscle datasets agree at a median of 0.87 (one shared component carries
+   71 % of their variance), and the same five kidney-cortex nodes head every one of them. In OSD-245 liver
+   the correction moves `right lobe of liver` from 161st to 9th of 13,895 Anatomy nodes (4th to 1st among
+   the 60 linked nodes) and puts the five liver-lobule zones at the top; `cortex of kidney` drops from 1st
+   to 2,882nd.
+4. **Three tests, each within the dataset.** Primary: rank of the tissue's own node among the 60 gene-linked
+   Anatomy nodes (CLEAR = 1st, PARTIAL = top 7, NONE below; proxy when only a linked ancestor exists).
+   Secondary: the tissue's UBERON family against all Anatomy nodes (QQ plot with a random-node envelope,
+   one-sided Mann-Whitney U and KS, per-sample consistency, rank among 14 organ families). Fallback for
+   tissues without a linked Anatomy node: rank of the tissue's cell type among the 2,745 CellType nodes.
 
-RR-3 payload (families for adrenal gland, eye, retina and brain added to `families.py`; the
-competition set stays the fixed 13 organ families plus the dataset's own family):
+## Why only the up-regulation edges
 
-| dataset | tissue | verdict | pooled MWU p | KS p | samples p<0.05 | family rank | family nodes in top 2.5 % (expected) |
-|---|---|---|---|---|---|---|---|
-| OSD-163 | kidney (167 nodes) | PARTIAL | 1.3e-7 | 1.1e-8 | 6/6 | 7/13 | 7 (4.2) |
-| OSD-352 | brain (578 nodes) | PARTIAL | 3e-78 | 2e-93 | 3/3 | 3/14 (behind hippocampus, cerebral cortex) | 17 (14.5) |
-| OSD-270 | heart (97 nodes) | PARTIAL | 0.037 | 0.056 | 2/2 | 7/13 | 1 (2.4) |
-| OSD-137 | liver (85 nodes) | NONE | 0.66 | 0.36 | 0/6 | 8/13 | 1 (2.1) |
-| OSD-168 | liver (85 nodes) | NONE | 0.54 | 0.38 | 0/4 | 8/13 | 0 (2.1) |
-| OSD-161 | adrenal gland (31 nodes) | NONE | 0.32 | 0.0044 | 0/5 | 12/14 | 2 (0.8) |
-| OSD-162 | eye (169 nodes) | NONE | 1 | 0.8 | 0/5 | 14/14 | 1 (4.2) |
-| OSD-194 | retina (37 nodes) | NONE | 1 | 0.87 | 0/4 | 14/14 | 0 (0.9) |
-
-Reading notes:
-- RR-3 shows the same pattern as the first set: the tissue's parenchymal core sits at the very top
-  (liver lobule 2.6 %, zona fasciculata 1.0 % and zona glomerulosa 1.5 % of the adrenal, corneal
-  epithelium 2.3 % and ciliary body 2.6 % of the eye, renal papilla 0.9 %, cardiac Purkinje fiber 1.5 %,
-  olfactory bulb layers 0.6 %), while the broad name-based family is diluted by vessels, ducts and
-  primordia, so the family-level verdict is sensitive to how the family is drawn.
-- Retina is the one real failure: all 37 retina nodes sit at the bottom of the ranking (median 93 %)
-  in every retina sample, i.e. retina anatomy is anti-associated with retina expression on the 2019
-  build. The eye dataset shows the same for its retina members. This looks like a property of how
-  retina is wired in SPOKE v2 rather than of the samples.
-- OSD-270 has only two GC samples; its verdict rests on very little.
-- Thymus and spleen families are bimodal: organ/cortex/medulla/pulp terms sit near the 10th percentile,
-  vessels and embryonic primordia at the bottom. The families separate on their parenchymal core.
-- The 85-node liver family mixes parenchyma with bile-duct, ligament and vessel terms; the parenchymal
-  nodes are at the top (hepatic cord 2.5 %, liver lobule 2.6 %, hepatic acinus 3.0 %) while the rest sit
-  at the bottom, so the broad family reads as NONE. `--tissue "liver parenchyma"` (24 nodes, post hoc)
-  gives median 28 %, MWU p 8e-6.
-- On the 2019 build the absolute top of every Anatomy ranking is UBERON life-stage pseudo-nodes and
-  brain/neural hub nodes regardless of tissue (listed under `top_real_anatomy` in each summary.json), so
-  the check is about where the family sits, not what is at rank 1.
-- Expression-side QC (archived) confirmed every dataset expresses its own tissue signature, so failures
-  here are properties of the projection, not of the counts. It also found a strong technical factor
-  shared by the RR-1 thymus and liver replicates (samples pair by replicate index, residual r ≈ 0.99).
-
-## OSDR-wide run (2026-10-04): 104 datasets, 31 tissues, 916 control samples
-
-Every mouse bulk RNA-seq study on OSDR with GeneLab counts and a usable control group was added
-(`run_osdr_wide.sh`; about 4.5 h of compute for 104 datasets on an 8-core laptop):
-
-```
-scripts/survey_osdr.py      111 mouse RNA-seq studies -> data/_catalog/survey.tsv (+ ISA metadata, file listings)
-scripts/build_manifest.py   control samples per (study, tissue) -> data/_catalog/manifest.json, manifest_skipped.tsv
-scripts/gc_counts_to_psev.py --manifest ... --compact
-                            -> psev_out/<name>_GC_anatomy_ranks.tsv (raw Anatomy ranks)
-                               psev_out/<name>_GC_ranks.npz (ranks, raw scores, uniform-weight profile, mean weights; all 389,297 nodes)
-scripts/check_manifest.py [--corrected]     one check per dataset -> datasets/<name>/ and datasets/<name>/baseline_corrected/
-scripts/compile_results.py                  -> results/compiled_verdicts.tsv, tissue_summary.tsv, tissue_separation_overview*.png
-```
-
-83 entries are true ground-control groups from spaceflight missions and 21 are baseline controls of
-ground-analog studies (`control_type` column). Selection rules are in METHODS.md section 13.
-
-### The raw check mostly measures a tissue-independent baseline
-
-Across datasets of different tissues the pooled Anatomy percentiles correlate at Spearman 0.96;
-96 % of their variance is one shared profile. Nodes such as hepatic cord, renal papilla, masseter
-and hippocampal commissure sit in the top 1–3 % in every tissue, and the organ nodes liver, kidney
-and retina sit near the bottom in every tissue. Two earlier statements in this README are therefore
-wrong as written: the "parenchymal core at the top" pattern is the baseline, not tissue signal, and
-retina is not anti-associated. `METHODS.md` sections 14–15 describe the within-dataset correction
-(subtract the uniform-weight profile), which every dataset now has in `baseline_corrected/`.
-
-### Results per tissue (baseline-corrected; raw in `results/tissue_summary.tsv`)
-
-| verdicts | raw | baseline-corrected |
-|---|---|---|
-| CLEAR | 6 | 20 |
-| PARTIAL | 33 | 64 |
-| NONE | 65 | 20 |
-| pooled Mann-Whitney p < 0.01 | 35 | 79 |
-| tissue family ranked first of the organ families | 6 | 20 |
-
-- **Separate clearly** (family median in the top ~15 %, usually ranked first): retina (5/5 CLEAR;
-  the `retina` node is ranked 1 of 13,257), bone marrow, cecum, kidney, heart, hippocampus, brain,
-  colon, cerebrum, mammary gland.
-- **Separate, but not ranked first** (PARTIAL in every dataset): spleen (8), thymus (5), all five
-  skeletal muscles (20 datasets; top nodes are cardiovascular and striated-muscle terms), skin (7),
-  eye, placenta. Liver is borderline: 10 PARTIAL, 4 NONE across 14 datasets, family median ≈ 31 %,
-  and the top nodes of a liver sample are kidney and renal terms.
-- **Do not separate**: adrenal gland (4/4), cerebellum (3/3; brain samples all point at forebrain),
-  lung (2 of 3), white and brown adipose, bone tissue, mandible, temporal bone, optic nerve, whole
-  blood. These are candidates for weak or missing tissue wiring in SPOKE v2.
-- Analog-study controls behave like ground controls for the same tissue.
-- Residual artifact: a few nodes (for example `mammary gland smooth muscle`, `cardiovascular system`)
-  rank near the top in many unrelated tissues after correction, because they are linked to genes
-  that are highly expressed everywhere. A reference-centred weight would remove this.
-
-### Using the data for machine learning
-
-Per-sample vectors for all 389,297 nodes are in `psev_out/<name>_GC_ranks.npz`
-(`scores - mean_weight[:, None] * uniform` is the corrected embedding). Use the corrected vectors,
-split by study, compare against a gene-expression baseline, and reduce dimensions (one node type, or
-principal components) before fitting.
-
-## Two no-re-projection refinements (2026-10-05)
-
-Both run on the stored baseline-corrected scores (`scripts/check_manifest.py --variant ontology|linked`).
-
-**1. Ontology families** (`scripts/ontology_families.py`, `check_anatomy.py --families ontology`,
-output `datasets/<name>/corrected_ontology/`). A family is a UBERON root term plus everything below
-it by is_a / part_of, instead of a name regex. Result: sharper, not more permissive. 17 CLEAR /
-58 PARTIAL / 29 NONE (name families: 20 / 64 / 20). Kidney becomes CLEAR in 6 of 6 and mammary
-gland CLEAR; retina's family median drops to 0.2 %. But the true organ families of liver, adrenal
-gland, lung and cerebellum sit at the *bottom* of the ranking (medians 73 %, 99.7 %, 92 %, 78 %); the
-name-based liver family had looked borderline only because it included non-liver terms.
-
-**2. Gene-linked nodes only** (`scripts/extract_anatomy_psev.py`, `scripts/check_linked.py`, output
-`datasets/<name>/corrected_linked/`). Reading the Anatomy columns of all 19,567 gene PSEVs shows that
-only **74 of the 13,257 Anatomy nodes are linked to genes** in the 2019 graph (a linked node has a
-PSEV value above 1e-4 for essentially every gene; the 75th node has it for 6 %). Spleen, thymus,
-skeletal muscle, colon, cecum, hippocampus, cerebral cortex and all bone terms have no gene links;
-their signal is second-hand through neighbours such as lymphoid tissue, hematopoietic system and
-digestive system. The check ranks the 74 linked nodes per sample and reports where the tissue's own
-node falls (or its nearest linked ancestor, flagged "proxy").
-
-| tissue | linked node(s) | rank of 74 in own samples |
-|---|---|---|
-| retina | retina | 1–2 |
-| brain | forebrain, telencephalon | 1–2 |
-| kidney | kidney, nephron tubule | 2–3 |
-| heart | myocardium | 2–3 (the `heart` node itself: 65) |
-| spleen, thymus | hematopoietic system (proxy) | 2 |
-| colon, cecum | digestive system (proxy) | 1–2 |
-| skin | skin of body | 11 |
-| mammary gland, blood | own node | 12, 13 |
-| bone marrow, placenta | bone marrow, decidua | 26–29 |
-| adrenal gland | adrenal cortex / adrenal gland | 34 / 72 |
-| liver, adipose, cerebellum, lung | own node | 60–70 |
-| skeletal muscles, bone | none, and no linked ancestor | not testable |
-
-**Why the failures fail.** Across the 31 linked nodes that are some dataset's own tissue, how heavily a
-node is linked to genes predicts how badly it ranks in its own samples: Spearman −0.85 (p 1.5e-9).
-The most heavily linked nodes (brain, adrenal gland, heart, lung, cerebellum, liver) are connected to
-so many genes that the link carries no tissue information: for liver, the correlation across genes
-between expression in liver samples and the gene's PSEV value at the liver node is 0.00, against
-+0.33 for retina and +0.36 for kidney. Lightly linked nodes (retina, kidney, myocardium, forebrain)
-are selective and work. The next improvement should therefore correct for connectivity (a
-degree-matched permutation null, or normalising each node's PSEV by its link weight); removing
-housekeeping genes alone is unlikely to rescue liver, lung, adrenal or cerebellum.
-
-## Stage-1 pilot: can reweighting rescue the failing tissues? (2026-10-11)
-
-Ten tissues, four scoring arms (METHODS.md section 19), judged by where the tissue's own gene-linked
-node ranks among the 74 linked nodes. `results/pilot_stage1.tsv`.
-
-| tissue (own node) | A rank-based | Z z-score | B permutation z | D housekeeping removed |
-|---|---|---|---|---|
-| retina | 1 | 1 | 1 | 1 |
-| kidney | 1 | 2 | 2 | 1 |
-| heart (myocardium) | 2 | 4 | 15 | 3 |
-| blood (blood plasma) | 13 | 3 | 5 | 11 |
-| adrenal gland (adrenal cortex) | 37 | 36 | 42 | 34 |
-| liver | 57 | 52 | 48 | 52 |
-| white adipose tissue | 65 | 63 | 63 | 64 |
-| cerebellum | 68 | 66 | 64 | 67 |
-| lung | 69 | 69 | 60 | 67 |
-| Spearman(link weight, own rank) | −0.88 | −0.93 | −0.87 | −0.87 |
-
-No arm moves liver, lung, adrenal gland, cerebellum or adipose out of the bottom third, and the
-connectivity relationship is unchanged in every arm. Housekeeping removal (D) is indistinguishable
-from the current method; the z-score projection (Z) helps blood and softens some family medians
-(liver family 57 → 19 %, cerebellum 80 → 27 %) without moving the organ nodes themselves; the
-permutation null (B) does not help and costs heart. Decision: keep the rank-based, baseline-corrected
-score (A) as the method. The failures are a property of the 2019 graph's edges for those nodes, not
-of the weighting, so Stage 2 tests the graph: the 2025 SPOKE build for the failing tissues, and a
-no-propagation control on the 74 linked nodes.
-
-## Stage 2: the same ten tissues on the 2025 SPOKE builds (2026-10-11)
-
-Three gene-PSEV builds of the 2025-03 SPOKE snapshot exist on the external drive
-(`/Volumes/justinytlin/SPOKE_psev/`, see `psev_build/README.md`): the full graph; the graph without the
-1.58 M `EXPRESSES_AeG` edges (keeping 494 k `DOWNREGULATES_AdG` + 86 k `UPREGULATES_AuG`); and the graph
-with only the 86 k `UPREGULATES_AuG` Anatomy–Gene edges. The pilot datasets were projected on each
-(`pilot_stage2_<tag>.json`, `gc_counts_to_psev.py --zip <build> --spoke <build>`), the gene-linked
-Anatomy set was read from each build (`extract_anatomy_psev.py --build`), and the linked-node and
-ontology checks were run (`pilot_stage2.py`). `results/pilot_stage2_<tag>.tsv`,
-`results/pilot_stage2_builds.png`.
-
-Rank of the tissue's own gene-linked node (number of linked nodes in brackets):
-
-| tissue | 2019 (74) | 2025 all edges (92) | 2025 no 'expresses' (73) | 2025 'upregulates' only (44) |
-|---|---|---|---|---|
-| retina | 1 | no node | no node | no node |
-| kidney | 1 | 21 | 38 | no node |
-| heart | 2 | 7 | 45 | no node |
-| spleen | proxy 2 | 75 | 48 | 2 |
-| liver | 57 | 35 | 45 | **1** |
-| adrenal gland | 37 | 5 | 38 | **2** |
-| lung | 69 | 11 | 30 | **3** |
-| cerebellum | 68 | 1 | 20 | **1** |
-| white adipose | 65 | 10 | 37 | **1** |
-| blood | 13 | 82 | 73 | **1** |
-| Spearman(link weight, own rank) | −0.88 | −0.91 | −0.59 | −0.04 |
-
-Housekeeping-gene removal on the full 2025 graph (`2025nohk`) reproduces the full-graph column within
-a few places (kidney 20, liver 31, spleen 74, blood 79, same universal-top nodes), as it did on 2019.
-| nodes in the top 3 of ≥ 3 datasets | smooth muscle tissue, cardiovascular system | skeletal muscle tissue, cerebellum, corpus callosum, popliteal artery | putamen, amygdala, blood | upper lobe of left lung only |
-
-- **The full 2025 graph has the same defect as 2019, inverted.** Link weight still predicts own-tissue
-  rank (−0.91), but now the most lightly linked nodes (cerebellum, skeletal muscle tissue, corpus
-  callosum, popliteal artery) top eight or nine of the ten datasets whatever the tissue, and the most
-  heavily linked (blood, heart left ventricle) sink. Cerebellum's "CLEAR" there is largely that artifact.
-- **Removing the 'expresses' edges but keeping 'downregulates' fails everywhere**: the top nodes become
-  putamen and amygdala in every dataset.
-- **Keeping only 'upregulates' edges removes the artifact.** Every testable tissue's own node is in the
-  top three, the top nodes differ by tissue (right lobe of liver, left adrenal gland, cerebellar
-  hemisphere, subcutaneous adipose tissue, blood), the connectivity correlation is gone (−0.04) and no
-  node tops many datasets. The cost is coverage: only 44 Anatomy nodes carry up-regulation edges, so
-  retina, kidney and heart have no testable node on that build (their ontology families still read
-  PARTIAL / PARTIAL / CLEAR through neighbours).
-
-**Interpretation.** The PSEV random walk uses a binary adjacency, so an Anatomy–Gene edge counts the
-same whether it says the gene is expressed in, up-regulated in, or down-regulated in the tissue. The
-blanket "expresses" edges (2019: nearly every gene for 74 tissues; 2025: 1.58 M edges) and the
-"downregulates" edges swamp the informative "upregulates" edges and leave each organ node's position
-governed by how many edges it has rather than by what the sample expresses. This, not the gene
-weighting (Stage 1), is why liver, lung, adrenal gland, cerebellum and adipose failed on 2019.
-
-## All 104 datasets on the 2025 'upregulates-only' build (2026-10-12)
-
-`run_upauG_all.sh` (manifest `data/_catalog/manifest_2025upAuG.json`, three batches, 3 h 45 min), checks via
-`scripts/check_build.py`, compiled by `scripts/compile_build.py --tag 2025upAuG` →
-`results/compiled_2025upAuG.tsv`, `results/tissue_summary_2025upAuG.tsv`, `results/tissue_overview_2025upAuG.png`.
-Each dataset is judged on its own: rank of its tissue's own gene-linked node among the build's 44 linked
-Anatomy nodes (CLEAR = 1st, PARTIAL = top 7, NONE = below), plus the ontology-family check.
-
-| | datasets |
-|---|---|
-| own node ranked 1st (CLEAR) | 52 |
-| own node ranked 2nd–5th (PARTIAL) | 17 |
-| own node below 7th (NONE) | 0 |
-| tissue has no up-regulation-linked node | 35 |
-
-- **Ranked 1st in every dataset:** liver (14 of 14), all five skeletal muscles (20 of 20, via the single
-  `gastrocnemius` node), cerebrum (3), brain (2), white adipose, blood; skin 6 of 7; cerebellum 2 of 3.
-- **Consistently 2nd–4th:** spleen (2nd in all 8, behind `blood`), lung (2nd–3rd in all 3, behind
-  `tibial artery` / `thoracic aorta`), adrenal gland (2nd–3rd in all 4, behind `gastrocnemius`),
-  hippocampus (4th in both, behind prefrontal and cingulate cortex). These are near-misses with a
-  biologically related node ahead, not failures.
-- **Not testable on this build** (no up-regulation edges to any node in the family): thymus, retina,
-  kidney, heart, eye, bone marrow, colon, cecum, mammary gland, placenta, bone, mandible, temporal
-  bone, optic nerve (35 datasets). Their ontology-family check still runs through neighbouring
-  nodes: heart CLEAR in 6 of 6, colon, cecum and mandible CLEAR, kidney and retina PARTIAL, thymus NONE
-  in 5 of 5 (family median 84 %).
-- Analog-study controls behave like ground controls (11 CLEAR / 3 PARTIAL / 7 no node).
-- Residual hub: `gastrocnemius` is in the top four of 49 datasets and `left adrenal gland cortex` of 34.
-  They do not displace the tissue's own node except for adrenal gland, where gastrocnemius ranks first.
-
-Compared with the 2019 build on the same 104 datasets (baseline-corrected, linked-node check: 6 CLEAR
-out of the 31 own-node cases, connectivity Spearman −0.85), this build identifies the tissue in 69 of 69
-testable datasets within the top five. The trade is coverage: 74 linked nodes in 2019 against 44 here,
-with retina, kidney and heart among the tissues that lose their node.
-
-## Cell-type route for tissues without a gene-linked Anatomy node (2026-10-12)
-
-The 2025 graph has 2,745 CellType nodes, 59 of which carry Gene edges (33,827 `EXPRESSEDIN_GeiCT`, a
-single marker-gene source, median ~400 genes each) and 846 `PARTOF_CTpA` links to Anatomy nodes.
-`scripts/celltype_check.py --tag 2025upAuG` ranks all CellType nodes by baseline-corrected score in
-every dataset of the upregulates-only run and reports the best-ranked cell type whose name matches the
-tissue (`results/celltype_check_2025upAuG.tsv`). Ranks are out of 2,745.
-
-| tissue (datasets) | best matching cell type | rank, median [range] |
-|---|---|---|
-| retina (5) | camera-type eye photoreceptor cell | 1 [1–2] |
-| kidney (6) | proximal tubular cell | 1 [1–1] |
-| bone marrow (2) | CD115-positive monocyte | 1 |
-| placenta (1) | syncytiotrophoblast cell | 1 |
-| colon (2) | smooth muscle fiber of descending colon | 1 |
-| cecum (1) | Paneth cell | 2 |
-| heart (6) | cardiac pacemaker cell of sinoatrial node | 2.5 [2–16] |
-| mammary gland (1) | adipocyte of breast | 9 |
-| thymus (5) | T cell / fetal thymocyte | 17 [3–19] |
-| eye (2) | retinal rod cell | 19 [15–23] |
-| optic nerve, mandible, bone, temporal bone | (chondrocyte) | 30, 47, 121, 146 |
-
-For the tissues that do have an Anatomy node the cell-type ranking agrees with it (liver → hepatocyte
-rank 1 in 14 of 14, skin → suprabasal keratinocyte, muscles → sinoatrial myocyte rank 3, cerebellum and
-brain → oligodendrocyte / astrocyte), except adrenal gland, which has no steroidogenic cell type in the
-59 and ranks a kidney cell at ~109.
-
-So the cell-type route recovers retina, kidney, bone marrow, placenta, colon, cecum and heart directly
-from the existing projections; thymus is weak (T cells are in the top 20 but monocytes rank above them);
-eye and mammary gland are marginal; the bones and optic nerve have no cell type with gene edges and
-stay untestable. Residual hub: sinoatrial-node myocytes and epicardial adipocytes appear in the top five
-of about a quarter of all datasets.
-
-## What the live graph says about the Anatomy–Gene edges (2026-10-12)
-
-`scripts/inspect_edges.py` and `scripts/inspect_aug_coverage.py` (read-only Cypher through the SSH tunnel;
+Read from the live graph (`scripts/inspect_edges.py`, `inspect_aug_coverage.py`,
 `results/anatomy_gene_edge_counts.tsv`):
 
 | edge type | edges | Anatomy nodes | genes | properties |
 |---|---|---|---|---|
 | `EXPRESSES_AeG` | 1,582,757 | 92 | 19,072 | `sources` only (Bgee); blanket: blood is linked to 18,879 of 19,072 genes |
-| `UPREGULATES_AuG` | 85,530 | 72 | 17,018 | `log2fc` (min 1.0, median 1.6, 90th pct 3.3), `pvalue`, `fdr`, `sources` (Bgee) |
-| `DOWNREGULATES_AdG` | 493,600 | 73 | 19,014 | `log2fc`, `pvalue`, `fdr`, `sources` (Bgee) |
+| `UPREGULATES_AuG` | 85,530 | 72 | 17,018 | `log2fc` (min 1.0, median 1.6, 90th pct 3.3), `pvalue`, `fdr` |
+| `DOWNREGULATES_AdG` | 493,600 | 73 | 19,014 | `log2fc`, `pvalue`, `fdr` |
 
-So a rebuild that filters the "expresses" edges by expression level is **not possible**: they carry no
-value. The up-regulation edges are genuine tissue-specificity calls and they exist for 72 tissues, not
-the 44 my PSEV-based detector found (it only flags nodes linked to more than half of all genes). Edge
-counts per tissue range from 14 (cortex of kidney) to 6,167 (testis); heart left ventricle 484, adult
-mammalian kidney 398, transverse colon 986, thoracic mammary gland 668, placenta 45, liver 113.
+The PSEV walk is binary, so an `expresses` or `downregulates` edge counts as much as an `upregulates` edge,
+and the blanket edges turn every linked organ node into a generic hub. Ten pilot datasets, one per tissue,
+projected on four builds of the same 2025 graph (`scripts/pilot_stage2.py`, `results/pilot_stage2_<tag>.tsv`,
+`results/pilot_stage2_builds_2025only.png`); rank of the tissue's own gene-linked node, number of linked
+nodes in brackets:
 
-**Linked set re-derived from the edge list.** `check_linked.py --linked-ids` takes the set directly.
-With all 72 nodes, the sparsely linked ones (heart 38 edges, brain 19, ectocervix 27) top many datasets
-because a covariance over a handful of genes is noisy, so the set used is the **60 nodes with ≥ 200
-up-regulation edges** (`results/aug_linked_nodes_ge200.tsv`; outputs `corrected_linked_2025upAuG60/`,
-`results/compiled_2025upAuG60.tsv`, `tissue_summary_2025upAuG60.tsv`, `tissue_overview_2025upAuG60.png`).
+| tissue | all edges (92 linked) | no 'expresses' (73) | housekeeping removed, all edges (92) | 'upregulates' only (44) |
+|---|---|---|---|---|
+| retina | no node | no node | no node | no node |
+| kidney | 21 | 38 | 20 | no node |
+| heart | 8 | 45 | 7 | no node |
+| spleen | 75 | 48 | 74 | **2** |
+| liver | 35 | 45 | 31 | **1** |
+| adrenal gland | 5 | 38 | 5 | **2** |
+| lung | 11 | 30 | 11 | **3** |
+| cerebellum | 1 | 20 | 1 | **1** |
+| white adipose tissue | 10 | 37 | 10 | **1** |
+| blood | 82 | 73 | 79 | **1** |
+| Spearman(link weight, own rank) | −0.95 | −0.35 | −0.95 | −0.18 |
 
-| | 44-node set (PSEV-detected) | 60-node set (≥ 200 AuG edges) |
+The 'all edges' and 'upregulates only' columns are computed with the corrected weights; the liver, lung and heart cells of the two middle columns come from the run before the weight fix (the other seven pilot tissues were not affected by it). The pilot's 'upregulates only' column uses the 44 nodes the
+PSEV-threshold detector finds; the main results below use the edge-derived 60-node set, on which kidney and heart
+become testable.
+
+
+- **Full graph:** link count predicts own-tissue rank (Spearman −0.95); the most lightly linked nodes top
+  almost every dataset whatever the tissue, the most heavily linked ones sink.
+- **Without `expresses` but with `downregulates`:** fails everywhere; `putamen` and `amygdala` top every dataset.
+- **Housekeeping genes removed (full graph):** reproduces the full-graph column within a few places, so the
+  problem is not the gene weighting.
+- **`upregulates` only:** every testable tissue's own node in the top three, the top node differs by tissue,
+  and the connectivity correlation shrinks to −0.18. This is the configuration used for everything below.
+
+**Which Anatomy nodes are tested.** 72 nodes carry up-regulation edges; the sparsely linked ones (heart 38
+edges, brain 19, ectocervix 27) top many datasets because a covariance over a handful of genes is noisy, so
+the primary test uses the **60 nodes with ≥ 200 up-regulation edges** (`results/aug_linked_nodes_ge200.tsv`).
+For reference, the 44-node set found by the PSEV-threshold detector gives 51 CLEAR / 18 PARTIAL / 35 no node
+(`compiled_2025upAuG.tsv`) and the full 72-node set 45 / 27 / 13 NONE / 19 (`compiled_2025upAuG72.tsv`).
+Scoring variants tried before the edge set was changed (z-score weighting, a hub-matched permutation null,
+housekeeping removal) did not move the failing tissues; the rank-based score was kept (METHODS.md § 15).
+
+## Results: 104 datasets, 60-node set
+
+`results/compiled_2025upAuG60.tsv` (one row per dataset), `results/tissue_summary_2025upAuG60.tsv`,
+`results/tissue_overview_2025upAuG60.png`.
+
+| own node | datasets |
+|---|---|
+| ranked 1st (CLEAR) | 50 |
+| ranked 2nd–7th (PARTIAL) | 32 |
+| below 7th (NONE) | 2 |
+| tissue has no linked Anatomy node | 20 |
+
+| tissue (sets) | own node | 1st | 2nd–7th | median rank | family verdicts (median pct) |
+|---|---|---|---|---|---|
+| liver (14) | right lobe of liver | 14 | 0 | 1 | CLEAR 14 (0.3) |
+| soleus (7), gastrocnemius (5), quadriceps (4), tibialis anterior (2), extensor digitorum longus (2) | gastrocnemius | 20 | 0 | 1 | PARTIAL 20 (5) |
+| cerebrum (3), brain (2) | dorsolateral prefrontal cortex | 5 | 0 | 1 | CLEAR 1, PARTIAL 4 (5–7) |
+| white adipose tissue (1) | subcutaneous adipose tissue | 1 | 0 | 1 | PARTIAL (31) |
+| blood (1) | blood | 1 | 0 | 1 | PARTIAL (0.4) |
+| kidney (6) | adult mammalian kidney | 4 | 2 (2nd, behind right lobe of liver) | 1 | PARTIAL 6 (37) |
+| cerebellum (3) | cerebellar hemisphere | 2 | 1 | 1 | CLEAR 3 (2.6) |
+| spleen (8) | spleen | 2 | 6 (2nd, behind blood) | 2 | PARTIAL 8 (26) |
+| skin (7) | skin of abdomen / skin of leg | 1 | 6 (2nd–4th, behind descending thoracic aorta) | 2 | CLEAR 3, PARTIAL 4 (27) |
+| heart (6) | heart left ventricle | 0 | 6 (2nd, behind gastrocnemius) | 2 | CLEAR 6 (2.2) |
+| adrenal gland (4) | right adrenal gland | 0 | 4 (2nd–3rd, behind descending thoracic aorta) | 2 | PARTIAL 3, NONE 1 (33) |
+| hippocampus (2) | Ammon's horn | 0 | 2 (4th, behind prefrontal and cingulate cortex) | 4 | CLEAR 2 (4.7) |
+| lung (3) | upper lobe of left lung | 0 | 3 (4th–6th, behind aorta and arteries) | 5 | NONE 3 (68) |
+| mammary gland (1) | thoracic mammary gland | 0 | 1 (5th) | 5 | NONE (62) |
+| colon (2) | muscle layer of sigmoid colon | 0 | 1 (6th); the other 17th | 11.5 | CLEAR 2 (20) |
+| brown adipose tissue (1) | subcutaneous adipose tissue | 0 | 0 (12th) | 12 | NONE (47) |
+| retina (5), thymus (5), eye (2), bone marrow (2), placenta, cecum, bone, mandible, temporal bone, optic nerve | no linked node | – | – | – | thymus NONE 5 (84); retina PARTIAL 5 (17); cecum, mandible CLEAR |
+
+- Ground-analog baselines behave like spaceflight ground controls (11 CLEAR / 6 PARTIAL / 4 no node vs
+  39 / 26 / 2 NONE / 16).
+- Near-misses are a biologically related node winning, and they are consistent: spleen behind `blood` in
+  6 of 8, heart behind `gastrocnemius` in 6 of 6, adrenal gland and skin behind `descending thoracic aorta`.
+- Residual hubs: `gastrocnemius` is in the top four of 43 datasets, `heart left ventricle` of 29,
+  `descending thoracic aorta` of 28.
+- The secondary (family) test agrees where families are clean (liver, heart, cerebellum, hippocampus) and
+  is weaker where the UBERON family mixes parenchyma with vessels and skin appendages (kidney, spleen,
+  adrenal gland).
+
+## Cell-type route for tissues without a gene-linked Anatomy node
+
+The graph has 2,745 CellType nodes, 59 with gene edges (33,827 `EXPRESSEDIN_GeiCT`) and 846 `PARTOF_CTpA`
+links to Anatomy nodes. `scripts/celltype_check.py --tag 2025upAuG --build $B` ranks them per sample by the
+same corrected score (`results/celltype_check_2025upAuG.tsv`); `scripts/plot_celltype.py --tag 2025upAuG`
+draws the 20 datasets without a linked Anatomy node (`results/celltype_nolinked_2025upAuG.png`) and, with
+`--all`, all 104 (`results/celltype_all_2025upAuG.png`). Ranks are out of 2,745.
+
+| tissue (sets) | best matching cell type | rank, median [range] |
 |---|---|---|
-| own node 1st | 52 | 52 |
-| own node 2nd–7th | 17 | 30 |
-| own node below 7th | 0 | 2 (one colon set, brown adipose) |
-| no linked node | 35 | 20 |
+| retina (5) | camera-type eye photoreceptor cell | 1 [1–2] |
+| bone marrow (2) | CD115-positive monocyte | 1 |
+| placenta (1) | syncytiotrophoblast cell | 1 |
+| cecum (1) | Paneth cell | 2 |
+| thymus (5) | T cell | 17 [12–19] |
+| eye (2) | retinal rod cell | 19 [15–23] |
+| optic nerve, mandible, bone, temporal bone | (oligodendrocyte / chondrocyte) | 30, 47, 121, 146 |
 
-Newly testable with the 60-node set: heart (`heart left ventricle`, 2nd in all 6 datasets), kidney
-(`adult mammalian kidney`, 1st in 5 of 6), mammary gland (5th), colon (`muscle layer of sigmoid colon`,
-11th median). Still without a node: thymus, retina, eye, bone marrow, cecum, placenta (45 edges, below
-the cut), bones, optic nerve; the cell-type route (previous section) covers retina, bone marrow,
-placenta and cecum.
+For tissues that do have an Anatomy node the cell-type ranking agrees with it: hepatocyte 1st in 14 of 14
+liver sets, proximal tubular cell 1st in 6 of 6 kidney sets, suprabasal keratinocyte 1st in 4 of 7 skin sets,
+colonic smooth muscle fibre 1st in both colon sets, cardiac pacemaker cell 3rd–4th in heart, sinoatrial
+myocyte 3rd in the muscles; adrenal gland has no steroidogenic cell type among the 59 and ranks a kidney cell
+at ~109. Residual hub: sinoatrial-node myocytes and epicardial adipocytes are in the top five of 27 % of datasets.
+
+## Tissue coverage in three groups
+
+| group | tissues | how |
+|---|---|---|
+| validated directly (20) | liver, kidney, heart, spleen, lung, adrenal gland, skin, brain, cerebrum, cerebellum, hippocampus, white adipose tissue, blood, mammary gland, the five hindlimb muscles, colon (weak) | own Anatomy node among the 60 linked nodes |
+| validated by cell type (4) | retina, bone marrow, placenta, cecum; thymus weak (T cell median 17th), eye marginal | own CellType node among 2,745 |
+| not testable (4) | bone, mandible, temporal bone, optic nerve | no Anatomy or CellType node with gene edges |
+
+So 27 of 31 tissues have a direct within-dataset test; thymus, eye, colon and brown adipose tissue carry an
+explicit "weak" label. The gaps follow the human atlases behind SPOKE's edges: GTEx never sampled thymus,
+retina, bone marrow or placenta, and no atlas edge exists for bone.
+
+## Reproducibility note (2026-10-13)
+
+While porting the pipeline to its standalone repository, the CPM step was found to return wrong values for
+frames above one million cells: pandas routes such elementwise operations to numexpr, and numexpr 2.10.1
+under numpy 2.4.6 computed them incorrectly with no warning. The 13 control sets with 19 or more samples
+(OSD-243, 244, 245, 248, 253, 254, 295, 379, 580, 720, 771, 825, 881) had 13–21 % of their weight cells
+wrong; the other 91 were exact (`results/weight_audit_numexpr_2025upAuG.tsv`). The CPM step now uses explicit
+numpy arithmetic with the pandas fast path disabled, the 13 datasets were re-projected and re-checked, and
+every table and figure in `results/` was regenerated. Two verdicts changed, OSD-243 skin and OSD-771 kidney
+(own node 2nd instead of 1st); the other eleven were unchanged.
 
 ## Archive
 
-`archive/cross_dataset/` holds the earlier analysis that compared datasets with one another
-(anatomy-family heatmaps, hub-corrected shifts, specificity tests, per-dataset QQ figures, expression
-ssGSEA/clustering) with its scripts, results and figures; the scripts still run from that location.
-`archive/combined_check_figures/` holds the previous three-panel-in-one version of the per-dataset check.
+`results/archive_2019/` holds the tables and overview figures of the same datasets on the 2019 Zenodo PSEVs
+(the development history that led to the baseline correction and to the edge-set change; superseded, and
+partly computed before the fix above). `archive/cross_dataset/` holds the earlier analysis that compared
+datasets with one another; `archive/combined_check_figures/` the previous three-panel figures.

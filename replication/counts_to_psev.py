@@ -37,6 +37,7 @@ from pathlib import Path
 
 import numpy as np
 import pandas as pd
+pd.set_option("compute.use_numexpr", False)   # numexpr 2.10.1 + numpy 2.4 returned wrong elementwise results on >1e6-cell frames
 
 HERE = Path(__file__).resolve().parent
 BASE = HERE.parent
@@ -100,9 +101,10 @@ def main():
           f"{len(sample_cols)} samples kept: {sample_cols}")
 
     # CPM -> log2(CPM+1); drop genes never reaching --min-cpm
-    cpm = counts / counts.sum(axis=0) * 1e6
-    expressed = (cpm >= args.min_cpm).any(axis=1)
-    weights = np.log2(cpm[expressed] + 1.0)
+    v = counts.to_numpy(dtype=np.float64)              # explicit numpy maths (pandas' numexpr path gave wrong values)
+    cpm_v = v / v.sum(axis=0, keepdims=True) * 1e6
+    expressed = (cpm_v >= args.min_cpm).any(axis=1)
+    weights = pd.DataFrame(np.log2(cpm_v[expressed] + 1.0), index=counts.index[expressed], columns=counts.columns)
     print(f"  genes with CPM>={args.min_cpm} in >=1 sample: {len(weights)}")
 
     # ENSEMBL -> mouse Entrez -> human Entrez (SPOKE Node)

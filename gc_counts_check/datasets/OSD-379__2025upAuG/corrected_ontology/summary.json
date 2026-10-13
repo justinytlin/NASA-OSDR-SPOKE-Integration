@@ -11,17 +11,17 @@
   "family_regex": "liver|hepat",
   "family_exclude": "hepatopancreas|flexure|arthropod|hepatic cecum",
   "n_family_nodes": 70,
-  "family_median_pct": 0.4393152727085796,
-  "in_top_2_5pct": 56,
-  "in_top_10pct": 62,
-  "mwu_p_less": 5.68286052052477e-38,
-  "ks_p_greater": 1.119222848924435e-42,
+  "family_median_pct": 0.4465121061018866,
+  "in_top_2_5pct": 53,
+  "in_top_10pct": 61,
+  "mwu_p_less": 1.0173854399239634e-36,
+  "ks_p_greater": 8.784577415209305e-41,
   "frac_samples_significant": 1.0,
   "family_rank_among_organ_families": 1,
   "verdict": "CLEAR",
   "criteria": [
-    "pooled Mann-Whitney p = 5.7e-38 (ok)",
-    "KS p = 1.1e-42 (ok)",
+    "pooled Mann-Whitney p = 1e-36 (ok)",
+    "KS p = 8.8e-41 (ok)",
     "35/35 samples individually p < 0.05 (ok)",
     "family ranks 1 of 14 organ families by median percentile (ok)"
   ],
@@ -30,18 +30,18 @@
     "liver lobule centrilobular region (0.0%)",
     "liver lobule periportal region (0.0%)",
     "lobe of liver (0.1%)",
-    "left hepatic vein (0.1%)"
+    "right hepatic vein (0.1%)"
   ],
   "top_real_anatomy": [
     "liver lobule midzonal region (0.03%)",
     "liver lobule centrilobular region (0.03%)",
     "liver lobule periportal region (0.05%)",
-    "lobe of liver (0.11%)",
-    "left hepatic vein (0.11%)",
-    "metabolic zone of liver (0.12%)",
-    "right hepatic vein (0.13%)",
-    "right hepatic artery (0.17%)",
-    "parenchyma of quadrate lobe of liver (0.17%)",
-    "left lobe of liver (0.17%)"
+    "lobe of liver (0.08%)",
+    "right hepatic vein (0.08%)",
+    "left hepatic vein (0.09%)",
+    "right lobe of liver (0.11%)",
+    "parenchyma of quadrate lobe of liver (0.12%)",
+    "quadrate lobe of liver (0.12%)",
+    "metabolic zone of liver (0.13%)"
   ]
 }

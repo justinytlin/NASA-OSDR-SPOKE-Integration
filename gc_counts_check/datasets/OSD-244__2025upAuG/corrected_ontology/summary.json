@@ -11,37 +11,37 @@
   "family_regex": "thym",
   "family_exclude": null,
   "n_family_nodes": 17,
-  "family_median_pct": 73.31300543550311,
-  "in_top_2_5pct": 1,
+  "family_median_pct": 78.43071153955418,
+  "in_top_2_5pct": 2,
   "in_top_10pct": 5,
-  "mwu_p_less": 0.851692898480722,
-  "ks_p_greater": 0.06397178380395856,
+  "mwu_p_less": 0.8888515295677883,
+  "ks_p_greater": 0.08415802641492089,
   "frac_samples_significant": 0.0,
   "family_rank_among_organ_families": 11,
   "verdict": "NONE",
   "criteria": [
-    "pooled Mann-Whitney p = 0.85 (fail)",
-    "KS p = 0.064 (fail)",
+    "pooled Mann-Whitney p = 0.89 (fail)",
+    "KS p = 0.084 (fail)",
     "0/19 samples individually p < 0.05 (fail)",
     "family ranks 11 of 14 organ families by median percentile (fail)"
   ],
   "best_family_nodes": [
-    "thymus lymphoid tissue (0.9%)",
-    "thymus (2.6%)",
-    "cervical thymus (3.1%)",
-    "superficial cervical thymus (3.1%)",
-    "deep cervical thymus (3.1%)"
+    "thymus lymphoid tissue (0.8%)",
+    "thymus (2.4%)",
+    "cervical thymus (3.9%)",
+    "superficial cervical thymus (3.9%)",
+    "deep cervical thymus (4.0%)"
   ],
   "top_real_anatomy": [
-    "catecholamine system (0.07%)",
-    "gABAergic system (0.08%)",
-    "cholinergic system (0.08%)",
-    "glutamatergic system (0.09%)",
-    "histaminergic system (0.10%)",
-    "serotonergic system (0.10%)",
-    "common plantar digital arteries (0.17%)",
-    "subiliac lymph node (0.18%)",
-    "zygomaticus minor muscle (0.19%)",
-    "neurogenic placode (0.21%)"
+    "glutamatergic system (0.02%)",
+    "histaminergic system (0.03%)",
+    "cholinergic system (0.04%)",
+    "gABAergic system (0.04%)",
+    "serotonergic system (0.05%)",
+    "supraclavicular lymph node (0.06%)",
+    "catecholamine system (0.06%)",
+    "left supraclavicular lymph node (0.06%)",
+    "Virchow's lymph node (0.07%)",
+    "right supraclavicular lymph node (0.07%)"
   ]
 }

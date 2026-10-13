@@ -11,7 +11,7 @@
     "left coronary artery (rank 8)"
   ],
   "best_target_rank": 2,
-  "frac_samples_target_rank1": 0.05263157894736842,
+  "frac_samples_target_rank1": 0.0,
   "frac_samples_target_top3": 1.0,
   "verdict": "PARTIAL",
   "top_linked_nodes": [
@@ -20,8 +20,8 @@
     "muscle of leg",
     "right atrium auricular region",
     "descending thoracic aorta",
-    "right adrenal gland",
     "right adrenal gland cortex",
+    "right adrenal gland",
     "left coronary artery"
   ]
 }

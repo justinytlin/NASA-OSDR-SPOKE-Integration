@@ -14,7 +14,8 @@ control for graph artifacts, and rebuild the PSEVs from a current SPOKE.
 | Run an OSDR differential-expression table through the paper's method and get ranked SPOKE nodes with a null control | [`replication/`](replication/README.md) | the 25.6 GB Zenodo PSEV zip (one-time) |
 | Embed each sample of a raw counts file separately | [`replication/`](replication/README.md#counts-route-one-embedding-per-sample) | same |
 | See a complete worked example, outputs included | [`examples/OSD-564/`](examples/OSD-564/README.md) | nothing |
-| Ask whether a dataset's ground-control profile points at its own tissue, across many datasets | [`gc_counts_check/`](gc_counts_check/README.md) | the zip + counts files (`fetch_data.sh`) |
+| Ask whether a dataset's control profile points at its own tissue, across many datasets | [`gc_counts_check/`](gc_counts_check/README.md) | the 2025 'upregulates-only' PSEV build (`psev_build/`) + counts files (`fetch_data.sh`) |
+| Run that tissue check on any counts table with one command | [SPOKE-GeneCounts-Anatomy-Pipeline](https://github.com/justinytlin/SPOKE-GeneCounts-Anatomy-Pipeline) (separate repository) | the same PSEV build |
 | Query the live SPOKE graph without any bulk data | [`spoke-api-client/`](spoke-api-client/README.md) | internet access only |
 | Rebuild the gene PSEVs from a current SPOKE Neo4j instance | [`psev_build/`](psev_build/README.md) | Bolt access to a SPOKE server, ~40 GB of disk |
 
@@ -74,15 +75,19 @@ free positive control.
   script and two reprocessed DE tables were never published.
 - **New datasets**: [`examples/OSD-564/`](examples/OSD-564/README.md) shows
   the full workflow and how to read the outputs.
-- **Tissue check**: parenchymal terms of the source tissue reach the top 1–3%
-  of Anatomy nodes in every dataset on the 2019 PSEVs, while broad UBERON
-  families are diluted by vessel and primordium terms
-  ([`gc_counts_check/README.md`](gc_counts_check/README.md)).
+- **Tissue check**: on the 2025 SPOKE snapshot rebuilt with only the
+  up-regulation Anatomy–Gene edges, and after a within-dataset baseline
+  correction, the control samples' own tissue node ranks first among the 60
+  gene-linked Anatomy nodes in 50 of 104 control sets and in the top seven in
+  32 more; tissues without such a node (retina, bone marrow, placenta, cecum)
+  are recovered through their cell-type nodes
+  ([`gc_counts_check/README.md`](gc_counts_check/README.md)). The blanket
+  `expresses` and the `downregulates` edges of the full graph are what
+  defeated the check before; the edge comparison is in the same README.
 - **Current SPOKE**: a 2025-snapshot build (547,873 nodes) agrees with the
   2019 PSEVs at the gene, process and protein level well above chance, but
   the disease, symptom and anatomy layers were rebuilt at the source and do
-  not carry over; the expression-based tissue check does not work on it and
-  the reasons are documented ([`psev_build/README.md`](psev_build/README.md)).
+  not carry over ([`psev_build/README.md`](psev_build/README.md)).
 
 ## Data sources
 

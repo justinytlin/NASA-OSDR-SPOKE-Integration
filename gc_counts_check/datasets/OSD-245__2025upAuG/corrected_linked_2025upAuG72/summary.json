@@ -10,17 +10,17 @@
     "liver (rank 2)"
   ],
   "best_target_rank": 1,
-  "frac_samples_target_rank1": 0.9473684210526315,
+  "frac_samples_target_rank1": 1.0,
   "frac_samples_target_top3": 1.0,
   "verdict": "CLEAR",
   "top_linked_nodes": [
     "right lobe of liver",
     "liver",
-    "left adrenal gland",
     "brain",
+    "left adrenal gland",
     "adult mammalian kidney",
     "right adrenal gland",
-    "left adrenal gland cortex",
+    "heart",
     "gastrocnemius"
   ]
 }
